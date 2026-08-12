@@ -1,71 +1,57 @@
 /* ==========================================================================
-   Homepage rendering. Reads SITE / SECTIONS / IDEAS from data.js and builds
-   the hero, the section/subsection structure, and the idea cards.
-   You should not need to edit this file to add content — edit data.js instead.
+   Homepage rendering. Builds the hero, stat tiles, industry cards, and a
+   sample of product review cards from data.js. Edit data.js, not this file.
    ========================================================================== */
 
-// Small helper: safely escape text before inserting into HTML.
-function esc(s) {
-  return String(s == null ? "" : s)
-    .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
-}
+mountChrome();
 
-// --- Hero + footer ----------------------------------------------------------
-document.getElementById("hero-title").textContent = SITE.title;
-document.getElementById("hero-lede").textContent = SITE.lede;
-document.getElementById("year").textContent = "© " + SITE.author;
+// --- Hero -------------------------------------------------------------------
+document.getElementById("hero-eyebrow").textContent = SITE.heroEyebrow;
+document.getElementById("hero-title").innerHTML =
+  `${esc(SITE.heroTitle)} <span class="hl">${esc(SITE.heroTitleHighlight)}</span> ${esc(SITE.heroTitleTail)}`;
+document.getElementById("hero-lede").textContent = SITE.heroLede;
 
-// --- Top nav: one link per section -----------------------------------------
-document.getElementById("nav").innerHTML = SECTIONS
-  .map(s => `<a href="#${esc(s.id)}">${esc(s.title.split(" & ")[0])}</a>`)
-  .join("");
+// --- Stat tiles -------------------------------------------------------------
+document.getElementById("stats-grid").innerHTML = SITE.stats.map(s => `
+  <div class="stat">
+    <div class="ico">${icon(s.icon)}</div>
+    <div>
+      <div class="num">${esc(s.num)}</div>
+      <div class="label">${esc(s.label)}</div>
+    </div>
+  </div>`).join("");
 
-// --- Build each section -----------------------------------------------------
-const ideasFor = (sectionId, subId) =>
-  IDEAS.filter(i => i.section === sectionId && i.subsection === subId);
+// --- Industry cards ---------------------------------------------------------
+const productsIn = id => PRODUCTS.filter(p => p.industry === id);
 
-function cardHTML(idea) {
-  const tagClass = idea.hasAI ? "has-ai" : "no-ai";
-  const tagText  = idea.hasAI ? "Extending existing AI" : "Adding AI";
+document.getElementById("industries-grid").innerHTML = INDUSTRIES.map(ind => {
+  const count = productsIn(ind.id).length;
+  const subs = ind.subIndustries.slice(0, 3)
+    .map(s => `<span class="chip">${esc(s.name)}</span>`).join("");
   return `
-    <a class="card" href="article.html?id=${encodeURIComponent(idea.id)}">
-      <span class="tag ${tagClass}">${tagText}</span>
-      <h4>${esc(idea.title)}</h4>
-      <p class="company">${esc(idea.company && idea.company.name || "")}</p>
-      <p class="summary">${esc(idea.summary)}</p>
-      <span class="read">Read the idea →</span>
+    <a class="tile" href="industry.html?id=${encodeURIComponent(ind.id)}">
+      <div class="ico">${icon(ind.icon)}</div>
+      <h3>${esc(ind.name)}</h3>
+      <p>${esc(ind.blurb)}</p>
+      <div class="meta">${subs}</div>
+      <span class="go">${ind.subIndustries.length} sub-industries · ${count} product${count === 1 ? "" : "s"} →</span>
+    </a>`;
+}).join("");
+
+// --- Product review cards ---------------------------------------------------
+function productCard(p) {
+  const cls = p.status === "has-ai" ? "has-ai" : "adds-ai";
+  const label = p.status === "has-ai" ? "AI product" : "Idea: add AI";
+  const ind = INDUSTRIES.find(i => i.id === p.industry);
+  return `
+    <a class="tile" href="product.html?id=${encodeURIComponent(p.id)}">
+      <span class="pill ${cls}">${label}</span>
+      <h3>${esc(p.name)}</h3>
+      <p>${esc(p.tagline)}</p>
+      <div class="meta">${ind ? `<span class="chip">${esc(ind.name)}</span>` : ""}</div>
+      <span class="go">Read the review →</span>
     </a>`;
 }
 
-function subsectionHTML(sectionId, sub) {
-  const ideas = ideasFor(sectionId, sub.id);
-  if (ideas.length === 0) {
-    return `
-      <div class="subsection">
-        <h3>${esc(sub.title)}</h3>
-        <p style="color:var(--muted);font-size:15px;margin:0">No ideas here yet — coming soon.</p>
-      </div>`;
-  }
-  return `
-    <div class="subsection">
-      <h3>${esc(sub.title)}</h3>
-      <div class="card-grid">${ideas.map(cardHTML).join("")}</div>
-    </div>`;
-}
-
-function sectionHTML(section) {
-  return `
-    <section class="section" id="${esc(section.id)}">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>${esc(section.title)}</h2>
-          <p>${esc(section.blurb)}</p>
-        </div>
-        ${section.subsections.map(sub => subsectionHTML(section.id, sub)).join("")}
-      </div>
-    </section>`;
-}
-
-document.getElementById("sections").innerHTML =
-  SECTIONS.map(sectionHTML).join("");
+document.getElementById("products-grid").innerHTML =
+  PRODUCTS.map(productCard).join("");

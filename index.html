@@ -3,39 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI, applied to healthcare</title>
-  <meta name="description" content="A collection of ideas for applying AI across the healthcare industry." />
+  <title>Nithila Notes — The map of AI across healthcare</title>
+  <meta name="description" content="Every healthcare industry and sub-industry, how AI is transforming each one, and the products reviewed for the people who work there." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Newsreader:opsz@6..72&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,opsz@0,6..72;1,6..72&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="index.html">Nithila<span class="dot">.</span> <span style="font-weight:400;color:var(--muted)">AI × Healthcare</span></a>
-      <nav class="nav" id="nav"></nav>
-    </div>
-  </header>
+  <div id="header-slot"></div>
 
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">A working notebook of ideas</p>
-      <h1 id="hero-title"></h1>
-      <p class="lede" id="hero-lede"></p>
+      <div class="hero-inner">
+        <p class="eyebrow" id="hero-eyebrow"></p>
+        <h1 id="hero-title"></h1>
+        <p class="lede" id="hero-lede"></p>
+        <div class="btns">
+          <a class="btn btn-primary" href="#industries">Explore industries&nbsp;→</a>
+          <a class="btn btn-ghost" href="#products">Browse all products</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <main id="sections"></main>
-
-  <footer class="site-footer">
+  <section class="stats">
     <div class="wrap">
-      <span>Built as a portfolio of ideas for AI in healthcare.</span>
-      <span id="year"></span>
+      <div class="grid" id="stats-grid"></div>
     </div>
-  </footer>
+  </section>
 
+  <section class="section" id="industries">
+    <div class="wrap">
+      <p class="section-eyebrow">Start with your focus area</p>
+      <div class="section-title-row">
+        <div>
+          <h2>Healthcare industries</h2>
+          <p class="sub">Pick your industry to see its sub-industries, how AI is reshaping each, and the products built for them.</p>
+        </div>
+      </div>
+      <div class="grid-cards" id="industries-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="products" style="padding-top:0">
+    <div class="wrap">
+      <p class="section-eyebrow">Reviewed for the people who work there</p>
+      <div class="section-title-row">
+        <div>
+          <h2>Latest product reviews</h2>
+          <p class="sub">Honest, plain-language verdicts on the AI products moving each field.</p>
+        </div>
+      </div>
+      <div class="grid-cards" id="products-grid"></div>
+    </div>
+  </section>
+
+  <div id="footer-slot"></div>
+
+  <script src="icons.js"></script>
   <script src="data.js"></script>
+  <script src="partials.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

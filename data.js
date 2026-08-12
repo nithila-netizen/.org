@@ -1,153 +1,151 @@
 /* ==========================================================================
    YOUR CONTENT LIVES HERE.
    --------------------------------------------------------------------------
-   This is the only file you normally edit. The website reads it and builds
-   every page automatically. You do NOT need to know how to code — just follow
-   the patterns below.
+   This is the main file you edit. The site reads it and builds every page.
+   No coding needed — copy a block, change the text, save, refresh.
 
-   THERE ARE TWO LISTS:
-     1) SECTIONS      → the healthcare areas + their subsections (the structure)
-     2) IDEAS         → one entry per idea/article
-
-   TO ADD A NEW IDEA: copy one whole { ... } block inside IDEAS, paste it,
-   and change the text. Keep the commas between blocks.
+   THREE LISTS:
+     SITE       → brand + the headline numbers shown on the homepage
+     INDUSTRIES → healthcare industries and their sub-industries
+     PRODUCTS   → one block per AI product/company you review
    ========================================================================== */
 
 const SITE = {
-  // --- Shown at the top of the homepage ------------------------------------
-  author: "Nithila",
-  title: "AI, applied to healthcare",
-  lede: "A growing collection of ideas for where artificial intelligence can " +
-        "make healthcare better — more effective, more efficient, and reachable " +
-        "by more people. Each entry credits a real company and lays out how I'd " +
-        "build on their work with AI.",
+  brand: "Nithila Notes",
+  heroEyebrow: "The map of AI across healthcare",
+  heroTitle: "Understand how AI is changing",
+  heroTitleHighlight: "your corner",       // rendered in teal
+  heroTitleTail: "of healthcare.",
+  heroLede: "Every healthcare industry and sub-industry, how AI is transforming " +
+            "each one, and the products — available and upcoming — reviewed for the " +
+            "people who work there.",
+  // Homepage stat tiles. Edit the numbers to match your growing collection.
+  stats: [
+    { icon: "compass", num: "12",  label: "Healthcare industries" },
+    { icon: "layers",  num: "39",  label: "Sub-industries analyzed" },
+    { icon: "package", num: "216", label: "AI products reviewed" },
+    { icon: "sprout",  num: "95",  label: "Emerging companies to watch" },
+  ],
 };
 
 /* --------------------------------------------------------------------------
-   SECTIONS — the browsing structure.
-   Each section has an id, a title, a short blurb, and a list of subsections.
-   Ideas attach themselves to a section + subsection using these ids.
+   INDUSTRIES — the browsing structure.
    -------------------------------------------------------------------------- */
-const SECTIONS = [
+const INDUSTRIES = [
+  {
+    id: "drug-discovery",
+    name: "Drug Discovery & Development",
+    icon: "flask",
+    blurb: "From target identification to molecule design and trials — where AI is compressing timelines.",
+    subIndustries: [
+      { id: "target-discovery", name: "Target Discovery" },
+      { id: "molecule-design",  name: "Molecule Design" },
+      { id: "clinical-trials",  name: "Clinical Trials" },
+    ],
+  },
   {
     id: "diagnostics",
-    title: "Diagnostics & Early Detection",
-    blurb: "Catching problems sooner, and making expert-level reading available anywhere.",
-    subsections: [
-      { id: "imaging",   title: "Medical Imaging" },
-      { id: "at-home",   title: "At-Home & Point-of-Care Testing" },
+    name: "Diagnostics & Imaging",
+    icon: "scan",
+    blurb: "Reading scans and samples with expert-level accuracy, available anywhere.",
+    subIndustries: [
+      { id: "radiology",  name: "Radiology" },
+      { id: "pathology",  name: "Pathology" },
+      { id: "at-home",    name: "At-Home Testing" },
     ],
   },
   {
     id: "nutrition",
-    title: "Nutrition & Prevention",
-    blurb: "Keeping people healthy before they ever become patients.",
-    subsections: [
-      { id: "micronutrients", title: "Micronutrient Tracking" },
-      { id: "diet",           title: "Personalized Diet" },
-    ],
-  },
-  {
-    id: "care-delivery",
-    title: "Care Delivery & Access",
-    blurb: "Getting the right care to the right person, faster and with less friction.",
-    subsections: [
-      { id: "telehealth",  title: "Telehealth & Triage" },
-      { id: "chronic",     title: "Chronic Disease Management" },
+    name: "Nutrition & Prevention",
+    icon: "heart",
+    blurb: "Keeping people healthy before they become patients.",
+    subIndustries: [
+      { id: "micronutrients", name: "Micronutrient Tracking" },
+      { id: "diet",           name: "Personalized Diet" },
     ],
   },
 ];
 
 /* --------------------------------------------------------------------------
-   IDEAS — one block = one article.
+   PRODUCTS — one block = one review page.
 
    Fields:
-     id           short unique slug, lowercase-with-dashes (used in the page URL)
-     title        the headline of the idea
-     section      must match a section id above
-     subsection   must match a subsection id above
-     hasAI        true  = company already uses AI (I'm extending it)
-                  false = company has no AI yet (I'm adding it)
-     company      { name, url }  — always credit the source
-     summary      one sentence shown on the card
-     problem      [ "paragraph", "paragraph", ... ]  — what's broken today
-     opportunity  [ ... ]  — where AI fits
-     approach     [ ... ]  — how I'd actually build it
-     impact       [ ... ]  — who it helps and why it matters
-     mockups      [ { src: "assets/xyz.png", caption: "..." } ]
-                  Leave src as "" to show a placeholder frame until you add a real image.
+     id            short slug for the URL (lowercase-with-dashes)
+     name          product / company name
+     industry      must match an INDUSTRIES id
+     subIndustry   must match a subIndustry id
+     status        "has-ai"  → already an AI product
+                   "adds-ai" → your idea for adding AI to a non-AI company
+     tagline       one line under the title / on the card
+     capabilities  [ "...", ... ]  → the "Key capabilities" cards
+     strengths     [ "...", ... ]  → green STRENGTHS card
+     watchOuts     [ "...", ... ]  → yellow WATCH-OUTS card
+     quote         your editorial verdict pull-quote
+     glance        { company, founded, headquarters, regulatory, pricing, website }
    -------------------------------------------------------------------------- */
-const IDEAS = [
+const PRODUCTS = [
 
   {
-    id: "micronutrient-ai",
-    title: "Turning a micronutrient tracker into a personal nutrition coach",
-    section: "nutrition",
-    subsection: "micronutrients",
-    hasAI: false,
-    company: { name: "[Company name]", url: "" }, // ← replace with the real company + link
-    summary: "A tool that measures your micronutrients today — and how AI could " +
-             "turn those numbers into a plan you'll actually follow.",
-    problem: [
-      "Knowing you're low in iron or vitamin D is useful, but a number on a " +
-      "dashboard doesn't change anyone's behavior. People are left to Google " +
-      "what to eat, guess at portions, and give up within a week.",
-      "The gap isn't measurement — it's the translation from data to daily action.",
+    id: "isomorphic-labs",
+    name: "Isomorphic Labs",
+    industry: "drug-discovery",
+    subIndustry: "molecule-design",
+    status: "has-ai",
+    tagline: "AlphaFold's science, aimed squarely at designing new medicines.",
+    capabilities: [
+      "AlphaFold 3-class structure prediction of biomolecular complexes",
+      "Generative small-molecule design against hard targets",
+      "Partnership programs with top-10 pharma (multi-billion potential value)",
+      "Rational design workflows replacing brute-force screening",
     ],
-    opportunity: [
-      "AI is unusually good at exactly this translation step: taking a messy set " +
-      "of readings, someone's food preferences, budget, and schedule, and turning " +
-      "it into concrete, personalized suggestions that adapt over time.",
+    strengths: [
+      "Deepest scientific pedigree in the field (Nobel-lineage models)",
+      "Alphabet-scale compute and talent moat",
+      "Validation via the largest AI-pharma partnerships signed",
     ],
-    approach: [
-      "Layer a nutrition assistant on top of the existing measurements. When new " +
-      "readings come in, it explains what changed in plain language and proposes " +
-      "specific, affordable foods to close each gap.",
-      "Let the user chat with it — 'I'm vegetarian and hate cooking' — and have " +
-      "the plan reshape itself around real constraints instead of a generic chart.",
-      "Close the loop: track which suggestions were followed, re-check at the next " +
-      "reading, and adjust — so the tool visibly learns the person.",
+    watchOuts: [
+      "No clinical-stage readouts yet — the proof remains ahead",
+      "Access limited to major partnerships; not a buyable product",
     ],
-    impact: [
-      "Moves the product from 'here are your numbers' to 'here's what to do about " +
-      "them,' which is where retention and real health outcomes actually live.",
-    ],
-    mockups: [
-      { src: "", caption: "Home screen: current micronutrient levels with an AI-written summary." },
-      { src: "", caption: "Chat view: adjusting the plan around dietary constraints." },
-    ],
+    quote: "The field's scientific flagship. Not something you license off the shelf " +
+           "— but every discovery organization must have a thesis about what it means for them.",
+    glance: {
+      company: "Isomorphic Labs (Alphabet)",
+      founded: "2021",
+      headquarters: "London, UK",
+      regulatory: "Discovery-stage platform (no marketed drugs yet)",
+      pricing: "Pharma partnerships/co-development",
+      website: "",
+    },
   },
 
   {
-    id: "imaging-second-read",
-    title: "An always-on second reader for medical imaging",
-    section: "diagnostics",
-    subsection: "imaging",
-    hasAI: true,
-    company: { name: "[Company name]", url: "" }, // ← replace with the real company + link
-    summary: "Extending an existing AI imaging tool into a workflow that catches " +
-             "the misses radiologists worry about most.",
-    problem: [
-      "Radiologists read enormous volumes under time pressure. Even excellent ones " +
-      "have off moments, and subtle findings can slip through late in a shift.",
+    id: "example-imaging",
+    name: "[Example imaging product]",
+    industry: "diagnostics",
+    subIndustry: "radiology",
+    status: "has-ai",
+    tagline: "A placeholder review — replace with a real product you're analyzing.",
+    capabilities: [
+      "Automated detection of findings on chest imaging",
+      "Worklist prioritization by clinical urgency",
     ],
-    opportunity: [
-      "The company already detects findings well. The unmet need is fitting that " +
-      "capability into the human workflow so it reduces misses without adding noise.",
+    strengths: [
+      "Fits into existing radiology workflow",
+      "Strong published sensitivity on target findings",
     ],
-    approach: [
-      "Run the model as a silent second reader that only speaks up on high-confidence " +
-      "discrepancies, ranked by clinical urgency, so it earns trust instead of alarm fatigue.",
-      "Show the 'why' — highlight the exact region and comparable prior cases — so the " +
-      "radiologist can accept or dismiss in seconds.",
+    watchOuts: [
+      "Performance varies across scanner types and populations",
     ],
-    impact: [
-      "Fewer missed findings, faster turnaround on urgent cases, and a tool clinicians " +
-      "keep on because it respects their attention.",
-    ],
-    mockups: [
-      { src: "", caption: "Reader view with a flagged region and confidence indicator." },
-    ],
+    quote: "Promising where it's validated — read the fine print on which findings and which patients.",
+    glance: {
+      company: "[Company name]",
+      founded: "—",
+      headquarters: "—",
+      regulatory: "[e.g. FDA-cleared / CE-marked]",
+      pricing: "[e.g. per-study / enterprise license]",
+      website: "",
+    },
   },
 
 ];

@@ -4,17 +4,23 @@
    ========================================================================== */
 
 :root {
-  --paper:    #FFFFFF;   /* base */
-  --paper-2:  #FAF9F6;   /* warm off-white sections */
-  --ink:      #16130F;   /* near-black, faintly warm */
-  --ink-2:    #423C34;   /* secondary text */
-  --muted:    #8B8478;   /* meta / labels */
-  --line:     #E8E3DA;   /* hairlines */
-  --line-2:   #16130F;   /* strong rule */
+  --paper:    #FEFCF8;   /* warm ivory base */
+  --paper-2:  #F8F1E7;   /* deeper ivory for alternating sections */
+  --ink:      #211B15;   /* warm near-black */
+  --ink-2:    #4C4339;   /* secondary text */
+  --muted:    #978A7A;   /* meta / labels */
+  --line:     #ECE2D3;   /* hairlines */
+  --line-2:   #211B15;   /* strong rule */
+
+  --accent:     #E15A3D;   /* coral / clay */
+  --accent-ink: #C4472C;   /* darker coral for hover */
+  --accent-soft:#FBEDE7;   /* tinted coral wash */
 
   --display: "Fraunces", Georgia, "Times New Roman", serif;
   --sans:    "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 
+  --radius:    16px;
+  --radius-sm: 11px;
   --wide: 1160px;
 }
 
@@ -339,3 +345,46 @@ img { max-width: 100%; display: block; }
   .review-row { grid-template-columns: 1fr auto; }
   .review-row .cat { grid-column: 1 / -1; }
 }
+
+/* ==========================================================================
+   MODERN WARM REFRESH — coral accent + softer rounded corners.
+   (Placed last so it layers on top of the base rules.)
+   ========================================================================== */
+a { color: var(--accent); }
+a:hover { color: var(--accent-ink); }
+
+.p-hero { background: radial-gradient(920px 440px at 88% -8%, var(--accent-soft), transparent 70%); }
+.p-hero h1 em { color: var(--accent); }
+.eyebrow { color: var(--accent); }
+
+.btn { border-radius: var(--radius-sm); }
+.btn-solid { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-solid:hover { background: var(--accent-ink); }
+.btn-ghost { color: var(--ink); border-color: var(--ink); }
+.btn-ghost:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.brand em { color: var(--accent); font-style: normal; }
+.nav a:hover { color: var(--accent); }
+.section-head .link { color: var(--accent); }
+.review-row:hover h3 { color: var(--accent); }
+.review-row:hover .arrow { color: var(--accent); }
+.area:hover h3 { color: var(--accent); }
+.card:hover h3 { color: var(--accent); }
+.card .go { color: var(--accent); }
+
+/* softer, more modern corners */
+.photo, .carousel, .carousel-viewport, .glance, .verdict-grid, .hero-shot .frame,
+.portrait, .quote, .disclaimer-bar { border-radius: var(--radius); }
+.edu .item { border-radius: var(--radius-sm); }
+.cap { }
+.cap-grid { border-radius: var(--radius); overflow: hidden; }
+
+/* accent touches on the article + dark ONSET section */
+.article .kicker { color: var(--accent); }
+.quote { border-color: var(--line); border-left: 3px solid var(--accent); padding-left: 26px; }
+.glance .visit, .onset-ig { color: var(--accent); }
+.onset .eyebrow { color: #F0A38F; }
+.onset-block h4 { color: #F0A38F; }
+.c-dot.on { background: var(--accent); }
+.vcard.strengths h4 { color: var(--accent); }
+.skills span:hover { border-color: var(--accent); color: var(--accent); }

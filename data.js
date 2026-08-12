@@ -66,12 +66,17 @@ const PROFILE = {
    -------------------------------------------------------------------------- */
 const ONSET = {
   founded: "",                        // ← e.g. "2024"
-  oneLiner: "[One line on what ONSET is — tell me and I'll write this whole section.]",
-  why: "[Why you started ONSET — the gap or problem you saw that made you build it.]",
-  who: "[Who ONSET helps — the people it's for.]",
-  how: "[How it works — what ONSET actually does for them.]",
-  impact: "[Why it matters — the difference it makes.]",
-  ig: { handle: "", url: "" },        // ← ONSET Instagram
+  oneLiner: "ONSET is my platform for learning about AI in healthcare — a place to actually " +
+            "understand the field, one week at a time.",
+  why: "AI in healthcare moves fast and can feel locked behind jargon. I built ONSET as a friendly " +
+       "on-ramp — so anyone curious could keep up and break in, without needing a technical background.",
+  who: "Students and early-career people who want to understand AI in healthcare and find their way " +
+       "into it — plus anyone who just wants to stay current.",
+  how: "Every week we post a bite-sized breakdown: a key term to know, a company doing interesting " +
+       "work, or a job and what it actually involves — making the space approachable and concrete.",
+  impact: "It turns a fast, intimidating field into something learnable and career-relevant, and " +
+          "builds a community of people growing into it together.",
+  ig: { handle: "", url: "" },        // ← ONSET Instagram (send me the link)
   // Drop screenshots of ONSET posts into assets/photos/ with these names:
   posts: [
     "assets/photos/onset-1.jpg",

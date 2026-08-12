@@ -98,9 +98,13 @@ const ONSET = {
 const PROJECTS = [
   {
     name: "nirmaa.com",
-    role: "Designed & built the website",
+    role: "Service design & website · end to end",
     url: "https://nirmaa.com",
-    blurb: "Nirmaa is a textile manufacturing company. I designed its services and built the website end to end.",
+    blurb: "Nirmaa is a textile manufacturer that lived almost entirely offline. I shaped how it " +
+           "presents and sells its work: defining its service offering, then designing and building " +
+           "the website end to end. The result gives a traditional manufacturer a credible, modern " +
+           "digital front door: a place to showcase its capabilities and win clients it couldn't " +
+           "reach before. It's the clearest proof of my range: strategy, design, and shipping a real product.",
     photo: "assets/photos/nirmaa.jpg",
   },
 ];

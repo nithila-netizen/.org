@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prototype — Progress</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{ --teal:#10B981; --ink:#0F172A; }
+  *{box-sizing:border-box;margin:0;padding:0;font-family:"Inter",system-ui,sans-serif;}
+  body{ width:1040px;height:760px;display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(800px 460px at 78% 15%, rgba(16,185,129,.18), transparent 60%), linear-gradient(135deg,#0A1020,#132038);}
+  .phone{ width:352px;height:712px;border-radius:46px;background:#0B1220;border:10px solid #05070d;
+    box-shadow:0 40px 90px -30px rgba(0,0,0,.7);position:relative;overflow:hidden;}
+  .notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:150px;height:26px;background:#05070d;border-radius:0 0 18px 18px;z-index:3;}
+  .screen{position:absolute;inset:0;background:#F6F8FA;display:flex;flex-direction:column;}
+  .top{background:#fff;padding:36px 22px 16px;border-bottom:1px solid #E5EAF0;}
+  .top .k{font-size:12px;color:#64748B;font-weight:600;}
+  .top .t{font-size:19px;font-weight:800;color:var(--ink);display:flex;align-items:center;gap:8px;}
+  .logo{width:22px;height:22px;border-radius:6px;background:var(--teal);display:grid;place-items:center;}
+  .logo svg{width:14px;height:14px;}
+  .pad{padding:16px 18px;display:flex;flex-direction:column;gap:14px;overflow:hidden;}
+  .hero-num{background:linear-gradient(135deg,#0f766e,#10B981);color:#fff;border-radius:18px;padding:20px;}
+  .hero-num .big{font-size:40px;font-weight:800;letter-spacing:-.02em;line-height:1;}
+  .hero-num .sub{font-size:13px;opacity:.9;margin-top:6px;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .card{background:#fff;border:1px solid #E5EAF0;border-radius:16px;padding:16px;}
+  .card .lab{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#64748B;font-weight:700;margin-bottom:8px;}
+  .ring{display:flex;align-items:center;gap:12px;}
+  .ring .pct{font-size:24px;font-weight:800;color:var(--ink);}
+  .chart{background:#fff;border:1px solid #E5EAF0;border-radius:16px;padding:16px;}
+  .chart .lab{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#64748B;font-weight:700;margin-bottom:6px;display:flex;justify-content:space-between;}
+  .chart .down{color:var(--teal);}
+  .bars{display:flex;align-items:flex-end;gap:10px;height:70px;margin-top:6px;}
+  .bars div{flex:1;background:var(--teal);border-radius:6px 6px 0 0;opacity:.85;}
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="screen">
+      <div class="top">
+        <div class="k">Knee recovery · Week 3</div>
+        <div class="t"><span class="logo"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Your progress</div>
+      </div>
+      <div class="pad">
+        <div class="hero-num">
+          <div class="big">+18°</div>
+          <div class="sub">Knee flexion gained in 3 weeks — ahead of your recovery curve</div>
+        </div>
+        <div class="row2">
+          <div class="card">
+            <div class="lab">Adherence</div>
+            <div class="ring">
+              <svg width="52" height="52" viewBox="0 0 52 52">
+                <circle cx="26" cy="26" r="21" fill="none" stroke="#E5EAF0" stroke-width="7"/>
+                <circle cx="26" cy="26" r="21" fill="none" stroke="#10B981" stroke-width="7" stroke-linecap="round"
+                        stroke-dasharray="132" stroke-dashoffset="18" transform="rotate(-90 26 26)"/>
+              </svg>
+              <span class="pct">86%</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="lab">Pain trend ↓</div>
+            <svg width="100%" height="52" viewBox="0 0 120 52" preserveAspectRatio="none">
+              <polyline points="4,10 30,18 58,26 86,38 116,44" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="116" cy="44" r="3.5" fill="#10B981"/>
+            </svg>
+          </div>
+        </div>
+        <div class="chart">
+          <div class="lab"><span>Range of motion</span><span class="down">improving</span></div>
+          <div class="bars"><div style="height:46%"></div><div style="height:62%"></div><div style="height:78%"></div><div style="height:92%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -199,14 +199,18 @@ const PRODUCTS = [
         "or reps get sloppy, tomorrow's program dials back automatically and flags a human PT " +
         "when the trend looks wrong. The human clinicians don't disappear — their attention " +
         "gets routed to the members who actually need it.",
-      ]},
+      ],
+        image: { src: "assets/physio-coach.png",
+          caption: "Concept: an AI coach that already knows your plan — it adapts tomorrow's session from today's feedback and escalates to a human PT when something sounds wrong." } },
       { heading: "Why it matters", body: [
         "This is the difference between an app that stores your program and one that runs your " +
         "session. Better form means faster, safer recovery; instant feedback means people stay " +
         "engaged instead of quietly giving up; and adaptive plans plus smart escalation let a " +
         "small clinical team safely support far more people. That combination — better outcomes " +
         "and better economics — is exactly what a payer or employer is buying.",
-      ]},
+      ],
+        image: { src: "assets/physio-progress.png",
+          caption: "Concept: a progress view that turns adherence, pain, and range-of-motion into something a member — and a payer — can actually see." } },
     ],
     capabilities: [
       "Real-time form scoring from the phone camera (on-device pose estimation)",

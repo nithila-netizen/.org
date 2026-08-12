@@ -581,3 +581,7 @@ a.db-row:hover { padding-left: 14px; background: var(--paper-2); text-decoration
 .p-hero .wrap { grid-template-columns: 1fr; max-width: 900px; }
 .p-hero h1 { max-width: 18ch; }
 .research-grid .photo img { filter: grayscale(1) contrast(1.02); }
+
+/* how-it-works flow diagram (second image on each review) */
+.flow-shot { margin: 10px 0 46px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.flow-shot img { width: 100%; display: block; }

@@ -113,8 +113,8 @@ function render() {
   const cat = (typeof CATALOG !== "undefined") ? CATALOG.find(c => c.full === p.id) : null;
   const rating = cat && cat.rating;
   const catField = cat ? cat.field : (ind ? ind.name : "");
-  const signal = p.status === "adds-ai" ? "My concept"
-    : (p.status === "watch" ? "Emerging" : "Established product");
+  const signal = p.status === "adds-ai" ? "Needs to be AI-ified"
+    : (p.status === "watch" ? "One to watch" : "Already AI");
 
   el.innerHTML = `
     <p class="crumb">${crumb}</p>
@@ -135,6 +135,7 @@ function render() {
       <div>
         ${heroHTML(p.hero)}
         ${articleHTML(p.article)}
+        <figure class="flow-shot"><img src="assets/protos/flow-${encodeURIComponent(p.id)}.png" alt="How ${esc(p.name)} works" loading="lazy" onerror="this.closest('.flow-shot').style.display='none'" /></figure>
 
         <p class="block-label">Key capabilities</p>
         <div class="cap-grid">${(p.capabilities || []).map(capHTML).join("")}</div>

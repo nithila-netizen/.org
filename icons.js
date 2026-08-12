@@ -46,7 +46,7 @@ function stars(r) {
 
 // Short label for a catalog entry's status.
 function statusLabel(s) {
-  return s === "adds-ai" ? "Concept" : (s === "watch" ? "Watch" : "Established");
+  return s === "adds-ai" ? "Needs to be AI-ified" : (s === "watch" ? "One to watch" : "Already AI");
 }
 
 // Escape text before inserting into HTML.

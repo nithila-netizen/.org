@@ -10,7 +10,7 @@ function renderHeader() {
       <nav class="nav">
         <a href="reviews.html">Coverage</a>
         <a href="index.html#work">Reviews</a>
-        <a href="index.html#onset">ONSET</a>
+        <a href="index.html#projects">Projects</a>
         <a href="index.html#involvement">Experience</a>
         <a href="index.html#about">About</a>
         <a href="index.html#contact">Contact</a>

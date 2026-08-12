@@ -64,27 +64,41 @@ document.getElementById("areas-grid").innerHTML = INDUSTRIES.map((ind, i) => {
     </a>`;
 }).join("");
 
-/* ---- ONSET ---------------------------------------------------------------- */
+/* ---- Instagram profile card (live link to the public account) ------------- */
+function igGlyph() {
+  return `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>`;
+}
+function igCard(handle, url, note) {
+  const h = handle || "Instagram";
+  const u = url || ("https://instagram.com/" + String(handle || "").replace(/^@/, ""));
+  return `<a class="ig-card" href="${esc(u)}" target="_blank" rel="noopener">
+    <span class="ig-glyph">${igGlyph()}</span>
+    <span class="ig-body"><span class="ig-handle">${esc(h)}</span><span class="ig-note">${esc(note || "View the latest posts on Instagram")}</span></span>
+    <span class="ig-go">Open →</span>
+  </a>`;
+}
+
+/* ---- ONSET (featured project inside Projects) ----------------------------- */
 if (typeof ONSET !== "undefined") {
-  const igLink = ONSET.ig && ONSET.ig.url
-    ? `<a class="onset-ig" href="${esc(ONSET.ig.url)}" target="_blank" rel="noopener">Follow ONSET on Instagram ${icon("external")}</a>`
-    : (ONSET.ig && ONSET.ig.handle ? `<span class="onset-ig">${esc(ONSET.ig.handle)}</span>` : "");
-  const block = (h, t) => t ? `<div class="onset-block"><h4>${esc(h)}</h4><p>${esc(t)}</p></div>` : "";
-  document.getElementById("onset-slot").innerHTML = `
-    <p class="eyebrow">My venture${ONSET.founded ? " · " + esc(ONSET.founded) : ""}</p>
-    <h2>ONSET</h2>
-    <p class="lede">${esc(ONSET.oneLiner)}</p>
-    <div class="onset-grid">
-      <div class="onset-story">
-        ${block("Why I made it", ONSET.why)}
-        ${block("Who it helps", ONSET.who)}
-        ${block("How it works", ONSET.how)}
-        ${block("Why it matters", ONSET.impact)}
+  const ofBlock = (k, t) => t ? `<div class="of-item"><span class="of-k">${esc(k)}</span><p>${esc(t)}</p></div>` : "";
+  document.getElementById("onset-feature").innerHTML = `
+    <div class="onset-feature">
+      <div class="of-head">
+        <div>
+          <p class="of-eyebrow">Flagship project · Founder</p>
+          <h3>Onset</h3>
+        </div>
+        <span class="of-badge">Independent media brand</span>
       </div>
-      <div>
-        ${carousel(ONSET.posts, "ONSET post")}
-        ${igLink}
+      <p class="of-lead">${esc(ONSET.oneLiner)}</p>
+      <div class="of-grid">
+        ${ofBlock("Why I built it", ONSET.why)}
+        ${ofBlock("Who it's for", ONSET.who)}
+        ${ofBlock("How it works", ONSET.how)}
+        ${ofBlock("What I built", ONSET.impact)}
       </div>
+      ${igCard(ONSET.ig && ONSET.ig.handle, ONSET.ig && ONSET.ig.url, "Weekly on Instagram — see the latest posts")}
     </div>`;
 }
 
@@ -113,8 +127,7 @@ if (typeof MARKETING !== "undefined") {
       : "";
     return `<div class="mkt">
         <div class="mkt-head">${head}<div><h3>${esc(m.name)}</h3><p class="role">${esc(m.role)}</p></div></div>
-        ${carousel(m.posts, m.name + " post")}
-        ${ig ? `<div style="margin-top:12px">${ig}</div>` : ""}
+        ${igCard(m.ig && m.ig.handle, m.ig && m.ig.url, "See my work — latest posts on Instagram")}
       </div>`;
   }).join("");
 }

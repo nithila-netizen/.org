@@ -496,3 +496,29 @@ a.db-row:hover { padding-left: 14px; background: var(--paper-2); text-decoration
 
 /* professionalize the review lead (less blog) */
 .article-prose p.lead { font-size: 20px; }
+
+/* ==========================================================================
+   ONSET as a featured project + Instagram profile cards
+   ========================================================================== */
+.onset-feature { background: var(--ink); color: #F1ECE3; border-radius: var(--radius); padding: 40px; margin-bottom: 40px; }
+.of-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+.of-eyebrow { font-family: var(--sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #C0A79C; margin: 0 0 8px; font-weight: 600; }
+.onset-feature h3 { font-family: var(--display); font-weight: 500; font-size: clamp(30px,4vw,42px); letter-spacing: -0.02em; margin: 0; color: #fff; }
+.of-badge { font-family: var(--sans); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: #fff; border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 7px 13px; white-space: nowrap; }
+.of-lead { font-family: var(--display); font-weight: 500; font-size: clamp(20px,2.6vw,26px); line-height: 1.35; letter-spacing: -0.01em; max-width: 760px; margin: 18px 0 28px; color: #F1ECE3; }
+.of-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px 40px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,0.14); }
+@media (max-width: 720px){ .of-grid { grid-template-columns: 1fr; } .onset-feature { padding: 28px; } }
+.of-item .of-k { font-family: var(--sans); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+.of-item p { font-size: 15.5px; line-height: 1.6; color: #D8D0C4; margin: 8px 0 0; }
+
+.ig-card { display: inline-flex; align-items: center; gap: 14px; margin-top: 28px; padding: 14px 18px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--paper); color: var(--ink); }
+.onset-feature .ig-card { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.18); color: #fff; }
+.ig-card:hover { text-decoration: none; border-color: var(--accent); }
+.ig-glyph { color: var(--accent); display: grid; place-items: center; }
+.onset-feature .ig-glyph { color: #fff; }
+.ig-body { display: flex; flex-direction: column; }
+.ig-handle { font-family: var(--sans); font-weight: 700; font-size: 15px; letter-spacing: 0.01em; }
+.ig-note { font-family: var(--sans); font-size: 12.5px; color: var(--muted); }
+.onset-feature .ig-note { color: #B9AE9C; }
+.ig-go { font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: var(--accent); margin-left: 8px; }
+.onset-feature .ig-go { color: #fff; }

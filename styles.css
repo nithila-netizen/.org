@@ -407,6 +407,33 @@ a:hover { color: var(--accent-ink); }
 /* keep inline link icons small (was rendering huge) */
 .onset-ig svg, .glance .visit svg, .mkt svg { width: 13px; height: 13px; vertical-align: -1px; display: inline-block; }
 
+/* glossary tooltips */
+.term { border-bottom: 1.5px dashed var(--accent); cursor: help; position: relative; }
+.term:focus { outline: none; }
+.term::after {
+  content: attr(data-def);
+  position: absolute; left: 0; bottom: calc(100% + 9px); z-index: 40;
+  width: max-content; max-width: 270px;
+  background: var(--ink); color: #fff;
+  font-family: var(--sans); font-size: 13.5px; line-height: 1.5; letter-spacing: 0; text-transform: none; font-style: normal; font-weight: 400;
+  padding: 11px 13px; border-radius: 10px;
+  box-shadow: 0 14px 34px -14px rgba(0,0,0,.55);
+  opacity: 0; visibility: hidden; transform: translateY(4px); transition: opacity .15s, transform .15s, visibility .15s;
+  pointer-events: none;
+}
+.term::before {
+  content: ""; position: absolute; left: 16px; bottom: calc(100% + 4px); z-index: 40;
+  border: 5px solid transparent; border-top-color: var(--ink);
+  opacity: 0; visibility: hidden; transition: opacity .15s, visibility .15s;
+}
+.term:hover::after, .term:focus::after, .term:hover::before, .term:focus::before { opacity: 1; visibility: visible; transform: none; }
+
+/* terms & tools to explore */
+.explore { margin-top: 44px; }
+.explore-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.explore-chip { font-family: var(--sans); font-size: 13px; letter-spacing: 0.02em; color: var(--ink-2); border: 1px solid var(--line-2); border-radius: 999px; padding: 8px 15px; }
+.explore-chip:hover { background: var(--accent); border-color: var(--accent); color: #fff; text-decoration: none; }
+
 /* research labs */
 .research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .research-grid .photo { aspect-ratio: 4 / 3; }

@@ -17,19 +17,58 @@ function heroHTML(hero) {
   const cap = hero.caption ? `<figcaption>${esc(hero.caption)}</figcaption>` : "";
   return `<figure class="hero-shot"><div class="frame"><img src="${esc(hero.img)}" alt="${esc(hero.caption || "")}" /></div>${cap}</figure>`;
 }
+// --- Glossary tooltips: auto-wrap known terms (first use per article) -------
+const _terms = (typeof GLOSSARY !== "undefined")
+  ? Object.keys(GLOSSARY).sort((a, b) => b.length - a.length) : [];
+function _reEsc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+function wrapTerms(escaped, used) {
+  let out = escaped;
+  for (const term of _terms) {
+    const key = term.toLowerCase();
+    if (used.has(key)) continue;
+    try {
+      const re = new RegExp("(^|[^A-Za-z0-9])(" + _reEsc(term) + ")(?![A-Za-z0-9])", "i");
+      const m = re.exec(out);
+      if (!m) continue;
+      const start = m.index + m[1].length;
+      const span = `<span class="term" tabindex="0" data-def="${esc(GLOSSARY[term])}">${m[2]}</span>`;
+      out = out.slice(0, start) + span + out.slice(start + m[2].length);
+      used.add(key);
+    } catch (e) { /* older browsers: skip this term */ }
+  }
+  return out;
+}
+
 function articleHTML(blocks) {
   if (!blocks || !blocks.length) return "";
+  const used = new Set();
   const parts = blocks.map((b, i) => {
     const h = b.heading ? `<h2>${esc(b.heading)}</h2>` : "";
-    const ps = (b.body || []).map((p, j) =>
-      (i === 0 && j === 0) ? `<p class="lead">${esc(p)}</p>` : `<p>${esc(p)}</p>`
-    ).join("");
+    const ps = (b.body || []).map((p, j) => {
+      const html = wrapTerms(esc(p), used);
+      return (i === 0 && j === 0) ? `<p class="lead">${html}</p>` : `<p>${html}</p>`;
+    }).join("");
     const fig = (b.image && b.image.src)
       ? `<figure><img src="${esc(b.image.src)}" alt="${esc(b.image.caption || "")}" />${b.image.caption ? `<figcaption>${esc(b.image.caption)}</figcaption>` : ""}</figure>`
       : "";
     return h + ps + fig;
   }).join("");
   return `<div class="article-prose">${parts}</div>`;
+}
+
+function exploreHTML(list) {
+  if (!list || !list.length) return "";
+  const chips = list.map(item => {
+    const label = typeof item === "string" ? item : item.label;
+    const url = (item && item.url) ? item.url
+      : "https://www.google.com/search?q=" + encodeURIComponent(label);
+    return `<a class="explore-chip" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`;
+  }).join("");
+  return `<div class="explore">
+    <p class="block-label">Terms &amp; tools to explore</p>
+    <p style="font-family:var(--sans);font-size:13px;color:var(--muted);margin:-8px 0 16px">Tap a highlighted word in the article for a quick definition — or click any of these to research it yourself.</p>
+    <div class="explore-chips">${chips}</div>
+  </div>`;
 }
 function vItem(iconName, text) { return `<li>${icon(iconName)}<span>${esc(text)}</span></li>`; }
 function glanceRow(iconName, key, value) {
@@ -104,6 +143,7 @@ function render() {
         </div>
 
         ${p.quote ? `<div class="quote"><p>“${esc(p.quote)}”</p><div class="attrib">My take · Nithila Notes</div></div>` : ""}
+        ${exploreHTML(p.explore)}
       </div>
 
       <aside>

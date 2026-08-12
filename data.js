@@ -36,6 +36,9 @@ const PROFILE = {
     "always crediting the source.",
     "It's how I sharpen the instincts a product manager lives on: reading a market, judging a " +
     "product honestly, and turning a critique into a concrete direction.",
+    "A thread runs through the rest of what I do, too: getting kids excited — about movement with " +
+    "Girls on the Run and about science with UF Teach — and staying active and outdoors myself, " +
+    "usually with my little sister. Curiosity and energy are the throughline.",
   ],
   skills: [
     "Product strategy", "AI / ML literacy", "Healthcare markets",
@@ -240,9 +243,11 @@ const INDUSTRIES = [
     icon: "scan",
     blurb: "Reading scans and samples with expert-level accuracy, available anywhere.",
     subIndustries: [
-      { id: "radiology",  name: "Radiology" },
-      { id: "pathology",  name: "Pathology" },
-      { id: "at-home",    name: "At-Home Testing" },
+      { id: "radiology",    name: "Radiology" },
+      { id: "pathology",    name: "Pathology" },
+      { id: "dermatology",  name: "Dermatology" },
+      { id: "ophthalmology",name: "Ophthalmology" },
+      { id: "at-home",      name: "At-Home Testing" },
     ],
   },
   {
@@ -276,7 +281,95 @@ const INDUSTRIES = [
       { id: "risk-prediction", name: "Risk Prediction" },
     ],
   },
+  {
+    id: "chronic",
+    name: "Chronic Disease Management",
+    icon: "heart",
+    blurb: "Helping people manage lifelong conditions day to day.",
+    subIndustries: [
+      { id: "diabetes", name: "Diabetes" },
+    ],
+  },
+  {
+    id: "mental-health",
+    name: "Mental Health",
+    icon: "heart",
+    blurb: "Expanding access to support, safely.",
+    subIndustries: [
+      { id: "digital-therapy", name: "Digital Therapy & Support" },
+    ],
+  },
+  {
+    id: "womens-health",
+    name: "Women's & Maternal Health",
+    icon: "heart",
+    blurb: "Care for pregnancy, postpartum, and beyond.",
+    subIndustries: [
+      { id: "maternal-postpartum", name: "Maternal & Postpartum" },
+    ],
+  },
+  {
+    id: "care-ops",
+    name: "Care Delivery & Operations",
+    icon: "scan",
+    blurb: "The workflows and paperwork that run medicine.",
+    subIndustries: [
+      { id: "clinical-documentation", name: "Clinical Documentation" },
+    ],
+  },
+  {
+    id: "wellness",
+    name: "Sleep & Everyday Health",
+    icon: "heart",
+    blurb: "The daily habits that keep people well.",
+    subIndustries: [
+      { id: "sleep", name: "Sleep & Recovery" },
+    ],
+  },
+  {
+    id: "elder-care",
+    name: "Elder & Home Care",
+    icon: "heart",
+    blurb: "Helping older adults stay safe and independent at home.",
+    subIndustries: [
+      { id: "aging-in-place", name: "Aging in Place" },
+    ],
+  },
 ];
+
+/* --------------------------------------------------------------------------
+   GLOSSARY — plain-English definitions. Any term here that appears in an
+   article gets a hover/tap tooltip automatically. Add terms freely.
+   -------------------------------------------------------------------------- */
+const GLOSSARY = {
+  "atrial fibrillation": "An irregular, often rapid heart rhythm that raises the risk of stroke.",
+  "AFib": "Short for atrial fibrillation — an irregular heart rhythm that raises stroke risk.",
+  "ECG": "Electrocardiogram — a recording of the heart's electrical activity, used to spot rhythm problems.",
+  "electrocardiogram": "A recording of the heart's electrical activity, used to spot rhythm problems.",
+  "ambient AI scribe": "AI that listens to a clinical visit and drafts the medical note automatically.",
+  "diabetic retinopathy": "Diabetes-related damage to the blood vessels of the retina; a leading cause of blindness.",
+  "autonomous AI": "AI cleared to make a screening decision on its own, without a specialist reviewing every case.",
+  "autonomous screening": "Screening where the AI itself returns the result, without a specialist reading each image.",
+  "continuous glucose monitor": "A wearable sensor that tracks blood-sugar levels in real time.",
+  "CGM": "Continuous glucose monitor — a wearable sensor that tracks blood sugar in real time.",
+  "time-in-range": "The share of the day a person's blood sugar stays within a healthy target band.",
+  "PHQ-9": "A standard 9-question questionnaire that measures the severity of depression symptoms.",
+  "measurement-based care": "Adjusting treatment using repeated, standardized symptom scores over time.",
+  "teledermatology": "Diagnosing skin conditions remotely from photos or video instead of an in-person visit.",
+  "n-of-1": "An experiment run on a single person to learn what works specifically for them.",
+  "pulmonary embolism": "A sudden blockage in an artery of the lungs — a medical emergency.",
+  "triage": "Sorting cases by urgency so the most critical are handled first.",
+  "alert fatigue": "When too many alerts cause people to start ignoring them — including important ones.",
+  "automation bias": "The tendency to over-trust an automated system's output.",
+  "postpartum": "The period after childbirth, when the body is recovering.",
+  "false positive": "When a test flags a problem that isn't actually there.",
+  "false negative": "When a test misses a problem that is actually there.",
+  "sensitivity": "How well a test catches the true cases it is meant to find.",
+  "aging in place": "Staying safely in one's own home while getting older, instead of moving to a facility.",
+  "readmission": "Returning to the hospital soon after being discharged.",
+  "FDA clearance": "U.S. Food and Drug Administration sign-off that a medical device is safe to market.",
+  "De Novo": "An FDA pathway that authorizes a novel, lower-risk device type for the first time.",
+};
 
 /* --------------------------------------------------------------------------
    PRODUCTS — one block = one review page.
@@ -420,6 +513,206 @@ const PRODUCTS = [
       pricing: "Pharma partnerships/co-development",
       website: "",
     },
+  },
+
+  {
+    id: "pulseguard",
+    name: "Continuous heart monitoring, built on KardiaMobile",
+    industry: "cardiology", subIndustry: "wearables", status: "has-ai",
+    tagline: "AliveCor proved a personal ECG can fit in your pocket. Here's how I'd turn spot-checks into real risk monitoring.",
+    hero: { img: "assets/protos/pulseguard.png", caption: "Concept prototype: turning at-home ECG readings into a continuous AFib-burden trend with escalation." },
+    article: [
+      { body: ["KardiaMobile put a medical-grade ECG in people's hands and taught them to catch atrial fibrillation at home. The next leap isn't a better single reading — it's understanding the rhythm over time."] },
+      { heading: "Where it stands", body: ["Today most personal ECG use is reactive: you feel a flutter, you take a reading, you get a snapshot. That's valuable, but AFib is a moving target — its burden rises and falls, and isolated readings miss the trend that actually predicts stroke risk."] },
+      { heading: "My take — from spot-checks to a trend line", body: ["I'd model AFib burden continuously and turn it into a single trend a patient and cardiologist can watch together. Pair each reading with context — sleep, caffeine, stress — so the app surfaces personal triggers, and set clear thresholds that escalate to a clinician automatically instead of leaving people to interpret squiggles alone."] },
+      { heading: "Why it matters", body: ["Stroke prevention depends on catching rising AFib burden early. A tool that trends risk and escalates at the right moment turns a clever gadget into genuine preventive care."] },
+    ],
+    capabilities: ["Continuous AFib-burden trending from at-home ECGs","Personal trigger detection (sleep, caffeine, stress)","Automatic escalation to a cardiologist at set thresholds","Plain-language explanations of every reading"],
+    strengths: ["Builds on a trusted, FDA-cleared ECG","Turns raw readings into decisions","Runs on hardware patients already own"],
+    watchOuts: ["Consumer ECG can miss or misread some arrhythmias","Trend claims need clinical validation, not just demos"],
+    quote: "AliveCor won the hardware. The next win is the story the data tells over months — and who acts on it.",
+    glance: { company: "AliveCor (KardiaMobile)", founded: "2011", headquarters: "Mountain View, CA", regulatory: "FDA-cleared personal ECG", pricing: "Device + optional subscription", website: "" },
+    explore: ["AliveCor / KardiaMobile","Atrial fibrillation","ECG (electrocardiogram)","AFib burden","Stroke prevention"],
+  },
+
+  {
+    id: "mindbridge",
+    name: "Safer AI mental-health support, built on Wysa",
+    industry: "mental-health", subIndustry: "digital-therapy", status: "has-ai",
+    tagline: "Wysa made supportive AI available 24/7. Here's how I'd make it safe enough to sit next to real therapy.",
+    hero: { img: "assets/protos/mindbridge.png", caption: "Concept prototype: daily check-ins with crisis-safe triage, human handoff, and symptom tracking." },
+    article: [
+      { body: ["Wysa showed that millions will open up to a supportive AI at 2am when no human is available. The hard part isn't conversation — it's knowing its limits and handling the moments that are genuinely dangerous."] },
+      { heading: "Where it stands", body: ["General wellness chatbots risk two failure modes: missing a crisis, and drifting into advice they shouldn't give. Trust in mental health is fragile, and one mishandled crisis erodes it for everyone."] },
+      { heading: "My take — build for the edges", body: ["I'd put a crisis-safe triage layer first: detect risk language, respond with vetted protocols, and warm-hand-off to a human or hotline immediately. Then add measurement-based care — track PHQ-9 and anxiety scores over time — so the tool complements a therapist with data, rather than pretending to replace one."] },
+      { heading: "Why it matters", body: ["Done right, AI support extends scarce clinicians into the in-between moments. Done carelessly, it's a liability. The difference is entirely in how it handles the edges."] },
+    ],
+    capabilities: ["Crisis detection with human/hotline handoff","Measurement-based care (PHQ-9, anxiety tracking)","Between-session check-ins","Clear scope limits, no clinical overreach"],
+    strengths: ["Meets people where and when they are","Complements therapists with longitudinal data","Lowers the barrier to a first step"],
+    watchOuts: ["Crisis handling must be clinically validated","Privacy of sensitive conversations is paramount"],
+    quote: "In mental health, the product IS the safety design. Everything else is table stakes.",
+    glance: { company: "Wysa", founded: "2015", headquarters: "Boston / London / Bangalore", regulatory: "Wellness tool; some breakthrough-device work", pricing: "Freemium + employer / health-plan", website: "" },
+    explore: ["Wysa","Measurement-based care","PHQ-9 depression screening","Crisis triage in digital health","988 Suicide & Crisis Lifeline"],
+  },
+
+  {
+    id: "glucopilot",
+    name: "Predictive glucose coaching, built on Dexcom",
+    industry: "chronic", subIndustry: "diabetes", status: "has-ai",
+    tagline: "Dexcom made glucose visible in real time. Here's how I'd turn that stream into a single next step.",
+    hero: { img: "assets/protos/glucopilot.png", caption: "Concept prototype: forecasting a low 45 minutes out and giving one specific action." },
+    article: [
+      { body: ["Continuous glucose monitors gave people a live view of their blood sugar. But a wall of numbers is not the same as knowing what to do — and most users still learn by trial and error."] },
+      { heading: "Where it stands", body: ["A CGM shows where you are now; it rarely tells you where you're heading or what to do about it. That insight-to-action gap is where adherence and outcomes are won or lost."] },
+      { heading: "My take — forecast, then one action", body: ["I'd forecast highs and lows 30–60 minutes out from food, activity, and personal patterns, and collapse that into a single, specific instruction — 'have 15g of carbs now.' Over time the model learns each person, so the guidance gets sharper and the alerts get quieter."] },
+      { heading: "Why it matters", body: ["Fewer dangerous lows, less mental load, better time-in-range. Turning data into one clear move is the difference between a monitor and a coach."] },
+    ],
+    capabilities: ["30–60 minute glucose forecasting","One specific recommended action","Personalized pattern learning","Quieter, smarter alerts"],
+    strengths: ["Builds on a proven, FDA-cleared CGM","Reduces the daily cognitive load of diabetes","Gets more accurate per person over time"],
+    watchOuts: ["Predictive advice must fail safe","Over-alerting causes people to tune it out"],
+    quote: "A CGM tells you the weather. A coach tells you to bring an umbrella — now.",
+    glance: { company: "Dexcom", founded: "1999", headquarters: "San Diego, CA", regulatory: "FDA-cleared continuous glucose monitor", pricing: "Device + sensors (often insured)", website: "" },
+    explore: ["Dexcom","Continuous glucose monitor (CGM)","Time in range","Glucose forecasting","Type 2 diabetes management"],
+  },
+
+  {
+    id: "readrank",
+    name: "An explainable radiology worklist, built on Aidoc",
+    industry: "diagnostics", subIndustry: "radiology", status: "has-ai",
+    tagline: "Aidoc flags urgent findings on scans. Here's how I'd turn many detectors into one trusted worklist.",
+    hero: { img: "assets/protos/readrank.png", caption: "Concept prototype: one urgency-ranked worklist with region highlights and confidence." },
+    article: [
+      { body: ["Aidoc showed AI can catch time-critical findings — a bleed, a clot — and nudge them up the queue. As these detectors multiply, the risk shifts from missing disease to overwhelming radiologists with disconnected alerts."] },
+      { heading: "Where it stands", body: ["Each condition tends to get its own model and its own alert. Radiologists end up juggling separate flags with little sense of relative priority — or why the AI spoke up at all."] },
+      { heading: "My take — one list, with the 'why'", body: ["I'd merge the detectors into a single, urgency-ranked worklist, each item carrying a highlighted region and a confidence so a radiologist can accept or dismiss in seconds. Then close the loop: learn from which flags get accepted to keep the ranking honest and fight alert fatigue."] },
+      { heading: "Why it matters", body: ["The bottleneck in radiology isn't detection anymore — it's attention. A tool that ranks and explains protects the scarcest resource in the department, while guarding against automation bias."] },
+    ],
+    capabilities: ["Unified, urgency-ranked worklist","Region highlight + confidence per finding","Feedback loop from radiologist accept/dismiss","Triage across multiple conditions"],
+    strengths: ["Extends an FDA-cleared triage platform","Designed around radiologist attention","Explainability builds trust"],
+    watchOuts: ["Ranking errors could deprioritize real disease","Needs guardrails against automation bias"],
+    quote: "When every finding shouts, nothing gets heard. The product job is prioritization, not just detection.",
+    glance: { company: "Aidoc", founded: "2016", headquarters: "Tel Aviv, Israel", regulatory: "FDA-cleared radiology triage", pricing: "Enterprise / hospital license", website: "" },
+    explore: ["Aidoc","Radiology triage AI","Pulmonary embolism","Alert fatigue","Explainable AI in medicine"],
+  },
+
+  {
+    id: "nuramom",
+    name: "An AI postpartum companion, built on Elvie",
+    industry: "womens-health", subIndustry: "maternal-postpartum", status: "adds-ai",
+    tagline: "Elvie built beloved devices for new mothers. Here's how I'd add AI that catches warning signs early.",
+    hero: { img: "assets/protos/nuramom.png", caption: "Concept prototype: reading recovery data to flag postpartum warning signs and route to care." },
+    article: [
+      { body: ["Elvie earned trust with products designed around real postpartum life. The unmet need around them is intelligence: postpartum is when serious problems hide, and where follow-up is thinnest."] },
+      { heading: "Where it stands", body: ["New parents are sent home with devices and pamphlets, then largely left alone. Postpartum warning signs — mood, bleeding, supply — often go unnoticed until they're urgent."] },
+      { heading: "My take — quiet monitoring that routes to care", body: ["I'd read the data mothers already generate to surface early signals — a drop in supply, a mood-screen red flag — and route them to their care team with one tap. Not another dashboard to manage; a companion that watches so an exhausted parent doesn't have to."] },
+      { heading: "Why it matters", body: ["Maternal outcomes hinge on catching problems in the weeks after birth. Software that closes the postpartum follow-up gap can be genuinely life-saving."] },
+    ],
+    capabilities: ["Postpartum warning-sign detection","Supply & recovery insights","Mood screening with escalation","One-tap route to a care team"],
+    strengths: ["Builds on trusted, loved hardware","Targets a dangerous care gap","Low-effort for exhausted users"],
+    watchOuts: ["Must avoid alarming without cause","Clinical claims require validation and consent"],
+    quote: "The postpartum period is where the system goes quiet. That silence is the product opportunity — and the responsibility.",
+    glance: { company: "Elvie", founded: "2013", headquarters: "London, UK", regulatory: "Consumer health devices", pricing: "Consumer purchase", website: "" },
+    explore: ["Elvie","Postpartum care","Maternal mortality","Postpartum depression screening","Remote patient monitoring"],
+  },
+
+  {
+    id: "dermacheck",
+    name: "Trustworthy skin checks, built on SkinVision",
+    industry: "diagnostics", subIndustry: "dermatology", status: "has-ai",
+    tagline: "SkinVision assesses skin-cancer risk from a photo. Here's how I'd make it fair and finish the loop.",
+    hero: { img: "assets/protos/dermacheck.png", caption: "Concept prototype: photo risk validated across skin tones, ending in a teledermatology booking." },
+    article: [
+      { body: ["SkinVision showed a phone photo can flag concerning skin lesions and prompt people to act. The credibility of any such tool rests on two things: does it work across skin tones, and what happens after a scary result?"] },
+      { heading: "Where it stands", body: ["Many dermatology AIs are trained mostly on lighter skin, and a high-risk result can leave a user anxious with no clear next step — the two failure modes that break trust fastest."] },
+      { heading: "My take — validate fairly, then book the visit", body: ["I'd hold the model to validated performance across skin tones and show confidence honestly, including 'unsure.' Then connect a high-risk result straight to a teledermatology appointment, so the product ends in care, not in a worried search."] },
+      { heading: "Why it matters", body: ["Early detection saves lives only if people trust the result and can act on it. Fairness and follow-through are the whole game — a false negative here is dangerous."] },
+    ],
+    capabilities: ["Skin-lesion risk from a photo","Validated across skin tones","Honest confidence, including 'unsure'","Teledermatology booking for high risk"],
+    strengths: ["Extends a CE-marked medical device","Directly addresses equity concerns","Ends in a next step, not anxiety"],
+    watchOuts: ["False negatives are dangerous in cancer screening","Requires transparent, tone-stratified validation"],
+    quote: "A skin-cancer screener is only as good as the darkest skin it works on — and the appointment it books next.",
+    glance: { company: "SkinVision", founded: "2012", headquarters: "Amsterdam, Netherlands", regulatory: "CE-marked medical device", pricing: "Subscription", website: "" },
+    explore: ["SkinVision","Melanoma / skin cancer","Teledermatology","Algorithmic bias in dermatology","Sensitivity vs specificity"],
+  },
+
+  {
+    id: "visitcopilot",
+    name: "From scribe to visit co-pilot, built on Abridge",
+    industry: "care-ops", subIndustry: "clinical-documentation", status: "has-ai",
+    tagline: "Abridge turns a conversation into a note. Here's how I'd make it help during the visit, not just after.",
+    hero: { img: "assets/protos/visitcopilot.png", caption: "Concept prototype: an ambient note plus live reminders and a plain-language patient summary." },
+    article: [
+      { body: ["Abridge attacked one of medicine's biggest time sinks: documentation. An ambient AI scribe that writes the note frees clinicians to look at patients again. The next step is helping while the visit is still happening."] },
+      { heading: "Where it stands", body: ["Most ambient scribes are after-the-fact stenographers — they summarize what happened. The richer opportunity is real-time support that improves the visit itself."] },
+      { heading: "My take — a co-pilot in the room", body: ["I'd surface guideline reminders and missing questions live ('you haven't discussed medications'), then auto-draft the patient's after-visit summary in plain language. The scribe becomes a quiet second brain, not just a transcriptionist."] },
+      { heading: "Why it matters", body: ["Documentation burden drives burnout; missed steps drive errors. A tool that lightens the first and reduces the second earns its place in the room."] },
+    ],
+    capabilities: ["Ambient note drafted in seconds","Live guideline & gap reminders","Plain-language after-visit summary","Structured data back to the record"],
+    strengths: ["Builds on a proven documentation product","Attacks clinician burnout directly","Improves the visit, not just the paperwork"],
+    watchOuts: ["Live prompts must not distract or overstep","Accuracy and consent are non-negotiable"],
+    quote: "Writing the note was step one. Making the visit better while it happens is where the value compounds.",
+    glance: { company: "Abridge", founded: "2018", headquarters: "Pittsburgh / San Francisco", regulatory: "Clinical documentation tool", pricing: "Enterprise / health-system license", website: "" },
+    explore: ["Abridge","Ambient AI scribe","Clinician burnout","Clinical decision support","After-visit summary"],
+  },
+
+  {
+    id: "retinascreen",
+    name: "Closing the loop on eye screening, built on IDx-DR",
+    industry: "diagnostics", subIndustry: "ophthalmology", status: "has-ai",
+    tagline: "Digital Diagnostics built the first autonomous AI to diagnose diabetic retinopathy. Here's how I'd finish the job.",
+    hero: { img: "assets/protos/retinascreen.png", caption: "Concept prototype: autonomous screening in a pharmacy that auto-books the referral on a positive." },
+    article: [
+      { body: ["Digital Diagnostics' IDx-DR made history as an autonomous AI that can screen for diabetic retinopathy without a specialist reading every image. Detection is solved. What isn't solved is what happens next."] },
+      { heading: "Where it stands", body: ["Most people with diabetes who should be screened never get to an ophthalmologist. And even when screening flags a problem, the referral often falls through the cracks."] },
+      { heading: "My take — screen everywhere, then book the referral", body: ["I'd push autonomous screening into pharmacies and primary care where patients already are, and — critically — auto-book the follow-up appointment when a result is positive. The bottleneck isn't detection; it's follow-through, so the product should own the hand-off."] },
+      { heading: "Why it matters", body: ["Diabetic retinopathy is a leading cause of preventable blindness — preventable precisely when it's caught and treated in time. Owning the referral is where sight is actually saved."] },
+    ],
+    capabilities: ["Autonomous diabetic-retinopathy screening","Deployable in pharmacy / primary care","Automatic referral booking on positives","Patient reminders and navigation"],
+    strengths: ["Extends a landmark FDA-authorized autonomous AI","Meets patients where they already are","Targets the real gap: follow-through"],
+    watchOuts: ["Referral automation needs clean clinical workflows","Image quality varies outside eye clinics"],
+    quote: "Autonomous detection was the breakthrough. Autonomous follow-through is what saves eyesight.",
+    glance: { company: "Digital Diagnostics (IDx-DR)", founded: "2010", headquarters: "Coralville, Iowa", regulatory: "FDA De Novo authorized autonomous AI", pricing: "Per-exam / enterprise", website: "" },
+    explore: ["Digital Diagnostics (IDx-DR)","Autonomous AI screening","Diabetic retinopathy","FDA De Novo authorization","Care follow-through gap"],
+  },
+
+  {
+    id: "sleeplab",
+    name: "A sleep coach that changes behavior, built on Oura",
+    industry: "wellness", subIndustry: "sleep", status: "has-ai",
+    tagline: "Oura made sleep measurable. Here's how I'd make it actionable.",
+    hero: { img: "assets/protos/sleeplab.png", caption: "Concept prototype: running n-of-1 experiments and showing what actually moved your sleep." },
+    article: [
+      { body: ["Oura turned sleep and recovery into a daily score people actually check. But a score you can't change is just a mood ring — the value is in knowing what to do differently."] },
+      { heading: "Where it stands", body: ["Trackers are great at telling you that you slept badly and not so great at telling you why, or what to try. Generic tips ignore how personal sleep really is."] },
+      { heading: "My take — run tiny experiments", body: ["I'd use the data to run n-of-1 experiments — 'no caffeine after 2pm this week' — and show what actually moved your sleep. Coaching grounded in your own results beats generic advice, and it turns a passive tracker into a behavior-change engine."] },
+      { heading: "Why it matters", body: ["Sleep underlies mood, metabolism, and heart health. A tracker that produces real behavior change is worth far more than one that just produces numbers."] },
+    ],
+    capabilities: ["Personalized n-of-1 experiments","Driver analysis (what moves your sleep)","Actionable weekly coaching","Recovery-aware recommendations"],
+    strengths: ["Builds on a loved consumer wearable","Turns tracking into behavior change","Personal, not generic, advice"],
+    watchOuts: ["Wellness claims should avoid medical overreach","Correlation isn't causation without careful design"],
+    quote: "A score you can't act on is a number. A score that runs experiments on your behalf is a coach.",
+    glance: { company: "Oura", founded: "2013", headquarters: "Oulu, Finland / San Francisco", regulatory: "Consumer wellness device", pricing: "Ring + membership", website: "" },
+    explore: ["Oura Ring","Sleep hygiene","n-of-1 experiments","Heart-rate variability (HRV)","Behavior change design"],
+  },
+
+  {
+    id: "homewatch",
+    name: "Dignified aging-in-place, built on Cherish",
+    industry: "elder-care", subIndustry: "aging-in-place", status: "adds-ai",
+    tagline: "Cherish built contactless in-home sensing. Here's how I'd make it predict decline, not just detect falls.",
+    hero: { img: "assets/protos/homewatch.png", caption: "Concept prototype: learning a senior's baseline and flagging decline before a fall." },
+    article: [
+      { body: ["Cherish showed you can sense what's happening in a home without cameras or wearables. The next step is meaning: not just 'someone fell,' but 'something is changing.'"] },
+      { heading: "Where it stands", body: ["Most home-safety tech is reactive — it raises an alarm after a fall. By then, the decline that led there has often been building for weeks, invisibly."] },
+      { heading: "My take — learn the baseline, flag the drift", body: ["I'd learn each person's normal — gait speed, activity, night-time bathroom trips — and flag decline before it becomes a fall or a hospital stay. Alerts should carry context for family and clinicians, not just noise, so a subtle slowdown becomes an early, actionable heads-up."] },
+      { heading: "Why it matters", body: ["Falls and avoidable readmissions are enormous costs, human and financial. Catching decline early keeps older adults home, safe, and independent longer — true aging in place."] },
+    ],
+    capabilities: ["Passive, camera-free monitoring","Personal baseline learning","Decline detection before a fall","Context-rich alerts to family & clinicians"],
+    strengths: ["Builds on privacy-conscious sensing","Predictive, not just reactive","Supports aging in place with dignity"],
+    watchOuts: ["Privacy and consent for continuous sensing","False alarms erode family trust"],
+    quote: "A fall alarm reacts to a tragedy. The real product predicts the decline that precedes it.",
+    glance: { company: "Cherish Health", founded: "2019", headquarters: "Boston, MA", regulatory: "Home monitoring; verify clearances", pricing: "Device + subscription", website: "" },
+    explore: ["Cherish Health","Aging in place","Fall detection vs. prediction","Hospital readmissions","Remote patient monitoring"],
   },
 
 ];

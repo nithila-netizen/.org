@@ -84,21 +84,19 @@ if (typeof ONSET !== "undefined") {
   const ofBlock = (k, t) => t ? `<div class="of-item"><span class="of-k">${esc(k)}</span><p>${esc(t)}</p></div>` : "";
   document.getElementById("onset-feature").innerHTML = `
     <div class="onset-feature">
-      <div class="of-head">
-        <div>
-          <p class="of-eyebrow">Flagship project · Founder</p>
-          <h3>Onset</h3>
+      <div class="of-media"><img src="assets/onset-brand.png" alt="Onset — a Word of the Week post" loading="lazy" /></div>
+      <div class="of-content">
+        <div class="of-head"><p class="of-eyebrow">Flagship project · Founder</p><span class="of-badge">Independent media brand</span></div>
+        <h3>Onset</h3>
+        <p class="of-lead">${esc(ONSET.oneLiner)}</p>
+        <div class="of-grid">
+          ${ofBlock("Why I built it", ONSET.why)}
+          ${ofBlock("Who it's for", ONSET.who)}
+          ${ofBlock("How it works", ONSET.how)}
+          ${ofBlock("What I built", ONSET.impact)}
         </div>
-        <span class="of-badge">Independent media brand</span>
+        ${igCard(ONSET.ig && ONSET.ig.handle, ONSET.ig && ONSET.ig.url, "Weekly on Instagram. See the latest posts.")}
       </div>
-      <p class="of-lead">${esc(ONSET.oneLiner)}</p>
-      <div class="of-grid">
-        ${ofBlock("Why I built it", ONSET.why)}
-        ${ofBlock("Who it's for", ONSET.who)}
-        ${ofBlock("How it works", ONSET.how)}
-        ${ofBlock("What I built", ONSET.impact)}
-      </div>
-      ${igCard(ONSET.ig && ONSET.ig.handle, ONSET.ig && ONSET.ig.url, "Weekly on Instagram — see the latest posts")}
     </div>`;
 }
 
@@ -127,7 +125,7 @@ if (typeof MARKETING !== "undefined") {
       : "";
     return `<div class="mkt">
         <div class="mkt-head">${head}<div><h3>${esc(m.name)}</h3><p class="role">${esc(m.role)}</p></div></div>
-        ${igCard(m.ig && m.ig.handle, m.ig && m.ig.url, "See my work — latest posts on Instagram")}
+        ${igCard(m.ig && m.ig.handle, m.ig && m.ig.url, "See my work. Latest posts on Instagram.")}
       </div>`;
   }).join("");
 }

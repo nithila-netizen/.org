@@ -113,8 +113,8 @@ function render() {
   const cat = (typeof CATALOG !== "undefined") ? CATALOG.find(c => c.full === p.id) : null;
   const rating = cat && cat.rating;
   const catField = cat ? cat.field : (ind ? ind.name : "");
-  const signal = p.status === "adds-ai" ? "Concept — my proposal"
-    : (p.status === "watch" ? "Emerging — watch" : "Established — extend");
+  const signal = p.status === "adds-ai" ? "My concept"
+    : (p.status === "watch" ? "Emerging" : "Established product");
 
   el.innerHTML = `
     <p class="crumb">${crumb}</p>
@@ -126,9 +126,9 @@ function render() {
       <div class="analyst">
         ${rating ? `<div class="a-item"><span class="a-k">Rating</span><span class="a-v db-rating">${stars(rating)}</span></div>` : ""}
         <div class="a-item"><span class="a-k">Category</span><span class="a-v">${esc(catField)}</span></div>
-        <div class="a-item"><span class="a-k">Signal</span><span class="a-v">${esc(signal)}</span></div>
+        <div class="a-item"><span class="a-k">Status</span><span class="a-v">${esc(signal)}</span></div>
       </div>
-      <div class="disclaimer-bar">An independent review and personal product opinion — not affiliated with, sponsored by, or endorsed by the companies discussed.</div>
+      <div class="disclaimer-bar">An independent review and personal product opinion. Not affiliated with, sponsored by, or endorsed by the companies discussed.</div>
     </div>
 
     <div class="product-layout">

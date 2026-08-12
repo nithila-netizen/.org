@@ -23,21 +23,21 @@ const PROFILE = {
   role: "Aspiring Product Manager · AI in Healthcare",
   portrait: "assets/photos/portrait-cutout.png",   // cut-out headshot on the homepage
   // Hero headline. Wrap words in <em>…</em> for elegant italics.
-  heroTitle: "Product thinking for the <em>future</em> of healthcare.",
-  heroIntro: "I'm Nithila — I study where artificial intelligence meets healthcare, and I " +
-             "write independent reviews of the products shaping it, each with a clear point of " +
-             "view on how they could serve more people, better.",
+  heroTitle: "How AI is <em>reshaping</em> healthcare.",
+  heroIntro: "I'm Nithila. I study where artificial intelligence meets healthcare, and I write " +
+             "independent reviews of the products shaping it, each with a clear point of view on " +
+             "how they could serve more people, better.",
   // About section
   aboutLead: "I want to build products that make good healthcare reach further.",
   about: [
     "My work here is a running body of analysis: I take a real company in a corner of " +
     "healthcare, review what it does well and where it falls short, and lay out my own " +
-    "product thinking for how AI could push it further — always as independent commentary, " +
+    "product thinking for how AI could push it further, always as independent commentary, " +
     "always crediting the source.",
     "It's how I sharpen the instincts a product manager lives on: reading a market, judging a " +
     "product honestly, and turning a critique into a concrete direction.",
-    "A thread runs through the rest of what I do, too: getting kids excited — about movement with " +
-    "Girls on the Run and about science with UF Teach — and staying active and outdoors myself, " +
+    "A thread runs through the rest of what I do, too. I love getting kids excited about movement with " +
+    "Girls on the Run and about science with UF Teach, and staying active and outdoors myself, " +
     "usually with my little sister. Curiosity and energy are the throughline.",
   ],
   skills: [
@@ -54,7 +54,7 @@ const PROFILE = {
     photo: "assets/photos/museum-future-dubai.jpg",
     title: "Where it started",
     text: "My love for this field grew at the Museum of the Future in Dubai. Standing up close to " +
-          "innovations from every field — health, mobility, energy, space — I stopped wanting to " +
+          "innovations from every field (health, mobility, energy, space). I stopped wanting to " +
           "just watch the future arrive and decided I wanted to help build it, starting with healthcare.",
   },
   education: [
@@ -71,14 +71,14 @@ const PROFILE = {
 const ONSET = {
   founded: "",                        // ← e.g. "2024"
   oneLiner: "Onset is an independent media brand that decodes AI in healthcare for students and " +
-            "newcomers — one idea, one company, and one career at a time, in plain English.",
+            "newcomers: one idea, one company, and one career at a time, in plain English.",
   why: "AI is transforming medicine faster than anyone can explain it, and most coverage is either " +
        "too technical or too hyped to be useful to someone just getting curious. I built Onset to " +
        "close that gap: no jargon, no hype, no medical degree required.",
   who: "College students, pre-meds, and early-career people who want to understand where medicine is " +
        "heading before it becomes mainstream.",
   how: "A recurring weekly system on Instagram: a 'Word of the Week' explainer, a 'Company Spotlight,' " +
-       "and a 'Role Spotlight' on careers in the field — plus deep dives and timely breaking-news posts. " +
+       "and a 'Role Spotlight' on careers in the field, plus deep dives and timely breaking-news posts. " +
        "Each is a designed carousel with a searchable, editorial caption, backed by a newsletter and LinkedIn.",
   impact: "I built the whole brand: naming and positioning, a warm editorial voice that reports rather " +
           "than lectures, a minimalist cream-and-blood-red visual system, a repeatable weekly content " +
@@ -392,7 +392,7 @@ const PRODUCTS = [
 
   {
     id: "hinge-health-ai-pt",
-    name: "Hinge Health — AI physiotherapy",
+    name: "Hinge Health · AI physiotherapy",
     industry: "rehab",
     subIndustry: "physiotherapy",
     status: "adds-ai",
@@ -483,7 +483,7 @@ const PRODUCTS = [
 
   {
     id: "isomorphic-labs",
-    name: "Isomorphic Labs — AI drug design",
+    name: "Isomorphic Labs · AI drug design",
     industry: "drug-discovery",
     subIndustry: "molecule-design",
     status: "has-ai",
@@ -517,7 +517,7 @@ const PRODUCTS = [
 
   {
     id: "pulseguard",
-    name: "AliveCor — Continuous heart monitoring",
+    name: "AliveCor · Continuous heart monitoring",
     industry: "cardiology", subIndustry: "wearables", status: "has-ai",
     tagline: "AliveCor proved a personal ECG can fit in your pocket. Here's how I'd turn spot-checks into real risk monitoring.",
     hero: { img: "assets/protos/pulseguard.png", caption: "Concept prototype: turning at-home ECG readings into a continuous AFib-burden trend with escalation." },
@@ -537,7 +537,7 @@ const PRODUCTS = [
 
   {
     id: "mindbridge",
-    name: "Wysa — AI mental-health support",
+    name: "Wysa · AI mental-health support",
     industry: "mental-health", subIndustry: "digital-therapy", status: "has-ai",
     tagline: "Wysa made supportive AI available 24/7. Here's how I'd make it safe enough to sit next to real therapy.",
     hero: { img: "assets/protos/mindbridge.png", caption: "Concept prototype: daily check-ins with crisis-safe triage, human handoff, and symptom tracking." },
@@ -557,7 +557,7 @@ const PRODUCTS = [
 
   {
     id: "glucopilot",
-    name: "Dexcom — Predictive glucose coaching",
+    name: "Dexcom · Predictive glucose coaching",
     industry: "chronic", subIndustry: "diabetes", status: "has-ai",
     tagline: "Dexcom made glucose visible in real time. Here's how I'd turn that stream into a single next step.",
     hero: { img: "assets/protos/glucopilot.png", caption: "Concept prototype: forecasting a low 45 minutes out and giving one specific action." },
@@ -577,7 +577,7 @@ const PRODUCTS = [
 
   {
     id: "readrank",
-    name: "Aidoc — Explainable radiology triage",
+    name: "Aidoc · Explainable radiology triage",
     industry: "diagnostics", subIndustry: "radiology", status: "has-ai",
     tagline: "Aidoc flags urgent findings on scans. Here's how I'd turn many detectors into one trusted worklist.",
     hero: { img: "assets/protos/readrank.png", caption: "Concept prototype: one urgency-ranked worklist with region highlights and confidence." },
@@ -597,7 +597,7 @@ const PRODUCTS = [
 
   {
     id: "nuramom",
-    name: "Elvie — AI postpartum companion",
+    name: "Elvie · AI postpartum companion",
     industry: "womens-health", subIndustry: "maternal-postpartum", status: "adds-ai",
     tagline: "Elvie built beloved devices for new mothers. Here's how I'd add AI that catches warning signs early.",
     hero: { img: "assets/protos/nuramom.png", caption: "Concept prototype: reading recovery data to flag postpartum warning signs and route to care." },
@@ -617,7 +617,7 @@ const PRODUCTS = [
 
   {
     id: "dermacheck",
-    name: "SkinVision — Trustworthy skin checks",
+    name: "SkinVision · Trustworthy skin checks",
     industry: "diagnostics", subIndustry: "dermatology", status: "has-ai",
     tagline: "SkinVision assesses skin-cancer risk from a photo. Here's how I'd make it fair and finish the loop.",
     hero: { img: "assets/protos/dermacheck.png", caption: "Concept prototype: photo risk validated across skin tones, ending in a teledermatology booking." },
@@ -637,7 +637,7 @@ const PRODUCTS = [
 
   {
     id: "visitcopilot",
-    name: "Abridge — Clinical visit co-pilot",
+    name: "Abridge · Clinical visit co-pilot",
     industry: "care-ops", subIndustry: "clinical-documentation", status: "has-ai",
     tagline: "Abridge turns a conversation into a note. Here's how I'd make it help during the visit, not just after.",
     hero: { img: "assets/protos/visitcopilot.png", caption: "Concept prototype: an ambient note plus live reminders and a plain-language patient summary." },
@@ -657,7 +657,7 @@ const PRODUCTS = [
 
   {
     id: "retinascreen",
-    name: "Digital Diagnostics — Autonomous eye screening",
+    name: "Digital Diagnostics · Autonomous eye screening",
     industry: "diagnostics", subIndustry: "ophthalmology", status: "has-ai",
     tagline: "Digital Diagnostics built the first autonomous AI to diagnose diabetic retinopathy. Here's how I'd finish the job.",
     hero: { img: "assets/protos/retinascreen.png", caption: "Concept prototype: autonomous screening in a pharmacy that helps the patient navigate the referral and its cost." },
@@ -677,7 +677,7 @@ const PRODUCTS = [
 
   {
     id: "sleeplab",
-    name: "Oura — Actionable sleep coaching",
+    name: "Oura · Actionable sleep coaching",
     industry: "wellness", subIndustry: "sleep", status: "has-ai",
     tagline: "Oura made sleep measurable. Here's how I'd make it actionable.",
     hero: { img: "assets/protos/sleeplab.png", caption: "Concept prototype: running n-of-1 experiments and showing what actually moved your sleep." },
@@ -697,7 +697,7 @@ const PRODUCTS = [
 
   {
     id: "homewatch",
-    name: "Cherish — Predictive aging-in-place",
+    name: "Cherish · Predictive aging-in-place",
     industry: "elder-care", subIndustry: "aging-in-place", status: "adds-ai",
     tagline: "Cherish built contactless in-home sensing. Here's how I'd make it predict decline, not just detect falls.",
     hero: { img: "assets/protos/homewatch.png", caption: "Concept prototype: learning a senior's baseline and flagging decline before a fall." },

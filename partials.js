@@ -8,8 +8,7 @@ function renderHeader() {
     <div class="wrap">
       <a class="brand" href="index.html">Nithila <em>Neminathan</em></a>
       <nav class="nav">
-        <a href="reviews.html">Coverage</a>
-        <a href="index.html#work">Reviews</a>
+        <a href="reviews.html">Reviews</a>
         <a href="index.html#projects">Projects</a>
         <a href="index.html#involvement">Experience</a>
         <a href="index.html#about">About</a>

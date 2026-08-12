@@ -45,28 +45,130 @@ const PROFILE = {
     linkedin: "",                    // ← paste your LinkedIn URL
     other: "",                       // ← anything else (portfolio, X, etc.)
   },
+  // Origin story — the Museum of the Future, Dubai
+  origin: {
+    photo: "assets/photos/museum-future-dubai.jpg",
+    title: "Where it started",
+    text: "My love for this field grew at the Museum of the Future in Dubai. Standing up close to " +
+          "innovations from every field — health, mobility, energy, space — I stopped wanting to " +
+          "just watch the future arrive and decided I wanted to help build it, starting with healthcare.",
+  },
+  education: [
+    { school: "University of Florida", note: "Undergraduate" },
+    { school: "Creekside High School", note: "Recipient of the Benacquisto Scholarship",
+      photo: "assets/photos/grad-creekside.jpg" },
+  ],
 };
 
 /* --------------------------------------------------------------------------
-   EXPERIENCE — case competitions, programs, and other portfolio items.
-   Copy a block to add more. type is just a small label.
+   ONSET — your own venture. Gets a dedicated section.
+   Fill the [bracketed] placeholders with the real story and it renders fully.
    -------------------------------------------------------------------------- */
-const EXPERIENCE = [
+const ONSET = {
+  founded: "",                        // ← e.g. "2024"
+  oneLiner: "[One line on what ONSET is — tell me and I'll write this whole section.]",
+  why: "[Why you started ONSET — the gap or problem you saw that made you build it.]",
+  who: "[Who ONSET helps — the people it's for.]",
+  how: "[How it works — what ONSET actually does for them.]",
+  impact: "[Why it matters — the difference it makes.]",
+  ig: { handle: "", url: "" },        // ← ONSET Instagram
+  // Drop screenshots of ONSET posts into assets/photos/ with these names:
+  posts: [
+    "assets/photos/onset-1.jpg",
+    "assets/photos/onset-2.jpg",
+    "assets/photos/onset-3.jpg",
+  ],
+};
+
+/* --------------------------------------------------------------------------
+   PROJECTS — things you've built. (e.g. the Nirmaa website.)
+   -------------------------------------------------------------------------- */
+const PROJECTS = [
   {
-    type: "Program",
-    title: "ONSET",
-    org: "",                          // ← organization / host, if any
-    year: "",                         // ← e.g. "2025"
-    detail: "Add a sentence on what ONSET was and your role or takeaway. " +
-            "(Placeholder — edit in data.js under EXPERIENCE.)",
+    name: "nirmaa.com",
+    role: "Designed & built the website",
+    url: "https://nirmaa.com",
+    blurb: "I designed and built the Nirmaa website end to end. [Add one line on what Nirmaa is.]",
+    photo: "assets/photos/nirmaa.jpg",
+  },
+];
+
+/* --------------------------------------------------------------------------
+   MARKETING — clubs/orgs you run marketing for. Each gets an Instagram
+   carousel so people can see your work. Drop post screenshots into
+   assets/photos/ with the listed names, and add the Instagram handle/URL.
+   -------------------------------------------------------------------------- */
+const MARKETING = [
+  {
+    name: "UF Pawsthetics",
+    role: "Marketing Director",
+    ig: { handle: "", url: "" },      // ← Instagram handle + URL
+    posts: [
+      "assets/photos/pawsthetics-1.jpg",
+      "assets/photos/pawsthetics-2.jpg",
+      "assets/photos/pawsthetics-3.jpg",
+    ],
   },
   {
-    type: "Case competition",
-    title: "[Case competition name]",
-    org: "",
-    year: "",
-    detail: "What the challenge was, what you proposed, and how you placed. " +
-            "Copy this block to add each competition you've attended.",
+    name: "180 Degrees Consulting",
+    role: "Marketing Director",
+    ig: { handle: "", url: "" },      // ← Instagram handle + URL
+    posts: [
+      "assets/photos/180dc-1.jpg",
+      "assets/photos/180dc-2.jpg",
+      "assets/photos/180dc-3.jpg",
+    ],
+  },
+];
+
+/* --------------------------------------------------------------------------
+   INVOLVEMENT — leadership, competitions, teaching, volunteering (with photos).
+   -------------------------------------------------------------------------- */
+const INVOLVEMENT = [
+  {
+    title: "One Health Center of Excellence — Case Competition",
+    role: "2nd place → Communications Chair",
+    text: "I placed 2nd in the One Health Center of Excellence case competition, then came back " +
+          "to lead communications as Communications Chair for the next one.",
+    photo: "assets/photos/onehealth-team.jpg",
+  },
+  {
+    title: "UF Teach",
+    role: "STEM Camp Instructor",
+    text: "Through UF's Teach program I taught STEM camp to elementary schoolers every week — " +
+          "making science hands-on and fun for the youngest learners.",
+    photo: "assets/photos/uf-teach-stem.jpg",
+  },
+  {
+    title: "Girls on the Run",
+    role: "Volunteer Coach",
+    text: "I volunteered with Girls on the Run to share my love of being active with young girls, " +
+          "building their confidence through movement.",
+    photo: "assets/photos/girls-on-the-run.jpg",
+  },
+];
+
+/* --------------------------------------------------------------------------
+   FUN FACTS — personal, photo-led moments.
+   annotations place a small arrow + label over a photo (x/y are % positions).
+   -------------------------------------------------------------------------- */
+const FUNFACTS = [
+  {
+    label: "Fun fact",
+    text: "I was at UF the year we won the 2025 national basketball championship. 🏀",
+    photo: "assets/photos/basketball-2025.jpg",
+    annotations: [
+      { x: "72%", y: "34%", label: "me" },
+      { x: "30%", y: "34%", label: "college roommate" },
+    ],
+  },
+  {
+    label: "About me",
+    text: "I love staying active and being out in nature — especially exploring with my little sister.",
+    photos: [
+      "assets/photos/nature-road.jpg",
+      "assets/photos/nature-hike.jpg",
+    ],
   },
 ];
 

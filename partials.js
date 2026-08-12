@@ -9,8 +9,8 @@ function renderHeader() {
       <a class="brand" href="index.html">Nithila <em>Neminathan</em></a>
       <nav class="nav">
         <a href="index.html#work">Reviews</a>
-        <a href="index.html#areas">Areas</a>
-        <a href="index.html#experience">Experience</a>
+        <a href="index.html#onset">ONSET</a>
+        <a href="index.html#involvement">Experience</a>
         <a href="index.html#about">About</a>
         <a href="index.html#contact">Contact</a>
       </nav>

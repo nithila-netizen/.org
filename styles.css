@@ -192,6 +192,135 @@ img { max-width: 100%; display: block; }
 .glance .visit { display: inline-flex; align-items: center; gap: 6px; font-family: var(--sans); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-top: 18px; }
 .glance .note { font-family: var(--sans); font-size: 12px; color: var(--muted); line-height: 1.5; margin-top: 20px; }
 
+/* ==========================================================================
+   MOTION — scroll reveal + hero line draw
+   ========================================================================== */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+.p-hero .art svg .draw {
+  stroke-dasharray: 1400; stroke-dashoffset: 1400;
+  animation: draw 2.4s ease forwards .3s;
+}
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.p-hero .art svg .fade { opacity: 0; animation: fadein 1s ease forwards 1.8s; }
+@keyframes fadein { to { opacity: 1; } }
+
+/* ==========================================================================
+   PHOTOS — graceful placeholder when a file isn't added yet
+   ========================================================================== */
+.photo { position: relative; margin: 0; overflow: hidden; background: var(--paper-2); border: 1px solid var(--line); }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo.missing { aspect-ratio: 4 / 3; }
+.photo.missing img { display: none; }
+.photo.missing::after {
+  content: "◇  " attr(data-label);
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 20px; font-family: var(--sans); font-size: 13px; letter-spacing: 0.04em;
+  color: var(--muted);
+  background: repeating-linear-gradient(45deg, transparent, transparent 11px, rgba(22,19,15,0.04) 11px, rgba(22,19,15,0.04) 22px);
+}
+
+/* dark cinematic overlay + caption on top of a photo */
+.overlay-photo::before {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, rgba(10,8,6,0) 30%, rgba(10,8,6,0.72) 100%);
+  pointer-events: none;
+}
+.overlay-photo.missing::before { display: none; }
+.overlay-caption { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 26px 28px; color: #fff; }
+.overlay-caption .lab { font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.8); margin: 0 0 8px; }
+.overlay-caption h3 { font-family: var(--display); font-weight: 500; font-size: 24px; letter-spacing: -0.01em; margin: 0 0 4px; }
+.overlay-caption p { font-family: var(--sans); font-size: 14px; color: rgba(255,255,255,0.9); margin: 0; max-width: 520px; }
+
+/* arrow + label annotations over a photo */
+.anno-layer { position: absolute; inset: 0; z-index: 3; }
+.anno { position: absolute; transform: translate(-50%, -100%); display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.anno-label { font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: 0.04em; color: #fff; background: rgba(22,19,15,0.82); padding: 5px 11px; border-radius: 999px; white-space: nowrap; }
+.anno-arrow { width: 20px; height: 30px; filter: drop-shadow(0 1px 2px rgba(0,0,0,.5)); }
+
+/* ==========================================================================
+   CAROUSEL
+   ========================================================================== */
+.carousel { position: relative; border: 1px solid var(--line); background: #000; }
+.carousel-viewport { overflow: hidden; }
+.carousel-track { display: flex; transition: transform .5s cubic-bezier(.4,.0,.2,1); }
+.slide { flex: 0 0 100%; }
+.slide .photo { border: none; background: #0b0b0b; aspect-ratio: 4 / 3; }
+.slide .photo.missing { aspect-ratio: 4 / 3; }
+.slide .photo.missing::after { color: #9a938a; }
+.c-btn { position: absolute; top: 50%; transform: translateY(-50%); z-index: 4; width: 44px; height: 44px; border: none; border-radius: 50%; background: rgba(255,255,255,0.92); color: var(--ink); font-size: 22px; line-height: 1; cursor: pointer; display: grid; place-items: center; box-shadow: 0 4px 16px rgba(0,0,0,.25); }
+.c-btn:hover { background: #fff; }
+.c-prev { left: 14px; } .c-next { right: 14px; }
+.c-dots { position: absolute; bottom: 14px; left: 0; right: 0; z-index: 4; display: flex; justify-content: center; gap: 7px; }
+.c-dot { width: 7px; height: 7px; border-radius: 50%; border: none; padding: 0; background: rgba(255,255,255,0.5); cursor: pointer; }
+.c-dot.on { background: #fff; width: 20px; border-radius: 999px; }
+.carousel-cap { font-family: var(--sans); font-size: 13px; color: var(--muted); margin-top: 12px; }
+
+/* ==========================================================================
+   ONSET — dedicated venture section
+   ========================================================================== */
+.onset { background: var(--ink); color: #F1ECE3; border: none; }
+.onset .eyebrow { color: #B9AE9C; }
+.onset h2 { color: #fff; }
+.onset .lede { font-family: var(--display); font-weight: 500; font-size: clamp(24px,3.4vw,34px); line-height: 1.25; letter-spacing: -0.02em; max-width: 720px; margin: 0 0 16px; }
+.onset-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: start; margin-top: 44px; }
+@media (max-width: 900px){ .onset-grid { grid-template-columns: 1fr; } }
+.onset-story { display: grid; gap: 26px; }
+.onset-block h4 { font-family: var(--sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #B9AE9C; margin: 0 0 8px; }
+.onset-block p { font-size: 17px; line-height: 1.7; color: #D9D1C4; margin: 0; }
+.onset .carousel { border-color: rgba(255,255,255,0.14); }
+.onset-ig { font-family: var(--sans); font-size: 13px; letter-spacing: 0.06em; color: #fff; margin-top: 14px; display: inline-block; }
+
+/* ==========================================================================
+   PROJECTS spotlight
+   ========================================================================== */
+.spotlight { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; border-top: 1px solid var(--line); padding-top: 40px; }
+@media (max-width: 820px){ .spotlight { grid-template-columns: 1fr; } }
+.spotlight .photo { aspect-ratio: 16 / 10; }
+.spotlight h3 { font-family: var(--display); font-weight: 500; font-size: 30px; letter-spacing: -0.02em; margin: 0 0 6px; }
+.spotlight .role { font-family: var(--sans); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; }
+.spotlight p { font-size: 18px; color: var(--ink-2); margin: 0 0 20px; }
+
+/* ==========================================================================
+   MARKETING carousels
+   ========================================================================== */
+.mkt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+@media (max-width: 820px){ .mkt-grid { grid-template-columns: 1fr; } }
+.mkt h3 { font-family: var(--display); font-weight: 500; font-size: 24px; margin: 0 0 2px; }
+.mkt .role { font-family: var(--sans); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; }
+
+/* ==========================================================================
+   INVOLVEMENT cards (photo + dark overlay)
+   ========================================================================== */
+.inv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+@media (max-width: 820px){ .inv-grid { grid-template-columns: 1fr; } }
+.inv .photo { aspect-ratio: 3 / 4; }
+.inv .role { font-family: var(--sans); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.85); }
+
+/* ==========================================================================
+   FUN FACTS
+   ========================================================================== */
+.funfact { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; padding: 30px 0; border-top: 1px solid var(--line); }
+.funfact:first-of-type { border-top: none; }
+.funfact.flip { grid-template-columns: 1fr 1.1fr; }
+.funfact.flip .ff-text { order: 2; }
+@media (max-width: 820px){ .funfact, .funfact.flip { grid-template-columns: 1fr; } .funfact.flip .ff-text { order: 0; } }
+.funfact .lab { font-family: var(--sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.funfact .ff-text p { font-family: var(--display); font-weight: 500; font-size: clamp(22px,2.6vw,28px); line-height: 1.3; letter-spacing: -0.01em; margin: 0; }
+.funfact .photo { aspect-ratio: 3 / 2; }
+.ff-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.ff-duo .photo { aspect-ratio: 3 / 4; }
+
+/* ==========================================================================
+   EDUCATION
+   ========================================================================== */
+.edu { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.edu .item { border: 1px solid var(--line); padding: 16px 20px; flex: 1 1 220px; }
+.edu .school { font-family: var(--display); font-size: 19px; font-weight: 500; }
+.edu .note { font-family: var(--sans); font-size: 13px; color: var(--muted); margin-top: 4px; letter-spacing: 0.02em; }
+
 /* ---- Responsive ----------------------------------------------------------- */
 @media (max-width: 900px){
   .p-hero .wrap { grid-template-columns: 1fr; padding: 60px 32px; }

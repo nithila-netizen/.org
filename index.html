@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nithila Neminathan — Product thinking for AI in healthcare</title>
-  <meta name="description" content="Nithila Neminathan — aspiring product manager in AI and healthcare. Independent reviews of the products shaping the field." />
+  <meta name="description" content="Nithila Neminathan — aspiring product manager in AI and healthcare. Reviews, ventures, and work." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -22,19 +22,16 @@
         <p class="intro" id="hero-intro"></p>
         <div class="btns">
           <a class="btn btn-solid" href="#work">Read my reviews</a>
-          <a class="btn btn-ghost" href="#about">About me</a>
+          <a class="btn btn-ghost" href="#onset">See my work</a>
         </div>
       </div>
       <div class="art" aria-hidden="true">
-        <!-- Elegant monochrome AI × health line graphic: a pulse line resolving into a node network -->
         <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="200" cy="200" r="168" stroke="#E8E3DA" stroke-width="1"/>
-          <circle cx="200" cy="200" r="120" stroke="#E8E3DA" stroke-width="1"/>
-          <!-- ECG pulse across the middle -->
-          <path d="M40 200 H120 l14 -46 l20 96 l16 -120 l18 150 l14 -80 H210"
+          <circle class="fade" cx="200" cy="200" r="168" stroke="#E8E3DA" stroke-width="1"/>
+          <circle class="fade" cx="200" cy="200" r="120" stroke="#E8E3DA" stroke-width="1"/>
+          <path class="draw" d="M40 200 H120 l14 -46 l20 96 l16 -120 l18 150 l14 -80 H210"
                 stroke="#16130F" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-          <!-- pulse resolves into a small neural node graph on the right -->
-          <g stroke="#16130F" stroke-width="1.4">
+          <g class="draw" stroke="#16130F" stroke-width="1.4">
             <line x1="210" y1="200" x2="272" y2="150"/>
             <line x1="210" y1="200" x2="278" y2="232"/>
             <line x1="272" y1="150" x2="330" y2="132"/>
@@ -43,7 +40,7 @@
             <line x1="278" y1="232" x2="332" y2="268"/>
             <line x1="326" y1="196" x2="332" y2="268"/>
           </g>
-          <g fill="#FFFFFF" stroke="#16130F" stroke-width="1.6">
+          <g class="fade" fill="#FFFFFF" stroke="#16130F" stroke-width="1.6">
             <circle cx="210" cy="200" r="5"/>
             <circle cx="272" cy="150" r="6"/>
             <circle cx="278" cy="232" r="6"/>
@@ -51,8 +48,7 @@
             <circle cx="326" cy="196" r="7"/>
             <circle cx="332" cy="268" r="6"/>
           </g>
-          <!-- a fine heart glyph tucked at lower-left of the orbit -->
-          <path d="M96 300 c -10 -12 -28 -4 -28 12 c 0 16 28 30 28 30 c 0 0 28 -14 28 -30 c 0 -16 -18 -24 -28 -12 z"
+          <path class="fade" d="M96 300 c -10 -12 -28 -4 -28 12 c 0 16 28 30 28 30 c 0 0 28 -14 28 -30 c 0 -16 -18 -24 -28 -12 z"
                 stroke="#16130F" stroke-width="1.4" fill="none"/>
         </svg>
       </div>
@@ -61,7 +57,7 @@
 
   <!-- Selected reviews -->
   <section class="section" id="work">
-    <div class="wrap">
+    <div class="wrap reveal">
       <div class="section-head">
         <div>
           <p class="eyebrow">Selected work · Nithila Notes</p>
@@ -73,45 +69,53 @@
     </div>
   </section>
 
-  <!-- Areas I cover -->
+  <!-- Areas -->
   <section class="section alt" id="areas">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Coverage</p>
-          <h2>Areas I cover</h2>
-        </div>
-      </div>
+    <div class="wrap reveal">
+      <div class="section-head"><div><p class="eyebrow">Coverage</p><h2>Areas I cover</h2></div></div>
       <div class="areas" id="areas-grid"></div>
     </div>
   </section>
 
-  <!-- Experience / case competitions -->
-  <section class="section" id="experience">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Beyond the writing</p>
-          <h2>Case competitions &amp; experience</h2>
-        </div>
-      </div>
-      <div class="reviews" id="experience-list"></div>
+  <!-- ONSET -->
+  <section class="section onset" id="onset">
+    <div class="wrap reveal" id="onset-slot"></div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="wrap reveal">
+      <div class="section-head"><div><p class="eyebrow">Built by me</p><h2>Projects</h2></div></div>
+      <div id="projects-slot"></div>
+    </div>
+  </section>
+
+  <!-- Marketing -->
+  <section class="section alt" id="marketing">
+    <div class="wrap reveal">
+      <div class="section-head"><div><p class="eyebrow">Marketing Director</p><h2>Social &amp; brand work</h2></div></div>
+      <div class="mkt-grid" id="marketing-slot"></div>
+    </div>
+  </section>
+
+  <!-- Involvement / experience -->
+  <section class="section" id="involvement">
+    <div class="wrap reveal">
+      <div class="section-head"><div><p class="eyebrow">Leadership · competitions · service</p><h2>Experience</h2></div></div>
+      <div class="inv-grid" id="involvement-slot"></div>
     </div>
   </section>
 
   <!-- About -->
   <section class="section alt" id="about">
-    <div class="wrap">
-      <p class="eyebrow">About</p>
-      <div class="about-grid">
-        <div class="portrait" aria-hidden="true">
-          <svg viewBox="0 0 100 120" fill="none" stroke="#16130F" stroke-width="1.4">
-            <circle cx="50" cy="42" r="22"/>
-            <path d="M14 112 c0 -26 16 -40 36 -40 s36 14 36 40"/>
-          </svg>
-        </div>
-        <div class="about-body" id="about-body"></div>
-      </div>
+    <div class="wrap reveal" id="about-slot"></div>
+  </section>
+
+  <!-- Fun facts -->
+  <section class="section" id="funfacts">
+    <div class="wrap reveal">
+      <div class="section-head"><div><p class="eyebrow">Off the clock</p><h2>A few fun facts</h2></div></div>
+      <div id="funfacts-slot"></div>
     </div>
   </section>
 
@@ -120,6 +124,7 @@
   <script src="icons.js"></script>
   <script src="data.js"></script>
   <script src="partials.js"></script>
+  <script src="ui.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

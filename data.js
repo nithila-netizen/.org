@@ -64,6 +64,27 @@ const INDUSTRIES = [
       { id: "diet",           name: "Personalized Diet" },
     ],
   },
+  {
+    id: "rehab",
+    name: "Rehabilitation & Physical Therapy",
+    icon: "heart",
+    blurb: "Recovering movement and managing pain — increasingly from home.",
+    subIndustries: [
+      { id: "physiotherapy", name: "Digital Physiotherapy" },
+      { id: "remote-rehab",  name: "Remote Rehab & Monitoring" },
+    ],
+  },
+  {
+    id: "cardiology",
+    name: "Cardiology",
+    icon: "scan",
+    blurb: "Watching the heart continuously, and catching risk earlier.",
+    subIndustries: [
+      { id: "wearables",       name: "Wearable Heart Monitoring" },
+      { id: "ecg-imaging",     name: "ECG & Imaging AI" },
+      { id: "risk-prediction", name: "Risk Prediction" },
+    ],
+  },
 ];
 
 /* --------------------------------------------------------------------------
@@ -84,6 +105,93 @@ const INDUSTRIES = [
      glance        { company, founded, headquarters, regulatory, pricing, website }
    -------------------------------------------------------------------------- */
 const PRODUCTS = [
+
+  {
+    id: "hinge-health-ai-pt",
+    name: "AI-native physiotherapy, built on the Hinge Health model",
+    industry: "rehab",
+    subIndustry: "physiotherapy",
+    status: "adds-ai",
+    tagline: "Hinge Health proved people will do physical therapy from home. Here's how I'd " +
+             "make the session itself intelligent.",
+    // Prototype screenshot shown at the top of the article.
+    hero: {
+      img: "assets/physio-hinge-ai.png",
+      caption: "Concept prototype: a physiotherapy app that scores your form from the camera in real time and coaches each rep.",
+    },
+    // Blog-style body. Each block: { heading (optional), body: [paragraphs] }.
+    article: [
+      { body: [
+        "Digital physical therapy has already won its first argument: people will do their " +
+        "exercises at home if the experience is good enough. Hinge Health built a large " +
+        "business proving exactly that. The open question now isn't whether care can move " +
+        "into the living room — it's whether the living-room session can become as sharp as " +
+        "the one you'd get standing in front of a therapist. That's an AI problem.",
+      ]},
+      { heading: "The company I'm crediting", body: [
+        "Hinge Health is a digital clinic for muscle, joint, and back pain. Members get a " +
+        "personalized exercise-therapy program in an app, guided sessions with motion " +
+        "tracking, and access to human physical therapists and health coaches — largely " +
+        "offered through employers and health plans. Their core insight is sound: most " +
+        "musculoskeletal recovery is about doing the right movements consistently, and a " +
+        "phone can carry a lot of that program.",
+      ]},
+      { heading: "Where the experience still falls short", body: [
+        "Guided video and periodic check-ins are a big step up from a paper handout, but the " +
+        "moment-to-moment session is still mostly one-directional. The app shows you an " +
+        "exercise; you do your best; a human reviews things later. Two things are missing in " +
+        "the loop: instant feedback on whether you're doing the movement correctly, and a plan " +
+        "that reacts to how today actually felt rather than to a preset schedule.",
+        "For recovery, form is not a detail — a squat done with the knee collapsing inward can " +
+        "reinforce the exact pattern that caused the pain. Catching that in the second it " +
+        "happens is worth more than catching it a week later.",
+      ]},
+      { heading: "The AI-ification", body: [
+        "I'd make the camera the therapist's eyes. Modern on-device pose estimation can track " +
+        "joint positions from an ordinary phone camera, which means the app can score your " +
+        "form rep-by-rep and speak up the instant something drifts — 'keep your knee over your " +
+        "toes' — the way a therapist would.",
+        "On top of that, a language-model coach turns raw signals into plain, encouraging " +
+        "guidance and answers the questions people actually ask mid-session: 'this pinches a " +
+        "little, should I stop?' Finally, the plan itself becomes adaptive: if pain scores rise " +
+        "or reps get sloppy, tomorrow's program dials back automatically and flags a human PT " +
+        "when the trend looks wrong. The human clinicians don't disappear — their attention " +
+        "gets routed to the members who actually need it.",
+      ]},
+      { heading: "Why it matters", body: [
+        "This is the difference between an app that stores your program and one that runs your " +
+        "session. Better form means faster, safer recovery; instant feedback means people stay " +
+        "engaged instead of quietly giving up; and adaptive plans plus smart escalation let a " +
+        "small clinical team safely support far more people. That combination — better outcomes " +
+        "and better economics — is exactly what a payer or employer is buying.",
+      ]},
+    ],
+    capabilities: [
+      "Real-time form scoring from the phone camera (on-device pose estimation)",
+      "An AI coach that explains each correction in plain language",
+      "Plans that adapt automatically to pain and progress",
+      "Smart escalation that routes at-risk members to human physical therapists",
+    ],
+    strengths: [
+      "Closes the feedback loop that home PT is missing today",
+      "Makes human clinicians more leveraged, not redundant",
+      "Runs on hardware members already own — a phone",
+    ],
+    watchOuts: [
+      "Camera pose tracking must be validated for clinical safety, not just demoed",
+      "Privacy: live camera analysis needs on-device processing and clear consent",
+    ],
+    quote: "Hinge Health won the distribution argument. The next winner wins the session itself " +
+           "— and that prize goes to whoever makes the at-home rep as smart as the in-clinic one.",
+    glance: {
+      company: "Concept — credits Hinge Health",
+      founded: "Hinge Health founded 2014",
+      headquarters: "San Francisco, CA",
+      regulatory: "Digital MSK care; AI form-tracking would need clinical validation",
+      pricing: "Typically employer / health-plan sponsored",
+      website: "",
+    },
+  },
 
   {
     id: "isomorphic-labs",
@@ -115,35 +223,6 @@ const PRODUCTS = [
       headquarters: "London, UK",
       regulatory: "Discovery-stage platform (no marketed drugs yet)",
       pricing: "Pharma partnerships/co-development",
-      website: "",
-    },
-  },
-
-  {
-    id: "example-imaging",
-    name: "[Example imaging product]",
-    industry: "diagnostics",
-    subIndustry: "radiology",
-    status: "has-ai",
-    tagline: "A placeholder review — replace with a real product you're analyzing.",
-    capabilities: [
-      "Automated detection of findings on chest imaging",
-      "Worklist prioritization by clinical urgency",
-    ],
-    strengths: [
-      "Fits into existing radiology workflow",
-      "Strong published sensitivity on target findings",
-    ],
-    watchOuts: [
-      "Performance varies across scanner types and populations",
-    ],
-    quote: "Promising where it's validated — read the fine print on which findings and which patients.",
-    glance: {
-      company: "[Company name]",
-      founded: "—",
-      headquarters: "—",
-      regulatory: "[e.g. FDA-cleared / CE-marked]",
-      pricing: "[e.g. per-study / enterprise license]",
       website: "",
     },
   },

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prototype — AI Physiotherapy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{ --teal:#10B981; --ink:#0F172A; }
+  *{box-sizing:border-box; margin:0; padding:0; font-family:"Inter",system-ui,sans-serif;}
+  body{
+    width:1280px; height:800px; display:flex; align-items:center; justify-content:center; gap:56px;
+    background:
+      radial-gradient(900px 500px at 15% 20%, rgba(16,185,129,0.18), transparent 60%),
+      linear-gradient(135deg,#0A1020,#132038);
+    color:#fff; overflow:hidden;
+  }
+  /* left copy */
+  .copy{ width:400px; }
+  .badge{ display:inline-block; font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+    color:#34D399; border:1px solid rgba(52,211,153,.4); border-radius:999px; padding:6px 12px; margin-bottom:20px;}
+  .copy h1{ font-size:44px; line-height:1.08; letter-spacing:-.03em; font-weight:800; margin-bottom:16px;}
+  .copy h1 span{ color:#34D399; }
+  .copy p{ font-size:17px; color:#A9B6C9; line-height:1.6;}
+  .copy .feats{ margin-top:22px; display:flex; flex-direction:column; gap:12px;}
+  .copy .feats div{ display:flex; align-items:center; gap:10px; font-size:15px; color:#D5DEEA;}
+  .dot{ width:8px; height:8px; border-radius:50%; background:#34D399; flex:none;}
+  /* phone */
+  .phone{
+    width:340px; height:700px; border-radius:44px; background:#0B1220;
+    border:10px solid #05070d; box-shadow:0 40px 90px -30px rgba(0,0,0,.7); position:relative; overflow:hidden;
+  }
+  .notch{ position:absolute; top:0; left:50%; transform:translateX(-50%); width:150px; height:26px; background:#05070d; border-radius:0 0 18px 18px; z-index:3;}
+  .screen{ position:absolute; inset:0; background:#F6F8FA; display:flex; flex-direction:column;}
+  .app-top{ background:#fff; padding:34px 20px 14px; border-bottom:1px solid #E5EAF0;}
+  .app-top .k{ font-size:12px; color:#64748B; font-weight:600;}
+  .app-top .t{ font-size:18px; font-weight:800; color:var(--ink); display:flex; align-items:center; gap:8px;}
+  .logo{ width:22px; height:22px; border-radius:6px; background:var(--teal); display:grid; place-items:center;}
+  .logo svg{ width:14px; height:14px;}
+  /* camera / pose */
+  .cam{ margin:14px; border-radius:18px; height:250px; position:relative; overflow:hidden;
+    background:radial-gradient(120% 120% at 50% 10%, #1f2b45, #0d1526);}
+  .form-badge{ position:absolute; top:12px; left:12px; background:rgba(16,185,129,.92); color:#fff; font-weight:800;
+    font-size:13px; padding:6px 10px; border-radius:10px;}
+  .rep{ position:absolute; top:12px; right:12px; background:rgba(255,255,255,.12); color:#fff; font-weight:700;
+    font-size:13px; padding:6px 10px; border-radius:10px; backdrop-filter:blur(4px);}
+  .cam svg{ position:absolute; inset:0; width:100%; height:100%;}
+  /* coach bubble */
+  .coach{ margin:0 14px; background:#ECFDF5; border:1px solid #A7F3D0; border-radius:14px; padding:12px 14px;
+    display:flex; gap:10px; align-items:flex-start;}
+  .coach .ai{ width:26px; height:26px; border-radius:8px; background:var(--teal); color:#fff; font-size:12px; font-weight:800;
+    display:grid; place-items:center; flex:none;}
+  .coach p{ font-size:13px; color:#065F46; line-height:1.45;}
+  /* plan */
+  .plan{ margin:14px; }
+  .plan h4{ font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#64748B; margin-bottom:10px;}
+  .plan .item{ display:flex; align-items:center; gap:10px; background:#fff; border:1px solid #E5EAF0; border-radius:12px;
+    padding:11px 13px; margin-bottom:8px; font-size:13px; color:var(--ink); font-weight:500;}
+  .check{ width:20px; height:20px; border-radius:50%; background:var(--teal); color:#fff; display:grid; place-items:center; flex:none;}
+  .check svg{ width:12px; height:12px;}
+  .todo{ width:20px; height:20px; border-radius:50%; border:2px solid #CBD5E1; flex:none;}
+  .muted{ color:#94A3B8; font-weight:400;}
+  .nav{ margin-top:auto; background:#fff; border-top:1px solid #E5EAF0; display:flex; justify-content:space-around; padding:12px 0 16px;}
+  .nav span{ width:24px; height:24px; border-radius:7px; background:#E2E8F0;}
+  .nav span.on{ background:var(--teal);}
+</style>
+</head>
+<body>
+  <div class="copy">
+    <span class="badge">Concept prototype</span>
+    <h1>Your PT session, <span>watched by AI.</span></h1>
+    <p>An exercise-therapy app that sees your form through the phone camera, corrects you rep-by-rep, and reshapes tomorrow's plan around how today actually went.</p>
+    <div class="feats">
+      <div><span class="dot"></span> Real-time form scoring from the camera</div>
+      <div><span class="dot"></span> An AI coach that explains every correction</div>
+      <div><span class="dot"></span> Plans that adapt to pain and progress</div>
+    </div>
+  </div>
+
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="screen">
+      <div class="app-top">
+        <div class="k">Knee recovery · Week 3</div>
+        <div class="t"><span class="logo"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> MoveWell AI</div>
+      </div>
+
+      <div class="cam">
+        <div class="form-badge">Form 96%</div>
+        <div class="rep">Rep 8 / 12</div>
+        <svg viewBox="0 0 300 250" preserveAspectRatio="xMidYMid meet">
+          <!-- skeleton -->
+          <g stroke="#34D399" stroke-width="3" stroke-linecap="round">
+            <line x1="150" y1="55" x2="150" y2="120"/>
+            <line x1="150" y1="72" x2="118" y2="105"/>
+            <line x1="150" y1="72" x2="182" y2="105"/>
+            <line x1="150" y1="120" x2="126" y2="170"/>
+            <line x1="150" y1="120" x2="174" y2="170"/>
+            <line x1="126" y1="170" x2="132" y2="215"/>
+            <line x1="174" y1="170" x2="168" y2="215"/>
+          </g>
+          <g fill="#fff" stroke="#10B981" stroke-width="2">
+            <circle cx="150" cy="48" r="12"/>
+            <circle cx="150" cy="72" r="5"/>
+            <circle cx="118" cy="105" r="5"/><circle cx="182" cy="105" r="5"/>
+            <circle cx="150" cy="120" r="5"/>
+            <circle cx="126" cy="170" r="6"/><circle cx="174" cy="170" r="6"/>
+            <circle cx="132" cy="215" r="5"/><circle cx="168" cy="215" r="5"/>
+          </g>
+          <!-- angle highlight at knee -->
+          <path d="M126 170 A 18 18 0 0 1 132 215" fill="none" stroke="#FBBF24" stroke-width="3"/>
+        </svg>
+      </div>
+
+      <div class="coach">
+        <div class="ai">AI</div>
+        <p><b>Great depth.</b> Keep your left knee tracking over your toes — you're drifting inward slightly on the way up.</p>
+      </div>
+
+      <div class="plan">
+        <h4>Today's plan</h4>
+        <div class="item"><span class="check"><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-11" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Heel slides <span class="muted">· done</span></div>
+        <div class="item"><span class="check"><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-11" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Mini squats <span class="muted">· in progress</span></div>
+        <div class="item"><span class="todo"></span> Step-ups <span class="muted">· up next</span></div>
+      </div>
+
+      <div class="nav"><span class="on"></span><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</body>
+</html>

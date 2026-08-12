@@ -13,6 +13,25 @@ function param(name) {
 function capHTML(text) {
   return `<div class="cap">${icon("check")}<span>${esc(text)}</span></div>`;
 }
+function heroHTML(hero) {
+  if (!hero || !hero.img) return "";
+  const cap = hero.caption ? `<figcaption>${esc(hero.caption)}</figcaption>` : "";
+  return `<figure class="hero-shot"><div class="frame"><img src="${esc(hero.img)}" alt="${esc(hero.caption || "")}" /></div>${cap}</figure>`;
+}
+function articleHTML(blocks) {
+  if (!blocks || !blocks.length) return "";
+  const parts = blocks.map((b, i) => {
+    const h = b.heading ? `<h2>${esc(b.heading)}</h2>` : "";
+    const ps = (b.body || []).map((p, j) =>
+      (i === 0 && j === 0) ? `<p class="lead">${esc(p)}</p>` : `<p>${esc(p)}</p>`
+    ).join("");
+    const fig = (b.image && b.image.src)
+      ? `<figure><img src="${esc(b.image.src)}" alt="${esc(b.image.caption || "")}" />${b.image.caption ? `<figcaption>${esc(b.image.caption)}</figcaption>` : ""}</figure>`
+      : "";
+    return h + ps + fig;
+  }).join("");
+  return `<div class="article-prose">${parts}</div>`;
+}
 function vItem(iconName, text) {
   return `<li>${icon(iconName)}<span>${esc(text)}</span></li>`;
 }
@@ -70,6 +89,8 @@ function render() {
 
     <div class="product-layout">
       <div>
+        ${heroHTML(p.hero)}
+        ${articleHTML(p.article)}
         <p class="block-title">Key capabilities</p>
         <div class="cap-grid">${(p.capabilities || []).map(capHTML).join("")}</div>
 

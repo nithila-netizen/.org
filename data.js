@@ -11,22 +11,64 @@
    ========================================================================== */
 
 const SITE = {
-  brand: "Nithila Notes",
-  heroEyebrow: "The map of AI across healthcare",
-  heroTitle: "Understand how AI is changing",
-  heroTitleHighlight: "your corner",       // rendered in teal
-  heroTitleTail: "of healthcare.",
-  heroLede: "Every healthcare industry and sub-industry, how AI is transforming " +
-            "each one, and the products — available and upcoming — reviewed for the " +
-            "people who work there.",
-  // Homepage stat tiles. Edit the numbers to match your growing collection.
-  stats: [
-    { icon: "compass", num: "12",  label: "Healthcare industries" },
-    { icon: "layers",  num: "39",  label: "Sub-industries analyzed" },
-    { icon: "package", num: "216", label: "AI products reviewed" },
-    { icon: "sprout",  num: "95",  label: "Emerging companies to watch" },
-  ],
+  brand: "Nithila Neminathan",
+  publication: "Nithila Notes",
 };
+
+/* --------------------------------------------------------------------------
+   PROFILE — this is YOUR portfolio. Edit these to change the homepage.
+   -------------------------------------------------------------------------- */
+const PROFILE = {
+  name: "Nithila Neminathan",
+  role: "Aspiring Product Manager · AI in Healthcare",
+  // Hero headline. Wrap words in <em>…</em> for elegant italics.
+  heroTitle: "Product thinking for the <em>future</em> of healthcare.",
+  heroIntro: "I'm Nithila — I study where artificial intelligence meets healthcare, and I " +
+             "write independent reviews of the products shaping it, each with a clear point of " +
+             "view on how they could serve more people, better.",
+  // About section
+  aboutLead: "I want to build products that make good healthcare reach further.",
+  about: [
+    "My work here is a running body of analysis: I take a real company in a corner of " +
+    "healthcare, review what it does well and where it falls short, and lay out my own " +
+    "product thinking for how AI could push it further — always as independent commentary, " +
+    "always crediting the source.",
+    "It's how I sharpen the instincts a product manager lives on: reading a market, judging a " +
+    "product honestly, and turning a critique into a concrete direction.",
+  ],
+  skills: [
+    "Product strategy", "AI / ML literacy", "Healthcare markets",
+    "User research", "Prototyping", "Competitive analysis",
+  ],
+  contact: {
+    email: "nithilajax@gmail.com",   // ← edit if you want a different contact address
+    linkedin: "",                    // ← paste your LinkedIn URL
+    other: "",                       // ← anything else (portfolio, X, etc.)
+  },
+};
+
+/* --------------------------------------------------------------------------
+   EXPERIENCE — case competitions, programs, and other portfolio items.
+   Copy a block to add more. type is just a small label.
+   -------------------------------------------------------------------------- */
+const EXPERIENCE = [
+  {
+    type: "Program",
+    title: "ONSET",
+    org: "",                          // ← organization / host, if any
+    year: "",                         // ← e.g. "2025"
+    detail: "Add a sentence on what ONSET was and your role or takeaway. " +
+            "(Placeholder — edit in data.js under EXPERIENCE.)",
+  },
+  {
+    type: "Case competition",
+    title: "[Case competition name]",
+    org: "",
+    year: "",
+    detail: "What the challenge was, what you proposed, and how you placed. " +
+            "Copy this block to add each competition you've attended.",
+  },
+];
 
 /* --------------------------------------------------------------------------
    INDUSTRIES — the browsing structure.
@@ -146,7 +188,7 @@ const PRODUCTS = [
         "reinforce the exact pattern that caused the pain. Catching that in the second it " +
         "happens is worth more than catching it a week later.",
       ]},
-      { heading: "The AI-ification", body: [
+      { heading: "My take — how I'd push it further", body: [
         "I'd make the camera the therapist's eyes. Modern on-device pose estimation can track " +
         "joint positions from an ordinary phone camera, which means the app can score your " +
         "form rep-by-rep and speak up the instant something drifts — 'keep your knee over your " +

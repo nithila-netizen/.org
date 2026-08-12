@@ -3,59 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nithila Notes — The map of AI across healthcare</title>
-  <meta name="description" content="Every healthcare industry and sub-industry, how AI is transforming each one, and the products reviewed for the people who work there." />
+  <title>Nithila Neminathan — Product thinking for AI in healthcare</title>
+  <meta name="description" content="Nithila Neminathan — aspiring product manager in AI and healthcare. Independent reviews of the products shaping the field." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,opsz@0,6..72;1,6..72&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div id="header-slot"></div>
 
-  <section class="hero">
+  <!-- Portfolio hero -->
+  <section class="p-hero">
     <div class="wrap">
-      <div class="hero-inner">
-        <p class="eyebrow" id="hero-eyebrow"></p>
+      <div>
+        <p class="eyebrow" id="hero-role"></p>
         <h1 id="hero-title"></h1>
-        <p class="lede" id="hero-lede"></p>
+        <p class="intro" id="hero-intro"></p>
         <div class="btns">
-          <a class="btn btn-primary" href="#industries">Explore industries&nbsp;→</a>
-          <a class="btn btn-ghost" href="#products">Browse all products</a>
+          <a class="btn btn-solid" href="#work">Read my reviews</a>
+          <a class="btn btn-ghost" href="#about">About me</a>
         </div>
+      </div>
+      <div class="art" aria-hidden="true">
+        <!-- Elegant monochrome AI × health line graphic: a pulse line resolving into a node network -->
+        <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="200" r="168" stroke="#E8E3DA" stroke-width="1"/>
+          <circle cx="200" cy="200" r="120" stroke="#E8E3DA" stroke-width="1"/>
+          <!-- ECG pulse across the middle -->
+          <path d="M40 200 H120 l14 -46 l20 96 l16 -120 l18 150 l14 -80 H210"
+                stroke="#16130F" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+          <!-- pulse resolves into a small neural node graph on the right -->
+          <g stroke="#16130F" stroke-width="1.4">
+            <line x1="210" y1="200" x2="272" y2="150"/>
+            <line x1="210" y1="200" x2="278" y2="232"/>
+            <line x1="272" y1="150" x2="330" y2="132"/>
+            <line x1="272" y1="150" x2="326" y2="196"/>
+            <line x1="278" y1="232" x2="326" y2="196"/>
+            <line x1="278" y1="232" x2="332" y2="268"/>
+            <line x1="326" y1="196" x2="332" y2="268"/>
+          </g>
+          <g fill="#FFFFFF" stroke="#16130F" stroke-width="1.6">
+            <circle cx="210" cy="200" r="5"/>
+            <circle cx="272" cy="150" r="6"/>
+            <circle cx="278" cy="232" r="6"/>
+            <circle cx="330" cy="132" r="7"/>
+            <circle cx="326" cy="196" r="7"/>
+            <circle cx="332" cy="268" r="6"/>
+          </g>
+          <!-- a fine heart glyph tucked at lower-left of the orbit -->
+          <path d="M96 300 c -10 -12 -28 -4 -28 12 c 0 16 28 30 28 30 c 0 0 28 -14 28 -30 c 0 -16 -18 -24 -28 -12 z"
+                stroke="#16130F" stroke-width="1.4" fill="none"/>
+        </svg>
       </div>
     </div>
   </section>
 
-  <section class="stats">
+  <!-- Selected reviews -->
+  <section class="section" id="work">
     <div class="wrap">
-      <div class="grid" id="stats-grid"></div>
-    </div>
-  </section>
-
-  <section class="section" id="industries">
-    <div class="wrap">
-      <p class="section-eyebrow">Start with your focus area</p>
-      <div class="section-title-row">
+      <div class="section-head">
         <div>
-          <h2>Healthcare industries</h2>
-          <p class="sub">Pick your industry to see its sub-industries, how AI is reshaping each, and the products built for them.</p>
+          <p class="eyebrow">Selected work · Nithila Notes</p>
+          <h2>Reviews &amp; product takes</h2>
         </div>
+        <a class="link" href="#areas">Browse by area →</a>
       </div>
-      <div class="grid-cards" id="industries-grid"></div>
+      <div class="reviews" id="reviews"></div>
     </div>
   </section>
 
-  <section class="section" id="products" style="padding-top:0">
+  <!-- Areas I cover -->
+  <section class="section alt" id="areas">
     <div class="wrap">
-      <p class="section-eyebrow">Reviewed for the people who work there</p>
-      <div class="section-title-row">
+      <div class="section-head">
         <div>
-          <h2>Latest product reviews</h2>
-          <p class="sub">Honest, plain-language verdicts on the AI products moving each field.</p>
+          <p class="eyebrow">Coverage</p>
+          <h2>Areas I cover</h2>
         </div>
       </div>
-      <div class="grid-cards" id="products-grid"></div>
+      <div class="areas" id="areas-grid"></div>
+    </div>
+  </section>
+
+  <!-- Experience / case competitions -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Beyond the writing</p>
+          <h2>Case competitions &amp; experience</h2>
+        </div>
+      </div>
+      <div class="reviews" id="experience-list"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section alt" id="about">
+    <div class="wrap">
+      <p class="eyebrow">About</p>
+      <div class="about-grid">
+        <div class="portrait" aria-hidden="true">
+          <svg viewBox="0 0 100 120" fill="none" stroke="#16130F" stroke-width="1.4">
+            <circle cx="50" cy="42" r="22"/>
+            <path d="M14 112 c0 -26 16 -40 36 -40 s36 14 36 40"/>
+          </svg>
+        </div>
+        <div class="about-body" id="about-body"></div>
+      </div>
     </div>
   </section>
 

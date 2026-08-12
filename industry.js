@@ -40,7 +40,7 @@ function render() {
 
   el.innerHTML = `
     <p class="crumb"><a href="index.html">Home</a> &nbsp;·&nbsp; ${esc(ind.name)}</p>
-    <p class="eyebrow">Coverage area</p>
+    <p class="eyebrow">Sector</p>
     <h1 style="font-family:var(--display);font-weight:500;font-size:clamp(32px,5vw,46px);letter-spacing:-0.025em;margin:0 0 14px">${esc(ind.name)}</h1>
     <p style="font-size:20px;color:var(--ink-2);max-width:640px;margin:0">${esc(ind.blurb)}</p>
     ${sections}`;

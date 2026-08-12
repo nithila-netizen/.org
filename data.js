@@ -84,6 +84,7 @@ const ONSET = {
           "than lectures, a minimalist cream-and-blood-red visual system, a repeatable weekly content " +
           "calendar, and light automation that drafts upcoming posts and scans for breaking news.",
   ig: { handle: "@onset.ai.health", url: "https://instagram.com/onset.ai.health" },
+  widget: "",  // ← paste a LightWidget/SnapWidget <iframe> embed here for a live post feed
   // Drop screenshots of ONSET posts into assets/photos/ with these names:
   posts: [
     "assets/photos/onset-1.jpg",
@@ -119,6 +120,7 @@ const MARKETING = [
     name: "UF Pawsthetics",
     role: "Marketing Director",
     ig: { handle: "@ufpawsthetics", url: "https://instagram.com/ufpawsthetics" },
+    widget: "",  // ← paste a LightWidget/SnapWidget <iframe> embed here
     posts: [
       "assets/photos/pawsthetics-1.jpg",
       "assets/photos/pawsthetics-2.jpg",
@@ -130,6 +132,7 @@ const MARKETING = [
     role: "Marketing Director",
     headshot: "assets/photos/headshot-180dc.jpg",
     ig: { handle: "@180dcuflorida", url: "https://instagram.com/180dcuflorida" },
+    widget: "",  // ← paste a LightWidget/SnapWidget <iframe> embed here
     posts: [
       "assets/photos/180dc-1.jpg",
       "assets/photos/180dc-2.jpg",

@@ -38,6 +38,10 @@ function carousel(posts, label) {
 document.getElementById("hero-role").textContent = PROFILE.role;
 document.getElementById("hero-title").innerHTML = PROFILE.heroTitle;
 document.getElementById("hero-intro").textContent = PROFILE.heroIntro;
+(function () {
+  const hp = document.getElementById("hero-portrait");
+  if (hp && PROFILE.portrait) hp.innerHTML = `<div class="pf"><img src="${esc(PROFILE.portrait)}" alt="${esc(PROFILE.name)}" /></div>`;
+})();
 
 /* ---- Reviews -------------------------------------------------------------- */
 const _rate = {};
@@ -95,7 +99,7 @@ if (typeof ONSET !== "undefined") {
           ${ofBlock("How it works", ONSET.how)}
           ${ofBlock("What I built", ONSET.impact)}
         </div>
-        ${igCard(ONSET.ig && ONSET.ig.handle, ONSET.ig && ONSET.ig.url, "Weekly on Instagram. See the latest posts.")}
+        ${ONSET.widget ? `<div class="ig-widget">${ONSET.widget}</div>` : igCard(ONSET.ig && ONSET.ig.handle, ONSET.ig && ONSET.ig.url, "Weekly on Instagram. See the latest posts.")}
       </div>
     </div>`;
 }
@@ -125,7 +129,7 @@ if (typeof MARKETING !== "undefined") {
       : "";
     return `<div class="mkt">
         <div class="mkt-head">${head}<div><h3>${esc(m.name)}</h3><p class="role">${esc(m.role)}</p></div></div>
-        ${igCard(m.ig && m.ig.handle, m.ig && m.ig.url, "See my work. Latest posts on Instagram.")}
+        ${m.widget ? `<div class="ig-widget">${m.widget}</div>` : igCard(m.ig && m.ig.handle, m.ig && m.ig.url, "See my work. Latest posts on Instagram.")}
       </div>`;
   }).join("");
 }
@@ -176,13 +180,10 @@ if (typeof RESEARCH !== "undefined") {
   document.getElementById("about-slot").innerHTML = `
     <p class="eyebrow">About</p>
     ${originHTML}
-    <div class="about-grid">
-      ${portraitHTML}
-      <div class="about-body">
-        ${aboutParas}
-        <div class="skills">${skills}</div>
-        ${edu ? `<div class="edu">${edu}</div>` : ""}
-      </div>
+    <div class="about-body" style="max-width:820px">
+      ${aboutParas}
+      <div class="skills">${skills}</div>
+      ${edu ? `<div class="edu">${edu}</div>` : ""}
     </div>`;
 })();
 

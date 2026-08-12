@@ -1,8 +1,7 @@
-# AI × Healthcare — a collection of ideas
+# Nithila Notes — the map of AI across healthcare
 
-A personal portfolio of ideas for applying AI across the healthcare industry.
-Healthcare is broken into **sections → subsections → idea articles**. Each
-article credits a real company and lays out how I'd use AI to make it better.
+Every healthcare industry and sub-industry, how AI is transforming each one,
+and the products — reviewed for the people who work there.
 
 Built as plain HTML, CSS, and JavaScript — no build tools, no frameworks.
 
@@ -10,40 +9,43 @@ Built as plain HTML, CSS, and JavaScript — no build tools, no frameworks.
 
 ## How to view the site on your computer
 
-Just **double-click `index.html`** — it opens in your web browser. That's it.
-(Everything works by opening files directly; no server needed.)
+**Double-click `index.html`** — it opens in your web browser. That's it.
+(No server needed; everything works by opening the files directly.)
 
-## How to add a new idea (no coding required)
+## How to add content (no coding required)
 
-1. Open **`data.js`** in any text editor.
-2. Find the `IDEAS` list.
-3. Copy one whole idea block — everything from `{` to `},` — and paste it as a
-   new block.
-4. Change the text: the title, the company, the problem, your AI approach, etc.
-5. Save the file and refresh the page in your browser. Your new idea appears.
+Everything you write lives in **`data.js`**. Open it in any text editor.
 
-To add a whole new **section or subsection**, edit the `SECTIONS` list at the
-top of `data.js` the same way.
+### Add a new industry
+Find the `INDUSTRIES` list, copy one `{ ... }` block, paste it, and edit the
+name, blurb, and its `subIndustries`. Keep the commas between blocks.
 
-### Adding mockup screenshots
+### Add a new product review
+Find the `PRODUCTS` list, copy one `{ ... }` block, paste it, and edit:
+- `name`, `tagline`
+- `industry` / `subIndustry` — must match ids from the `INDUSTRIES` list
+- `status` — `"has-ai"` (already an AI product) or `"adds-ai"` (your idea to add AI)
+- `capabilities`, `strengths`, `watchOuts`, `quote`
+- `glance` — the "At a glance" sidebar (company, founded, HQ, regulatory, pricing, website)
 
-1. Put your image file in the **`assets/`** folder (e.g. `assets/my-mockup.png`).
-2. In that idea's `mockups` list, set `src: "assets/my-mockup.png"`.
-3. Refresh. Until you add a real image, a placeholder frame shows instead.
+Save, refresh the page, and your changes appear.
 
 ---
 
 ## The files, in plain terms
 
-| File           | What it is                                             |
-|----------------|--------------------------------------------------------|
-| `data.js`      | **Your content.** The only file you normally edit.     |
-| `index.html`   | The homepage.                                          |
-| `article.html` | The template every idea article uses.                  |
-| `styles.css`   | The look and feel (colors, fonts, spacing).            |
-| `app.js`       | Builds the homepage from your content. (Don't edit.)   |
-| `article.js`   | Builds each article from your content. (Don't edit.)   |
-| `assets/`      | Your mockup images.                                    |
+| File            | What it is                                              |
+|-----------------|---------------------------------------------------------|
+| `data.js`       | **Your content.** The main file you edit.               |
+| `index.html`    | The homepage (hero, stats, industries, products).       |
+| `industry.html` | Template for a single industry's page.                  |
+| `product.html`  | Template for a single product review.                   |
+| `styles.css`    | The look and feel (colors, fonts, spacing).             |
+| `app.js`        | Builds the homepage. (Don't edit.)                      |
+| `industry.js` / `product.js` | Build those pages. (Don't edit.)           |
+| `icons.js`      | The little line icons. (Don't edit.)                    |
+| `partials.js`   | The shared header + footer. (Don't edit.)               |
+| `assets/`       | For any image files you add.                            |
 
 ---
 
@@ -63,3 +65,12 @@ git add .
 git commit -m "describe what you changed"
 git push
 ```
+
+---
+
+## Note on this version
+
+This is a faithful rebuild of the Nithila Notes design, seeded with example
+content (the Isomorphic Labs review). If you have an earlier version with your
+own written reviews, push it from that project to this repo to bring your real
+content in.

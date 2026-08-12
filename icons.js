@@ -31,6 +31,24 @@ function icon(name) {
   return `<svg viewBox="0 0 24 24" aria-hidden="true">${body}</svg>`;
 }
 
+// Star rating (out of 5, supports halves). Returns HTML.
+function stars(r) {
+  const path = "M12 2l2.9 6 6.6.6-5 4.3 1.5 6.5L12 16.9 5.9 20.5l1.5-6.5-5-4.3 6.6-.6z";
+  let out = "";
+  for (let i = 1; i <= 5; i++) {
+    const type = r >= i ? "full" : (r >= i - 0.5 ? "half" : "empty");
+    if (type === "full")  out += `<svg class="star" viewBox="0 0 24 24"><path d="${path}" fill="currentColor"/></svg>`;
+    else if (type === "empty") out += `<svg class="star" viewBox="0 0 24 24"><path d="${path}" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>`;
+    else out += `<svg class="star" viewBox="0 0 24 24"><defs><linearGradient id="half"><stop offset="50%" stop-color="currentColor"/><stop offset="50%" stop-color="transparent"/></linearGradient></defs><path d="${path}" fill="url(#half)" stroke="currentColor" stroke-width="1.3"/></svg>`;
+  }
+  return `<span class="stars" role="img" aria-label="${r} out of 5">${out}</span><span class="rnum">${Number(r).toFixed(1)}</span>`;
+}
+
+// Short label for a catalog entry's status.
+function statusLabel(s) {
+  return s === "adds-ai" ? "Concept" : (s === "watch" ? "Watch" : "Established");
+}
+
 // Escape text before inserting into HTML.
 function esc(s) {
   return String(s == null ? "" : s)

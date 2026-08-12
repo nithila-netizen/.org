@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coverage — Nithila Notes</title>
+  <meta name="description" content="A searchable database of AI-in-healthcare companies, reviewed and rated across every field." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <section class="db-head">
+    <div class="wrap">
+      <p class="eyebrow">Nithila Notes · Coverage</p>
+      <h1>The database</h1>
+      <p class="db-sub" id="db-sub"></p>
+      <div class="db-controls">
+        <div class="db-search">
+          <span class="db-search-ico" aria-hidden="true"></span>
+          <input id="q" type="search" placeholder="Search companies, fields, tags…" aria-label="Search the database" />
+        </div>
+        <select id="sort" aria-label="Sort">
+          <option value="rating">Sort: Rating (high → low)</option>
+          <option value="az">Sort: Name (A → Z)</option>
+          <option value="field">Sort: Field</option>
+        </select>
+      </div>
+      <div class="db-filters" id="filters"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:36px">
+    <div class="wrap">
+      <p class="db-count" id="count"></p>
+      <div class="db-list" id="list"></div>
+    </div>
+  </section>
+
+  <div id="footer-slot"></div>
+
+  <script src="icons.js"></script>
+  <script src="data.js"></script>
+  <script src="partials.js"></script>
+  <script src="reviews.js"></script>
+</body>
+</html>

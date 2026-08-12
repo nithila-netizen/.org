@@ -40,12 +40,15 @@ document.getElementById("hero-title").innerHTML = PROFILE.heroTitle;
 document.getElementById("hero-intro").textContent = PROFILE.heroIntro;
 
 /* ---- Reviews -------------------------------------------------------------- */
+const _rate = {};
+if (typeof CATALOG !== "undefined") CATALOG.forEach(c => { if (c.full) _rate[c.full] = c.rating; });
 document.getElementById("reviews").innerHTML = PRODUCTS.map(p => {
   const ind = INDUSTRIES.find(i => i.id === p.industry);
+  const r = _rate[p.id];
   return `<a class="review-row" href="product.html?id=${encodeURIComponent(p.id)}">
       <span class="cat">${esc(ind ? ind.name : "Review")}</span>
       <span><h3>${esc(p.name)}</h3><p>${esc(p.tagline)}</p></span>
-      <span class="arrow">→</span>
+      <span class="review-meta">${r ? `<span class="db-rating">${stars(r)}</span>` : ""}<span class="arrow">→</span></span>
     </a>`;
 }).join("");
 

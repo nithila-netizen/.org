@@ -190,7 +190,7 @@ const RESEARCH = {
   text: "I do neuroscience research in the Urs Lab at the University of Florida, studying how the " +
         "brain's signaling systems work — hands-on bench science that grounds my interest in where " +
         "medicine and technology meet.",
-  url: "",   // ← paste the lab's website URL and it becomes a button
+  url: "https://pharmacology.med.ufl.edu/research-2/the-urs-lab-2/",
   photos: [
     "assets/photos/research-1.jpg",
     "assets/photos/research-2.jpg",
@@ -392,7 +392,7 @@ const PRODUCTS = [
 
   {
     id: "hinge-health-ai-pt",
-    name: "AI-native physiotherapy, built on the Hinge Health model",
+    name: "Hinge Health — AI physiotherapy",
     industry: "rehab",
     subIndustry: "physiotherapy",
     status: "adds-ai",
@@ -483,7 +483,7 @@ const PRODUCTS = [
 
   {
     id: "isomorphic-labs",
-    name: "Isomorphic Labs",
+    name: "Isomorphic Labs — AI drug design",
     industry: "drug-discovery",
     subIndustry: "molecule-design",
     status: "has-ai",
@@ -517,7 +517,7 @@ const PRODUCTS = [
 
   {
     id: "pulseguard",
-    name: "Continuous heart monitoring, built on KardiaMobile",
+    name: "AliveCor — Continuous heart monitoring",
     industry: "cardiology", subIndustry: "wearables", status: "has-ai",
     tagline: "AliveCor proved a personal ECG can fit in your pocket. Here's how I'd turn spot-checks into real risk monitoring.",
     hero: { img: "assets/protos/pulseguard.png", caption: "Concept prototype: turning at-home ECG readings into a continuous AFib-burden trend with escalation." },
@@ -537,7 +537,7 @@ const PRODUCTS = [
 
   {
     id: "mindbridge",
-    name: "Safer AI mental-health support, built on Wysa",
+    name: "Wysa — AI mental-health support",
     industry: "mental-health", subIndustry: "digital-therapy", status: "has-ai",
     tagline: "Wysa made supportive AI available 24/7. Here's how I'd make it safe enough to sit next to real therapy.",
     hero: { img: "assets/protos/mindbridge.png", caption: "Concept prototype: daily check-ins with crisis-safe triage, human handoff, and symptom tracking." },
@@ -557,7 +557,7 @@ const PRODUCTS = [
 
   {
     id: "glucopilot",
-    name: "Predictive glucose coaching, built on Dexcom",
+    name: "Dexcom — Predictive glucose coaching",
     industry: "chronic", subIndustry: "diabetes", status: "has-ai",
     tagline: "Dexcom made glucose visible in real time. Here's how I'd turn that stream into a single next step.",
     hero: { img: "assets/protos/glucopilot.png", caption: "Concept prototype: forecasting a low 45 minutes out and giving one specific action." },
@@ -577,7 +577,7 @@ const PRODUCTS = [
 
   {
     id: "readrank",
-    name: "An explainable radiology worklist, built on Aidoc",
+    name: "Aidoc — Explainable radiology triage",
     industry: "diagnostics", subIndustry: "radiology", status: "has-ai",
     tagline: "Aidoc flags urgent findings on scans. Here's how I'd turn many detectors into one trusted worklist.",
     hero: { img: "assets/protos/readrank.png", caption: "Concept prototype: one urgency-ranked worklist with region highlights and confidence." },
@@ -597,7 +597,7 @@ const PRODUCTS = [
 
   {
     id: "nuramom",
-    name: "An AI postpartum companion, built on Elvie",
+    name: "Elvie — AI postpartum companion",
     industry: "womens-health", subIndustry: "maternal-postpartum", status: "adds-ai",
     tagline: "Elvie built beloved devices for new mothers. Here's how I'd add AI that catches warning signs early.",
     hero: { img: "assets/protos/nuramom.png", caption: "Concept prototype: reading recovery data to flag postpartum warning signs and route to care." },
@@ -617,7 +617,7 @@ const PRODUCTS = [
 
   {
     id: "dermacheck",
-    name: "Trustworthy skin checks, built on SkinVision",
+    name: "SkinVision — Trustworthy skin checks",
     industry: "diagnostics", subIndustry: "dermatology", status: "has-ai",
     tagline: "SkinVision assesses skin-cancer risk from a photo. Here's how I'd make it fair and finish the loop.",
     hero: { img: "assets/protos/dermacheck.png", caption: "Concept prototype: photo risk validated across skin tones, ending in a teledermatology booking." },
@@ -637,7 +637,7 @@ const PRODUCTS = [
 
   {
     id: "visitcopilot",
-    name: "From scribe to visit co-pilot, built on Abridge",
+    name: "Abridge — Clinical visit co-pilot",
     industry: "care-ops", subIndustry: "clinical-documentation", status: "has-ai",
     tagline: "Abridge turns a conversation into a note. Here's how I'd make it help during the visit, not just after.",
     hero: { img: "assets/protos/visitcopilot.png", caption: "Concept prototype: an ambient note plus live reminders and a plain-language patient summary." },
@@ -657,7 +657,7 @@ const PRODUCTS = [
 
   {
     id: "retinascreen",
-    name: "Closing the loop on eye screening, built on IDx-DR",
+    name: "Digital Diagnostics — Autonomous eye screening",
     industry: "diagnostics", subIndustry: "ophthalmology", status: "has-ai",
     tagline: "Digital Diagnostics built the first autonomous AI to diagnose diabetic retinopathy. Here's how I'd finish the job.",
     hero: { img: "assets/protos/retinascreen.png", caption: "Concept prototype: autonomous screening in a pharmacy that helps the patient navigate the referral and its cost." },
@@ -677,7 +677,7 @@ const PRODUCTS = [
 
   {
     id: "sleeplab",
-    name: "A sleep coach that changes behavior, built on Oura",
+    name: "Oura — Actionable sleep coaching",
     industry: "wellness", subIndustry: "sleep", status: "has-ai",
     tagline: "Oura made sleep measurable. Here's how I'd make it actionable.",
     hero: { img: "assets/protos/sleeplab.png", caption: "Concept prototype: running n-of-1 experiments and showing what actually moved your sleep." },
@@ -697,7 +697,7 @@ const PRODUCTS = [
 
   {
     id: "homewatch",
-    name: "Dignified aging-in-place, built on Cherish",
+    name: "Cherish — Predictive aging-in-place",
     industry: "elder-care", subIndustry: "aging-in-place", status: "adds-ai",
     tagline: "Cherish built contactless in-home sensing. Here's how I'd make it predict decline, not just detect falls.",
     hero: { img: "assets/protos/homewatch.png", caption: "Concept prototype: learning a senior's baseline and flagging decline before a fall." },

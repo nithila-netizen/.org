@@ -119,8 +119,9 @@ if (typeof PROJECTS !== "undefined") {
 }
 
 /* ---- Marketing carousels -------------------------------------------------- */
-if (typeof MARKETING !== "undefined") {
-  document.getElementById("marketing-slot").innerHTML = MARKETING.map(m => {
+const _mktEl = document.getElementById("marketing-slot");
+if (typeof MARKETING !== "undefined" && _mktEl) {
+  _mktEl.innerHTML = MARKETING.map(m => {
     const ig = m.ig && m.ig.url
       ? `<a class="onset-ig" style="color:var(--ink)" href="${esc(m.ig.url)}" target="_blank" rel="noopener">${esc(m.ig.handle || "Instagram")} ${icon("external")}</a>`
       : (m.ig && m.ig.handle ? `<span class="carousel-cap">${esc(m.ig.handle)}</span>` : "");
@@ -157,8 +158,9 @@ if (typeof RESEARCH !== "undefined") {
     </div>`;
 }
 
-/* ---- About ---------------------------------------------------------------- */
+/* ---- About (removed from page; guard if the slot is absent) --------------- */
 (function () {
+  if (!document.getElementById("about-slot")) return;
   const o = PROFILE.origin;
   const originHTML = o ? `
     <div class="spotlight" style="border-top:none;padding-top:0;margin-bottom:48px">

@@ -574,3 +574,10 @@ a.db-row:hover { padding-left: 14px; background: var(--paper-2); text-decoration
 /* live Instagram widget frame (LightWidget/SnapWidget embeds) */
 .ig-widget { margin-top: 6px; border: 1px solid var(--line); border-radius: var(--radius-sm); overflow: hidden; }
 .ig-widget iframe { width: 100%; border: 0; display: block; }
+
+/* ==========================================================================
+   De-personalized: single-column hero, grayscale (professional) lab photos
+   ========================================================================== */
+.p-hero .wrap { grid-template-columns: 1fr; max-width: 900px; }
+.p-hero h1 { max-width: 18ch; }
+.research-grid .photo img { filter: grayscale(1) contrast(1.02); }

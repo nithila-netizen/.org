@@ -11,7 +11,7 @@ function renderHeader() {
         <a href="reviews.html">Reviews</a>
         <a href="index.html#projects">Projects</a>
         <a href="index.html#involvement">Experience</a>
-        <a href="index.html#about">About</a>
+        <a href="index.html#research">Research</a>
         <a href="index.html#contact">Contact</a>
       </nav>
     </div>

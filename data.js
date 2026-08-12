@@ -96,19 +96,7 @@ const ONSET = {
 /* --------------------------------------------------------------------------
    PROJECTS — things you've built. (e.g. the Nirmaa website.)
    -------------------------------------------------------------------------- */
-const PROJECTS = [
-  {
-    name: "nirmaa.com",
-    role: "Service design & website · end to end",
-    url: "https://nirmaa.com",
-    blurb: "Nirmaa is a textile manufacturer that lived almost entirely offline. I shaped how it " +
-           "presents and sells its work: defining its service offering, then designing and building " +
-           "the website end to end. The result gives a traditional manufacturer a credible, modern " +
-           "digital front door: a place to showcase its capabilities and win clients it couldn't " +
-           "reach before. It's the clearest proof of my range: strategy, design, and shipping a real product.",
-    photo: "assets/photos/nirmaa.jpg",
-  },
-];
+const PROJECTS = [];
 
 /* --------------------------------------------------------------------------
    MARKETING — clubs/orgs you run marketing for. Each gets an Instagram
@@ -195,7 +183,7 @@ const RESEARCH = {
   lab: "Urs Lab · University of Florida",
   field: "Neuroscience research",
   text: "I do neuroscience research in the Urs Lab at the University of Florida, studying how the " +
-        "brain's signaling systems work — hands-on bench science that grounds my interest in where " +
+        "brain's signaling systems work: hands-on bench science that grounds my interest in where " +
         "medicine and technology meet.",
   url: "https://pharmacology.med.ufl.edu/research-2/the-urs-lab-2/",
   photos: [
@@ -217,14 +205,6 @@ const FUNFACTS = [
     annotations: [
       { x: "72%", y: "34%", label: "me" },
       { x: "30%", y: "34%", label: "college roommate" },
-    ],
-  },
-  {
-    label: "About me",
-    text: "I love staying active and being out in nature — especially exploring with my little sister.",
-    photos: [
-      "assets/photos/nature-road.jpg",
-      "assets/photos/nature-hike.jpg",
     ],
   },
 ];

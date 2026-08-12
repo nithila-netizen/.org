@@ -21,6 +21,7 @@ const SITE = {
 const PROFILE = {
   name: "Nithila Neminathan",
   role: "Aspiring Product Manager · AI in Healthcare",
+  portrait: "assets/photos/portrait-cutout.png",   // cut-out headshot on the homepage
   // Hero headline. Wrap words in <em>…</em> for elegant italics.
   heroTitle: "Product thinking for the <em>future</em> of healthcare.",
   heroIntro: "I'm Nithila — I study where artificial intelligence meets healthcare, and I " +
@@ -66,17 +67,20 @@ const PROFILE = {
    -------------------------------------------------------------------------- */
 const ONSET = {
   founded: "",                        // ← e.g. "2024"
-  oneLiner: "ONSET is my platform for learning about AI in healthcare — a place to actually " +
-            "understand the field, one week at a time.",
-  why: "AI in healthcare moves fast and can feel locked behind jargon. I built ONSET as a friendly " +
-       "on-ramp — so anyone curious could keep up and break in, without needing a technical background.",
-  who: "Students and early-career people who want to understand AI in healthcare and find their way " +
-       "into it — plus anyone who just wants to stay current.",
-  how: "Every week we post a bite-sized breakdown: a key term to know, a company doing interesting " +
-       "work, or a job and what it actually involves — making the space approachable and concrete.",
-  impact: "It turns a fast, intimidating field into something learnable and career-relevant, and " +
-          "builds a community of people growing into it together.",
-  ig: { handle: "", url: "" },        // ← ONSET Instagram (send me the link)
+  oneLiner: "Onset is an independent media brand that decodes AI in healthcare for students and " +
+            "newcomers — one idea, one company, and one career at a time, in plain English.",
+  why: "AI is transforming medicine faster than anyone can explain it, and most coverage is either " +
+       "too technical or too hyped to be useful to someone just getting curious. I built Onset to " +
+       "close that gap: no jargon, no hype, no medical degree required.",
+  who: "College students, pre-meds, and early-career people who want to understand where medicine is " +
+       "heading before it becomes mainstream.",
+  how: "A recurring weekly system on Instagram: a 'Word of the Week' explainer, a 'Company Spotlight,' " +
+       "and a 'Role Spotlight' on careers in the field — plus deep dives and timely breaking-news posts. " +
+       "Each is a designed carousel with a searchable, editorial caption, backed by a newsletter and LinkedIn.",
+  impact: "I built the whole brand: naming and positioning, a warm editorial voice that reports rather " +
+          "than lectures, a minimalist cream-and-blood-red visual system, a repeatable weekly content " +
+          "calendar, and light automation that drafts upcoming posts and scans for breaking news.",
+  ig: { handle: "@onset.ai.health", url: "https://instagram.com/onset.ai.health" },
   // Drop screenshots of ONSET posts into assets/photos/ with these names:
   posts: [
     "assets/photos/onset-1.jpg",
@@ -93,7 +97,7 @@ const PROJECTS = [
     name: "nirmaa.com",
     role: "Designed & built the website",
     url: "https://nirmaa.com",
-    blurb: "I designed and built the Nirmaa website end to end. [Add one line on what Nirmaa is.]",
+    blurb: "Nirmaa is a textile manufacturing company. I designed its services and built the website end to end.",
     photo: "assets/photos/nirmaa.jpg",
   },
 ];
@@ -107,7 +111,7 @@ const MARKETING = [
   {
     name: "UF Pawsthetics",
     role: "Marketing Director",
-    ig: { handle: "", url: "" },      // ← Instagram handle + URL
+    ig: { handle: "@ufpawsthetics", url: "https://instagram.com/ufpawsthetics" },
     posts: [
       "assets/photos/pawsthetics-1.jpg",
       "assets/photos/pawsthetics-2.jpg",
@@ -117,7 +121,8 @@ const MARKETING = [
   {
     name: "180 Degrees Consulting",
     role: "Marketing Director",
-    ig: { handle: "", url: "" },      // ← Instagram handle + URL
+    headshot: "assets/photos/headshot-180dc.jpg",
+    ig: { handle: "@180dcuflorida", url: "https://instagram.com/180dcuflorida" },
     posts: [
       "assets/photos/180dc-1.jpg",
       "assets/photos/180dc-2.jpg",
@@ -151,7 +156,44 @@ const INVOLVEMENT = [
           "building their confidence through movement.",
     photo: "assets/photos/girls-on-the-run.jpg",
   },
+  {
+    title: "Norman Fixel Institute for Neurological Diseases",
+    role: "Volunteer",
+    text: "I volunteered at UF Health's Norman Fixel Institute for Neurological Diseases — pictured " +
+          "here with Congressman Gus Bilirakis and Dr. Michael Okun, neurologist and best-selling " +
+          "author of The Parkinson's Plan.",
+    photo: "assets/photos/fixel-institute.jpg",
+    links: [
+      { url: "https://fixel.ufhealth.org/", label: "Fixel Institute ↗" },
+      { url: "https://www.google.com/search?q=The+Parkinson%27s+Plan+Michael+Okun+book", label: "The Parkinson's Plan ↗" },
+    ],
+  },
+  {
+    title: "Stop Children's Cancer",
+    role: "Intern",
+    text: "I interned with Stop Children's Cancer, supporting their mission to fund research and " +
+          "brighter outcomes for children facing cancer.",
+    photo: "assets/photos/stop-childrens-cancer.jpg",
+  },
 ];
+
+/* --------------------------------------------------------------------------
+   RESEARCH — lab work. Three photos side by side + a description.
+   Drop research-1.jpg / research-2.jpg / research-3.jpg into assets/photos/.
+   -------------------------------------------------------------------------- */
+const RESEARCH = {
+  lab: "Urs Lab · University of Florida",
+  field: "Neuroscience research",
+  text: "I do neuroscience research in the Urs Lab at the University of Florida, studying how the " +
+        "brain's signaling systems work — hands-on bench science that grounds my interest in where " +
+        "medicine and technology meet.",
+  url: "",   // ← paste the lab's website URL and it becomes a button
+  photos: [
+    "assets/photos/research-1.jpg",
+    "assets/photos/research-2.jpg",
+    "assets/photos/research-3.jpg",
+  ],
+};
 
 /* --------------------------------------------------------------------------
    FUN FACTS — personal, photo-led moments.

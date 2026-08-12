@@ -12,7 +12,7 @@ function photo(src, label, cls) {
          onerror="this.closest('.photo').classList.add('missing')" />
   </figure>`;
 }
-function overlayPhoto(src, lab, title, text, cls) {
+function overlayPhoto(src, lab, title, text, cls, extra) {
   return `<figure class="photo overlay-photo ${cls || ""}" data-label="${esc(title || lab || "Photo")}">
     <img src="${esc(src)}" alt="${esc(title || "")}" loading="lazy"
          onerror="this.closest('.photo').classList.add('missing')" />
@@ -20,6 +20,7 @@ function overlayPhoto(src, lab, title, text, cls) {
       ${lab ? `<p class="lab">${esc(lab)}</p>` : ""}
       ${title ? `<h3>${esc(title)}</h3>` : ""}
       ${text ? `<p>${esc(text)}</p>` : ""}
+      ${extra || ""}
     </figcaption>
   </figure>`;
 }
@@ -104,9 +105,11 @@ if (typeof MARKETING !== "undefined") {
     const ig = m.ig && m.ig.url
       ? `<a class="onset-ig" style="color:var(--ink)" href="${esc(m.ig.url)}" target="_blank" rel="noopener">${esc(m.ig.handle || "Instagram")} ${icon("external")}</a>`
       : (m.ig && m.ig.handle ? `<span class="carousel-cap">${esc(m.ig.handle)}</span>` : "");
+    const head = m.headshot
+      ? `<img class="mkt-headshot" src="${esc(m.headshot)}" alt="${esc(m.name)}" loading="lazy" onerror="this.style.display='none'" />`
+      : "";
     return `<div class="mkt">
-        <h3>${esc(m.name)}</h3>
-        <p class="role">${esc(m.role)}</p>
+        <div class="mkt-head">${head}<div><h3>${esc(m.name)}</h3><p class="role">${esc(m.role)}</p></div></div>
         ${carousel(m.posts, m.name + " post")}
         ${ig ? `<div style="margin-top:12px">${ig}</div>` : ""}
       </div>`;
@@ -115,9 +118,25 @@ if (typeof MARKETING !== "undefined") {
 
 /* ---- Involvement ---------------------------------------------------------- */
 if (typeof INVOLVEMENT !== "undefined") {
-  document.getElementById("involvement-slot").innerHTML = INVOLVEMENT.map(v =>
-    `<div class="inv">${overlayPhoto(v.photo, v.role, v.title, v.text)}</div>`
-  ).join("");
+  document.getElementById("involvement-slot").innerHTML = INVOLVEMENT.map(v => {
+    const links = (v.links || (v.link ? [v.link] : []))
+      .map(l => `<a class="inv-link" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("");
+    return `<div class="inv">${overlayPhoto(v.photo, v.role, v.title, v.text, "", links)}</div>`;
+  }).join("");
+}
+
+/* ---- Research ------------------------------------------------------------- */
+if (typeof RESEARCH !== "undefined") {
+  const pics = RESEARCH.photos.map(src => photo(src, RESEARCH.lab)).join("");
+  const link = RESEARCH.url
+    ? `<a class="btn btn-ghost" href="${esc(RESEARCH.url)}" target="_blank" rel="noopener">Visit the lab site →</a>` : "";
+  document.getElementById("research-slot").innerHTML = `
+    <div class="research-grid">${pics}</div>
+    <div class="research-desc">
+      <p class="eyebrow" style="margin-bottom:10px">${esc(RESEARCH.lab)} · ${esc(RESEARCH.field)}</p>
+      <p class="body">${esc(RESEARCH.text)}</p>
+      ${link}
+    </div>`;
 }
 
 /* ---- About ---------------------------------------------------------------- */
@@ -137,15 +156,14 @@ if (typeof INVOLVEMENT !== "undefined") {
   const edu = (PROFILE.education || []).map(e =>
     `<div class="item"><div class="school">${esc(e.school)}</div><div class="note">${esc(e.note)}</div></div>`
   ).join("");
+  const portraitHTML = PROFILE.portrait
+    ? `<div class="portrait photo-cut"><img src="${esc(PROFILE.portrait)}" alt="${esc(PROFILE.name)}" loading="lazy" /></div>`
+    : `<div class="portrait" aria-hidden="true"><svg viewBox="0 0 100 120" fill="none" stroke="#16130F" stroke-width="1.4"><circle cx="50" cy="42" r="22"/><path d="M14 112 c0 -26 16 -40 36 -40 s36 14 36 40"/></svg></div>`;
   document.getElementById("about-slot").innerHTML = `
     <p class="eyebrow">About</p>
     ${originHTML}
     <div class="about-grid">
-      <div class="portrait" aria-hidden="true">
-        <svg viewBox="0 0 100 120" fill="none" stroke="#16130F" stroke-width="1.4">
-          <circle cx="50" cy="42" r="22"/><path d="M14 112 c0 -26 16 -40 36 -40 s36 14 36 40"/>
-        </svg>
-      </div>
+      ${portraitHTML}
       <div class="about-body">
         ${aboutParas}
         <div class="skills">${skills}</div>

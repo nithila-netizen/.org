@@ -55,3 +55,27 @@ function esc(s) {
     .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
 }
+
+// Glossary tooltips: wrap known GLOSSARY terms (first use) with a hover/tap definition.
+let _glossTerms = null;
+function _reEsc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+function wrapTerms(escaped, used) {
+  if (_glossTerms === null) _glossTerms = (typeof GLOSSARY !== "undefined")
+    ? Object.keys(GLOSSARY).sort((a, b) => b.length - a.length) : [];
+  used = used || new Set();
+  let out = escaped;
+  for (const term of _glossTerms) {
+    const key = term.toLowerCase();
+    if (used.has(key)) continue;
+    try {
+      const re = new RegExp("(^|[^A-Za-z0-9])(" + _reEsc(term) + ")(?![A-Za-z0-9])", "i");
+      const m = re.exec(out);
+      if (!m) continue;
+      const start = m.index + m[1].length;
+      const span = `<span class="term" tabindex="0" data-def="${esc(GLOSSARY[term])}">${m[2]}</span>`;
+      out = out.slice(0, start) + span + out.slice(start + m[2].length);
+      used.add(key);
+    } catch (e) { /* older browsers without lookahead-safe regex: skip */ }
+  }
+  return out;
+}

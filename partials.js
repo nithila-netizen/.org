@@ -8,10 +8,11 @@ function renderHeader() {
     <div class="wrap">
       <a class="brand" href="index.html">Nithila <em>Neminathan</em></a>
       <nav class="nav">
-        <a href="reviews.html">Reviews</a>
+        <a href="reviews.html">Industries</a>
         <a href="index.html#projects">Projects</a>
         <a href="index.html#involvement">Experience</a>
         <a href="index.html#research">Research</a>
+        <a href="glossary.html">Glossary</a>
         <a href="index.html#contact">Contact</a>
       </nav>
     </div>
@@ -37,7 +38,7 @@ function renderFooter() {
       </div>
       <div class="foot-bottom">
         <span>© ${esc((typeof PROFILE !== "undefined" && PROFILE.name) || "Nithila Neminathan")}</span>
-        <span>Nithila Notes — independent reviews of AI in healthcare</span>
+        <span>Nithila Notes · independent reviews of AI in healthcare</span>
       </div>
     </div>
   </footer>`;

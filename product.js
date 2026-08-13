@@ -17,27 +17,7 @@ function heroHTML(hero) {
   const cap = hero.caption ? `<figcaption>${esc(hero.caption)}</figcaption>` : "";
   return `<figure class="hero-shot"><div class="frame"><img src="${esc(hero.img)}" alt="${esc(hero.caption || "")}" /></div>${cap}</figure>`;
 }
-// --- Glossary tooltips: auto-wrap known terms (first use per article) -------
-const _terms = (typeof GLOSSARY !== "undefined")
-  ? Object.keys(GLOSSARY).sort((a, b) => b.length - a.length) : [];
-function _reEsc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
-function wrapTerms(escaped, used) {
-  let out = escaped;
-  for (const term of _terms) {
-    const key = term.toLowerCase();
-    if (used.has(key)) continue;
-    try {
-      const re = new RegExp("(^|[^A-Za-z0-9])(" + _reEsc(term) + ")(?![A-Za-z0-9])", "i");
-      const m = re.exec(out);
-      if (!m) continue;
-      const start = m.index + m[1].length;
-      const span = `<span class="term" tabindex="0" data-def="${esc(GLOSSARY[term])}">${m[2]}</span>`;
-      out = out.slice(0, start) + span + out.slice(start + m[2].length);
-      used.add(key);
-    } catch (e) { /* older browsers: skip this term */ }
-  }
-  return out;
-}
+// wrapTerms() lives in icons.js (shared with the industries explorer)
 
 function articleHTML(blocks) {
   if (!blocks || !blocks.length) return "";

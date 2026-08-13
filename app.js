@@ -57,16 +57,17 @@ document.getElementById("reviews").innerHTML = PRODUCTS.map(p => {
 }).join("");
 
 /* ---- Areas ---------------------------------------------------------------- */
-const countIn = id => PRODUCTS.filter(p => p.industry === id).length;
-document.getElementById("areas-grid").innerHTML = INDUSTRIES.map((ind, i) => {
-  const subs = ind.subIndustries.map(s => s.name).join(" · ");
-  const n = countIn(ind.id);
-  return `<a class="area" href="industry.html?id=${encodeURIComponent(ind.id)}">
-      <span class="no">${String(i + 1).padStart(2, "0")}</span>
-      <span class="body"><h3>${esc(ind.name)}</h3><p>${esc(ind.blurb)}</p>
-        <span class="subs">${esc(subs)} — ${n ? n + " review" + (n === 1 ? "" : "s") : "coming soon"}</span></span>
-    </a>`;
-}).join("");
+if (typeof SECTORS !== "undefined" && document.getElementById("areas-grid")) {
+  document.getElementById("areas-grid").innerHTML = SECTORS.map((s, i) => {
+    const subs = s.subsectors.map(x => x.name).join(" · ");
+    const n = s.subsectors.length;
+    return `<a class="area" href="reviews.html?ind=${encodeURIComponent(s.id)}">
+        <span class="no">${String(i + 1).padStart(2, "0")}</span>
+        <span class="body"><h3>${esc(s.name)}</h3><p>${esc(s.blurb)}</p>
+          <span class="subs">${esc(subs)} · ${n} sub-sector${n === 1 ? "" : "s"}</span></span>
+      </a>`;
+  }).join("");
+}
 
 /* ---- Instagram profile card (live link to the public account) ------------- */
 function igGlyph() {

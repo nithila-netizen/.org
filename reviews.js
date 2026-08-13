@@ -1,73 +1,129 @@
 /* ==========================================================================
-   The database: search + filter + sort over CATALOG, with editorial ratings.
+   Industries explorer: industry grid → sector detail, plus topic search.
+   Search matches sector/sub-sector text, keywords, and companies (so
+   "hip replacement" surfaces Surgical AI, etc.).
    ========================================================================== */
 
 mountChrome();
 
-const fields = Array.from(new Set(CATALOG.map(c => c.field))).sort();
-let activeField = "All";
+const view = document.getElementById("view");
+const qInput = document.getElementById("q");
 let query = "";
-let sortBy = "rating";
 
-// header sub + filter chips
 document.getElementById("db-sub").textContent =
-  `${CATALOG.length} companies reviewed and rated across ${fields.length} fields of healthcare. Search, filter, and sort — deep-dive analyses are linked where available.`;
+  `${SECTORS.length} industries · ${SECTORS.reduce((n, s) => n + s.subsectors.length, 0)} sub-sectors. ` +
+  `Browse how AI is reshaping each, or search a condition, sector, or company.`;
 
-function renderFilters() {
-  const all = ["All"].concat(fields);
-  document.getElementById("filters").innerHTML = all.map(f =>
-    `<button class="db-chip${f === activeField ? " on" : ""}" data-field="${esc(f)}">${esc(f)}</button>`
-  ).join("");
-  document.querySelectorAll(".db-chip").forEach(b =>
-    b.addEventListener("click", () => { activeField = b.dataset.field; renderFilters(); render(); }));
+// Link a company to its deep-dive review if one exists.
+function companyLink(name) {
+  const c = (typeof CATALOG !== "undefined")
+    ? CATALOG.find(x => x.company === name || x.name === name ||
+        (x.company && name && x.company.indexOf(name) === 0)) : null;
+  if (c && c.full) {
+    return `<a class="comp-chip has-review" href="product.html?id=${encodeURIComponent(c.full)}">${esc(name)}<span class="comp-go">Review →</span></a>`;
+  }
+  return `<span class="comp-chip">${esc(name)}</span>`;
 }
 
-function matches(c) {
-  if (activeField !== "All" && c.field !== activeField) return false;
-  if (!query) return true;
-  const hay = [c.name, c.company, c.field, c.take, (c.tags || []).join(" ")].join(" ").toLowerCase();
-  return hay.includes(query);
+function adoptionMeter(a) {
+  const levels = ["Early", "Emerging", "Scaling", "Mainstream"];
+  const idx = levels.indexOf(a.level);
+  const dots = levels.map((l, i) =>
+    `<span class="ad-dot${i <= idx ? " on" : ""}" title="${esc(l)}"></span>`).join("");
+  return `<div class="adoption">
+    <div class="ad-top"><span class="ss-eyebrow" style="margin:0">Adoption</span><span class="ad-level">${esc(a.level)}</span></div>
+    <div class="ad-track">${dots}</div>
+    <p class="ad-note">${esc(a.note)}</p>
+  </div>`;
 }
 
-function sortList(a, b) {
-  if (sortBy === "az") return a.name.localeCompare(b.name);
-  if (sortBy === "field") return a.field.localeCompare(b.field) || b.rating - a.rating;
-  return b.rating - a.rating || a.name.localeCompare(b.name);
-}
-
-function row(c) {
-  const href = c.full ? `product.html?id=${encodeURIComponent(c.full)}` : null;
-  const tag = c.full ? `<span class="db-deep">Deep-dive analysis →</span>` : `<span class="db-track">Tracking</span>`;
-  const inner = `
-      <div class="db-main">
-        <div class="db-top">
-          <span class="db-field">${esc(c.field)}</span>
-          <span class="db-status s-${esc(c.status)}">${esc(statusLabel(c.status))}</span>
-        </div>
-        <h3>${esc(c.name)} <span class="db-co">· ${esc(c.company)}</span></h3>
-        <p>${esc(c.take)}</p>
-        <div class="db-tags">${(c.tags || []).map(t => `<span>${esc(t)}</span>`).join("")}</div>
+function subsectorBlock(sub) {
+  const trends = (sub.trends || []).map(t => `<li>${wrapTerms(esc(t), new Set())}</li>`).join("");
+  const comps = (sub.companies || []).length
+    ? `<div class="comp-chips">${sub.companies.map(companyLink).join("")}</div>`
+    : `<p class="ss-coming">Company coverage coming soon.</p>`;
+  return `<section class="subsector" id="${esc(sub.id)}">
+    <h3>${esc(sub.name)}</h3>
+    <div class="ss-grid">
+      <div class="ss-main">
+        <p class="ss-eyebrow">How AI is reshaping this</p>
+        <p class="ss-reshaping">${wrapTerms(esc(sub.reshaping), new Set())}</p>
+        <p class="ss-eyebrow" style="margin-top:26px">Trends to watch</p>
+        <ul class="ss-trends">${trends}</ul>
       </div>
-      <div class="db-side">
-        <span class="db-rating">${stars(c.rating)}</span>
-        ${tag}
-      </div>`;
-  return href
-    ? `<a class="db-row" href="${href}">${inner}</a>`
-    : `<div class="db-row static">${inner}</div>`;
+      <aside class="ss-side">
+        ${adoptionMeter(sub.adoption)}
+        <p class="ss-eyebrow" style="margin-top:24px">Companies</p>
+        ${comps}
+      </aside>
+    </div>
+  </section>`;
+}
+
+function industryGrid() {
+  const cards = SECTORS.map(s => {
+    const subs = s.subsectors.map(x => x.name).join(" · ");
+    return `<a class="ind-card" href="reviews.html?ind=${encodeURIComponent(s.id)}">
+      <h3>${esc(s.name)}</h3>
+      <p>${esc(s.blurb)}</p>
+      <span class="ind-subs">${esc(subs)}</span>
+      <span class="ind-go">${s.subsectors.length} sub-sector${s.subsectors.length === 1 ? "" : "s"} →</span>
+    </a>`;
+  }).join("");
+  return `<div class="ind-grid">${cards}</div>`;
+}
+
+function industryDetail(sec) {
+  return `<p class="crumb"><a href="reviews.html">← All industries</a></p>
+    <h2 class="ind-title">${esc(sec.name)}</h2>
+    <p class="ind-blurb">${esc(sec.blurb)}</p>
+    ${sec.subsectors.map(subsectorBlock).join("")}`;
+}
+
+function searchResults(q) {
+  const secHits = [];
+  SECTORS.forEach(sec => sec.subsectors.forEach(sub => {
+    const hay = [sec.name, sub.name, sub.reshaping, (sub.trends || []).join(" "),
+      (sub.keywords || []).join(" "), (sub.companies || []).join(" ")].join(" ").toLowerCase();
+    if (hay.includes(q)) secHits.push({ sec, sub });
+  }));
+  const compHits = (typeof CATALOG !== "undefined")
+    ? CATALOG.filter(c => [c.name, c.company, c.field, (c.tags || []).join(" "), c.take]
+        .join(" ").toLowerCase().includes(q)) : [];
+
+  if (!secHits.length && !compHits.length) {
+    return `<p class="db-empty">No matches for “${esc(q)}”. Try a broader term, or browse the industries below.</p>${industryGrid()}`;
+  }
+  let html = `<p class="db-count">${secHits.length} sub-sector${secHits.length === 1 ? "" : "s"} and ${compHits.length} compan${compHits.length === 1 ? "y" : "ies"} match “${esc(q)}”.</p>`;
+  if (secHits.length) {
+    html += `<div class="sr-list">` + secHits.map(r =>
+      `<a class="sr-row" href="reviews.html?ind=${encodeURIComponent(r.sec.id)}#${encodeURIComponent(r.sub.id)}">
+        <span class="sr-cat">${esc(r.sec.name)}</span>
+        <span><h3>${esc(r.sub.name)}</h3><p>${esc(r.sub.reshaping.slice(0, 140))}…</p></span>
+        <span class="arrow">→</span>
+      </a>`).join("") + `</div>`;
+  }
+  if (compHits.length) {
+    html += `<p class="ss-eyebrow" style="margin-top:38px">Companies</p><div class="comp-chips">` +
+      compHits.map(c => companyLink(c.company) ).join("") + `</div>`;
+  }
+  return html;
 }
 
 function render() {
-  const items = CATALOG.filter(matches).sort(sortList);
-  document.getElementById("count").textContent =
-    `${items.length} result${items.length === 1 ? "" : "s"}${activeField !== "All" ? " in " + activeField : ""}${query ? ` for “${query}”` : ""}`;
-  document.getElementById("list").innerHTML = items.length
-    ? items.map(row).join("")
-    : `<p class="db-empty">No matches. Try a different search or clear the filter.</p>`;
+  const ind = new URLSearchParams(location.search).get("ind");
+  if (query) { view.innerHTML = searchResults(query); return; }
+  if (ind) {
+    const sec = SECTORS.find(s => s.id === ind);
+    view.innerHTML = sec ? industryDetail(sec) : industryGrid();
+    if (sec && location.hash) {
+      const t = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (t) setTimeout(() => t.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
+    }
+    return;
+  }
+  view.innerHTML = industryGrid();
 }
 
-document.getElementById("q").addEventListener("input", e => { query = e.target.value.trim().toLowerCase(); render(); });
-document.getElementById("sort").addEventListener("change", e => { sortBy = e.target.value; render(); });
-
-renderFilters();
+qInput.addEventListener("input", e => { query = e.target.value.trim().toLowerCase(); render(); });
 render();

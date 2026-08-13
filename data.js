@@ -330,23 +330,23 @@ const INDUSTRIES = [
    -------------------------------------------------------------------------- */
 const GLOSSARY = {
   "atrial fibrillation": "An irregular, often rapid heart rhythm that raises the risk of stroke.",
-  "AFib": "Short for atrial fibrillation — an irregular heart rhythm that raises stroke risk.",
-  "ECG": "Electrocardiogram — a recording of the heart's electrical activity, used to spot rhythm problems.",
+  "AFib": "Short for atrial fibrillation, an irregular heart rhythm that raises stroke risk.",
+  "ECG": "Electrocardiogram: a recording of the heart's electrical activity, used to spot rhythm problems.",
   "electrocardiogram": "A recording of the heart's electrical activity, used to spot rhythm problems.",
   "ambient AI scribe": "AI that listens to a clinical visit and drafts the medical note automatically.",
   "diabetic retinopathy": "Diabetes-related damage to the blood vessels of the retina; a leading cause of blindness.",
   "autonomous AI": "AI cleared to make a screening decision on its own, without a specialist reviewing every case.",
   "autonomous screening": "Screening where the AI itself returns the result, without a specialist reading each image.",
   "continuous glucose monitor": "A wearable sensor that tracks blood-sugar levels in real time.",
-  "CGM": "Continuous glucose monitor — a wearable sensor that tracks blood sugar in real time.",
+  "CGM": "Continuous glucose monitor: a wearable sensor that tracks blood sugar in real time.",
   "time-in-range": "The share of the day a person's blood sugar stays within a healthy target band.",
   "PHQ-9": "A standard 9-question questionnaire that measures the severity of depression symptoms.",
   "measurement-based care": "Adjusting treatment using repeated, standardized symptom scores over time.",
   "teledermatology": "Diagnosing skin conditions remotely from photos or video instead of an in-person visit.",
   "n-of-1": "An experiment run on a single person to learn what works specifically for them.",
-  "pulmonary embolism": "A sudden blockage in an artery of the lungs — a medical emergency.",
+  "pulmonary embolism": "A sudden blockage in an artery of the lungs, and a medical emergency.",
   "triage": "Sorting cases by urgency so the most critical are handled first.",
-  "alert fatigue": "When too many alerts cause people to start ignoring them — including important ones.",
+  "alert fatigue": "When too many alerts cause people to start ignoring them, including important ones.",
   "automation bias": "The tendency to over-trust an automated system's output.",
   "postpartum": "The period after childbirth, when the body is recovering.",
   "false positive": "When a test flags a problem that isn't actually there.",
@@ -356,6 +356,34 @@ const GLOSSARY = {
   "readmission": "Returning to the hospital soon after being discharged.",
   "FDA clearance": "U.S. Food and Drug Administration sign-off that a medical device is safe to market.",
   "De Novo": "An FDA pathway that authorizes a novel, lower-risk device type for the first time.",
+  "computer vision": "AI that interprets images or video: here, watching a scene or reading a scan.",
+  "EHR": "Electronic Health Record: the digital chart where a patient's medical information lives.",
+  "sepsis": "A life-threatening overreaction to infection; catching it early saves lives.",
+  "foundation model": "A large AI model trained on broad data that can be adapted to many specific tasks.",
+  "large language model": "An AI trained on huge amounts of text that can read, write, and reason in natural language.",
+  "LLM": "Large language model: an AI trained on huge amounts of text to read, write, and reason.",
+  "biomarker": "A measurable biological signal (in blood or tissue) used to detect or track disease.",
+  "prior authorization": "Approval an insurer requires before it will cover a treatment.",
+  "utilization management": "How insurers review whether care is necessary and covered.",
+  "revenue cycle": "Everything involved in getting a provider paid: coding, billing, claims, and collections.",
+  "medical coding": "Translating a clinical visit into standardized codes used for billing.",
+  "software as a medical device": "Software that performs a medical function on its own and is regulated like a device.",
+  "SaMD": "Software as a Medical Device: software regulated like a medical device.",
+  "edge inference": "Running an AI model directly on a device instead of in the cloud.",
+  "value-based care": "Paying providers for health outcomes rather than the volume of services.",
+  "social determinants of health": "Non-medical factors like housing, food, and income that shape health.",
+  "metagenomic sequencing": "Reading all the genetic material in a sample to identify any pathogens present.",
+  "genomic surveillance": "Tracking pathogens by sequencing their genomes to spot variants and spread.",
+  "whole-slide imaging": "Scanning a full pathology slide into a high-resolution digital image.",
+  "opportunistic screening": "Finding unrelated disease as a byproduct of a scan done for another reason.",
+  "risk stratification": "Sorting a population by health risk to focus resources where they matter most.",
+  "length of stay": "How long a patient stays admitted to the hospital.",
+  "adherence": "Whether a patient actually takes a medication as prescribed.",
+  "arthroplasty": "Surgical joint replacement, such as a hip or knee replacement.",
+  "whole-room awareness": "A system's real-time understanding of everything happening in a patient's room.",
+  "clinical decision support": "Software that gives clinicians guidance or reminders during care.",
+  "interoperability": "The ability of different health systems to share and use each other's data.",
+  "care gap": "A recommended service a patient should have had but hasn't, such as a missed screening.",
 };
 
 /* --------------------------------------------------------------------------
@@ -714,7 +742,7 @@ const CATALOG = [
   // Cardiology
   { name: "KardiaMobile", company: "AliveCor", field: "Cardiology", rating: 4.4, status: "has-ai", tags: ["ECG","wearable","AFib"], take: "Reliable pocket ECG that catches AFib; the opportunity is trending risk over time.", full: "pulseguard" },
   { name: "Cleerly", company: "Cleerly", field: "Cardiology", rating: 4.3, status: "has-ai", tags: ["cardiac CT","prevention"], take: "AI plaque analysis on cardiac CT that shifts heart disease from reactive to preventive." },
-  { name: "Viz.ai", company: "Viz.ai", field: "Cardiology", rating: 4.5, status: "has-ai", tags: ["stroke","workflow"], take: "Care-coordination AI that genuinely saves minutes — a model for AI embedded in workflow." },
+  { name: "Viz.ai", company: "Viz.ai", field: "Cardiology", rating: 4.5, status: "has-ai", tags: ["stroke","workflow"], take: "Care-coordination AI that genuinely saves minutes, a model for AI embedded in workflow." },
   { name: "Eko Health", company: "Eko", field: "Cardiology", rating: 4.1, status: "has-ai", tags: ["stethoscope","devices"], take: "AI stethoscope surfacing murmurs and AFib at the point of care." },
   // Diabetes & Endocrine
   { name: "Dexcom G-series", company: "Dexcom", field: "Diabetes & Endocrine", rating: 4.5, status: "has-ai", tags: ["CGM"], take: "Best-in-class continuous glucose monitor; needs to close the data-to-action gap.", full: "glucopilot" },
@@ -780,10 +808,243 @@ const CATALOG = [
   { name: "Biofourmis", company: "Biofourmis", field: "Remote Monitoring", rating: 4.0, status: "has-ai", tags: ["RPM","virtual care"], take: "AI-powered remote monitoring and virtual care for complex patients." },
   { name: "Current Health", company: "Current Health (Best Buy)", field: "Remote Monitoring", rating: 3.9, status: "has-ai", tags: ["RPM","hospital-at-home"], take: "Hospital-at-home monitoring platform with a real device story." },
   // Hospital Operations
-  { name: "Qventus", company: "Qventus", field: "Hospital Operations", rating: 4.0, status: "has-ai", tags: ["ops","patient flow"], take: "AI for hospital operations and patient flow — unglamorous, high-leverage." },
+  { name: "Qventus", company: "Qventus", field: "Hospital Operations", rating: 4.0, status: "has-ai", tags: ["ops","patient flow"], take: "AI for hospital operations and patient flow: unglamorous, high-leverage." },
   // Surgery
   { name: "Activ Surgical", company: "Activ Surgical", field: "Surgery", rating: 3.8, status: "watch", tags: ["OR","visualization"], take: "Surgical AI and visualization augmenting what the surgeon can see." },
   { name: "Proprio", company: "Proprio", field: "Surgery", rating: 3.7, status: "watch", tags: ["imaging","OR"], take: "Light-field imaging plus AI to guide surgery in real time." },
   // Genomics
   { name: "Nucleus", company: "Nucleus Genomics", field: "Genomics", rating: 3.5, status: "watch", tags: ["consumer","genomics"], take: "Consumer genomics with interpretation; early, and worth watching carefully." },
+];
+
+/* --------------------------------------------------------------------------
+   SECTORS — the Industries explorer. Industry → sub-sectors, each with how AI
+   is reshaping it, an adoption snapshot, trends to watch, and companies.
+   `keywords` power topic search (e.g. "hip replacement" finds Surgical AI).
+   adoption.level: "Early" | "Emerging" | "Scaling" | "Mainstream"
+   -------------------------------------------------------------------------- */
+const SECTORS = [
+  {
+    id: "hospitals", name: "Hospitals & Health Systems",
+    blurb: "Where most care is delivered: inpatient units, emergency departments, and the operations that run them.",
+    subsectors: [
+      {
+        id: "inpatient", name: "Inpatient & Acute Care",
+        reshaping: "AI is moving from dashboards to the bedside: models that predict deterioration like sepsis or ICU transfers hours ahead, and computer vision that watches a room for safety events. The frontier is fusing these into whole-room awareness instead of periodic vitals checks.",
+        adoption: { level: "Emerging", note: "Early-warning models are widely piloted; ambient room sensing is still nascent." },
+        trends: ["Fusion of bedside computer vision with EHR prediction for whole-room awareness", "Sepsis prediction moving from alerts to embedded workflows", "Ambient sensing for fall prevention and pressure-injury monitoring"],
+        companies: ["Aidoc", "Viz.ai"],
+        keywords: ["inpatient", "acute care", "sepsis", "ICU", "deterioration", "falls", "hospital", "bedside", "early warning"],
+      },
+      {
+        id: "hospital-ops", name: "Hospital Operations & Patient Flow",
+        reshaping: "Beds, staff, and operating rooms are a scheduling problem AI handles well. Systems forecast admissions and discharges, flag bottlenecks, and orchestrate patient flow to cut boarding and length of stay.",
+        adoption: { level: "Scaling", note: "One of the faster-adopted categories because the ROI is clear." },
+        trends: ["Predictive discharge planning to reduce length of stay", "Command-center models coordinating capacity across a system"],
+        companies: ["Qventus"],
+        keywords: ["operations", "patient flow", "capacity", "scheduling", "length of stay", "throughput", "command center"],
+      },
+    ],
+  },
+  {
+    id: "diagnostics", name: "Diagnostics & Imaging",
+    blurb: "Reading scans and samples with expert-level accuracy, and making that reading available anywhere.",
+    subsectors: [
+      {
+        id: "digital-pathology", name: "Digital Pathology",
+        reshaping: "Slides are going digital and AI reads them: detecting and grading cancer, quantifying biomarkers, and flagging which cases a pathologist should see first. It compresses turnaround and standardizes reads across labs.",
+        adoption: { level: "Emerging", note: "FDA clearances exist; whole-slide workflows are scaling in academic centers." },
+        trends: ["Foundation models trained on millions of slides for general pathology", "AI biomarker scoring replacing manual counts", "Whole-slide imaging becoming the default of record"],
+        companies: ["Paige.AI", "PathAI"],
+        keywords: ["pathology", "digital pathology", "biomarker", "cancer grading", "histology", "oncology", "slides"],
+      },
+      {
+        id: "radiology-ai", name: "Radiology AI",
+        reshaping: "The most mature AI category in medicine: hundreds of cleared tools that triage urgent findings, measure structures, and flag misses. The shift now is from single-condition detectors to consolidated, explainable worklists.",
+        adoption: { level: "Scaling", note: "Hundreds of FDA-cleared tools; triage is standard in many emergency departments." },
+        trends: ["Consolidation of point solutions into unified worklists", "Opportunistic screening for unrelated disease on routine scans"],
+        companies: ["Aidoc", "Lunit", "Gleamer", "RapidAI"],
+        keywords: ["radiology", "imaging", "CT", "MRI", "triage", "pulmonary embolism", "stroke", "mammography"],
+      },
+    ],
+  },
+  {
+    id: "primary-care", name: "Primary & Ambulatory Care",
+    blurb: "The everyday front door of medicine: clinics, urgent care, and the visit itself.",
+    subsectors: [
+      {
+        id: "triage-front-door", name: "AI Triage & the Front Door",
+        reshaping: "AI is becoming the first touchpoint: symptom assessment, routing to the right level of care, and asynchronous visits. Done well it widens access; done poorly it adds noise and risk.",
+        adoption: { level: "Emerging", note: "Symptom checkers are common, but clinical rigor varies widely." },
+        trends: ["LLM-based intake and history-taking before the visit", "Risk stratification to route patients to the right care setting"],
+        companies: ["Ada", "K Health", "Buoy"],
+        keywords: ["primary care", "triage", "symptom checker", "navigation", "access", "front door", "urgent care"],
+      },
+      {
+        id: "ambient-doc", name: "Ambient Documentation",
+        reshaping: "Ambient AI scribes listen to the visit and draft the note, giving clinicians back time and eye contact. The next step is in-visit clinical decision support, not just transcription.",
+        adoption: { level: "Scaling", note: "Among the fastest enterprise rollouts in all of healthcare AI." },
+        trends: ["Ambient scribes expanding into orders and medical coding", "In-visit guideline and care-gap reminders"],
+        companies: ["Abridge", "Nuance (Microsoft)", "Nabla", "Suki"],
+        keywords: ["documentation", "ambient scribe", "clinical notes", "burnout", "primary care", "EHR"],
+      },
+    ],
+  },
+  {
+    id: "pharma", name: "Pharma & Life Sciences",
+    blurb: "Discovering and testing the medicines of the future.",
+    subsectors: [
+      {
+        id: "drug-discovery", name: "AI Drug Discovery",
+        reshaping: "AI is compressing the earliest, most expensive steps: predicting protein structure, generating candidate molecules, and picking better targets. The open question is clinical translation, since designs still have to survive trials.",
+        adoption: { level: "Emerging", note: "Many AI-designed candidates are in trials; no blockbuster approvals yet." },
+        trends: ["Generative chemistry against previously undruggable targets", "Foundation models for biology across protein, cell, and genome"],
+        companies: ["Isomorphic Labs (Alphabet)", "Recursion", "Insilico", "Insitro"],
+        keywords: ["drug discovery", "pharma", "molecule", "protein structure", "target", "biology", "generative"],
+      },
+      {
+        id: "clinical-trials", name: "Clinical Trials",
+        reshaping: "AI attacks trial cost and speed: finding eligible patients, monitoring data quality, and predicting enrollment. Decentralized designs lean on remote monitoring.",
+        adoption: { level: "Emerging", note: "Patient-matching and monitoring tools are scaling; end-to-end AI trials are early." },
+        trends: ["Automated patient matching from EHR and genomic data", "Synthetic control arms to reduce placebo cohorts"],
+        companies: ["Tempus"],
+        keywords: ["clinical trials", "recruitment", "patient matching", "decentralized", "enrollment"],
+      },
+    ],
+  },
+  {
+    id: "payers", name: "Payers & Health Insurance",
+    blurb: "The money and rules layer: who gets covered for what, and how claims flow.",
+    subsectors: [
+      {
+        id: "prior-auth", name: "Prior Authorization & Utilization Management",
+        reshaping: "The most friction-filled workflow in US healthcare is being automated on both sides: payers use AI to review requests, providers use AI to assemble and appeal them. The risk is opaque denials; the opportunity is faster, more consistent decisions, if it stays transparent and clinically sound.",
+        adoption: { level: "Scaling", note: "Rapid adoption, and rising regulatory scrutiny over automated denials." },
+        trends: ["LLMs drafting and appealing prior authorization requests", "Regulation pushing for transparency and clinician oversight of automated denials"],
+        companies: [],
+        keywords: ["payer", "insurance", "prior authorization", "utilization management", "claims", "denials", "appeals"],
+      },
+      {
+        id: "claims-fraud", name: "Claims & Fraud",
+        reshaping: "AI scores claims for errors and fraud and automates adjudication. It cuts waste, but raises fairness questions when it drives coverage decisions.",
+        adoption: { level: "Scaling", note: "A long-standing use that generative AI is now expanding." },
+        trends: ["Automated claims adjudication", "Fraud, waste, and abuse detection at scale"],
+        companies: [],
+        keywords: ["claims", "fraud", "adjudication", "billing", "payer", "waste"],
+      },
+    ],
+  },
+  {
+    id: "rev-cycle", name: "Healthcare Administration & Revenue Cycle",
+    blurb: "The back office that keeps providers solvent: coding, billing, and collections.",
+    subsectors: [
+      {
+        id: "rcm", name: "Revenue Cycle Management",
+        reshaping: "Coding, billing, and collections are text-and-rules work that LLMs handle well: autonomous medical coding, denial prevention, and patient billing. It is unglamorous and high-ROI.",
+        adoption: { level: "Scaling", note: "One of the clearest near-term ROI areas for generative AI." },
+        trends: ["Autonomous medical coding straight from the clinical note", "AI denial prevention and automated appeals"],
+        companies: [],
+        keywords: ["revenue cycle", "medical coding", "billing", "denials", "administration", "back office"],
+      },
+    ],
+  },
+  {
+    id: "medtech", name: "Medical Devices & MedTech",
+    blurb: "The hardware and software that sense, guide, and treat.",
+    subsectors: [
+      {
+        id: "samd", name: "Software as a Medical Device",
+        reshaping: "AI is turning devices into continuously-learning software: algorithms cleared as medical devices, embedded in monitors, wearables, and scanners. Regulation is adapting to models that update over time.",
+        adoption: { level: "Emerging", note: "Hundreds of AI/ML-enabled devices are authorized; adaptive algorithms are the frontier." },
+        trends: ["Predetermined change-control plans for models that keep learning", "Edge inference in wearables and monitors"],
+        companies: ["Eko", "AliveCor"],
+        keywords: ["medical device", "SaMD", "wearable", "sensor", "edge", "FDA", "hardware"],
+      },
+      {
+        id: "surgical-ai", name: "Surgical AI & Robotics",
+        reshaping: "AI is entering the operating room: computer vision that augments what a surgeon sees, planning for procedures like joint replacement, and robotics that improve precision. Most is assistive today, with autonomy far off.",
+        adoption: { level: "Early", note: "Mostly assistive and visualization; clinical evidence is still building." },
+        trends: ["Computer-vision overlays for intra-operative guidance", "AI planning for orthopedic procedures such as hip and knee replacement"],
+        companies: ["Activ Surgical", "Proprio"],
+        keywords: ["surgery", "operating room", "robotics", "orthopedics", "hip replacement", "knee replacement", "arthroplasty", "joint", "OR", "visualization"],
+      },
+    ],
+  },
+  {
+    id: "mental-health", name: "Mental & Behavioral Health",
+    blurb: "Expanding access to support, safely.",
+    subsectors: [
+      {
+        id: "ai-therapy", name: "AI-Assisted Therapy",
+        reshaping: "AI extends scarce clinicians: chatbots for between-session support, triage that catches crises, and tools that measure symptoms over time. The entire product is safety design, knowing its limits and escalating to humans.",
+        adoption: { level: "Emerging", note: "Wide consumer use; clinical evidence and safety standards are still maturing." },
+        trends: ["Crisis-safe LLM support with human escalation", "Measurement-based care baked into consumer apps"],
+        companies: ["Wysa", "Woebot Health", "Spring Health", "Lyra"],
+        keywords: ["mental health", "therapy", "chatbot", "CBT", "crisis", "PHQ-9", "behavioral health"],
+      },
+    ],
+  },
+  {
+    id: "senior-care", name: "Senior Care & Post-Acute Care",
+    blurb: "Helping older adults stay safe and independent, at home and after the hospital.",
+    subsectors: [
+      {
+        id: "aging-in-place", name: "Aging in Place",
+        reshaping: "AI is moving elder care from reactive alarms to predictive monitoring: passive, camera-free sensing that learns a person's baseline and flags decline like a slower gait or fewer steps before a fall or hospitalization.",
+        adoption: { level: "Emerging", note: "Growing with the demographic wave; reimbursement is the gating factor." },
+        trends: ["Passive in-home sensing for early decline detection", "Predicting avoidable hospital readmissions from home data"],
+        companies: ["Cherish Health", "CarePredict"],
+        keywords: ["senior care", "aging in place", "falls", "post-acute", "home care", "readmission", "gait"],
+      },
+    ],
+  },
+  {
+    id: "pharmacy", name: "Pharmacy & Medication Management",
+    blurb: "Getting the right medication to the right person, safely and consistently.",
+    subsectors: [
+      {
+        id: "med-adherence", name: "Medication Adherence & Safety",
+        reshaping: "AI targets the enormous cost of non-adherence and medication safety: predicting who will stop taking a drug, catching dangerous interactions, and automating pharmacy operations.",
+        adoption: { level: "Emerging", note: "Adherence prediction and pharmacy automation are scaling unevenly." },
+        trends: ["Adherence prediction with personalized nudges", "LLM-checked interaction and dosing safety at the point of dispensing"],
+        companies: [],
+        keywords: ["pharmacy", "medication", "adherence", "drug interaction", "dosing", "dispensing"],
+      },
+    ],
+  },
+  {
+    id: "dental", name: "Dental",
+    blurb: "A large, fragmented field where AI is quietly standardizing diagnosis.",
+    subsectors: [
+      {
+        id: "dental-imaging", name: "Dental Imaging AI",
+        reshaping: "AI reads X-rays and scans to detect caries, bone loss, and pathology, a second set of eyes that standardizes diagnosis and supports insurance documentation. It is one of the faster-moving AI categories in a fragmented industry.",
+        adoption: { level: "Emerging", note: "FDA-cleared radiograph AI is spreading through dental groups and practices." },
+        trends: ["Caries and bone-loss detection on radiographs", "AI documentation to support and audit dental claims"],
+        companies: [],
+        keywords: ["dental", "dentistry", "radiograph", "caries", "x-ray", "imaging", "oral health"],
+      },
+    ],
+  },
+  {
+    id: "public-health", name: "Public Health & Population Health",
+    blurb: "Protecting populations, not just patients: outbreaks, prevention, and equity.",
+    subsectors: [
+      {
+        id: "epidemic-intelligence", name: "Epidemic Intelligence & Biosecurity",
+        reshaping: "AI scans the world's signals, clinical, genomic, environmental, and online, to spot outbreaks earlier and model their spread. Genomic surveillance and metagenomic sequencing turn wastewater and samples into early warnings.",
+        adoption: { level: "Emerging", note: "Accelerated after COVID; fragmented data is the main barrier." },
+        trends: ["Metagenomic and wastewater surveillance for pathogen early-warning", "LLMs mining outbreak signals from unstructured global sources"],
+        companies: [],
+        keywords: ["public health", "epidemic", "biosecurity", "surveillance", "outbreak", "genomic", "wastewater", "pandemic"],
+      },
+      {
+        id: "pop-health", name: "Population Health & Risk",
+        reshaping: "AI stratifies populations by risk to target scarce resources: predicting who will get sick or be readmitted, and closing care gaps. The promise is prevention; the pitfall is bias in the data.",
+        adoption: { level: "Scaling", note: "Risk models are widely used in value-based care; equity concerns are real." },
+        trends: ["Social determinants of health folded into risk models", "Bias auditing of population-health algorithms"],
+        companies: [],
+        keywords: ["population health", "risk stratification", "value-based care", "social determinants", "care gaps", "equity"],
+      },
+    ],
+  },
 ];

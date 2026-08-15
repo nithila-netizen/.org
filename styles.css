@@ -937,3 +937,10 @@ a.db-row:hover { padding-left: 14px; background: var(--paper-2); text-decoration
 .fbar-chip { border: 0; background: transparent; border-radius: 0; border-bottom: 2px solid transparent; padding: 9px 13px; color: var(--ink-2); margin-bottom: -1px; white-space: nowrap; }
 .fbar-chip:hover { border-color: transparent; color: var(--ink); background: transparent; }
 .fbar-chip.on { background: transparent; color: var(--accent-ink); border-bottom-color: var(--accent); }
+
+/* Load-more + section accent (structure without overwhelm) */
+.more-wrap { display: flex; justify-content: center; margin-top: 26px; }
+.load-more { font-family: var(--sans); font-size: 14px; font-weight: 600; padding: 12px 26px; border-radius: 999px;
+  border: 1px solid var(--line-2); background: var(--paper); color: var(--ink); cursor: pointer; transition: all .12s ease; }
+.load-more:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.row-head h2::before { content: ""; display: inline-block; width: 22px; height: 3px; background: var(--accent); border-radius: 2px; margin-right: 12px; vertical-align: middle; }

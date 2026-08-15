@@ -27,7 +27,7 @@ if (lead) document.getElementById("lead").innerHTML =
 
 /* What's new — most recent articles, horizontal scroll */
 document.getElementById("whatsnew").innerHTML =
-  [...CATALOG].sort(byDate).slice(0, 16).map(feedCard).join("");
+  [...CATALOG].sort(byDate).slice(0, 12).map(feedCard).join("");
 
 /* Most notable — top rated */
 document.getElementById("notable").innerHTML =
@@ -51,12 +51,12 @@ function tally(key) {
   return Object.entries(m).sort((a, b) => b[1] - a[1]);
 }
 
-/* Specialty tiles */
+/* Specialty tiles (top few; full list behind "All specialties →") */
 document.getElementById("specialty-chips").outerHTML =
-  `<div class="facet-grid" id="specialty-chips">` + tally("specialties").map(([name, n]) =>
+  `<div class="facet-grid" id="specialty-chips">` + tally("specialties").slice(0, 8).map(([name, n]) =>
     `<a class="facet-tile" href="reviews.html?view=specialty&f=${encodeURIComponent(name)}">${esc(name)} <span class="n">${n}</span></a>`).join("") + `</div>`;
 
-/* Patient body-system tiles */
+/* Patient body-system tiles (top few; full list behind "By symptom →") */
 document.getElementById("system-chips").outerHTML =
-  `<div class="facet-grid" id="system-chips">` + tally("systems").map(([name, n]) =>
+  `<div class="facet-grid" id="system-chips">` + tally("systems").slice(0, 8).map(([name, n]) =>
     `<a class="facet-tile" href="reviews.html?view=patient&f=${encodeURIComponent(name)}">${esc(name)} <span class="n">${n}</span></a>`).join("") + `</div>`;

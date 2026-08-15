@@ -19,7 +19,7 @@ function renderHeader() {
     <div class="wrap">
       <a class="brand" href="index.html">${esc(siteName())}</a>
       <nav class="nav">
-        <a href="index.html">Latest</a>
+        <a href="reviews.html?sort=new">Latest</a>
         <a href="reviews.html">Browse</a>
         <a href="reviews.html?view=specialty">Specialties</a>
         <a href="following.html">Following${n ? ` <span class="nav-badge">${n}</span>` : ""}</a>

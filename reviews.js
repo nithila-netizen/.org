@@ -19,6 +19,27 @@ document.getElementById("db-sub").textContent =
   `${SECTORS.length} industries · ${SECTORS.reduce((n, s) => n + s.subsectors.length, 0)} sub-sectors · ` +
   `${CATALOG.length} articles. Browse by industry, filter by your specialty or a symptom, or search.`;
 
+/* ---- paginated grid: show a page at a time so lists never overwhelm ---- */
+const PAGE = 24;
+let moreState = null;
+function paginatedGrid(items) {
+  moreState = { items, shown: Math.min(PAGE, items.length) };
+  const first = items.slice(0, moreState.shown).map(articleCard).join("");
+  const more = items.length > moreState.shown
+    ? `<div class="more-wrap"><button class="load-more" id="loadmore">Load more · ${items.length - moreState.shown} to go</button></div>` : "";
+  return `<div class="feed-grid" id="pgrid">${first}</div>${more}`;
+}
+document.getElementById("view").addEventListener("click", e => {
+  if (e.target.id !== "loadmore" || !moreState) return;
+  const grid = document.getElementById("pgrid");
+  const next = moreState.items.slice(moreState.shown, moreState.shown + PAGE);
+  grid.insertAdjacentHTML("beforeend", next.map(articleCard).join(""));
+  moreState.shown += next.length;
+  const btn = e.target;
+  const left = moreState.items.length - moreState.shown;
+  if (left <= 0) btn.parentElement.remove(); else btn.textContent = `Load more · ${left} to go`;
+});
+
 /* ---------- shared bits ---------- */
 const FACET = {
   specialty: { key: "specialties", label: "Specialty", note: "Filter to your clinical field." },
@@ -141,7 +162,7 @@ function facetView(kind) {
       `<p class="crumb"><a href="reviews.html?view=${kind}">← All ${backLabel}</a></p>
        <div class="facet-head"><h2 class="ind-title">${esc(f)}</h2>${followBtn("topics", kind + ":" + f)}</div>
        <p class="ind-blurb">${items.length} article${items.length === 1 ? "" : "s"}.</p>
-       <div class="feed-grid">${items.map(articleCard).join("")}</div>`;
+       ${paginatedGrid(items)}`;
   }
   const tiles = tally(cfg.key).map(([name, n]) =>
     `<a class="facet-tile" href="reviews.html?view=${kind}&f=${encodeURIComponent(name)}">${esc(name)} <span class="n">${n}</span></a>`).join("");
@@ -155,7 +176,7 @@ function sortedList(sort) {
   return tabBar(sort === "top" ? "" : "Latest") +
     `<h2 class="ind-title">${sort === "top" ? "Top rated" : "Latest articles"}</h2>
      <p class="ind-blurb">${items.length} articles.</p>
-     <div class="feed-grid">${items.map(articleCard).join("")}</div>`;
+     ${paginatedGrid(items)}`;
 }
 
 function searchResults(q) {
@@ -174,7 +195,7 @@ function searchResults(q) {
 
   let html = `<p class="db-count">${ideaHits.length} article${ideaHits.length === 1 ? "" : "s"} and ${secHits.length} sub-sector${secHits.length === 1 ? "" : "s"} match “${esc(q)}”.</p>`;
   if (ideaHits.length)
-    html += `<div class="feed-grid">${ideaHits.sort((a, b) => b.rating - a.rating).map(articleCard).join("")}</div>`;
+    html += paginatedGrid(ideaHits.sort((a, b) => b.rating - a.rating));
   if (secHits.length)
     html += `<p class="ss-eyebrow ss-ideas-h" style="margin-top:34px">Related sub-sectors</p><div class="sr-list">` +
       secHits.map(r => `<a class="sr-row" href="reviews.html?ind=${encodeURIComponent(r.sec.id)}#${encodeURIComponent(r.sub.id)}">

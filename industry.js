@@ -28,7 +28,7 @@ function render() {
     return;
   }
 
-  document.title = `${ind.name} — Nithila Notes`;
+  document.title = `${ind.name} — Vitai`;
 
   const sections = ind.subIndustries.map(sub => {
     const items = PRODUCTS.filter(p => p.industry === ind.id && p.subIndustry === sub.id);

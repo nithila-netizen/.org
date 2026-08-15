@@ -1,83 +1,98 @@
 /* ==========================================================================
-   Industries explorer: industry grid → sector detail, plus topic search.
-   Each sub-sector leads with the IDEAS reviewed there (clickable), with the
-   company list kept as a secondary reference. Search matches idea text,
-   sub-sector text, keywords, and companies (so "hip replacement" surfaces
-   Surgical AI, arthroplasty ideas, etc.).
+   Browse + filter + search. Ways in:
+     ?ind=<id>              industry → sub-sectors (leads with ideas)
+     ?view=specialty|role|patient [&f=<value>]   faceted browse
+     ?sort=new|top          all articles, sorted
+     ?q=<text>              search (ideas first, then sub-sectors)
+   Requires icons.js, data.js, common.js.
    ========================================================================== */
 
 mountChrome();
 
 const view = document.getElementById("view");
 const qInput = document.getElementById("q");
-let query = "";
+const params = new URLSearchParams(location.search);
+let query = (params.get("q") || "").trim().toLowerCase();
+if (qInput && params.get("q")) qInput.value = params.get("q");
 
-/* ---- catalog lookups ---- */
-const CAT_BY_SLUG = {};
-const CAT_BY_COMPANY = {};
-if (typeof CATALOG !== "undefined") {
-  CATALOG.forEach(c => {
-    CAT_BY_SLUG[c.slug] = c;
-    if (!CAT_BY_COMPANY[c.company]) CAT_BY_COMPANY[c.company] = c;
-  });
-}
-
-const totalIdeas = (typeof CATALOG !== "undefined") ? CATALOG.length : 0;
 document.getElementById("db-sub").textContent =
   `${SECTORS.length} industries · ${SECTORS.reduce((n, s) => n + s.subsectors.length, 0)} sub-sectors · ` +
-  `${totalIdeas} ideas reviewed. Browse how AI is reshaping each, or search a condition, sector, or company.`;
+  `${CATALOG.length} articles. Browse by industry, filter by your specialty or a symptom, or search.`;
 
-function hrefFor(c) {
-  return c.full ? `product.html?id=${encodeURIComponent(c.full)}` : `review.html?id=${encodeURIComponent(c.slug)}`;
+/* ---------- shared bits ---------- */
+const FACET = {
+  specialty: { key: "specialties", label: "Specialty", note: "Filter to your clinical field." },
+  role:      { key: "roles",       label: "Who it's for", note: "Filter by who uses it." },
+  patient:   { key: "systems",     label: "For patients", note: "What's new for a body system or condition." },
+};
+
+function tally(key) {
+  const m = {};
+  CATALOG.forEach(c => (c[key] || []).forEach(v => m[v] = (m[v] || 0) + 1));
+  return Object.entries(m).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 }
 
-// Primary: an idea, identified by its concept and clickable to its review.
-function ideaRow(slug) {
-  const c = CAT_BY_SLUG[slug];
-  if (!c) return "";
-  return `<a class="idea-row" href="${hrefFor(c)}">
-    <span class="idea-main">
-      <span class="idea-text">${wrapTerms(esc(c.idea), new Set())}</span>
-      <span class="idea-by">${esc(c.company)}${c.full ? ' <span class="idea-deep">Deep dive</span>' : ""}</span>
-    </span>
-    <span class="idea-meta">
-      <span class="signal ${esc(c.status)}">${esc(statusLabel(c.status))}</span>
-      <span class="idea-score">${Number(c.rating).toFixed(1)}</span>
-    </span>
-  </a>`;
-}
-
-// Secondary: a company chip, clickable to its idea.
-function companyChip(name) {
-  const c = CAT_BY_COMPANY[name];
-  if (c) return `<a class="comp-chip has-review" href="${hrefFor(c)}">${esc(name)}</a>`;
-  return `<span class="comp-chip">${esc(name)}</span>`;
-}
-
-function adoptionMeter(a) {
-  const levels = ["Early", "Emerging", "Scaling", "Mainstream"];
-  const idx = levels.indexOf(a.level);
-  const dots = levels.map((l, i) =>
-    `<span class="ad-dot${i <= idx ? " on" : ""}" title="${esc(l)}"></span>`).join("");
-  return `<div class="adoption">
-    <div class="ad-top"><span class="ss-eyebrow" style="margin:0">Adoption</span><span class="ad-level">${esc(a.level)}</span></div>
-    <div class="ad-track">${dots}</div>
-    <p class="ad-note">${esc(a.note)}</p>
+// article card with a Follow control
+function articleCard(c) {
+  return `<div class="acard">
+    <a class="acard-body" href="${articleHref(c)}">
+      <div class="fcard-top"><span class="fcard-cat">${esc(c.field)}</span><span class="signal ${esc(c.status)}">${esc(statusLabel(c.status))}</span></div>
+      <h3 class="fcard-idea">${wrapTerms(esc(c.idea), new Set())}</h3>
+      <p class="acard-sum">${esc((c.summary || "").slice(0, 120))}${(c.summary || "").length > 120 ? "…" : ""}</p>
+      <div class="fcard-foot"><span class="fcard-co">${esc(c.company)}${c.full ? ' <span class="idea-deep">Deep dive</span>' : ""}</span>
+        <span class="fcard-meta"><span class="idea-score">${Number(c.rating).toFixed(1)}</span><span class="fcard-date">${fmtDate(c.date)}</span></span></div>
+    </a>
+    ${followBtn("companies", c.company)}
   </div>`;
 }
 
+function tabBar(active) {
+  const tabs = [
+    ["Industries", "reviews.html"],
+    ["By specialty", "reviews.html?view=specialty"],
+    ["Who it's for", "reviews.html?view=role"],
+    ["For patients", "reviews.html?view=patient"],
+    ["Latest", "reviews.html?sort=new"],
+  ];
+  return `<div class="tabbar">${tabs.map(([t, h]) =>
+    `<a class="tab${active === t ? " on" : ""}" href="${h}">${t}</a>`).join("")}</div>`;
+}
+
+/* ---------- idea rows (sub-sector detail) ---------- */
+function ideaRow(slug) {
+  const c = CBY_SLUG[slug]; if (!c) return "";
+  return `<div class="idea-row-wrap">
+    <a class="idea-row" href="${articleHref(c)}">
+      <span class="idea-main">
+        <span class="idea-text">${wrapTerms(esc(c.idea), new Set())}</span>
+        <span class="idea-by">${esc(c.company)}${c.full ? ' <span class="idea-deep">Deep dive</span>' : ""}</span>
+      </span>
+      <span class="idea-meta"><span class="signal ${esc(c.status)}">${esc(statusLabel(c.status))}</span><span class="idea-score">${Number(c.rating).toFixed(1)}</span></span>
+    </a>
+    ${followBtn("companies", c.company)}
+  </div>`;
+}
+function companyChip(name) {
+  const c = CBY_COMPANY[name];
+  if (c) return `<a class="comp-chip has-review" href="${articleHref(c)}">${esc(name)}</a>`;
+  return `<span class="comp-chip">${esc(name)}</span>`;
+}
+function adoptionMeter(a) {
+  const levels = ["Early", "Emerging", "Scaling", "Mainstream"];
+  const idx = levels.indexOf(a.level);
+  const dots = levels.map((l, i) => `<span class="ad-dot${i <= idx ? " on" : ""}" title="${esc(l)}"></span>`).join("");
+  return `<div class="adoption">
+    <div class="ad-top"><span class="ss-eyebrow" style="margin:0">Adoption</span><span class="ad-level">${esc(a.level)}</span></div>
+    <div class="ad-track">${dots}</div><p class="ad-note">${esc(a.note)}</p></div>`;
+}
 function subsectorBlock(sub) {
   const trends = (sub.trends || []).map(t => `<li>${wrapTerms(esc(t), new Set())}</li>`).join("");
   const items = sub.items || [];
-  const ideas = items.length
-    ? `<div class="idea-list">${items.map(ideaRow).join("")}</div>`
-    : `<p class="ss-coming">Coverage coming soon.</p>`;
+  const ideas = items.length ? `<div class="idea-list">${items.map(ideaRow).join("")}</div>` : `<p class="ss-coming">Coverage coming soon.</p>`;
   const comps = (sub.companies || []).length
-    ? `<details class="ss-companies"><summary>Companies (${sub.companies.length})</summary>
-        <div class="comp-chips">${sub.companies.map(companyChip).join("")}</div></details>`
-    : "";
+    ? `<details class="ss-companies"><summary>Companies (${sub.companies.length})</summary><div class="comp-chips">${sub.companies.map(companyChip).join("")}</div></details>` : "";
   return `<section class="subsector" id="${esc(sub.id)}">
-    <h3>${esc(sub.name)}</h3>
+    <div class="ss-h"><h3>${esc(sub.name)}</h3>${followBtn("topics", "sub:" + sub.id)}</div>
     <div class="ss-grid">
       <div class="ss-main">
         <p class="ss-eyebrow">How AI is reshaping this</p>
@@ -88,23 +103,22 @@ function subsectorBlock(sub) {
       <aside class="ss-side">${adoptionMeter(sub.adoption)}</aside>
     </div>
     <p class="ss-eyebrow ss-ideas-h">Ideas reviewed here${items.length ? ` (${items.length})` : ""}</p>
-    ${ideas}
-    ${comps}
+    ${ideas}${comps}
   </section>`;
 }
 
+/* ---------- views ---------- */
 function industryGrid() {
   const cards = SECTORS.map(s => {
     const subs = s.subsectors.map(x => x.name).join(" · ");
     const n = s.subsectors.reduce((a, x) => a + ((x.items || []).length), 0);
     return `<a class="ind-card" href="reviews.html?ind=${encodeURIComponent(s.id)}">
-      <h3>${esc(s.name)}</h3>
-      <p>${esc(s.blurb)}</p>
+      <h3>${esc(s.name)}</h3><p>${esc(s.blurb)}</p>
       <span class="ind-subs">${esc(subs)}</span>
       <span class="ind-go">${s.subsectors.length} sub-sector${s.subsectors.length === 1 ? "" : "s"} · ${n} idea${n === 1 ? "" : "s"} →</span>
     </a>`;
   }).join("");
-  return `<div class="ind-grid">${cards}</div>`;
+  return tabBar("Industries") + `<div class="ind-grid">${cards}</div>`;
 }
 
 function industryDetail(sec) {
@@ -114,47 +128,65 @@ function industryDetail(sec) {
     ${sec.subsectors.map(subsectorBlock).join("")}`;
 }
 
+function facetView(kind) {
+  const cfg = FACET[kind]; const f = params.get("f");
+  const tabName = kind === "specialty" ? "By specialty" : kind === "role" ? "Who it's for" : "For patients";
+  if (f) {
+    const items = CATALOG.filter(c => (c[cfg.key] || []).includes(f)).sort((a, b) => b.rating - a.rating);
+    const backLabel = kind === "specialty" ? "specialties" : kind === "role" ? "audiences" : "body systems";
+    return tabBar(tabName) +
+      `<p class="crumb"><a href="reviews.html?view=${kind}">← All ${backLabel}</a></p>
+       <div class="facet-head"><h2 class="ind-title">${esc(f)}</h2>${followBtn("topics", kind + ":" + f)}</div>
+       <p class="ind-blurb">${items.length} article${items.length === 1 ? "" : "s"}.</p>
+       <div class="feed-grid">${items.map(articleCard).join("")}</div>`;
+  }
+  const tiles = tally(cfg.key).map(([name, n]) =>
+    `<a class="facet-tile" href="reviews.html?view=${kind}&f=${encodeURIComponent(name)}">${esc(name)} <span class="n">${n}</span></a>`).join("");
+  return tabBar(tabName) + `<p class="facet-note">${esc(cfg.note)}</p><div class="facet-grid">${tiles}</div>`;
+}
+
+function sortedList(sort) {
+  const items = [...CATALOG].sort(sort === "top"
+    ? (a, b) => b.rating - a.rating
+    : (a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : b.rating - a.rating));
+  return tabBar(sort === "top" ? "" : "Latest") +
+    `<h2 class="ind-title">${sort === "top" ? "Top rated" : "Latest articles"}</h2>
+     <p class="ind-blurb">${items.length} articles.</p>
+     <div class="feed-grid">${items.map(articleCard).join("")}</div>`;
+}
+
 function searchResults(q) {
-  // Sub-sectors: match name/reshaping/trends/keywords (keywords carry synonyms).
-  const secHits = [];
-  const subMatchSlugs = new Set();
+  const secHits = []; const subMatchSlugs = new Set();
   SECTORS.forEach(sec => sec.subsectors.forEach(sub => {
-    const hay = [sec.name, sub.name, sub.reshaping, (sub.trends || []).join(" "),
-      (sub.keywords || []).join(" ")].join(" ").toLowerCase();
+    const hay = [sec.name, sub.name, sub.reshaping, (sub.trends || []).join(" "), (sub.keywords || []).join(" ")].join(" ").toLowerCase();
     if (hay.includes(q)) { secHits.push({ sec, sub }); (sub.items || []).forEach(s => subMatchSlugs.add(s)); }
   }));
-
-  // Ideas (primary): direct full-text matches, plus every idea in a matched
-  // sub-sector — so a synonym hit (e.g. "hip replacement") surfaces the actual reviews.
-  const ideaHits = (typeof CATALOG !== "undefined") ? CATALOG.filter(c =>
-    subMatchSlugs.has(c.slug) ||
+  const ideaHits = CATALOG.filter(c => subMatchSlugs.has(c.slug) ||
     [c.name, c.company, c.field, (c.tags || []).join(" "), c.idea, c.summary,
-     (c.capabilities || []).join(" "), c.verdict].join(" ").toLowerCase().includes(q)) : [];
+     (c.specialties || []).join(" "), (c.systems || []).join(" "),
+     (c.capabilities || []).join(" "), c.verdict].join(" ").toLowerCase().includes(q));
 
-  if (!ideaHits.length && !secHits.length) {
-    return `<p class="db-empty">No matches for “${esc(q)}”. Try a broader term, or browse the industries below.</p>${industryGrid()}`;
-  }
+  if (!ideaHits.length && !secHits.length)
+    return `<p class="db-empty">No matches for “${esc(q)}”. Try a broader term, or browse below.</p>${industryGrid()}`;
 
-  let html = `<p class="db-count">${ideaHits.length} idea${ideaHits.length === 1 ? "" : "s"} and ${secHits.length} sub-sector${secHits.length === 1 ? "" : "s"} match “${esc(q)}”.</p>`;
-  if (ideaHits.length) {
-    html += `<p class="ss-eyebrow ss-ideas-h">Ideas</p><div class="idea-list">` +
-      ideaHits.sort((a, b) => b.rating - a.rating).map(c => ideaRow(c.slug)).join("") + `</div>`;
-  }
-  if (secHits.length) {
-    html += `<p class="ss-eyebrow ss-ideas-h" style="margin-top:34px">Sub-sectors</p><div class="sr-list">` +
-      secHits.map(r =>
-        `<a class="sr-row" href="reviews.html?ind=${encodeURIComponent(r.sec.id)}#${encodeURIComponent(r.sub.id)}">
-          <span class="sr-cat">${esc(r.sec.name)}</span>
-          <span><h3>${esc(r.sub.name)}</h3><p>${esc(r.sub.reshaping.slice(0, 140))}…</p></span>
-          <span class="arrow">→</span>
-        </a>`).join("") + `</div>`;
-  }
+  let html = `<p class="db-count">${ideaHits.length} article${ideaHits.length === 1 ? "" : "s"} and ${secHits.length} sub-sector${secHits.length === 1 ? "" : "s"} match “${esc(q)}”.</p>`;
+  if (ideaHits.length)
+    html += `<div class="feed-grid">${ideaHits.sort((a, b) => b.rating - a.rating).map(articleCard).join("")}</div>`;
+  if (secHits.length)
+    html += `<p class="ss-eyebrow ss-ideas-h" style="margin-top:34px">Related sub-sectors</p><div class="sr-list">` +
+      secHits.map(r => `<a class="sr-row" href="reviews.html?ind=${encodeURIComponent(r.sec.id)}#${encodeURIComponent(r.sub.id)}">
+        <span class="sr-cat">${esc(r.sec.name)}</span>
+        <span><h3>${esc(r.sub.name)}</h3><p>${esc(r.sub.reshaping.slice(0, 140))}…</p></span>
+        <span class="arrow">→</span></a>`).join("") + `</div>`;
   return html;
 }
 
+/* ---------- router ---------- */
 function render() {
-  const ind = new URLSearchParams(location.search).get("ind");
   if (query) { view.innerHTML = searchResults(query); return; }
+  const vw = params.get("view"), sort = params.get("sort"), ind = params.get("ind");
+  if (vw && FACET[vw]) { view.innerHTML = facetView(vw); return; }
+  if (sort) { view.innerHTML = sortedList(sort); return; }
   if (ind) {
     const sec = SECTORS.find(s => s.id === ind);
     view.innerHTML = sec ? industryDetail(sec) : industryGrid();
@@ -167,5 +199,11 @@ function render() {
   view.innerHTML = industryGrid();
 }
 
-qInput.addEventListener("input", e => { query = e.target.value.trim().toLowerCase(); render(); });
+if (qInput) qInput.addEventListener("input", e => {
+  query = e.target.value.trim().toLowerCase();
+  // reflect in URL without reload
+  const u = new URL(location); if (query) u.searchParams.set("q", e.target.value); else u.searchParams.delete("q");
+  history.replaceState({}, "", u);
+  render();
+});
 render();

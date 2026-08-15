@@ -1,7 +1,7 @@
 /* ==========================================================================
    Product review page. Reads ?id=<product-id> and renders the review:
    an independent-review header, prototype hero, blog-style body, key
-   capabilities, the Nithila verdict, editorial quote, "at a glance" sidebar,
+   capabilities, the verdict, editorial quote, "at a glance" sidebar,
    and related reviews. Edit data.js for content.
    ========================================================================== */
 
@@ -76,7 +76,7 @@ function render() {
     return;
   }
 
-  document.title = `${p.name} — Nithila Notes`;
+  document.title = `${p.name} — Vitai`;
 
   const ind = INDUSTRIES.find(i => i.id === p.industry);
   const sub = ind && ind.subIndustries.find(s => s.id === p.subIndustry);
@@ -100,7 +100,7 @@ function render() {
     <p class="crumb">${crumb}</p>
 
     <div class="measure">
-      <p class="kicker">Nithila Notes · Independent review</p>
+      <p class="kicker">Vitai · Independent review</p>
       <h1>${esc(p.name)}</h1>
       <p class="tagline">${esc(p.tagline)}</p>
       <div class="analyst">
@@ -121,7 +121,7 @@ function render() {
         <div class="cap-grid">${(p.capabilities || []).map(capHTML).join("")}</div>
 
         <p class="eyebrow">Our verdict</p>
-        <h2 style="font-family:var(--display);font-weight:500;font-size:32px;letter-spacing:-0.02em;margin:0 0 22px">The Nithila verdict</h2>
+        <h2 style="font-family:var(--display);font-weight:500;font-size:32px;letter-spacing:-0.02em;margin:0 0 22px">The verdict</h2>
         <div class="verdict-grid">
           <div class="vcard strengths">
             <h4>Strengths</h4>
@@ -133,7 +133,7 @@ function render() {
           </div>
         </div>
 
-        ${p.quote ? `<div class="quote"><p>“${esc(p.quote)}”</p><div class="attrib">Analysis · Nithila Notes</div></div>` : ""}
+        ${p.quote ? `<div class="quote"><p>“${esc(p.quote)}”</p><div class="attrib">Analysis · Vitai</div></div>` : ""}
         ${exploreHTML(p.explore)}
       </div>
 

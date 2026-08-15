@@ -1,44 +1,52 @@
 /* ==========================================================================
-   Shared header + footer, injected on every page. Requires icons.js + data.js.
+   Shared masthead + footer, injected on every page. Requires icons.js + data.js.
+   A non-personal news publication. Rename in data.js → SITE.
    ========================================================================== */
 
+function siteName() { return (typeof SITE !== "undefined" && SITE.brand) || "The AI Health Brief"; }
+function siteTag()  { return (typeof SITE !== "undefined" && SITE.tagline) || ""; }
+
+function followCount() {
+  try { return (JSON.parse(localStorage.getItem("aihb_follows") || "{}").companies || []).length
+    + (JSON.parse(localStorage.getItem("aihb_follows") || "{}").topics || []).length; }
+  catch (e) { return 0; }
+}
+
 function renderHeader() {
+  const n = followCount();
   return `
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="index.html">Nithila <em>Neminathan</em></a>
+      <a class="brand" href="index.html">${esc(siteName())}</a>
       <nav class="nav">
-        <a href="reviews.html">Industries</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#involvement">Experience</a>
-        <a href="index.html#research">Research</a>
-        <a href="glossary.html">Glossary</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html">Latest</a>
+        <a href="reviews.html">Browse</a>
+        <a href="reviews.html?view=specialty">Specialties</a>
+        <a href="following.html">Following${n ? ` <span class="nav-badge">${n}</span>` : ""}</a>
       </nav>
     </div>
   </header>`;
 }
 
 function renderFooter() {
-  const c = (typeof PROFILE !== "undefined" && PROFILE.contact) || {};
-  const links = [];
-  if (c.email)    links.push(`<a href="mailto:${esc(c.email)}">${esc(c.email)}</a>`);
-  if (c.linkedin) links.push(`<a href="${esc(c.linkedin)}" target="_blank" rel="noopener">LinkedIn</a>`);
-  if (c.other)    links.push(`<a href="${esc(c.other)}" target="_blank" rel="noopener">More</a>`);
-
   return `
-  <footer class="site-footer" id="contact">
+  <footer class="site-footer">
     <div class="wrap">
       <div class="foot-top">
-        <div class="foot-lead">Building products that make good healthcare reach further.</div>
-        <div class="footcol">
-          <h4>Get in touch</h4>
-          ${links.join("") || '<a href="#">Add your contact links in data.js</a>'}
+        <div>
+          <div class="foot-brand">${esc(siteName())}</div>
+          <p class="foot-lead">${esc(siteTag())}</p>
         </div>
+        <nav class="foot-nav">
+          <a href="index.html">Latest</a>
+          <a href="reviews.html">Browse industries</a>
+          <a href="reviews.html?view=specialty">By specialty</a>
+          <a href="following.html">Following</a>
+        </nav>
       </div>
       <div class="foot-bottom">
-        <span>© ${esc((typeof PROFILE !== "undefined" && PROFILE.name) || "Nithila Neminathan")}</span>
-        <span>Nithila Notes · independent reviews of AI in healthcare</span>
+        <span>© ${esc(siteName())}</span>
+        <span>Independent reviews of AI in healthcare. Not medical or purchasing advice.</span>
       </div>
     </div>
   </footer>`;

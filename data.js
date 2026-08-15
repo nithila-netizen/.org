@@ -11,207 +11,16 @@
    ========================================================================== */
 
 const SITE = {
-  brand: "Nithila Neminathan",
-  publication: "Nithila Notes",
+  brand: "Vitai",                            // ← rename your publication here
+  publication: "Vitai",
+  tagline: "What's new in AI across healthcare",
 };
 
 /* --------------------------------------------------------------------------
    PROFILE, this is YOUR portfolio. Edit these to change the homepage.
    -------------------------------------------------------------------------- */
-const PROFILE = {
-  name: "Nithila Neminathan",
-  role: "Aspiring Product Manager · AI in Healthcare",
-  portrait: "assets/photos/portrait-cutout.png",   // cut-out headshot on the homepage
-  // Hero headline. Wrap words in <em>…</em> for elegant italics.
-  heroTitle: "How AI is <em>reshaping</em> healthcare.",
-  heroIntro: "I'm Nithila. I study where artificial intelligence meets healthcare, and I write " +
-             "independent reviews of the products shaping it, each with a clear point of view on " +
-             "how they could serve more people, better.",
-  // About section
-  aboutLead: "I want to build products that make good healthcare reach further.",
-  about: [
-    "My work here is a running body of analysis: I take a real company in a corner of " +
-    "healthcare, review what it does well and where it falls short, and lay out my own " +
-    "product thinking for how AI could push it further, always as independent commentary, " +
-    "always crediting the source.",
-    "It's how I sharpen the instincts a product manager lives on: reading a market, judging a " +
-    "product honestly, and turning a critique into a concrete direction.",
-    "A thread runs through the rest of what I do, too. I love getting kids excited about movement with " +
-    "Girls on the Run and about science with UF Teach, and staying active and outdoors myself, " +
-    "usually with my little sister. Curiosity and energy are the throughline.",
-  ],
-  skills: [
-    "Product strategy", "AI / ML literacy", "Healthcare markets",
-    "User research", "Prototyping", "Competitive analysis",
-  ],
-  contact: {
-    email: "nithilajax@gmail.com",   // ← edit if you want a different contact address
-    linkedin: "",                    // ← paste your LinkedIn URL
-    other: "",                       // ← anything else (portfolio, X, etc.)
-  },
-  // Origin story, the Museum of the Future, Dubai
-  origin: {
-    photo: "assets/photos/museum-future-dubai.jpg",
-    title: "Where it started",
-    text: "My love for this field grew at the Museum of the Future in Dubai. Standing up close to " +
-          "innovations from every field (health, mobility, energy, space). I stopped wanting to " +
-          "just watch the future arrive and decided I wanted to help build it, starting with healthcare.",
-  },
-  education: [
-    { school: "University of Florida", note: "Undergraduate" },
-    { school: "Creekside High School", note: "Recipient of the Benacquisto Scholarship",
-      photo: "assets/photos/grad-creekside.jpg" },
-  ],
-};
+/* Personal/portfolio data removed — Vitai is a non-personal publication. */
 
-/* --------------------------------------------------------------------------
-   ONSET, your own venture. Gets a dedicated section.
-   Fill the [bracketed] placeholders with the real story and it renders fully.
-   -------------------------------------------------------------------------- */
-const ONSET = {
-  founded: "",                        // ← e.g. "2024"
-  oneLiner: "Onset is an independent media brand that decodes AI in healthcare for students and " +
-            "newcomers: one idea, one company, and one career at a time, in plain English.",
-  why: "AI is transforming medicine faster than anyone can explain it, and most coverage is either " +
-       "too technical or too hyped to be useful to someone just getting curious. I built Onset to " +
-       "close that gap: no jargon, no hype, no medical degree required.",
-  who: "College students, pre-meds, and early-career people who want to understand where medicine is " +
-       "heading before it becomes mainstream.",
-  how: "A recurring weekly system on Instagram: a 'Word of the Week' explainer, a 'Company Spotlight,' " +
-       "and a 'Role Spotlight' on careers in the field, plus deep dives and timely breaking-news posts. " +
-       "Each is a designed carousel with a searchable, editorial caption, backed by a newsletter and LinkedIn.",
-  impact: "I built the whole brand: naming and positioning, a warm editorial voice that reports rather " +
-          "than lectures, a minimalist cream-and-blood-red visual system, a repeatable weekly content " +
-          "calendar, and light automation that drafts upcoming posts and scans for breaking news.",
-  ig: { handle: "@onset.ai.health", url: "https://instagram.com/onset.ai.health" },
-  widget: "",  // ← paste a LightWidget/SnapWidget <iframe> embed here for a live post feed
-  // Drop screenshots of ONSET posts into assets/photos/ with these names:
-  posts: [
-    "assets/photos/onset-1.jpg",
-    "assets/photos/onset-2.jpg",
-    "assets/photos/onset-3.jpg",
-  ],
-};
-
-/* --------------------------------------------------------------------------
-   PROJECTS, things you've built. (e.g. the Nirmaa website.)
-   -------------------------------------------------------------------------- */
-const PROJECTS = [];
-
-/* --------------------------------------------------------------------------
-   MARKETING, clubs/orgs you run marketing for. Each gets an Instagram
-   carousel so people can see your work. Drop post screenshots into
-   assets/photos/ with the listed names, and add the Instagram handle/URL.
-   -------------------------------------------------------------------------- */
-const MARKETING = [
-  {
-    name: "UF Pawsthetics",
-    role: "Marketing Director",
-    ig: { handle: "@ufpawsthetics", url: "https://instagram.com/ufpawsthetics" },
-    widget: "",  // ← paste a LightWidget/SnapWidget <iframe> embed here
-    posts: [
-      "assets/photos/pawsthetics-1.jpg",
-      "assets/photos/pawsthetics-2.jpg",
-      "assets/photos/pawsthetics-3.jpg",
-    ],
-  },
-  {
-    name: "180 Degrees Consulting",
-    role: "Marketing Director",
-    headshot: "assets/photos/headshot-180dc.jpg",
-    ig: { handle: "@180dcuflorida", url: "https://instagram.com/180dcuflorida" },
-    widget: "",  // ← paste a LightWidget/SnapWidget <iframe> embed here
-    posts: [
-      "assets/photos/180dc-1.jpg",
-      "assets/photos/180dc-2.jpg",
-      "assets/photos/180dc-3.jpg",
-    ],
-  },
-];
-
-/* --------------------------------------------------------------------------
-   INVOLVEMENT, leadership, competitions, teaching, volunteering (with photos).
-   -------------------------------------------------------------------------- */
-const INVOLVEMENT = [
-  {
-    title: "One Health Center of Excellence, Case Competition",
-    role: "2nd place → Communications Chair",
-    text: "I placed 2nd in the One Health Center of Excellence case competition, then came back " +
-          "to lead communications as Communications Chair for the next one.",
-    photo: "assets/photos/onehealth-team.jpg",
-  },
-  {
-    title: "UF Teach",
-    role: "STEM Camp Instructor",
-    text: "Through UF's Teach program I taught STEM camp to elementary schoolers every week, " +
-          "making science hands-on and fun for the youngest learners.",
-    photo: "assets/photos/uf-teach-stem.jpg",
-  },
-  {
-    title: "Girls on the Run",
-    role: "Volunteer Coach",
-    text: "I volunteered with Girls on the Run to share my love of being active with young girls, " +
-          "building their confidence through movement.",
-    photo: "assets/photos/girls-on-the-run.jpg",
-  },
-  {
-    title: "Norman Fixel Institute for Neurological Diseases",
-    role: "Volunteer",
-    text: "I volunteered at UF Health's Norman Fixel Institute for Neurological Diseases, pictured " +
-          "here with Congressman Gus Bilirakis and Dr. Michael Okun, neurologist and best-selling " +
-          "author of The Parkinson's Plan.",
-    photo: "assets/photos/fixel-institute.jpg",
-    links: [
-      { url: "https://fixel.ufhealth.org/", label: "Fixel Institute ↗" },
-      { url: "https://www.google.com/search?q=The+Parkinson%27s+Plan+Michael+Okun+book", label: "The Parkinson's Plan ↗" },
-    ],
-  },
-  {
-    title: "Stop Children's Cancer",
-    role: "Intern",
-    text: "I interned with Stop Children's Cancer, supporting their mission to fund research and " +
-          "brighter outcomes for children facing cancer.",
-    photo: "assets/photos/stop-childrens-cancer.jpg",
-  },
-];
-
-/* --------------------------------------------------------------------------
-   RESEARCH, lab work. Three photos side by side + a description.
-   Drop research-1.jpg / research-2.jpg / research-3.jpg into assets/photos/.
-   -------------------------------------------------------------------------- */
-const RESEARCH = {
-  lab: "Urs Lab · University of Florida",
-  field: "Neuroscience research",
-  text: "I do neuroscience research in the Urs Lab at the University of Florida, studying how the " +
-        "brain's signaling systems work: hands-on bench science that grounds my interest in where " +
-        "medicine and technology meet.",
-  url: "https://pharmacology.med.ufl.edu/research-2/the-urs-lab-2/",
-  photos: [
-    "assets/photos/research-1.jpg",
-    "assets/photos/research-2.jpg",
-    "assets/photos/research-3.jpg",
-  ],
-};
-
-/* --------------------------------------------------------------------------
-   FUN FACTS, personal, photo-led moments.
-   annotations place a small arrow + label over a photo (x/y are % positions).
-   -------------------------------------------------------------------------- */
-const FUNFACTS = [
-  {
-    label: "Fun fact",
-    text: "I was at UF the year we won the 2025 national basketball championship. 🏀",
-    photo: "assets/photos/basketball-2025.jpg",
-    annotations: [
-      { x: "72%", y: "34%", label: "me" },
-      { x: "30%", y: "34%", label: "college roommate" },
-    ],
-  },
-];
-
-/* --------------------------------------------------------------------------
-   INDUSTRIES, the browsing structure.
-   -------------------------------------------------------------------------- */
 const INDUSTRIES = [
   {
     id: "drug-discovery",
@@ -749,6 +558,19 @@ const CATALOG = [
     "tags": [
       "Cardiac Diagnostics"
     ],
+    "date": "2026-08-14",
+    "specialties": [
+      "Radiology",
+      "Cardiology",
+      "Dermatology"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Heart & circulation",
+      "Skin"
+    ],
     "idea": "The non-invasive cath lab: FFR computed from coronary CT.",
     "take": "The non-invasive cath lab: FFR computed from coronary CT.",
     "summary": "HeartFlow computes fractional flow reserve, the physiological significance of coronary blockages, from a standard coronary CT using computational fluid dynamics and AI, often replacing invasive diagnostic catheterization. With guideline recognition, dedicated reimbursement, and hundreds of thousands of patients analyzed, it is arguably the most commercially validated AI diagnostic in medicine.",
@@ -788,6 +610,24 @@ const CATALOG = [
     "tags": [
       "Radiology & Medical Imaging",
       "Emergency Medicine"
+    ],
+    "date": "2026-06-28",
+    "specialties": [
+      "Radiology",
+      "Cardiology",
+      "Neurology",
+      "Emergency Medicine"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians",
+      "Primary care providers",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Heart & circulation",
+      "Brain & nervous system",
+      "Bones & joints"
     ],
     "idea": "Enterprise-wide AI triage and care coordination across 20+ imaging findings.",
     "take": "Enterprise-wide AI triage and care coordination across 20+ imaging findings.",
@@ -831,6 +671,24 @@ const CATALOG = [
       "Radiology & Medical Imaging",
       "Emergency Medicine"
     ],
+    "date": "2026-05-12",
+    "specialties": [
+      "Radiology",
+      "Pathology",
+      "Cardiology",
+      "Neurology",
+      "Emergency Medicine"
+    ],
+    "roles": [
+      "Radiologists",
+      "Pathologists",
+      "Physicians",
+      "Primary care providers"
+    ],
+    "systems": [
+      "Heart & circulation",
+      "Brain & nervous system"
+    ],
     "idea": "The stroke-alerting pioneer, now a care-coordination platform.",
     "take": "The stroke-alerting pioneer, now a care-coordination platform.",
     "summary": "Viz.ai earned the first FDA De Novo for AI triage (LVO stroke, 2018) and the first CMS New Technology Add-on Payment for AI. Its playbook, detect on imaging, instantly mobilize the treatment team by phone, now extends to hemorrhage, PE, aneurysm, and cardiology (including hypertrophic cardiomyopathy from ECG).",
@@ -872,6 +730,15 @@ const CATALOG = [
     "tags": [
       "Clinical Decision Support & Medical Knowledge"
     ],
+    "date": "2026-03-25",
+    "specialties": [
+      "Primary Care"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers"
+    ],
+    "systems": [],
     "idea": "The AI medical search engine clinicians actually adopted.",
     "take": "The AI medical search engine clinicians actually adopted.",
     "summary": "OpenEvidence answers clinical questions with cited, literature-grounded responses and became a genuine phenomenon, used by a large share of US physicians within a couple of years of launch, free for verified clinicians, with content partnerships spanning top medical journals.",
@@ -912,6 +779,17 @@ const CATALOG = [
       "Ambient Clinical Documentation",
       "Medical Coding & CDI"
     ],
+    "date": "2026-07-06",
+    "specialties": [
+      "Nursing",
+      "Health Administration"
+    ],
+    "roles": [
+      "Nurses",
+      "Physicians",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "The enterprise leader in ambient clinical documentation.",
     "take": "The enterprise leader in ambient clinical documentation.",
     "summary": "Abridge converts the clinical conversation into structured, specialty-tuned draft notes inside Epic, its deep EHR partnership and health-system-wide deployments (many of the largest US systems) made it the breakout enterprise winner of the ambient-AI wave, with billing-aware output and nursing expansion following.",
@@ -954,6 +832,18 @@ const CATALOG = [
       "Surgical AI & Robotics",
       "Surgery & Perioperative Care"
     ],
+    "date": "2026-05-20",
+    "specialties": [
+      "Emergency Medicine",
+      "Dentistry",
+      "Surgery"
+    ],
+    "roles": [
+      "Surgeons"
+    ],
+    "systems": [
+      "Teeth & mouth"
+    ],
     "idea": "The fifth-generation robot with 10,000× the compute, built for an AI decade.",
     "take": "The fifth-generation robot with 10,000× the compute, built for an AI decade.",
     "summary": "Intuitive's da Vinci 5 pairs the dominant surgical-robotics franchise (15M+ cumulative procedures) with force feedback, vastly expanded onboard compute, and Case Insights analytics that convert every operation into structured data, the installed base on which surgical AI will actually ship.",
@@ -994,6 +884,21 @@ const CATALOG = [
     "tags": [
       "Radiology & Medical Imaging",
       "Digital Pathology"
+    ],
+    "date": "2026-04-03",
+    "specialties": [
+      "Radiology",
+      "Pathology",
+      "Oncology"
+    ],
+    "roles": [
+      "Radiologists",
+      "Pathologists",
+      "Physicians",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Cancer"
     ],
     "idea": "Cancer-focused imaging AI with unusually strong peer-reviewed evidence.",
     "take": "Cancer-focused imaging AI with unusually strong peer-reviewed evidence.",
@@ -1036,6 +941,16 @@ const CATALOG = [
       "Radiology & Medical Imaging",
       "Ambient Clinical Documentation"
     ],
+    "date": "2026-07-22",
+    "specialties": [
+      "Radiology",
+      "Health Administration"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians"
+    ],
+    "systems": [],
     "idea": "Generative AI for the radiology report itself.",
     "take": "Generative AI for the radiology report itself.",
     "summary": "Rad AI attacks radiology's other bottleneck: not seeing the finding, but writing it up. Omni generates report impressions from dictated findings in each radiologist's personal style, and its follow-up product ensures incidental findings actually get tracked to resolution. Adopted across a large share of top US health systems and private practices.",
@@ -1076,6 +991,21 @@ const CATALOG = [
     "tags": [
       "Point-of-Care Screening",
       "Primary Care & Virtual-First Medicine"
+    ],
+    "date": "2026-06-04",
+    "specialties": [
+      "Radiology",
+      "Endocrinology & Diabetes",
+      "Ophthalmology",
+      "Drug Development"
+    ],
+    "roles": [
+      "Physicians",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Eyes",
+      "Hormones & diabetes"
     ],
     "idea": "The first autonomous AI diagnostic ever authorized by the FDA.",
     "take": "The first autonomous AI diagnostic ever authorized by the FDA.",
@@ -1119,6 +1049,14 @@ const CATALOG = [
       "Ambient Clinical Documentation",
       "Medical Coding & CDI"
     ],
+    "date": "2026-04-18",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [],
     "idea": "Ambient documentation with coding compliance as the core thesis.",
     "take": "Ambient documentation with coding compliance as the core thesis.",
     "summary": "Ambience built its ambient suite around a pointed claim: the note is only half the job, the codes are the other half. Its documentation ships with CDI-aware, E/M-compliant coding support across 100+ specialties, an argument that resonated with CFOs as much as CMOs (and with OpenAI, an investor).",
@@ -1159,6 +1097,16 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
+    "date": "2026-07-30",
+    "specialties": [
+      "Pharmacy",
+      "Genetics & Genomics",
+      "Drug Development"
+    ],
+    "roles": [
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "The AlphaFold company, rebuilding drug design from first principles.",
     "take": "The AlphaFold company, rebuilding drug design from first principles.",
     "summary": "Spun out of DeepMind around the Nobel-recognized AlphaFold breakthroughs, Isomorphic applies frontier structure-prediction models (AlphaFold 3 predicts protein–ligand, DNA, RNA complexes) to internal programs and mega-deals with Eli Lilly and Novartis, the purest \"AI-first\" bet in big-league drug discovery.",
@@ -1199,6 +1147,19 @@ const CATALOG = [
     "tags": [
       "Dental AI & Imaging"
     ],
+    "date": "2026-06-13",
+    "specialties": [
+      "Dentistry",
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians",
+      "Payers & insurers"
+    ],
+    "systems": [
+      "Bones & joints",
+      "Teeth & mouth"
+    ],
     "idea": "The FDA-cleared dental AI both dentists and insurers run.",
     "take": "The FDA-cleared dental AI both dentists and insurers run.",
     "summary": "Overjet's FDA-cleared algorithms detect and outline caries and quantify bone loss on radiographs in real time, deployed chairside across major DSOs to standardize diagnosis and lift case acceptance, and on the payer side reviewing millions of claims with the same objective measurements.",
@@ -1238,6 +1199,26 @@ const CATALOG = [
     "tags": [
       "Radiology & Medical Imaging",
       "Point-of-Care Screening"
+    ],
+    "date": "2026-04-26",
+    "specialties": [
+      "Radiology",
+      "Cardiology",
+      "Neurology",
+      "Emergency Medicine",
+      "Pulmonology",
+      "Public Health"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians",
+      "Primary care providers",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Heart & circulation",
+      "Brain & nervous system",
+      "Lungs & breathing"
     ],
     "idea": "Imaging AI at global-health scale, from TB screening to stroke.",
     "take": "Imaging AI at global-health scale, from TB screening to stroke.",
@@ -1280,6 +1261,21 @@ const CATALOG = [
     "tags": [
       "Digital Pathology"
     ],
+    "date": "2026-08-07",
+    "specialties": [
+      "Radiology",
+      "Pathology",
+      "Oncology"
+    ],
+    "roles": [
+      "Pathologists",
+      "Physicians",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Bones & joints",
+      "Cancer"
+    ],
     "idea": "The first FDA-authorized AI in pathology, now building foundation models.",
     "take": "The first FDA-authorized AI in pathology, now building foundation models.",
     "summary": "Spun out of Memorial Sloan Kettering, Paige earned the first-ever FDA authorization for AI in digital pathology (Paige Prostate) and has since built massive pathology foundation models (Virchow) trained on millions of slides in partnership with Microsoft. Its clinical suite spans prostate, breast, and pan-cancer biomarker prediction.",
@@ -1319,6 +1315,22 @@ const CATALOG = [
     "tags": [
       "Genomics & Precision Medicine",
       "Real-World Data & Evidence"
+    ],
+    "date": "2026-06-28",
+    "specialties": [
+      "Radiology",
+      "Cardiology",
+      "Oncology",
+      "Genetics & Genomics"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Heart & circulation",
+      "Cancer"
     ],
     "idea": "The multimodal data machine: sequencing, algorithms, and trial matching.",
     "take": "The multimodal data machine: sequencing, algorithms, and trial matching.",
@@ -1363,6 +1375,17 @@ const CATALOG = [
       "Primary Care & Virtual-First Medicine",
       "Risk Adjustment & Quality Analytics"
     ],
+    "date": "2026-05-12",
+    "specialties": [
+      "Primary Care",
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers",
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "The primary-care copilot that reads the chart so you don't have to.",
     "take": "The primary-care copilot that reads the chart so you don't have to.",
     "summary": "Navina compresses fragmented records, EHR data, HIE feeds, PDFs, claims, into an actionable patient portrait at the moment of care: suspected diagnoses with evidence, care gaps, and risk-adjustment documentation, purpose-built for value-based primary care.",
@@ -1404,6 +1427,21 @@ const CATALOG = [
       "Ambient Clinical Documentation",
       "Clinical Decision Support & Medical Knowledge"
     ],
+    "date": "2026-03-26",
+    "specialties": [
+      "Endocrinology & Diabetes",
+      "Health Administration"
+    ],
+    "roles": [
+      "Nurses",
+      "Physicians",
+      "Hospital & health-system leaders",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Hormones & diabetes",
+      "Aging & mobility"
+    ],
     "idea": "Dictation king + ambient AI, fused into one clinical assistant.",
     "take": "Dictation king + ambient AI, fused into one clinical assistant.",
     "summary": "Dragon Copilot merges Nuance's DAX ambient documentation with Dragon Medical's dictation empire (used by most US clinicians) and adds assistant features, chart Q&A, order drafting, referral letters, all riding Microsoft's enterprise cloud relationships and Epic integration.",
@@ -1444,6 +1482,16 @@ const CATALOG = [
     "tags": [
       "Medical Coding & CDI"
     ],
+    "date": "2026-07-06",
+    "specialties": [
+      "Radiology",
+      "Health Administration"
+    ],
+    "roles": [
+      "Radiologists",
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "Autonomous coding you can audit, computational linguistics, not black box.",
     "take": "Autonomous coding you can audit, computational linguistics, not black box.",
     "summary": "Nym codes charts end-to-end with no human in the loop for high-volume domains (ED, radiology, and expanding), using a linguistics-based engine that emits a traceable justification for every code, the audit-trail-first architecture compliance teams actually accept.",
@@ -1483,6 +1531,14 @@ const CATALOG = [
     "tags": [
       "Prior Authorization & Utilization Management"
     ],
+    "date": "2026-05-20",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "Prior auth that approves in seconds, and nudges care toward evidence.",
     "take": "Prior auth that approves in seconds, and nudges care toward evidence.",
     "summary": "Cohere runs intelligent prior authorization for major payers (processing millions of requests yearly), auto-approving the clear majority in real time by reading clinical submissions against transparent criteria, and steering requests toward evidence-based care paths rather than blunt denials.",
@@ -1523,6 +1579,18 @@ const CATALOG = [
       "Revenue Cycle & Billing Automation",
       "Prior Authorization & Utilization Management"
     ],
+    "date": "2026-04-03",
+    "specialties": [
+      "Pharmacy",
+      "Health Administration"
+    ],
+    "roles": [
+      "Pharmacists",
+      "Hospital & health-system leaders",
+      "Payers & insurers",
+      "Patients & caregivers"
+    ],
+    "systems": [],
     "idea": "AI voice agents that sit on hold with payers so humans don't.",
     "take": "AI voice agents that sit on hold with payers so humans don't.",
     "summary": "Infinitus automates the phone calls healthcare runs on, benefit verification, prior-auth status, pharmacy stock checks, with voice AI that has completed millions of payer calls for providers, pharma hubs, and PBMs, expanding into patient-facing calls with guardrailed LLMs.",
@@ -1565,6 +1633,16 @@ const CATALOG = [
       "AI Drug Discovery & Design",
       "Clinical Trials & Development"
     ],
+    "date": "2026-07-15",
+    "specialties": [
+      "Surgery",
+      "Pharmacy",
+      "Drug Development"
+    ],
+    "roles": [
+      "Surgeons"
+    ],
+    "systems": [],
     "idea": "The most clinically advanced generative-AI drug pipeline.",
     "take": "The most clinically advanced generative-AI drug pipeline.",
     "summary": "Insilico's Pharma.AI platform (target discovery, generative chemistry, trial prediction) produced rentosertib, a drug with both an AI-discovered target and AI-generated structure, which posted encouraging Phase 2a results in IPF, the furthest any such molecule has progressed. It licenses the platform and out-licenses assets.",
@@ -1605,6 +1683,16 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM",
       "Cardiac Diagnostics"
+    ],
+    "date": "2026-06-05",
+    "specialties": [
+      "Cardiology"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Heart & circulation"
     ],
     "idea": "The AI stethoscope: heart failure screening in a 15-second listen.",
     "take": "The AI stethoscope: heart failure screening in a 15-second listen.",
@@ -1648,6 +1736,22 @@ const CATALOG = [
       "Point-of-Care Screening",
       "Primary Care & Virtual-First Medicine"
     ],
+    "date": "2026-04-18",
+    "specialties": [
+      "Radiology",
+      "Oncology",
+      "Emergency Medicine",
+      "Dermatology"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Skin",
+      "Cancer"
+    ],
     "idea": "Autonomous skin-cancer triage cleared to rule out without a dermatologist.",
     "take": "Autonomous skin-cancer triage cleared to rule out without a dermatologist.",
     "summary": "Skin Analytics' DERM is deployed across NHS dermatology pathways and has been authorised in the UK as an autonomous tool able to discharge benign lesions without clinician review, one of the furthest-reaching autonomy authorisations granted to any medical AI, addressing brutal dermatology waiting lists.",
@@ -1688,6 +1792,15 @@ const CATALOG = [
     "tags": [
       "Radiology & Medical Imaging"
     ],
+    "date": "2026-07-30",
+    "specialties": [
+      "Radiology"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians"
+    ],
+    "systems": [],
     "idea": "Comprehensive-read AI: 120+ findings on a single chest X-ray.",
     "take": "Comprehensive-read AI: 120+ findings on a single chest X-ray.",
     "summary": "Rather than one algorithm per finding, Annalise takes the comprehensive route, its CXR product detects well over a hundred findings simultaneously, and its head-CT product follows the same philosophy. Built by Australia's Harrison.ai with radiologist-labeled datasets at unusual scale.",
@@ -1726,6 +1839,20 @@ const CATALOG = [
     "status": "has-ai",
     "tags": [
       "Digital Pathology"
+    ],
+    "date": "2026-06-13",
+    "specialties": [
+      "Radiology",
+      "Pathology",
+      "Oncology"
+    ],
+    "roles": [
+      "Pathologists",
+      "Physicians",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Cancer"
     ],
     "idea": "AI-first cancer diagnostics running live in high-volume labs.",
     "take": "AI-first cancer diagnostics running live in high-volume labs.",
@@ -1767,6 +1894,21 @@ const CATALOG = [
       "Cardiac Diagnostics",
       "Point-of-Care Screening"
     ],
+    "date": "2026-04-27",
+    "specialties": [
+      "Radiology",
+      "Cardiology",
+      "Mental & Behavioral Health"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers",
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Heart & circulation",
+      "Mental health"
+    ],
     "idea": "Plaque-first coronary analysis, quantifying the disease, not just the narrowing.",
     "take": "Plaque-first coronary analysis, quantifying the disease, not just the narrowing.",
     "summary": "Cleerly analyzes coronary CT to quantify total atherosclerotic plaque burden and composition, reframing heart-attack risk around how much disease exists rather than just stenosis percentage. Backed by large trial programs and new reimbursement codes, it targets both symptomatic evaluation and the emerging preventive \"know your plaque\" market.",
@@ -1806,6 +1948,17 @@ const CATALOG = [
     "status": "has-ai",
     "tags": [
       "Cardiac Diagnostics"
+    ],
+    "date": "2026-08-07",
+    "specialties": [
+      "Radiology",
+      "Cardiology"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Heart & circulation"
     ],
     "idea": "Echo AI that detects what humans can't, including HFpEF and amyloidosis.",
     "take": "Echo AI that detects what humans can't, including HFpEF and amyloidosis.",
@@ -1847,6 +2000,14 @@ const CATALOG = [
       "Patient Access & Engagement",
       "Revenue Cycle & Billing Automation"
     ],
+    "date": "2026-06-21",
+    "specialties": [
+      "Primary Care"
+    ],
+    "roles": [
+      "Primary care providers"
+    ],
+    "systems": [],
     "idea": "An AI workforce for the front and back office of care.",
     "take": "An AI workforce for the front and back office of care.",
     "summary": "Notable deploys configurable AI agents (\"digital workers\") across registration, scheduling, intake, authorizations, and care-gap outreach, reading the EHR through automation rather than brittle interfaces, and reporting hundreds of FTEs' worth of work automated at flagship customers.",
@@ -1888,6 +2049,15 @@ const CATALOG = [
     "tags": [
       "Ambient Clinical Documentation"
     ],
+    "date": "2026-05-12",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "Lightweight, fast, clinician-loved ambient AI, without enterprise drag.",
     "take": "Lightweight, fast, clinician-loved ambient AI, without enterprise drag.",
     "summary": "Paris-born Nabla took a product-led route: a fast, low-friction ambient assistant clinicians can adopt in minutes, strong multilingual support, and transparent pricing, earning tens of thousands of clinician users and increasingly large US health-system deals.",
@@ -1927,6 +2097,14 @@ const CATALOG = [
     "tags": [
       "Medical Coding & CDI"
     ],
+    "date": "2026-03-26",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [],
     "idea": "The CDI engine ensuring the record reflects how sick patients really are.",
     "take": "The CDI engine ensuring the record reflects how sick patients really are.",
     "summary": "Iodine's AwareCDI suite runs machine learning across inpatient populations to surface documentation gaps that understate acuity, driving appropriate reimbursement and quality scores across one of the largest CDI client bases in the country, now augmented with generative query drafting.",
@@ -1966,6 +2144,16 @@ const CATALOG = [
     "tags": [
       "Real-World Data & Evidence"
     ],
+    "date": "2026-07-07",
+    "specialties": [
+      "Genetics & Genomics",
+      "Public Health",
+      "Drug Development"
+    ],
+    "roles": [
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "30+ health systems, one AI-normalized real-world dataset.",
     "take": "30+ health systems, one AI-normalized real-world dataset.",
     "summary": "Owned by a coalition of major US health systems, Truveta aggregates de-identified EHR data on 100M+ patients, using LLMs to normalize notes into research-grade structure, powering regulatory-grade studies, device surveillance, and (with its genome project) one of the largest linked clinical-genomic builds anywhere.",
@@ -2004,6 +2192,19 @@ const CATALOG = [
     "status": "has-ai",
     "tags": [
       "Software as a Medical Device & RPM"
+    ],
+    "date": "2026-05-20",
+    "specialties": [
+      "Mental & Behavioral Health",
+      "Surgery"
+    ],
+    "roles": [
+      "Surgeons",
+      "Physicians"
+    ],
+    "systems": [
+      "Bones & joints",
+      "Mental health"
     ],
     "idea": "AI Care built for MSK: computer-vision PT plus an LLM care copilot (Phoenix).",
     "take": "AI Care built for MSK: computer-vision PT plus an LLM care copilot (Phoenix).",
@@ -2044,6 +2245,22 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM"
     ],
+    "date": "2026-04-03",
+    "specialties": [
+      "Emergency Medicine",
+      "Mental & Behavioral Health",
+      "Women's Health"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers",
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Bones & joints",
+      "Mental health",
+      "Women's & maternal health"
+    ],
     "idea": "The scaled MSK leader, TrueMotion CV therapy, now publicly traded.",
     "take": "The scaled MSK leader, TrueMotion CV therapy, now publicly traded.",
     "summary": "Hinge Health took virtual MSK public (2025 IPO) on the back of its TrueMotion computer-vision exercise therapy, wearable pain relief (Enso), and enormous employer footprint, with automation driving industry-envy gross margins and outcomes studies backing its care model.",
@@ -2083,6 +2300,17 @@ const CATALOG = [
     "status": "has-ai",
     "tags": [
       "AI Therapy, Triage & Clinical Ops"
+    ],
+    "date": "2026-07-15",
+    "specialties": [
+      "Mental & Behavioral Health"
+    ],
+    "roles": [
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Bones & joints",
+      "Mental health"
     ],
     "idea": "The evidence-heavy AI mental-health companion used by 6M+ people.",
     "take": "The evidence-heavy AI mental-health companion used by 6M+ people.",
@@ -2125,6 +2353,15 @@ const CATALOG = [
       "AI Therapy, Triage & Clinical Ops",
       "Ambient Clinical Documentation"
     ],
+    "date": "2026-05-29",
+    "specialties": [
+      "Mental & Behavioral Health",
+      "Health Administration"
+    ],
+    "roles": [],
+    "systems": [
+      "Mental health"
+    ],
     "idea": "Ambient AI built for behavioral health's documentation and quality grind.",
     "take": "Ambient AI built for behavioral health's documentation and quality grind.",
     "summary": "Eleos applies behavioral-health-specific ambient AI to therapy sessions, compliant progress notes, golden-thread treatment-plan alignment, and CareOps intelligence showing which evidence-based techniques actually occur in sessions, deployed across hundreds of community and digital behavioral providers.",
@@ -2165,6 +2402,16 @@ const CATALOG = [
     "tags": [
       "Aging in Place & Home Health"
     ],
+    "date": "2026-04-19",
+    "specialties": [
+      "Geriatrics & Senior Care"
+    ],
+    "roles": [
+      "Nurses"
+    ],
+    "systems": [
+      "Aging & mobility"
+    ],
     "idea": "Fall intelligence for memory care, seeing the falls nobody witnesses.",
     "take": "Fall intelligence for memory care, seeing the falls nobody witnesses.",
     "summary": "Born from UC Berkeley AI research, SafelyYou's opt-in room cameras detect falls in real time and give clinical teams video review of how each fall happened, driving documented fall reductions and ER-transfer decreases across memory-care communities nationwide.",
@@ -2203,6 +2450,17 @@ const CATALOG = [
     "status": "has-ai",
     "tags": [
       "Dental AI & Imaging"
+    ],
+    "date": "2026-07-30",
+    "specialties": [
+      "Radiology",
+      "Dentistry"
+    ],
+    "roles": [
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Teeth & mouth"
     ],
     "idea": "Second Opinion: the most globally cleared chairside dental AI.",
     "take": "Second Opinion: the most globally cleared chairside dental AI.",
@@ -2243,6 +2501,14 @@ const CATALOG = [
     "tags": [
       "Disease Surveillance & Biosecurity"
     ],
+    "date": "2026-06-13",
+    "specialties": [
+      "Public Health"
+    ],
+    "roles": [
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "The outbreak-intelligence engine that flagged COVID before the world knew.",
     "take": "The outbreak-intelligence engine that flagged COVID before the world knew.",
     "summary": "BlueDot fuses multilingual news surveillance, flight networks, climate, and epidemiological data to detect and anticipate infectious-disease threats, famously alerting clients to Wuhan pneumonia days before official warnings, and now serving governments, health systems, and global enterprises with AI-accelerated epidemic intelligence.",
@@ -2282,6 +2548,23 @@ const CATALOG = [
     "tags": [
       "Radiology & Medical Imaging",
       "Emergency Medicine"
+    ],
+    "date": "2026-04-27",
+    "specialties": [
+      "Radiology",
+      "Cardiology",
+      "Neurology",
+      "Emergency Medicine",
+      "Pulmonology"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians"
+    ],
+    "systems": [
+      "Heart & circulation",
+      "Brain & nervous system",
+      "Lungs & breathing"
     ],
     "idea": "Stroke imaging AI with national-scale NHS outcome data behind it.",
     "take": "Stroke imaging AI with national-scale NHS outcome data behind it.",
@@ -2324,6 +2607,26 @@ const CATALOG = [
       "Digital Pathology",
       "Clinical Trials & Development"
     ],
+    "date": "2026-08-08",
+    "specialties": [
+      "Radiology",
+      "Pathology",
+      "Oncology",
+      "Emergency Medicine",
+      "Pharmacy",
+      "Gastroenterology",
+      "Drug Development"
+    ],
+    "roles": [
+      "Pathologists",
+      "Physicians",
+      "Primary care providers",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Gut & digestion",
+      "Cancer"
+    ],
     "idea": "Pathology AI powering biopharma trials and clinical labs alike.",
     "take": "Pathology AI powering biopharma trials and clinical labs alike.",
     "summary": "PathAI splits its business between biopharma (AI-measured biomarkers and pathology endpoints for drug trials, notably in liver disease like MASH) and clinical diagnostics through its AISight platform deployed across lab networks. Its algorithm-measured MASH histology work has been used in major drug-approval-supporting trials.",
@@ -2364,6 +2667,18 @@ const CATALOG = [
     "tags": [
       "Cardiac Diagnostics"
     ],
+    "date": "2026-06-22",
+    "specialties": [
+      "Radiology",
+      "Cardiology"
+    ],
+    "roles": [
+      "Physicians",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Heart & circulation"
+    ],
     "idea": "Fully automated echocardiography measurement and reporting.",
     "take": "Fully automated echocardiography measurement and reporting.",
     "summary": "Us2.ai automates the tedious core of echo: chamber measurements, ejection fraction, strain, and a structured report, generated in minutes without a sonographer clicking calipers. FDA-cleared for an unusually broad measurement set and used to scale echo capacity and standardize serial measurements in trials and clinics.",
@@ -2403,6 +2718,15 @@ const CATALOG = [
     "tags": [
       "Genomics & Precision Medicine"
     ],
+    "date": "2026-05-05",
+    "specialties": [
+      "Radiology",
+      "Genetics & Genomics"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [],
     "idea": "AI-prioritized rare-disease interpretation from the sequencing giant.",
     "take": "AI-prioritized rare-disease interpretation from the sequencing giant.",
     "summary": "Emedgene applies AI to the hardest search problem in clinical genomics: surfacing the causal variant for a rare-disease patient from millions of candidates, using phenotype-aware ranking and automated evidence collection. As Illumina's interpretation layer, it slots natively into the world's dominant sequencing ecosystem.",
@@ -2441,6 +2765,19 @@ const CATALOG = [
     "status": "has-ai",
     "tags": [
       "Point-of-Care Screening"
+    ],
+    "date": "2026-03-26",
+    "specialties": [
+      "Radiology",
+      "Endocrinology & Diabetes",
+      "Ophthalmology"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Eyes",
+      "Hormones & diabetes"
     ],
     "idea": "Autonomous retinal screening with the largest pivotal trial in the category.",
     "take": "Autonomous retinal screening with the largest pivotal trial in the category.",
@@ -2481,6 +2818,19 @@ const CATALOG = [
     "tags": [
       "Patient Access & Engagement"
     ],
+    "date": "2026-07-07",
+    "specialties": [
+      "Primary Care",
+      "Pharmacy",
+      "Health Administration"
+    ],
+    "roles": [
+      "Primary care providers",
+      "Pharmacists",
+      "Hospital & health-system leaders",
+      "Patients & caregivers"
+    ],
+    "systems": [],
     "idea": "The patient-communication backbone, upgraded with AI agents.",
     "take": "The patient-communication backbone, upgraded with AI agents.",
     "summary": "Artera (formerly WELL Health) unifies patient messaging across the enterprise, appointments, recalls, pharmacy, billing, coordinating conversations from many systems into one thread per patient, now shipping AI agents for self-scheduling and inbound call automation across its 800+ customer base.",
@@ -2520,6 +2870,14 @@ const CATALOG = [
     "tags": [
       "Ambient Clinical Documentation"
     ],
+    "date": "2026-05-21",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "The voice assistant approach, ambient notes plus commands, broadly integrated.",
     "take": "The voice assistant approach, ambient notes plus commands, broadly integrated.",
     "summary": "Suki pairs ambient documentation with a voice-command assistant (retrieve values, place order drafts, dictate anywhere in the note) and differentiates on breadth of EHR integrations beyond Epic, reaching the community-hospital and multi-EHR market others underserve.",
@@ -2559,6 +2917,18 @@ const CATALOG = [
     "tags": [
       "Ambient Clinical Documentation"
     ],
+    "date": "2026-04-03",
+    "specialties": [
+      "Primary Care",
+      "Nursing",
+      "Health Administration"
+    ],
+    "roles": [
+      "Nurses",
+      "Primary care providers",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "Global-first ambient AI sweeping clinics across continents.",
     "take": "Global-first ambient AI sweeping clinics across continents.",
     "summary": "Australian-born Heidi scaled ambient documentation internationally faster than anyone, millions of consults per week across primary care, allied health, and specialty clinics in dozens of countries, with template flexibility and price points that fit outside the US enterprise bubble.",
@@ -2598,6 +2968,21 @@ const CATALOG = [
     "tags": [
       "Medical Coding & CDI"
     ],
+    "date": "2026-07-15",
+    "specialties": [
+      "Radiology",
+      "Pathology",
+      "Surgery",
+      "Genetics & Genomics",
+      "Health Administration"
+    ],
+    "roles": [
+      "Radiologists",
+      "Pathologists",
+      "Surgeons",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "Health-system-born autonomous coding across specialties.",
     "take": "Health-system-born autonomous coding across specialties.",
     "summary": "Spun out of Mass General Brigham's coding operations, CodaMetrix automates professional-fee coding across radiology, pathology, GI, surgery and more, trained on tens of millions of provider-validated cases and expanding its autonomy rate specialty by specialty.",
@@ -2638,6 +3023,14 @@ const CATALOG = [
       "Revenue Cycle & Billing Automation",
       "Prior Authorization & Utilization Management"
     ],
+    "date": "2026-05-29",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "GenAI revenue-cycle automation trained on your own health system's data.",
     "take": "GenAI revenue-cycle automation trained on your own health system's data.",
     "summary": "AKASA applies LLM-based automation across authorization, claim status, denials, and coding workflows, distinguished by training/tuning on each customer's historical RCM actions so the automation matches local payer quirks rather than generic playbooks.",
@@ -2678,6 +3071,12 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
+    "date": "2026-04-12",
+    "specialties": [
+      "Drug Development"
+    ],
+    "roles": [],
+    "systems": [],
     "idea": "Open frontier models for molecular structure, and zero-shot antibody design.",
     "take": "Open frontier models for molecular structure, and zero-shot antibody design.",
     "summary": "Chai released Chai-1, an open(-weights) structure-prediction model rivaling closed frontier systems, then Chai-2, demonstrating zero-shot de novo antibody design with double-digit lab hit rates, putting OpenAI-backed startup energy behind the \"biology's GPT moment\" thesis.",
@@ -2716,6 +3115,15 @@ const CATALOG = [
     "status": "has-ai",
     "tags": [
       "Clinical Trials & Development"
+    ],
+    "date": "2026-07-31",
+    "specialties": [
+      "Neurology",
+      "Drug Development"
+    ],
+    "roles": [],
+    "systems": [
+      "Brain & nervous system"
     ],
     "idea": "Digital twins that let trials randomize fewer patients to placebo.",
     "take": "Digital twins that let trials randomize fewer patients to placebo.",
@@ -2757,6 +3165,16 @@ const CATALOG = [
       "Real-World Data & Evidence",
       "Clinical Decision Support & Medical Knowledge"
     ],
+    "date": "2026-06-13",
+    "specialties": [
+      "Nursing",
+      "Drug Development"
+    ],
+    "roles": [
+      "Nurses",
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "Publication-grade real-world evidence, generated on demand.",
     "take": "Publication-grade real-world evidence, generated on demand.",
     "summary": "Born from Stanford's Green Button project, Atropos answers clinical and pharma questions with rapid observational studies over federated real-world data, its GENEVA OS and ChatRWD interface produce consult-style evidence reports in days (or minutes), each with transparent methods.",
@@ -2797,6 +3215,18 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM",
       "Software as a Medical Device & RPM"
+    ],
+    "date": "2026-04-27",
+    "specialties": [
+      "Cardiology"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers",
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Heart & circulation"
     ],
     "idea": "Clinical-grade ECG in a credit card, read by FDA-cleared AI.",
     "take": "Clinical-grade ECG in a credit card, read by FDA-cleared AI.",
@@ -2840,6 +3270,21 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM"
     ],
+    "date": "2026-08-08",
+    "specialties": [
+      "Radiology",
+      "Critical Care",
+      "Women's Health",
+      "Pulmonology"
+    ],
+    "roles": [
+      "Physicians",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Lungs & breathing",
+      "Women's & maternal health"
+    ],
     "idea": "Whole-body ultrasound on a chip, with AI guiding every scan.",
     "take": "Whole-body ultrasound on a chip, with AI guiding every scan.",
     "summary": "Butterfly's semiconductor ultrasound probe made imaging portable and affordable; its AI layer (guidance, auto-measurements, education tools) makes it usable by non-experts, from ICU lines to global-health obstetrics, while its Garden platform hosts third-party ultrasound AI.",
@@ -2879,6 +3324,19 @@ const CATALOG = [
     "tags": [
       "AI Therapy, Triage & Clinical Ops",
       "AI Therapy, Triage & Clinical Ops"
+    ],
+    "date": "2026-06-22",
+    "specialties": [
+      "Emergency Medicine",
+      "Mental & Behavioral Health"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers",
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Mental health"
     ],
     "idea": "Clinical-grade AI triage that expanded access across NHS talking therapies.",
     "take": "Clinical-grade AI triage that expanded access across NHS talking therapies.",
@@ -2920,6 +3378,18 @@ const CATALOG = [
     "tags": [
       "AI Therapy, Triage & Clinical Ops"
     ],
+    "date": "2026-05-06",
+    "specialties": [
+      "Mental & Behavioral Health",
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians",
+      "Payers & insurers"
+    ],
+    "systems": [
+      "Mental health"
+    ],
     "idea": "Precision mental health for employers, ML-matched care that proves ROI.",
     "take": "Precision mental health for employers, ML-matched care that proves ROI.",
     "summary": "Spring Health's machine-learning matching engine routes each member to the care level and clinician most likely to help, wrapped in an employer/payer EAP-replacement platform with published clinical-and-cost outcomes (including claims-validated savings) and AI tooling across the care journey.",
@@ -2958,6 +3428,16 @@ const CATALOG = [
     "status": "has-ai",
     "tags": [
       "Aging in Place & Home Health"
+    ],
+    "date": "2026-03-19",
+    "specialties": [
+      "Geriatrics & Senior Care"
+    ],
+    "roles": [
+      "Payers & insurers"
+    ],
+    "systems": [
+      "Aging & mobility"
     ],
     "idea": "Predictive analytics steering home-health visits and hospice timing.",
     "take": "Predictive analytics steering home-health visits and hospice timing.",
@@ -2998,6 +3478,16 @@ const CATALOG = [
     "tags": [
       "Medication Safety & Adherence"
     ],
+    "date": "2026-07-07",
+    "specialties": [
+      "Pharmacy",
+      "Public Health"
+    ],
+    "roles": [
+      "Physicians",
+      "Pharmacists"
+    ],
+    "systems": [],
     "idea": "Catching the prescription errors rule-based systems were never built to see.",
     "take": "Catching the prescription errors rule-based systems were never built to see.",
     "summary": "MedAware's ML models learn normal prescribing patterns per patient profile and flag statistical outliers, the wrong-patient, wrong-drug, wrong-dose errors that slip past interaction checkers, with published studies showing high alert-acceptance rates and error catches across health-system deployments.",
@@ -3037,6 +3527,15 @@ const CATALOG = [
     "tags": [
       "Population Health & Value-Based Care"
     ],
+    "date": "2026-05-21",
+    "specialties": [
+      "Public Health",
+      "Health Administration"
+    ],
+    "roles": [
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "The healthcare-data platform racing to be population health's AI cloud.",
     "take": "The healthcare-data platform racing to be population health's AI cloud.",
     "summary": "Innovaccer unifies claims, EHR, and SDOH data on its Health Cloud for hundreds of provider/payer customers, layering risk stratification, care-gap orchestration, and a fast-shipping agentic-AI portfolio (copilots for care managers, contact centers, and analytics) on top of the unified record.",
@@ -3076,6 +3575,18 @@ const CATALOG = [
     "tags": [
       "Radiology & Medical Imaging",
       "Emergency Medicine"
+    ],
+    "date": "2026-04-04",
+    "specialties": [
+      "Radiology",
+      "Emergency Medicine"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians"
+    ],
+    "systems": [
+      "Bones & joints"
     ],
     "idea": "French radiology AI that started with the fracture nobody saw.",
     "take": "French radiology AI that started with the fracture nobody saw.",
@@ -3118,6 +3629,19 @@ const CATALOG = [
       "Cardiac Diagnostics",
       "Point-of-Care Screening"
     ],
+    "date": "2026-07-15",
+    "specialties": [
+      "Radiology",
+      "Cardiology",
+      "Pulmonology"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Heart & circulation",
+      "Lungs & breathing"
+    ],
     "idea": "Turning the ordinary ECG into a structural-heart-disease screen.",
     "take": "Turning the ordinary ECG into a structural-heart-disease screen.",
     "summary": "An nference and Mayo Clinic venture, Anumana develops AI-ECG algorithms that detect conditions invisible to human ECG readers, low ejection fraction, cardiac amyloidosis, pulmonary hypertension, converting the cheapest test in cardiology into a population screening instrument.",
@@ -3159,6 +3683,18 @@ const CATALOG = [
       "Emergency Medicine",
       "Telehealth & Digital Triage"
     ],
+    "date": "2026-05-29",
+    "specialties": [
+      "Emergency Medicine",
+      "Nursing",
+      "Health Administration"
+    ],
+    "roles": [
+      "Nurses",
+      "Physicians",
+      "Primary care providers"
+    ],
+    "systems": [],
     "idea": "Real-time AI listening to emergency calls and clinical conversations.",
     "take": "Real-time AI listening to emergency calls and clinical conversations.",
     "summary": "Copenhagen-based Corti began by analysing emergency dispatch calls in real time to detect out-of-hospital cardiac arrest faster than human dispatchers, and has grown into a broader clinical-conversation intelligence platform spanning triage lines, documentation, and quality review.",
@@ -3200,6 +3736,13 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
+    "date": "2026-04-12",
+    "specialties": [
+      "Genetics & Genomics",
+      "Drug Development"
+    ],
+    "roles": [],
+    "systems": [],
     "idea": "ESM3, a frontier language model for the language of proteins.",
     "take": "ESM3, a frontier language model for the language of proteins.",
     "summary": "Founded by the team behind Meta's ESM protein language models, EvolutionaryScale trains frontier-scale generative models over protein sequence, structure, and function together. Its ESM3 model generated a novel fluorescent protein far outside natural evolutionary space, a demonstration that these models can invent biology, not just describe it.",
@@ -3238,6 +3781,18 @@ const CATALOG = [
     "status": "has-ai",
     "tags": [
       "Genomics & Precision Medicine"
+    ],
+    "date": "2026-07-24",
+    "specialties": [
+      "Radiology",
+      "Oncology",
+      "Genetics & Genomics"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Cancer"
     ],
     "idea": "Decentralized genomic analysis for 800+ hospitals worldwide.",
     "take": "Decentralized genomic analysis for 800+ hospitals worldwide.",
@@ -3278,6 +3833,21 @@ const CATALOG = [
     "tags": [
       "Primary Care & Virtual-First Medicine",
       "Telehealth & Digital Triage"
+    ],
+    "date": "2026-06-14",
+    "specialties": [
+      "Emergency Medicine",
+      "Primary Care",
+      "Mental & Behavioral Health",
+      "Pharmacy"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Mental health"
     ],
     "idea": "AI-first primary care: chat intake to clinician visit in one flow.",
     "take": "AI-first primary care: chat intake to clinician visit in one flow.",
@@ -3320,6 +3890,19 @@ const CATALOG = [
       "Telehealth & Digital Triage",
       "Primary Care & Virtual-First Medicine"
     ],
+    "date": "2026-04-27",
+    "specialties": [
+      "Emergency Medicine",
+      "Primary Care"
+    ],
+    "roles": [
+      "Primary care providers",
+      "Hospital & health-system leaders",
+      "Payers & insurers",
+      "Researchers & pharma",
+      "Patients & caregivers"
+    ],
+    "systems": [],
     "idea": "The most-downloaded symptom assessment app on earth.",
     "take": "The most-downloaded symptom assessment app on earth.",
     "summary": "Berlin-built Ada pairs a consumer symptom-checker (tens of millions of assessments, strong peer-reviewed accuracy showings) with enterprise deployments where payers and systems embed its probabilistic reasoning engine as a triage and navigation front end.",
@@ -3361,6 +3944,17 @@ const CATALOG = [
       "Telehealth & Digital Triage",
       "Patient Access & Engagement"
     ],
+    "date": "2026-08-08",
+    "specialties": [
+      "Emergency Medicine",
+      "Primary Care"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "Conversational intake and virtual care automation for health systems.",
     "take": "Conversational intake and virtual care automation for health systems.",
     "summary": "Fabric (built through acquisitions including GYANT and Zipnosis) automates the digital care journey: symptom intake, asynchronous visits, clinical questionnaires that compress clinician time per encounter to minutes, and routing across virtual and in-person venues.",
@@ -3402,6 +3996,15 @@ const CATALOG = [
     "tags": [
       "Patient Access & Engagement"
     ],
+    "date": "2026-06-22",
+    "specialties": [
+      "Primary Care"
+    ],
+    "roles": [
+      "Primary care providers",
+      "Patients & caregivers"
+    ],
+    "systems": [],
     "idea": "Patient success platform: scheduling, reminders, and now AI concierges.",
     "take": "Patient success platform: scheduling, reminders, and now AI concierges.",
     "summary": "Luma orchestrates the patient journey around the visit, self-scheduling, smart waitlists, reminders, forms, payments, for 650+ organizations, layering in an AI concierge (\"Spark\") for calls and chat that resolves routine requests without staff.",
@@ -3441,6 +4044,16 @@ const CATALOG = [
     "tags": [
       "Medical Coding & CDI"
     ],
+    "date": "2026-05-06",
+    "specialties": [
+      "Radiology",
+      "Health Administration"
+    ],
+    "roles": [
+      "Radiologists",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "Deep-learning coding automation at national scale.",
     "take": "Deep-learning coding automation at national scale.",
     "summary": "Fathom autonomously codes a huge share of charts for some of the largest ED staffing groups, health systems, and billing companies in the country, competing on raw automation rate and cost per chart, the volume player of the autonomous-coding trio.",
@@ -3481,6 +4094,16 @@ const CATALOG = [
       "Medical Coding & CDI",
       "Inpatient & Acute Care"
     ],
+    "date": "2026-03-20",
+    "specialties": [
+      "Pathology",
+      "Health Administration"
+    ],
+    "roles": [
+      "Pathologists",
+      "Physicians"
+    ],
+    "systems": [],
     "idea": "The diagnosis co-pilot that pre-rounds the chart for hospitalists.",
     "take": "The diagnosis co-pilot that pre-rounds the chart for hospitalists.",
     "summary": "Regard scans the full inpatient record to surface supported diagnoses, draft problem-oriented documentation, and catch conditions (AKI staging, malnutrition, encephalopathy) that drive both care and appropriate reimbursement, an AI resident doing the 5am chart biopsy.",
@@ -3522,6 +4145,14 @@ const CATALOG = [
     "tags": [
       "Revenue Cycle & Billing Automation"
     ],
+    "date": "2026-06-30",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "AI woven through a clearinghouse touching half of US patients.",
     "take": "AI woven through a clearinghouse touching half of US patients.",
     "summary": "Waystar embedded generative AI (AltitudeAI, including AltitudeCreate for auto-drafted appeal letters) across its RCM clearinghouse platform, meaning thousands of provider organizations get denial prediction, appeal generation, and automation upgrades inside rails they already run on.",
@@ -3561,6 +4192,15 @@ const CATALOG = [
     "tags": [
       "Risk Adjustment & Quality Analytics"
     ],
+    "date": "2026-05-21",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians",
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "The risk-adjustment NLP veteran mining charts at population scale.",
     "take": "The risk-adjustment NLP veteran mining charts at population scale.",
     "summary": "Apixio pioneered AI chart review for Medicare Advantage risk adjustment, extracting and validating HCC evidence from millions of documents, and now serves payers and providers with coding, audit (including RADV defense), and quality analytics under the Datavant umbrella.",
@@ -3600,6 +4240,13 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
+    "date": "2026-04-04",
+    "specialties": [
+      "Radiology",
+      "Drug Development"
+    ],
+    "roles": [],
+    "systems": [],
     "idea": "Industrialized biology: mapping cell responses at petabyte scale.",
     "take": "Industrialized biology: mapping cell responses at petabyte scale.",
     "summary": "Recursion runs automated labs generating enormous cellular-imaging datasets (\"maps of biology\"), merged with Exscientia's precision-chemistry AI to unite biology-first and chemistry-first approaches, with NVIDIA backing, a top-tier supercomputer, and multiple clinical-stage programs (alongside some sobering readout lessons).",
@@ -3639,6 +4286,15 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
+    "date": "2026-07-16",
+    "specialties": [
+      "Genetics & Genomics",
+      "Drug Development"
+    ],
+    "roles": [
+      "Patients & caregivers"
+    ],
+    "systems": [],
     "idea": "Generative protein engineering as an everyday lab tool.",
     "take": "Generative protein engineering as an everyday lab tool.",
     "summary": "Zurich/Delft-based Cradle productizes protein optimization: scientists specify properties (stability, expression, activity), its generative models propose sequences, and iterative lab feedback tunes results, used by industrial-biotech and pharma teams to cut engineering cycles dramatically.",
@@ -3678,6 +4334,12 @@ const CATALOG = [
     "tags": [
       "Clinical Trials & Development"
     ],
+    "date": "2026-05-30",
+    "specialties": [
+      "Drug Development"
+    ],
+    "roles": [],
+    "systems": [],
     "idea": "Intelligence built on the industry's largest trial-data backbone.",
     "take": "Intelligence built on the industry's largest trial-data backbone.",
     "summary": "Medidata runs the EDC rails beneath a huge share of global trials, 30,000+ studies' worth of historical data now powering AI products: synthetic/external control arms, enrollment forecasting, site selection, and risk-based quality analytics, sold into the platform its customers already use.",
@@ -3717,6 +4379,20 @@ const CATALOG = [
     "tags": [
       "Pharmacovigilance & Regulatory Affairs"
     ],
+    "date": "2026-04-12",
+    "specialties": [
+      "Emergency Medicine",
+      "Pharmacy",
+      "Health Administration",
+      "Drug Development"
+    ],
+    "roles": [
+      "Primary care providers",
+      "Pharmacists",
+      "Hospital & health-system leaders",
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "Touchless pharmacovigilance case processing at top-10-pharma scale.",
     "take": "Touchless pharmacovigilance case processing at top-10-pharma scale.",
     "summary": "ArisGlobal's LifeSphere platform underpins safety operations across much of large pharma; its NavaX cognitive engine automates adverse-event intake, extraction, coding, and triage toward \"touchless\" case processing, the production-scale answer to AE volumes growing faster than safety teams.",
@@ -3756,6 +4432,18 @@ const CATALOG = [
     "tags": [
       "Surgical AI & Robotics"
     ],
+    "date": "2026-07-24",
+    "specialties": [
+      "Surgery",
+      "Nursing",
+      "Health Administration"
+    ],
+    "roles": [
+      "Nurses",
+      "Surgeons",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "Collaborative robotics for laparoscopy, with ScoPilot AI hands-free control.",
     "take": "Collaborative robotics for laparoscopy, with ScoPilot AI hands-free control.",
     "summary": "Rather than replacing laparoscopy, Maestro adds two collaborative arms that hold camera and instruments under the surgeon's direct control, its ScoPilot feature (developed with NVIDIA-adjacent AI talent) lets surgeons steer the scope hands-free, tackling assistant-shortage economics with a fraction of a mega-robot's cost and footprint.",
@@ -3795,6 +4483,16 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM"
     ],
+    "date": "2026-06-07",
+    "specialties": [
+      "Endocrinology & Diabetes",
+      "Pharmacy"
+    ],
+    "roles": [
+      "Pharmacists",
+      "Patients & caregivers"
+    ],
+    "systems": [],
     "idea": "The consumer recovery-and-readiness ring creeping into clinical relevance.",
     "take": "The consumer recovery-and-readiness ring creeping into clinical relevance.",
     "summary": "Oura leads the smart-ring category (millions sold) with sleep/HRV/temperature analytics and an AI Advisor, increasingly bridging to healthcare via FDA-cleared features arriving on its roadmap, research partnerships, employer wellness, and metabolic-health integrations (CGM pairings).",
@@ -3834,6 +4532,19 @@ const CATALOG = [
     "tags": [
       "Aging in Place & Home Health",
       "Aging in Place & Home Health"
+    ],
+    "date": "2026-04-28",
+    "specialties": [
+      "Geriatrics & Senior Care",
+      "Health Administration"
+    ],
+    "roles": [
+      "Nurses",
+      "Hospital & health-system leaders",
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Aging & mobility"
     ],
     "idea": "Audio intelligence auditing 24/7 what home care actually delivers.",
     "take": "Audio intelligence auditing 24/7 what home care actually delivers.",
@@ -3875,6 +4586,16 @@ const CATALOG = [
     "tags": [
       "Medication Safety & Adherence"
     ],
+    "date": "2026-08-08",
+    "specialties": [
+      "Pharmacy"
+    ],
+    "roles": [
+      "Pharmacists"
+    ],
+    "systems": [
+      "Kidneys"
+    ],
     "idea": "Bayesian precision dosing making vancomycin (and more) hit target first time.",
     "take": "Bayesian precision dosing making vancomycin (and more) hit target first time.",
     "summary": "DoseMeRx individualizes dosing for narrow-therapeutic-window drugs using Bayesian PK models fed by patient levels, the workflow standard emerging from vancomycin AUC-guideline shifts, integrated into pharmacy systems across a thousand-plus hospitals.",
@@ -3913,6 +4634,18 @@ const CATALOG = [
     "status": "has-ai",
     "tags": [
       "Dental AI & Imaging"
+    ],
+    "date": "2026-06-22",
+    "specialties": [
+      "Dentistry"
+    ],
+    "roles": [
+      "Physicians",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Bones & joints",
+      "Teeth & mouth"
     ],
     "idea": "MIT-born dental AI scaling through the biggest DSO partnerships.",
     "take": "MIT-born dental AI scaling through the biggest DSO partnerships.",
@@ -3953,6 +4686,15 @@ const CATALOG = [
     "tags": [
       "Population Health & Value-Based Care"
     ],
+    "date": "2026-05-06",
+    "specialties": [
+      "Public Health"
+    ],
+    "roles": [
+      "Payers & insurers",
+      "Patients & caregivers"
+    ],
+    "systems": [],
     "idea": "Analytics-grade population data for systems that treat VBC as a science.",
     "take": "Analytics-grade population data for systems that treat VBC as a science.",
     "summary": "Arcadia's platform is known for the depth and quality of its data aggregation and the analytical rigor of its risk, quality, and utilization insights, the quant shop's choice among population-health platforms, now extending into generative-AI assistants over its lakehouse architecture.",
@@ -3992,6 +4734,15 @@ const CATALOG = [
     "tags": [
       "Radiology & Medical Imaging"
     ],
+    "date": "2026-03-20",
+    "specialties": [
+      "Radiology"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians"
+    ],
+    "systems": [],
     "idea": "The vendor-neutral operating system for radiology AI.",
     "take": "The vendor-neutral operating system for radiology AI.",
     "summary": "Munich-based deepc sells deepcOS, a platform layer that lets hospitals run many third-party imaging algorithms through one integration, one contract, and one monitoring dashboard, rather than wiring each vendor into PACS separately. Its bet is that curation, not algorithms, is the bottleneck.",
@@ -4031,6 +4782,22 @@ const CATALOG = [
     "tags": [
       "Digital Pathology",
       "AI Drug Discovery & Design"
+    ],
+    "date": "2026-07-01",
+    "specialties": [
+      "Radiology",
+      "Pathology",
+      "Oncology",
+      "Pharmacy"
+    ],
+    "roles": [
+      "Pathologists",
+      "Physicians",
+      "Researchers & pharma",
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Cancer"
     ],
     "idea": "Charité spin-out building pathology foundation models for drug development.",
     "take": "Charité spin-out building pathology foundation models for drug development.",
@@ -4073,6 +4840,18 @@ const CATALOG = [
       "Inpatient & Acute Care",
       "Real-World Data & Evidence"
     ],
+    "date": "2026-05-14",
+    "specialties": [
+      "Radiology",
+      "Cardiology"
+    ],
+    "roles": [
+      "Physicians",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Heart & circulation"
+    ],
     "idea": "Multimodal clinical data for validating AI before it touches patients.",
     "take": "Multimodal clinical data for validating AI before it touches patients.",
     "summary": "Dandelion assembles de-identified multimodal data, waveforms, imaging, notes, outcomes, from non-academic health systems, letting developers train and, crucially, independently validate clinical AI on populations that look nothing like the academic cohorts most models are built on.",
@@ -4114,6 +4893,14 @@ const CATALOG = [
     "tags": [
       "Clinical Trials & Development"
     ],
+    "date": "2026-04-04",
+    "specialties": [
+      "Drug Development"
+    ],
+    "roles": [
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "An anti-CRO: running whole trials on one AI-native platform.",
     "take": "An anti-CRO: running whole trials on one AI-native platform.",
     "summary": "London-based Lindus Health runs clinical trials end-to-end on software it builds itself, recruitment, eCRF, monitoring, data, replacing the layered subcontracting of traditional CROs with an all-in-one AI-assisted model priced at a fixed fee, aimed squarely at biotech sponsors frustrated by CRO change orders.",
@@ -4153,6 +4940,20 @@ const CATALOG = [
     "tags": [
       "Real-World Data & Evidence",
       "Digital Pathology"
+    ],
+    "date": "2026-07-16",
+    "specialties": [
+      "Pathology",
+      "Oncology",
+      "Drug Development"
+    ],
+    "roles": [
+      "Pathologists",
+      "Physicians",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Cancer"
     ],
     "idea": "Federated AI across hospitals, models travel, patient data stays put.",
     "take": "Federated AI across hospitals, models travel, patient data stays put.",
@@ -4196,6 +4997,14 @@ const CATALOG = [
       "Medical Coding & CDI",
       "Revenue Cycle & Billing Automation"
     ],
+    "date": "2026-05-30",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [],
     "idea": "A clinical AI second look at every chart before the bill goes out.",
     "take": "A clinical AI second look at every chart before the bill goes out.",
     "summary": "SmarterDx re-reads the full clinical record pre-bill to find missed diagnoses, quality-measure implications, and documentation gaps that coding review overlooked, positioning revenue integrity as a clinical accuracy problem rather than a billing one.",
@@ -4236,6 +5045,17 @@ const CATALOG = [
     "tags": [
       "Digital Pathology"
     ],
+    "date": "2026-04-13",
+    "specialties": [
+      "Radiology",
+      "Pathology"
+    ],
+    "roles": [
+      "Pathologists",
+      "Physicians",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "The digital pathology operating layer that AI plugs into.",
     "take": "The digital pathology operating layer that AI plugs into.",
     "summary": "Proscia's Concentriq platform manages whole-slide images and workflows for large diagnostic labs and pharma R&D, positioning itself as the neutral layer through which third-party and in-house AI applications deploy. Less an algorithm vendor than the infrastructure the algorithm market runs on.",
@@ -4275,6 +5095,21 @@ const CATALOG = [
     "tags": [
       "Point-of-Care Screening",
       "Software as a Medical Device & RPM"
+    ],
+    "date": "2026-07-24",
+    "specialties": [
+      "Radiology",
+      "Oncology",
+      "Primary Care",
+      "Dermatology"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers"
+    ],
+    "systems": [
+      "Skin",
+      "Cancer"
     ],
     "idea": "FDA-cleared handheld skin-cancer evaluation for primary care.",
     "take": "FDA-cleared handheld skin-cancer evaluation for primary care.",
@@ -4317,6 +5152,17 @@ const CATALOG = [
     "tags": [
       "Clinical Decision Support & Medical Knowledge"
     ],
+    "date": "2026-06-07",
+    "specialties": [
+      "Primary Care",
+      "Public Health"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "AI for the diagnostic reasoning itself, DDx and plans on demand.",
     "take": "AI for the diagnostic reasoning itself, DDx and plans on demand.",
     "summary": "Glass generates ranked differential diagnoses and draft clinical plans from a one-liner or HPI, built around a curated medical knowledge base. Positioned as a clinician reasoning partner, the digital version of presenting your case to a sharp attending.",
@@ -4356,6 +5202,14 @@ const CATALOG = [
     "tags": [
       "Patient Access & Engagement"
     ],
+    "date": "2026-04-21",
+    "specialties": [
+      "Primary Care"
+    ],
+    "roles": [
+      "Primary care providers"
+    ],
+    "systems": [],
     "idea": "Responsible conversational AI for health-system call centers.",
     "take": "Responsible conversational AI for health-system call centers.",
     "summary": "Hyro's \"responsible AI\" assistants handle the healthcare call center's bread and butter, scheduling, prescriptions, FAQs, IT helpdesk, over voice and chat, with explainability and guardrails tuned for risk-averse health systems, and deflection rates it publishes openly.",
@@ -4395,6 +5249,16 @@ const CATALOG = [
     "tags": [
       "Prior Authorization & Utilization Management"
     ],
+    "date": "2026-08-09",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians",
+      "Hospital & health-system leaders",
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "Clinician-built LLM reasoning for utilization review.",
     "take": "Clinician-built LLM reasoning for utilization review.",
     "summary": "Anterior (founded by a physician, backed by NEA/Sequoia) applies LLMs to the clinical-review core of prior auth: reading medical records against policy criteria and producing evidence-linked determinations-support at dramatically higher reviewer throughput, sold to payers as a copilot rather than an auto-denier.",
@@ -4434,6 +5298,14 @@ const CATALOG = [
     "tags": [
       "Claims, Payment Integrity & Fraud"
     ],
+    "date": "2026-06-22",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "The consolidated AI payment-integrity platform for payers.",
     "take": "The consolidated AI payment-integrity platform for payers.",
     "summary": "Machinify unified several payment-integrity and risk businesses (including Apixio's VBC arm and audit/recovery assets) into one AI platform spanning claims editing, itemized bill review, coordination of benefits, and audit, pointing payer cost-containment at a single intelligent stack.",
@@ -4473,6 +5345,15 @@ const CATALOG = [
     "tags": [
       "Claims, Payment Integrity & Fraud"
     ],
+    "date": "2026-05-06",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Payers & insurers",
+      "Patients & caregivers"
+    ],
+    "systems": [],
     "idea": "Generative + graph AI catching fraud schemes as they emerge.",
     "take": "Generative + graph AI catching fraud schemes as they emerge.",
     "summary": "Codoxo's Forensic AI platform serves payers and agencies with self-learning detection that spots emerging fraud/waste patterns without waiting for rule updates, plus provider-education tooling that corrects billing behavior before it becomes an investigation.",
@@ -4513,6 +5394,14 @@ const CATALOG = [
       "Risk Adjustment & Quality Analytics",
       "Population Health & Value-Based Care"
     ],
+    "date": "2026-03-20",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "One AI platform for risk, quality, and member insights.",
     "take": "One AI platform for risk, quality, and member insights.",
     "summary": "Reveleer assembled (organically and via acquisitions like MDPortals and Curation Health) a value-based-care platform spanning retrieval, risk-adjustment coding, HEDIS quality abstraction, and pre-visit clinical intelligence, riding fast growth as plans consolidate vendors.",
@@ -4554,6 +5443,17 @@ const CATALOG = [
       "Clinical Trials & Development",
       "Pharmacovigilance & Regulatory Affairs"
     ],
+    "date": "2026-07-01",
+    "specialties": [
+      "Pharmacy",
+      "Drug Development"
+    ],
+    "roles": [
+      "Pharmacists",
+      "Hospital & health-system leaders",
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "LLM-accelerated clinical data review, proven on pandemic-speed trials.",
     "take": "LLM-accelerated clinical data review, proven on pandemic-speed trials.",
     "summary": "Saama's AI platform automates clinical data management and medical review, query generation, discrepancy detection, safety-signal surfacing, famously helping compress a landmark COVID vaccine trial's data-cleaning cycles, and now applying GenAI across the clinical data value chain for large sponsors.",
@@ -4594,6 +5494,16 @@ const CATALOG = [
     "tags": [
       "Pharmacovigilance & Regulatory Affairs"
     ],
+    "date": "2026-05-15",
+    "specialties": [
+      "Pharmacy",
+      "Drug Development"
+    ],
+    "roles": [
+      "Pharmacists",
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "Generative regulatory writing, embedded where medical writers work.",
     "take": "Generative regulatory writing, embedded where medical writers work.",
     "summary": "Certara, the biosimulation heavyweight, ships CoAuthor as a GenAI copilot for regulatory documents: drafting CSR sections, safety narratives, and submission modules from structured study data inside Word, with the domain guardrails regulatory writing demands.",
@@ -4633,6 +5543,18 @@ const CATALOG = [
     "tags": [
       "Real-World Data & Evidence",
       "Clinical Trials & Development"
+    ],
+    "date": "2026-03-28",
+    "specialties": [
+      "Oncology",
+      "Genetics & Genomics",
+      "Drug Development"
+    ],
+    "roles": [
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Cancer"
     ],
     "idea": "Oncology real-world data + AI SaaS for trials and evidence.",
     "take": "Oncology real-world data + AI SaaS for trials and evidence.",
@@ -4675,6 +5597,18 @@ const CATALOG = [
       "Surgical AI & Robotics",
       "Surgery & Perioperative Care"
     ],
+    "date": "2026-07-16",
+    "specialties": [
+      "Dentistry",
+      "Surgery"
+    ],
+    "roles": [
+      "Surgeons",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Teeth & mouth"
+    ],
     "idea": "The credible challenger, modular robotics plus the Touch Surgery data stack.",
     "take": "The credible challenger, modular robotics plus the Touch Surgery data stack.",
     "summary": "Medtronic's Hugo robotic system (FDA-cleared for urologic procedures after its international run) pairs modular, cost-flexible hardware with Touch Surgery Enterprise, AI-powered surgical video capture and analytics, giving the giant a genuine data-and-AI story alongside the hardware.",
@@ -4716,6 +5650,16 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Inpatient & Acute Care"
     ],
+    "date": "2026-05-30",
+    "specialties": [
+      "Emergency Medicine",
+      "Critical Care"
+    ],
+    "roles": [
+      "Primary care providers",
+      "Patients & caregivers"
+    ],
+    "systems": [],
     "idea": "A coin-sized wearable feeding AI triage for thousands of monitored patients.",
     "take": "A coin-sized wearable feeding AI triage for thousands of monitored patients.",
     "summary": "BioIntelliSense's FDA-cleared BioButton continuously captures vitals-grade signals for weeks per device, with its data-services layer triaging deterioration across inpatient and at-home populations, the sensor backbone for several major health systems' continuous-monitoring programs.",
@@ -4758,6 +5702,15 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Aging in Place & Home Health"
     ],
+    "date": "2026-04-13",
+    "specialties": [
+      "Critical Care"
+    ],
+    "roles": [
+      "Physicians",
+      "Patients & caregivers"
+    ],
+    "systems": [],
     "idea": "AI-personalized care-at-home: monitoring, analytics, and virtual clinicians.",
     "take": "AI-personalized care-at-home: monitoring, analytics, and virtual clinicians.",
     "summary": "Biofourmis pairs FDA-cleared physiology analytics (Biovitals) with wearables and a virtual clinical operation to run hospital-at-home, post-discharge, and pharma decentralized-trial programs, one of the most complete stacks in the care-at-home movement.",
@@ -4799,6 +5752,19 @@ const CATALOG = [
     "tags": [
       "Aging in Place & Home Health"
     ],
+    "date": "2026-07-25",
+    "specialties": [
+      "Surgery",
+      "Geriatrics & Senior Care"
+    ],
+    "roles": [
+      "Surgeons",
+      "Researchers & pharma",
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Aging & mobility"
+    ],
     "idea": "The proactive companion robot fighting elder loneliness, state-deployed.",
     "take": "The proactive companion robot fighting elder loneliness, state-deployed.",
     "summary": "ElliQ is a tabletop companion that initiates conversation, coaching, and check-ins with older adults, with New York State's aging office distributing thousands of units and reporting large loneliness reductions, the strongest institutional endorsement any social robot has earned.",
@@ -4839,6 +5805,17 @@ const CATALOG = [
       "Medication Safety & Adherence",
       "Medication Safety & Adherence"
     ],
+    "date": "2026-06-07",
+    "specialties": [
+      "Pharmacy",
+      "Health Administration"
+    ],
+    "roles": [
+      "Pharmacists",
+      "Hospital & health-system leaders",
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "Medication intelligence deciding which member gets which pharmacist intervention.",
     "take": "Medication intelligence deciding which member gets which pharmacist intervention.",
     "summary": "Arine fuses claims, clinical, and SDOH data to score medication-related risk across insured populations, generating prioritized, guideline-grounded care plans for pharmacist teams, the targeting engine behind large plans' adherence, polypharmacy, and Stars-measure programs.",
@@ -4880,6 +5857,12 @@ const CATALOG = [
     "tags": [
       "Disease Surveillance & Biosecurity"
     ],
+    "date": "2026-04-21",
+    "specialties": [
+      "Public Health"
+    ],
+    "roles": [],
+    "systems": [],
     "idea": "Predictive disease analytics for governments and life-science strategy.",
     "take": "Predictive disease analytics for governments and life-science strategy.",
     "summary": "London-based Airfinity built its reputation on COVID vaccine/supply forecasting and now runs continuous predictive surveillance across 160+ diseases, quantifying outbreak trajectories, countermeasure demand, and market implications for governments, pharma, and financial clients.",
@@ -4919,6 +5902,15 @@ const CATALOG = [
     "tags": [
       "Disease Surveillance & Biosecurity"
     ],
+    "date": "2026-08-02",
+    "specialties": [
+      "Genetics & Genomics",
+      "Public Health"
+    ],
+    "roles": [
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "National-scale pathogen monitoring and AI biosecurity infrastructure.",
     "take": "National-scale pathogen monitoring and AI biosecurity infrastructure.",
     "summary": "Ginkgo's biosecurity arm (built from its Concentric pandemic-response network) provides genomic surveillance, airport traveler programs, wastewater networks, pathogen analytics, plus AI tools for biothreat characterization, serving CDC programs and international health-security clients.",
@@ -4958,6 +5950,20 @@ const CATALOG = [
     "tags": [
       "Radiology & Medical Imaging",
       "Clinical Trials & Development"
+    ],
+    "date": "2026-06-23",
+    "specialties": [
+      "Radiology",
+      "Oncology",
+      "Drug Development"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Cancer"
     ],
     "idea": "Quantitative imaging biomarkers, from whole-body MRI to prostate.",
     "take": "Quantitative imaging biomarkers, from whole-body MRI to prostate.",
@@ -4999,6 +6005,22 @@ const CATALOG = [
     "tags": [
       "Digital Pathology"
     ],
+    "date": "2026-05-07",
+    "specialties": [
+      "Radiology",
+      "Pathology",
+      "Oncology",
+      "Mental & Behavioral Health"
+    ],
+    "roles": [
+      "Pathologists",
+      "Physicians",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Mental health",
+      "Cancer"
+    ],
     "idea": "Robust IHC scoring that works across scanners, stains, and labs.",
     "take": "Robust IHC scoring that works across scanners, stains, and labs.",
     "summary": "Hamburg-based Mindpeak focuses on the unglamorous problem that breaks most pathology AI in production: generalisation. Its breast-marker and IHC scoring tools are engineered to hold accuracy across different scanners, staining protocols, and laboratories rather than only on the training site.",
@@ -5037,6 +6059,18 @@ const CATALOG = [
     "status": "watch",
     "tags": [
       "Cardiac Diagnostics"
+    ],
+    "date": "2026-03-20",
+    "specialties": [
+      "Radiology",
+      "Pathology",
+      "Cardiology"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Heart & circulation"
     ],
     "idea": "Histology-validated plaque analysis from coronary CT.",
     "take": "Histology-validated plaque analysis from coronary CT.",
@@ -5078,6 +6112,16 @@ const CATALOG = [
       "Genomics & Precision Medicine",
       "Real-World Data & Evidence"
     ],
+    "date": "2026-07-01",
+    "specialties": [
+      "Radiology",
+      "Genetics & Genomics"
+    ],
+    "roles": [
+      "Physicians",
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "The genomic evidence layer, every variant, every paper.",
     "take": "The genomic evidence layer, every variant, every paper.",
     "summary": "Genomenon's Mastermind indexes the full genomic literature at variant level, so labs and pharma can find every published mention of a variant in seconds rather than through manual literature review, the evidence substrate underneath variant classification.",
@@ -5118,6 +6162,15 @@ const CATALOG = [
     "tags": [
       "Genomics & Precision Medicine"
     ],
+    "date": "2026-05-15",
+    "specialties": [
+      "Radiology",
+      "Genetics & Genomics"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [],
     "idea": "Rare-disease genomic interpretation, forged in the 100,000 Genomes Project.",
     "take": "Rare-disease genomic interpretation, forged in the 100,000 Genomes Project.",
     "summary": "Spun out of the Wellcome Sanger Institute and adopted as a clinical interpretation platform in England's national genomic medicine service, Congenica automates rare-disease variant prioritisation with the diagnostic-yield pressure of a population programme behind its design.",
@@ -5158,6 +6211,12 @@ const CATALOG = [
       "Inpatient & Acute Care",
       "Real-World Data & Evidence"
     ],
+    "date": "2026-03-29",
+    "specialties": [],
+    "roles": [
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "MIT-born LLMs that read the whole chart and answer clinical questions.",
     "take": "MIT-born LLMs that read the whole chart and answer clinical questions.",
     "summary": "Layer Health applies large language models to longitudinal medical records for clinical abstraction, pulling structured answers (staging, treatment history, outcomes) out of years of notes for quality measurement, registries, and research, with academic medical centre deployments.",
@@ -5200,6 +6259,19 @@ const CATALOG = [
       "Surgical AI & Robotics",
       "Surgery & Perioperative Care"
     ],
+    "date": "2026-07-09",
+    "specialties": [
+      "Dentistry",
+      "Surgery",
+      "Nursing"
+    ],
+    "roles": [
+      "Nurses",
+      "Surgeons"
+    ],
+    "systems": [
+      "Teeth & mouth"
+    ],
     "idea": "Swiss surgical robot designed to slot into an ordinary OR.",
     "take": "Swiss surgical robot designed to slot into an ordinary OR.",
     "summary": "Dexter is built around a pragmatic thesis: most hospitals cannot justify a million-dollar robot that monopolises a room. It offers sterile bedside robotic control that surgeons can enter and exit mid-procedure, converting between laparoscopic and robotic approaches without re-draping the room.",
@@ -5241,6 +6313,16 @@ const CATALOG = [
       "Hospital Operations & Patient Flow",
       "Nursing & Virtual Care Teams"
     ],
+    "date": "2026-05-30",
+    "specialties": [
+      "Nursing",
+      "Health Administration"
+    ],
+    "roles": [
+      "Nurses",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "AI for the frontline manager holding the staffing crisis together.",
     "take": "AI for the frontline manager holding the staffing crisis together.",
     "summary": "Laudio equips nurse managers, each responsible for dozens of staff, with AI-prioritised daily actions: who is trending toward burnout or turnover, who is overdue recognition, which compliance task is slipping, turning span-of-control problems into a manageable list.",
@@ -5282,6 +6364,19 @@ const CATALOG = [
       "AI Drug Discovery & Design",
       "Clinical Trials & Development"
     ],
+    "date": "2026-04-13",
+    "specialties": [
+      "Oncology",
+      "Health Administration",
+      "Drug Development"
+    ],
+    "roles": [
+      "Payers & insurers",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Cancer"
+    ],
     "idea": "AI-designed oncology assets already reading out in the clinic.",
     "take": "AI-designed oncology assets already reading out in the clinic.",
     "summary": "San Diego-based Iambic pairs generative chemistry (NeuralPLexer structure prediction, OrbNet quantum-accurate property models) with an automated lab loop, and has moved multiple internally discovered oncology candidates into clinical trials, the test that separates platforms from pipelines.",
@@ -5322,6 +6417,14 @@ const CATALOG = [
     "tags": [
       "Real-World Data & Evidence"
     ],
+    "date": "2026-07-25",
+    "specialties": [
+      "Drug Development"
+    ],
+    "roles": [
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "Regulatory-grade real-world evidence, with the methods left visible.",
     "take": "Regulatory-grade real-world evidence, with the methods left visible.",
     "summary": "Aetion's platform generates causal real-world evidence with transparent, reproducible study specifications, used in FDA collaborations and regulatory submissions where an observational study must withstand the same scrutiny as a trial.",
@@ -5361,6 +6464,16 @@ const CATALOG = [
     "tags": [
       "Ambient Clinical Documentation"
     ],
+    "date": "2026-06-08",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians",
+      "Hospital & health-system leaders",
+      "Patients & caregivers"
+    ],
+    "systems": [],
     "idea": "The clinician-bought scribe that spread without a sales team.",
     "take": "The clinician-bought scribe that spread without a sales team.",
     "summary": "Freed sells directly to individual clinicians at a transparent monthly price, bypassing enterprise procurement entirely, a bottom-up distribution model that has won it tens of thousands of users among small practices, therapists, and solo physicians that enterprise vendors ignore.",
@@ -5401,6 +6514,16 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Cardiac Diagnostics"
     ],
+    "date": "2026-04-21",
+    "specialties": [
+      "Primary Care"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers",
+      "Patients & caregivers"
+    ],
+    "systems": [],
     "idea": "Cuffless blood pressure, measured continuously from the wrist.",
     "take": "Cuffless blood pressure, measured continuously from the wrist.",
     "summary": "Swiss company Hilo built the first CE-marked cuffless blood-pressure monitor to gain real clinical traction, using optical sensing and algorithms to capture hundreds of readings per month, transforming hypertension from a handful of clinic snapshots into a continuous signal.",
@@ -5441,6 +6564,15 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM"
     ],
+    "date": "2026-08-02",
+    "specialties": [
+      "Radiology",
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [],
     "idea": "Handheld ultrasound with AI that grades the image as you scan.",
     "take": "Handheld ultrasound with AI that grades the image as you scan.",
     "summary": "Exo's Iris handheld ultrasound pairs silicon-based imaging with on-device AI that guides acquisition, auto-calculates measurements, and scores image quality in real time, plus Exo Works, a workflow platform handling the documentation and billing side of point-of-care ultrasound.",
@@ -5480,6 +6612,20 @@ const CATALOG = [
     "tags": [
       "Aging in Place & Home Health",
       "Aging in Place & Home Health"
+    ],
+    "date": "2026-06-16",
+    "specialties": [
+      "Emergency Medicine",
+      "Critical Care",
+      "Geriatrics & Senior Care",
+      "Health Administration"
+    ],
+    "roles": [
+      "Nurses",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Aging & mobility"
     ],
     "idea": "Home care where every visit feeds a model predicting deterioration.",
     "take": "Home care where every visit feeds a model predicting deterioration.",
@@ -5522,6 +6668,15 @@ const CATALOG = [
     "tags": [
       "Clinical Decision Support & Medical Knowledge"
     ],
+    "date": "2026-05-07",
+    "specialties": [
+      "Primary Care",
+      "Pharmacy"
+    ],
+    "roles": [
+      "Primary care providers"
+    ],
+    "systems": [],
     "idea": "Conversational search over a vetted medical library.",
     "take": "Conversational search over a vetted medical library.",
     "summary": "Elsevier put an LLM interface over its clinical content empire, textbooks, journals, drug monographs, guidelines, giving institutions AI answers whose provenance is the licensed library they already trust. The institutional-safe route to point-of-care AI reference.",
@@ -5561,6 +6716,14 @@ const CATALOG = [
     "tags": [
       "Revenue Cycle & Billing Automation"
     ],
+    "date": "2026-03-21",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "The biggest RCM outsourcer rebuilding itself around AI.",
     "take": "The biggest RCM outsourcer rebuilding itself around AI.",
     "summary": "R1 manages revenue cycle for a huge slice of US hospitals; its R37 lab, a headline partnership with Palantir, aims agentic AI at the full workflow stack (coding, denials, underpayments) with the audacious goal of automating the majority of RCM work it performs.",
@@ -5600,6 +6763,14 @@ const CATALOG = [
     "tags": [
       "Claims, Payment Integrity & Fraud"
     ],
+    "date": "2026-07-01",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "Global insurance-fraud AI, applied to health claims.",
     "take": "Global insurance-fraud AI, applied to health claims.",
     "summary": "Shift built its name in P&C insurance fraud across 25+ countries and brings the same decision-intelligence stack to health payers, claims fraud scoring, underwriting checks, and investigation workbenches, with the cross-industry pattern library only a global vendor accumulates.",
@@ -5638,6 +6809,16 @@ const CATALOG = [
     "status": "has-ai",
     "tags": [
       "AI Therapy, Triage & Clinical Ops"
+    ],
+    "date": "2026-05-15",
+    "specialties": [
+      "Mental & Behavioral Health"
+    ],
+    "roles": [
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Mental health"
     ],
     "idea": "The first foundation model built specifically for therapy conversations.",
     "take": "The first foundation model built specifically for therapy conversations.",
@@ -5678,6 +6859,19 @@ const CATALOG = [
     "tags": [
       "Aging in Place & Home Health",
       "Aging in Place & Home Health"
+    ],
+    "date": "2026-03-29",
+    "specialties": [
+      "Mental & Behavioral Health",
+      "Geriatrics & Senior Care"
+    ],
+    "roles": [
+      "Nurses",
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Mental health",
+      "Aging & mobility"
     ],
     "idea": "Wearable behavior-pattern AI predicting senior decline before events.",
     "take": "Wearable behavior-pattern AI predicting senior decline before events.",
@@ -5720,6 +6914,17 @@ const CATALOG = [
       "Aging in Place & Home Health",
       "Population Health & Value-Based Care"
     ],
+    "date": "2026-07-10",
+    "specialties": [
+      "Geriatrics & Senior Care",
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Aging & mobility"
+    ],
     "idea": "The post-acute platform giant embedding AI across care transitions.",
     "take": "The post-acute platform giant embedding AI across care transitions.",
     "summary": "WellSky's software spans home health, hospice, and care transitions for tens of thousands of provider sites; its CareInsights predictive analytics and SHP benchmarking embed risk scoring and documentation AI directly in the systems post-acute clinicians already chart in.",
@@ -5761,6 +6966,17 @@ const CATALOG = [
       "Aging in Place & Home Health",
       "Revenue Cycle & Billing Automation"
     ],
+    "date": "2026-05-23",
+    "specialties": [
+      "Geriatrics & Senior Care",
+      "Health Administration"
+    ],
+    "roles": [
+      "Payers & insurers"
+    ],
+    "systems": [
+      "Aging & mobility"
+    ],
     "idea": "Agentic back-office automation purpose-built for post-acute care.",
     "take": "Agentic back-office automation purpose-built for post-acute care.",
     "summary": "Element5 automates the administrative choreography of home health and hospice, eligibility checks, authorizations, referral processing, billing follow-ups, with workflow bots tuned to post-acute's specific payer portals and EHRs, sold as automation-as-a-service.",
@@ -5801,6 +7017,18 @@ const CATALOG = [
     "tags": [
       "Medication Safety & Adherence"
     ],
+    "date": "2026-04-13",
+    "specialties": [
+      "Surgery",
+      "Pharmacy",
+      "Health Administration"
+    ],
+    "roles": [
+      "Surgeons",
+      "Pharmacists",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "The medication-automation giant adding vision AI and intelligence services.",
     "take": "The medication-automation giant adding vision AI and intelligence services.",
     "summary": "Omnicell's dispensing cabinets and central-pharmacy robotics anchor medication logistics across thousands of hospitals; its AI layer, IntelliSight computer-vision inventory, EnlivenHealth patient engagement, diversion analytics, pushes the installed base toward the \"autonomous pharmacy\" it markets.",
@@ -5841,6 +7069,16 @@ const CATALOG = [
       "Population Health & Value-Based Care",
       "Hospital Operations & Patient Flow"
     ],
+    "date": "2026-07-25",
+    "specialties": [
+      "Genetics & Genomics",
+      "Public Health",
+      "Health Administration"
+    ],
+    "roles": [
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "Data + improvement science, with AI woven through the analytics stack.",
     "take": "Data + improvement science, with AI woven through the analytics stack.",
     "summary": "Health Catalyst pairs its Ignite data platform with a library of improvement analytics and Healthcare.AI capabilities, embedding prediction and augmented intelligence into the measurement-driven outcomes-improvement programs it runs with health systems.",
@@ -5881,6 +7119,15 @@ const CATALOG = [
     "tags": [
       "Radiology & Medical Imaging"
     ],
+    "date": "2026-06-08",
+    "specialties": [
+      "Radiology"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians"
+    ],
+    "systems": [],
     "idea": "Rebuilding the radiology workstation itself, AI-native from the start.",
     "take": "Rebuilding the radiology workstation itself, AI-native from the start.",
     "summary": "Rather than bolting algorithms onto legacy PACS, Sirona built a cloud-native radiology operating system unifying worklist, viewer, reporting, and AI results in one interface, an attempt to fix the workflow fragmentation that limits how much value imaging AI actually delivers.",
@@ -5920,6 +7167,18 @@ const CATALOG = [
     "tags": [
       "Digital Pathology"
     ],
+    "date": "2026-04-22",
+    "specialties": [
+      "Radiology",
+      "Pathology",
+      "Emergency Medicine"
+    ],
+    "roles": [
+      "Pathologists",
+      "Physicians",
+      "Primary care providers"
+    ],
+    "systems": [],
     "idea": "AI-native scanning that fixes digitisation before analysis begins.",
     "take": "AI-native scanning that fixes digitisation before analysis begins.",
     "summary": "Pramana attacks the step everyone skips past: getting slides into pixels reliably. Its scanning platform uses AI during acquisition to detect focus failures, tissue-detection misses, and artefacts in real time, re-scanning automatically, because downstream algorithms fail on bad images no matter how good they are.",
@@ -5959,6 +7218,21 @@ const CATALOG = [
     "tags": [
       "Cardiac Diagnostics",
       "Clinical Trials & Development"
+    ],
+    "date": "2026-08-02",
+    "specialties": [
+      "Radiology",
+      "Cardiology",
+      "Primary Care",
+      "Drug Development"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Heart & circulation"
     ],
     "idea": "Cardiology-grade ECG interpretation at scale, from Madrid.",
     "take": "Cardiology-grade ECG interpretation at scale, from Madrid.",
@@ -6001,6 +7275,17 @@ const CATALOG = [
       "Cardiac Diagnostics",
       "Point-of-Care Screening"
     ],
+    "date": "2026-06-16",
+    "specialties": [
+      "Radiology",
+      "Cardiology"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Heart & circulation"
+    ],
     "idea": "Reading coronary inflammation in the fat around the artery.",
     "take": "Reading coronary inflammation in the fat around the artery.",
     "summary": "Oxford spin-out Caristo analyses perivascular fat attenuation on routine coronary CT to quantify vascular inflammation, a risk signal that precedes plaque and is invisible to conventional stenosis reading, with published data linking its score to cardiac mortality.",
@@ -6040,6 +7325,18 @@ const CATALOG = [
     "status": "watch",
     "tags": [
       "Genomics & Precision Medicine"
+    ],
+    "date": "2026-04-30",
+    "specialties": [
+      "Radiology",
+      "Oncology",
+      "Genetics & Genomics"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Cancer"
     ],
     "idea": "Clinical-grade genomic interpretation for European hospital labs.",
     "take": "Clinical-grade genomic interpretation for European hospital labs.",
@@ -6081,6 +7378,18 @@ const CATALOG = [
       "Telehealth & Digital Triage",
       "Emergency Medicine"
     ],
+    "date": "2026-03-21",
+    "specialties": [
+      "Emergency Medicine",
+      "Primary Care",
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers",
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "Spanish-built symptom assessment with peer-reviewed accuracy studies.",
     "take": "Spanish-built symptom assessment with peer-reviewed accuracy studies.",
     "summary": "Mediktor provides AI symptom assessment and triage embedded in insurer, provider, and telehealth front doors across Europe and Latin America, distinguished by a habit of publishing prospective accuracy studies against physician benchmarks.",
@@ -6123,6 +7432,19 @@ const CATALOG = [
       "Surgery & Perioperative Care",
       "Surgical AI & Robotics"
     ],
+    "date": "2026-07-02",
+    "specialties": [
+      "Radiology",
+      "Dentistry",
+      "Surgery"
+    ],
+    "roles": [
+      "Surgeons"
+    ],
+    "systems": [
+      "Bones & joints",
+      "Teeth & mouth"
+    ],
     "idea": "Light-field imaging that gives surgeons real-time 3D navigation.",
     "take": "Light-field imaging that gives surgeons real-time 3D navigation.",
     "summary": "Seattle-based Proprio's Paradigm system captures the surgical field with light-field cameras and fuses it with pre-op imaging, giving spine surgeons live 3D navigation without repeated intraoperative radiation, and capturing a rich data record of each procedure as a by-product.",
@@ -6163,6 +7485,18 @@ const CATALOG = [
     "tags": [
       "Nursing & Virtual Care Teams",
       "Aging in Place & Home Health"
+    ],
+    "date": "2026-05-15",
+    "specialties": [
+      "Nursing",
+      "Geriatrics & Senior Care",
+      "Health Administration"
+    ],
+    "roles": [
+      "Nurses"
+    ],
+    "systems": [
+      "Aging & mobility"
     ],
     "idea": "Danish ambient AI that documents nursing care as it happens.",
     "take": "Danish ambient AI that documents nursing care as it happens.",
@@ -6206,6 +7540,22 @@ const CATALOG = [
       "Hospital Operations & Patient Flow",
       "Surgery & Perioperative Care"
     ],
+    "date": "2026-03-29",
+    "specialties": [
+      "Dentistry",
+      "Surgery",
+      "Nursing",
+      "Genetics & Genomics",
+      "Health Administration"
+    ],
+    "roles": [
+      "Nurses",
+      "Surgeons",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Teeth & mouth"
+    ],
     "idea": "Care orchestration that automates the coordination between visits.",
     "take": "Care orchestration that automates the coordination between visits.",
     "summary": "Lumeon automates care-pathway choreography, pre-op preparation, follow-up sequencing, escalation when a step is missed, so the coordination work that consumes nurse navigators executes itself, with humans intervening only on exceptions.",
@@ -6248,6 +7598,17 @@ const CATALOG = [
       "Primary Care & Virtual-First Medicine",
       "Population Health & Value-Based Care"
     ],
+    "date": "2026-07-10",
+    "specialties": [
+      "Primary Care",
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers",
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "Risk-bearing analytics that make independent primary care viable.",
     "take": "Risk-bearing analytics that make independent primary care viable.",
     "summary": "Pearl equips independent primary-care physicians to succeed under Medicare value-based models, using predictive analytics to surface which patients need attention now and translating opaque risk contracts into a daily prioritised list.",
@@ -6289,6 +7650,18 @@ const CATALOG = [
     "tags": [
       "Patient Access & Engagement"
     ],
+    "date": "2026-05-24",
+    "specialties": [
+      "Cardiology",
+      "Primary Care"
+    ],
+    "roles": [
+      "Primary care providers"
+    ],
+    "systems": [
+      "Heart & circulation",
+      "Bones & joints"
+    ],
     "idea": "Specialty-tuned voice AI answering the phones that never stop ringing.",
     "take": "Specialty-tuned voice AI answering the phones that never stop ringing.",
     "summary": "Assort builds voice AI for medical practice call centres, tuned per specialty so the agent understands why a cardiology caller differs from an orthopaedics one, resolving scheduling, refills, and routing end-to-end inside the EHR rather than just deflecting calls.",
@@ -6327,6 +7700,15 @@ const CATALOG = [
     "status": "watch",
     "tags": [
       "AI Drug Discovery & Design"
+    ],
+    "date": "2026-04-07",
+    "specialties": [
+      "Oncology",
+      "Drug Development"
+    ],
+    "roles": [],
+    "systems": [
+      "Cancer"
     ],
     "idea": "Quantum-inspired physics feeding generative chemistry, no experimental data needed.",
     "take": "Quantum-inspired physics feeding generative chemistry, no experimental data needed.",
@@ -6367,6 +7749,12 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
+    "date": "2026-07-25",
+    "specialties": [
+      "Drug Development"
+    ],
+    "roles": [],
+    "systems": [],
     "idea": "Computational design of antibodies against the hardest targets.",
     "take": "Computational design of antibodies against the hardest targets.",
     "summary": "Nabla Bio designs antibodies and complex biologics computationally, including against notoriously difficult multi-pass membrane proteins like GPCRs and ion channels, using generative models with an integrated wet-lab validation loop, backed by major pharma partnerships.",
@@ -6406,6 +7794,16 @@ const CATALOG = [
     "tags": [
       "Clinical Trials & Development",
       "Genomics & Precision Medicine"
+    ],
+    "date": "2026-06-08",
+    "specialties": [
+      "Oncology",
+      "Genetics & Genomics",
+      "Drug Development"
+    ],
+    "roles": [],
+    "systems": [
+      "Cancer"
     ],
     "idea": "LLMs that read oncology charts and find the trial that fits.",
     "take": "LLMs that read oncology charts and find the trial that fits.",
@@ -6447,6 +7845,17 @@ const CATALOG = [
     "tags": [
       "Real-World Data & Evidence"
     ],
+    "date": "2026-04-22",
+    "specialties": [
+      "Health Administration",
+      "Drug Development"
+    ],
+    "roles": [
+      "Physicians",
+      "Payers & insurers",
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "High-validity RWE that checks whether the data actually says what codes claim.",
     "take": "High-validity RWE that checks whether the data actually says what codes claim.",
     "summary": "Verantos targets the weak point of real-world evidence: billing codes are unreliable proxies for clinical truth. Its platform validates diagnoses and outcomes against clinical documentation, producing evidence of sufficient accuracy for regulatory-grade claims.",
@@ -6487,6 +7896,15 @@ const CATALOG = [
       "Real-World Data & Evidence",
       "Genomics & Precision Medicine"
     ],
+    "date": "2026-08-03",
+    "specialties": [
+      "Genetics & Genomics",
+      "Drug Development"
+    ],
+    "roles": [
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "Federated infrastructure for national-scale genomic and health data.",
     "take": "Federated infrastructure for national-scale genomic and health data.",
     "summary": "London-based Lifebit provides the secure federated platform behind national genomic and health-data programmes, letting approved researchers analyse sensitive population datasets in place, the trusted-research-environment layer that public biobanks require.",
@@ -6528,6 +7946,14 @@ const CATALOG = [
       "Ambient Clinical Documentation",
       "Clinical Decision Support & Medical Knowledge"
     ],
+    "date": "2026-06-16",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [],
     "idea": "A UK clinician copilot that operates the EHR, not just the note.",
     "take": "A UK clinician copilot that operates the EHR, not just the note.",
     "summary": "Founded by an NHS doctor, London-based Tortus builds OSLER, an AI copilot that listens to the consultation and then drives the electronic record itself, entering codes, ordering, and drafting letters through the interface a clinician would otherwise click through.",
@@ -6568,6 +7994,15 @@ const CATALOG = [
     "tags": [
       "Revenue Cycle & Billing Automation"
     ],
+    "date": "2026-04-30",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Hospital & health-system leaders",
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "Claims infrastructure as clean, testable software.",
     "take": "Claims infrastructure as clean, testable software.",
     "summary": "Candid treats medical billing as an engineering problem: a rules engine and API-first claims pipeline that developers can test, version, and monitor, appealing to digital-health and specialty organisations who find traditional billing software opaque and unautomatable.",
@@ -6608,6 +8043,15 @@ const CATALOG = [
       "Prior Authorization & Utilization Management",
       "Revenue Cycle & Billing Automation"
     ],
+    "date": "2026-03-14",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians",
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "Touchless prior auth built from the provider's side of the fax machine.",
     "take": "Touchless prior auth built from the provider's side of the fax machine.",
     "summary": "Led by a physician who previously ran prior-auth products at a national payer, Humata automates the provider side end-to-end, determining when auth is required, assembling clinical evidence, submitting, and tracking to decision, with backing from major health systems.",
@@ -6649,6 +8093,13 @@ const CATALOG = [
       "Population Health & Value-Based Care",
       "Inpatient & Acute Care"
     ],
+    "date": "2026-07-02",
+    "specialties": [
+      "Critical Care",
+      "Public Health"
+    ],
+    "roles": [],
+    "systems": [],
     "idea": "Explainable healthcare prediction, proven in a CMS national competition.",
     "take": "Explainable healthcare prediction, proven in a CMS national competition.",
     "summary": "ClosedLoop provides a healthcare-specific data science platform with pre-built, explainable models for readmission, cost, deterioration, and disease onset, an approach validated by winning the CMS AI Health Outcomes Challenge against a large national field.",
@@ -6689,6 +8140,19 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM",
       "Clinical Trials & Development"
+    ],
+    "date": "2026-05-16",
+    "specialties": [
+      "Neurology",
+      "Oncology"
+    ],
+    "roles": [
+      "Researchers & pharma",
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Brain & nervous system",
+      "Cancer"
     ],
     "idea": "FDA-cleared wearable that detects seizures and powers digital endpoints.",
     "take": "FDA-cleared wearable that detects seizures and powers digital endpoints.",
@@ -6731,6 +8195,15 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Point-of-Care Screening"
     ],
+    "date": "2026-03-29",
+    "specialties": [
+      "Radiology"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians"
+    ],
+    "systems": [],
     "idea": "Prenatal ultrasound AI that checks the exam is complete before it ends.",
     "take": "Prenatal ultrasound AI that checks the exam is complete before it ends.",
     "summary": "Sonio assists fetal ultrasound in real time, recognising required anatomical views, flagging missing elements of the protocol, and generating the report, targeting the incompleteness and variability that cause prenatal anomalies to be missed.",
@@ -6773,6 +8246,14 @@ const CATALOG = [
       "AI Therapy, Triage & Clinical Ops",
       "AI Therapy, Triage & Clinical Ops"
     ],
+    "date": "2026-07-10",
+    "specialties": [
+      "Mental & Behavioral Health"
+    ],
+    "roles": [],
+    "systems": [
+      "Mental health"
+    ],
     "idea": "A million therapy transcripts turned into a science of what works.",
     "take": "A million therapy transcripts turned into a science of what works.",
     "summary": "Cambridge-based ieso delivered typed cognitive behavioural therapy at NHS scale for years, accumulating a uniquely large corpus of transcribed sessions, and used NLP on it to identify which therapist behaviours actually predict recovery, feeding both supervision and new digital treatments.",
@@ -6814,6 +8295,20 @@ const CATALOG = [
       "Disease Surveillance & Biosecurity",
       "Population Health & Value-Based Care"
     ],
+    "date": "2026-05-24",
+    "specialties": [
+      "Pharmacy",
+      "Genetics & Genomics",
+      "Pulmonology",
+      "Public Health",
+      "Health Administration"
+    ],
+    "roles": [
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Lungs & breathing"
+    ],
     "idea": "Reading community health from the sewer, at national scale.",
     "take": "Reading community health from the sewer, at national scale.",
     "summary": "MIT spin-out Biobot analyses wastewater to track infectious disease, drug use, and emerging pathogens across communities, providing population-level signal that requires no individual testing, no clinical encounter, and no reporting bias.",
@@ -6853,6 +8348,20 @@ const CATALOG = [
     "status": "watch",
     "tags": [
       "Radiology & Medical Imaging"
+    ],
+    "date": "2026-04-07",
+    "specialties": [
+      "Radiology",
+      "Cardiology",
+      "Dermatology"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians"
+    ],
+    "systems": [
+      "Heart & circulation",
+      "Skin"
     ],
     "idea": "Catching the incidental findings radiologists were never looking for.",
     "take": "Catching the incidental findings radiologists were never looking for.",
@@ -6894,6 +8403,17 @@ const CATALOG = [
       "Digital Pathology",
       "Real-World Data & Evidence"
     ],
+    "date": "2026-07-19",
+    "specialties": [
+      "Radiology",
+      "Pathology"
+    ],
+    "roles": [
+      "Pathologists",
+      "Physicians",
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "Multimodal generative AI for pathology, from the lab that defined the field.",
     "take": "Multimodal generative AI for pathology, from the lab that defined the field.",
     "summary": "Founded by researchers behind several landmark pathology foundation models, Modella builds multimodal agents that reason across slides, reports, and molecular data, positioning pathology AI as a generative reasoning problem rather than a classification one.",
@@ -6934,6 +8454,21 @@ const CATALOG = [
     "tags": [
       "Point-of-Care Screening",
       "Clinical Trials & Development"
+    ],
+    "date": "2026-06-08",
+    "specialties": [
+      "Radiology",
+      "Oncology",
+      "Mental & Behavioral Health",
+      "Dermatology"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Skin",
+      "Mental health",
+      "Cancer"
     ],
     "idea": "Quantifying skin disease severity, not just spotting cancer.",
     "take": "Quantifying skin disease severity, not just spotting cancer.",
@@ -6976,6 +8511,22 @@ const CATALOG = [
       "Point-of-Care Screening",
       "Radiology & Medical Imaging"
     ],
+    "date": "2026-04-22",
+    "specialties": [
+      "Radiology",
+      "Oncology",
+      "Ophthalmology",
+      "Pulmonology"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians"
+    ],
+    "systems": [
+      "Lungs & breathing",
+      "Eyes",
+      "Cancer"
+    ],
     "idea": "Quantitative lung imaging for COPD, screening, and interventional planning.",
     "take": "Quantitative lung imaging for COPD, screening, and interventional planning.",
     "summary": "Nijmegen-based Thirona builds quantitative CT analysis for chest imaging, airway, emphysema, and fissure-integrity measurement used both in lung-cancer screening programmes and to plan bronchoscopic lung-volume-reduction procedures.",
@@ -7017,6 +8568,20 @@ const CATALOG = [
       "Surgery & Perioperative Care",
       "Surgical AI & Robotics"
     ],
+    "date": "2026-08-03",
+    "specialties": [
+      "Radiology",
+      "Dentistry",
+      "Surgery",
+      "Pharmacy"
+    ],
+    "roles": [
+      "Surgeons",
+      "Pharmacists"
+    ],
+    "systems": [
+      "Teeth & mouth"
+    ],
     "idea": "Dye-free perfusion imaging that shows surgeons live blood flow.",
     "take": "Dye-free perfusion imaging that shows surgeons live blood flow.",
     "summary": "Activ Surgical's ActivSight overlays real-time tissue perfusion onto the laparoscopic view without injected dye, letting surgeons see blood flow at the moment of decision, targeting anastomotic leaks and other perfusion-related complications.",
@@ -7057,6 +8622,15 @@ const CATALOG = [
     "tags": [
       "Surgical AI & Robotics"
     ],
+    "date": "2026-06-17",
+    "specialties": [
+      "Surgery"
+    ],
+    "roles": [
+      "Surgeons",
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "Britain's modular challenger to the surgical-robot duopoly.",
     "take": "Britain's modular challenger to the surgical-robot duopoly.",
     "summary": "Cambridge-based CMR built Versius as small, independently cart-mounted arms that can be configured per procedure and moved between rooms, a deliberate contrast to monolithic systems, with hundreds of thousands of procedures performed internationally and US entry underway.",
@@ -7096,6 +8670,19 @@ const CATALOG = [
     "tags": [
       "ICU & Critical Care",
       "Inpatient & Acute Care"
+    ],
+    "date": "2026-04-30",
+    "specialties": [
+      "Cardiology",
+      "Ophthalmology",
+      "Critical Care"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Heart & circulation",
+      "Eyes"
     ],
     "idea": "FDA-cleared instability warning from a single ECG lead.",
     "take": "FDA-cleared instability warning from a single ECG lead.",
@@ -7138,6 +8725,16 @@ const CATALOG = [
       "Primary Care & Virtual-First Medicine",
       "Telehealth & Digital Triage"
     ],
+    "date": "2026-03-14",
+    "specialties": [
+      "Emergency Medicine",
+      "Primary Care"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers"
+    ],
+    "systems": [],
     "idea": "AI-first virtual primary care where the model drafts and clinicians decide.",
     "take": "AI-first virtual primary care where the model drafts and clinicians decide.",
     "summary": "Curai runs a virtual primary-care service built AI-first: models handle intake, history-taking, and draft assessments, with clinicians reviewing and deciding, a structure designed to make continuous primary care affordable for underserved and Medicaid populations.",
@@ -7179,6 +8776,16 @@ const CATALOG = [
       "Clinical Decision Support & Medical Knowledge",
       "Real-World Data & Evidence"
     ],
+    "date": "2026-06-25",
+    "specialties": [
+      "Primary Care"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers",
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "Evidence search that tells you what the literature collectively concludes.",
     "take": "Evidence search that tells you what the literature collectively concludes.",
     "summary": "Consensus searches peer-reviewed literature and synthesises what studies collectively find on a question, surfacing the weight and consistency of evidence rather than a ranked link list, useful for clinicians and researchers checking whether a claim actually holds.",
@@ -7219,6 +8826,12 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
+    "date": "2026-05-16",
+    "specialties": [
+      "Drug Development"
+    ],
+    "roles": [],
+    "systems": [],
     "idea": "Ex-DeepMind protein design, delivered through the browser.",
     "take": "Ex-DeepMind protein design, delivered through the browser.",
     "summary": "Founded by a former AlphaFold team lead, London-based Latent Labs builds generative protein-design models and, unusually, ships them as a web platform, so bench scientists can design binders and proteins without a computational chemistry group behind them.",
@@ -7259,6 +8872,15 @@ const CATALOG = [
       "AI Drug Discovery & Design",
       "Digital Pathology"
     ],
+    "date": "2026-03-30",
+    "specialties": [
+      "Pathology",
+      "Drug Development"
+    ],
+    "roles": [
+      "Pathologists"
+    ],
+    "systems": [],
     "idea": "A French bid to build the foundation model for all of biology.",
     "take": "A French bid to build the foundation model for all of biology.",
     "summary": "Spun out of Owkin's orbit, Bioptimus is training foundation models spanning biological scales, molecules, cells, tissues, organisms, with access to hospital and research data across Europe. Its H-optimus pathology models are among the strongest openly available in the field.",
@@ -7299,6 +8921,12 @@ const CATALOG = [
     "tags": [
       "Clinical Trials & Development"
     ],
+    "date": "2026-07-10",
+    "specialties": [
+      "Drug Development"
+    ],
+    "roles": [],
+    "systems": [],
     "idea": "Opening trials to community sites where most patients actually are.",
     "take": "Opening trials to community sites where most patients actually are.",
     "summary": "Paris-based Inato runs a marketplace connecting sponsors to community research sites outside the usual academic circuit, using data to match protocols to sites with the right patients, addressing both slow enrolment and the persistent unrepresentativeness of trial populations.",
@@ -7339,6 +8967,17 @@ const CATALOG = [
       "Pharmacovigilance & Regulatory Affairs",
       "Clinical Trials & Development"
     ],
+    "date": "2026-05-24",
+    "specialties": [
+      "Pharmacy",
+      "Health Administration",
+      "Drug Development"
+    ],
+    "roles": [
+      "Pharmacists",
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "Generative regulatory and medical writing built for GxP validation.",
     "take": "Generative regulatory and medical writing built for GxP validation.",
     "summary": "French company Yseop automates the drafting of regulatory and medical documents, clinical study reports, safety narratives, submission sections, with the traceability and validation posture that GxP environments demand, deployed inside large pharma medical-writing organisations.",
@@ -7379,6 +9018,15 @@ const CATALOG = [
     "tags": [
       "Ambient Clinical Documentation"
     ],
+    "date": "2026-04-07",
+    "specialties": [
+      "Primary Care",
+      "Health Administration"
+    ],
+    "roles": [
+      "Primary care providers"
+    ],
+    "systems": [],
     "idea": "Ambient documentation with customisation controls in the customer's hands.",
     "take": "Ambient documentation with customisation controls in the customer's hands.",
     "summary": "DeepScribe focuses on configurability: customers tune note structure, style, and specialty behaviour themselves rather than filing vendor requests, and its trust-and-safety tooling surfaces accuracy metrics so health systems can monitor scribe quality rather than assume it.",
@@ -7418,6 +9066,14 @@ const CATALOG = [
     "tags": [
       "Revenue Cycle & Billing Automation"
     ],
+    "date": "2026-07-19",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "Revenue-cycle intelligence that predicts the denial before submission.",
     "take": "Revenue-cycle intelligence that predicts the denial before submission.",
     "summary": "Adonis combines RCM automation with predictive analytics that flag claims likely to be denied and why, before they go out, plus agentic workflows for eligibility, coding checks, and denial follow-up across specialty groups and digital health providers.",
@@ -7458,6 +9114,14 @@ const CATALOG = [
       "Claims, Payment Integrity & Fraud",
       "Revenue Cycle & Billing Automation"
     ],
+    "date": "2026-06-02",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "Transparent payment-integrity policy that both sides can inspect.",
     "take": "Transparent payment-integrity policy that both sides can inspect.",
     "summary": "Rialtic runs claim-editing and payment policy on a modern platform where the logic behind each edit is visible and configurable, addressing the black-box opacity that makes payment integrity the most adversarial part of the payer-provider relationship.",
@@ -7499,6 +9163,14 @@ const CATALOG = [
       "Risk Adjustment & Quality Analytics",
       "Population Health & Value-Based Care"
     ],
+    "date": "2026-04-22",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "NLP for quality measurement, built by people who wrote the measures.",
     "take": "NLP for quality measurement, built by people who wrote the measures.",
     "summary": "Founded by former NCQA leaders, Astrata applies clinical NLP to HEDIS quality measurement and risk adjustment, extracting measure-relevant evidence from clinical text so plans can close gaps and validate coding without brute-force manual chart abstraction.",
@@ -7539,6 +9211,22 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM",
       "Clinical Trials & Development"
+    ],
+    "date": "2026-08-03",
+    "specialties": [
+      "Cardiology",
+      "Pulmonology",
+      "Health Administration",
+      "Drug Development"
+    ],
+    "roles": [
+      "Payers & insurers",
+      "Researchers & pharma",
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Heart & circulation",
+      "Lungs & breathing"
     ],
     "idea": "Medical-grade continuous vitals in a bracelet, built for research and care.",
     "take": "Medical-grade continuous vitals in a bracelet, built for research and care.",
@@ -7582,6 +9270,17 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Aging in Place & Home Health"
     ],
+    "date": "2026-06-17",
+    "specialties": [
+      "Health Administration",
+      "Drug Development"
+    ],
+    "roles": [
+      "Payers & insurers",
+      "Researchers & pharma",
+      "Patients & caregivers"
+    ],
+    "systems": [],
     "idea": "A regulated platform others build their remote-care products on.",
     "take": "A regulated platform others build their remote-care products on.",
     "summary": "London-based Huma provides a modular, regulated digital-health platform, remote monitoring, decentralised trials, care pathways, that health systems and pharma configure rather than build, with Class IIb regulatory status and national-scale deployments behind it.",
@@ -7624,6 +9323,16 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Cardiac Diagnostics"
     ],
+    "date": "2026-05-01",
+    "specialties": [
+      "Cardiology"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Heart & circulation"
+    ],
     "idea": "A pocket ultrasound built around the cardiac exam.",
     "take": "A pocket ultrasound built around the cardiac exam.",
     "summary": "EchoNous' Kosmos combines a handheld probe with AI that auto-labels cardiac structures, calculates ejection fraction, and grades image quality, engineered specifically so clinicians who are not sonographers can obtain and interpret diagnostic cardiac views.",
@@ -7664,6 +9373,20 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM"
     ],
+    "date": "2026-03-15",
+    "specialties": [
+      "Mental & Behavioral Health",
+      "Pharmacy",
+      "Pulmonology"
+    ],
+    "roles": [
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Bones & joints",
+      "Lungs & breathing",
+      "Mental health"
+    ],
     "idea": "Motion-tracking MSK therapy with German reimbursement behind it.",
     "take": "Motion-tracking MSK therapy with German reimbursement behind it.",
     "summary": "Kaia delivers digital MSK and COPD therapy using smartphone-camera motion tracking for exercise feedback, and is among the products prescribable and reimbursed under Germany's DiGA framework, the world's first national digital-therapeutics reimbursement pathway.",
@@ -7703,6 +9426,18 @@ const CATALOG = [
     "tags": [
       "AI Therapy, Triage & Clinical Ops",
       "Ambient Clinical Documentation"
+    ],
+    "date": "2026-06-25",
+    "specialties": [
+      "Mental & Behavioral Health",
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians",
+      "Payers & insurers"
+    ],
+    "systems": [
+      "Mental health"
     ],
     "idea": "Measurement-based care and AI notes for the working therapist.",
     "take": "Measurement-based care and AI notes for the working therapist.",
@@ -7745,6 +9480,21 @@ const CATALOG = [
     "tags": [
       "Aging in Place & Home Health",
       "Aging in Place & Home Health"
+    ],
+    "date": "2026-05-09",
+    "specialties": [
+      "Cardiology",
+      "Geriatrics & Senior Care",
+      "Pulmonology"
+    ],
+    "roles": [
+      "Nurses",
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Heart & circulation",
+      "Lungs & breathing",
+      "Aging & mobility"
     ],
     "idea": "Radar that sees falls through walls, no camera, no wearable.",
     "take": "Radar that sees falls through walls, no camera, no wearable.",
@@ -7789,6 +9539,19 @@ const CATALOG = [
       "Medication Safety & Adherence",
       "Medication Safety & Adherence"
     ],
+    "date": "2026-03-30",
+    "specialties": [
+      "Oncology",
+      "Pharmacy",
+      "Health Administration"
+    ],
+    "roles": [
+      "Pharmacists",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Cancer"
+    ],
     "idea": "Precision dosing across a broad drug library, with analytics behind it.",
     "take": "Precision dosing across a broad drug library, with analytics behind it.",
     "summary": "InsightRX Nova applies Bayesian pharmacokinetic modelling to individualise dosing for antibiotics, oncology agents, and transplant drugs, adding population analytics so pharmacy leadership can see how dosing performance varies across their institution.",
@@ -7829,6 +9592,16 @@ const CATALOG = [
     "tags": [
       "Surgical AI & Robotics"
     ],
+    "date": "2026-07-11",
+    "specialties": [
+      "Surgery",
+      "Drug Development"
+    ],
+    "roles": [
+      "Surgeons",
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "J&J's unified-architecture robot, betting on OR integration.",
     "take": "J&J's unified-architecture robot, betting on OR integration.",
     "summary": "Ottava integrates four arms into the operating table itself, a rethink aimed at OR footprint and workflow, entering clinical trials with FDA IDE and drawing on J&J's Monarch robotics and Polyphonic digital ecosystem for its AI ambitions. A heavyweight arrival still in the \"upcoming\" column.",
@@ -7867,6 +9640,17 @@ const CATALOG = [
     "status": "watch",
     "tags": [
       "Surgical AI & Robotics"
+    ],
+    "date": "2026-05-24",
+    "specialties": [
+      "Surgery",
+      "Gastroenterology"
+    ],
+    "roles": [
+      "Surgeons"
+    ],
+    "systems": [
+      "Gut & digestion"
     ],
     "idea": "A two-pound robot that goes inside the abdomen, and has been to orbit.",
     "take": "A two-pound robot that goes inside the abdomen, and has been to orbit.",
@@ -7907,6 +9691,21 @@ const CATALOG = [
     "tags": [
       "ICU & Critical Care",
       "Surgery & Perioperative Care"
+    ],
+    "date": "2026-04-07",
+    "specialties": [
+      "Cardiology",
+      "Mental & Behavioral Health",
+      "Dentistry",
+      "Surgery"
+    ],
+    "roles": [
+      "Surgeons"
+    ],
+    "systems": [
+      "Heart & circulation",
+      "Mental health",
+      "Teeth & mouth"
     ],
     "idea": "Continuous cardiac output monitoring that tolerates messy waveforms.",
     "take": "Continuous cardiac output monitoring that tolerates messy waveforms.",
@@ -7949,6 +9748,17 @@ const CATALOG = [
       "Nursing & Virtual Care Teams",
       "Inpatient & Acute Care"
     ],
+    "date": "2026-07-19",
+    "specialties": [
+      "Nursing",
+      "Geriatrics & Senior Care"
+    ],
+    "roles": [
+      "Nurses"
+    ],
+    "systems": [
+      "Aging & mobility"
+    ],
     "idea": "Continuous AI patient observation replacing one-to-one sitters.",
     "take": "Continuous AI patient observation replacing one-to-one sitters.",
     "summary": "LookDeep runs computer-vision observation across inpatient rooms, tracking patient position, motion, and presence to flag fall risk and elopement, designed to let one remote observer safely cover the patients that would otherwise each require a dedicated sitter.",
@@ -7990,6 +9800,16 @@ const CATALOG = [
       "Clinical Decision Support & Medical Knowledge",
       "Inpatient & Acute Care"
     ],
+    "date": "2026-06-02",
+    "specialties": [
+      "Primary Care",
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers"
+    ],
+    "systems": [],
     "idea": "Automatic patient summaries from records nobody has time to read.",
     "take": "Automatic patient summaries from records nobody has time to read.",
     "summary": "Abstractive Health generates longitudinal patient summaries from fragmented records, including outside records arriving through health information exchanges, so clinicians meeting a patient for the first time start with a synthesis instead of a thousand-page PDF.",
@@ -8031,6 +9851,12 @@ const CATALOG = [
     "tags": [
       "Clinical Trials & Development"
     ],
+    "date": "2026-04-16",
+    "specialties": [
+      "Drug Development"
+    ],
+    "roles": [],
+    "systems": [],
     "idea": "Designing trial protocols with their cost and burden visible upfront.",
     "take": "Designing trial protocols with their cost and burden visible upfront.",
     "summary": "Faro turns protocol authoring into structured design, letting sponsors model the operational cost, site workload, and patient burden of each design decision before the protocol is finalised, attacking the amendments and enrolment failures that trace back to choices made on paper.",
@@ -8071,6 +9897,12 @@ const CATALOG = [
       "Revenue Cycle & Billing Automation",
       "Prior Authorization & Utilization Management"
     ],
+    "date": "2026-08-03",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [],
+    "systems": [],
     "idea": "Pre-built revenue-cycle agents you hire rather than configure.",
     "take": "Pre-built revenue-cycle agents you hire rather than configure.",
     "summary": "Thoughtful packages RCM automation as named agents, eligibility verification, claim status, payment posting, prior-auth follow-up, deployed against a provider's existing systems and priced against the labour they replace, avoiding long platform implementations.",
@@ -8112,6 +9944,19 @@ const CATALOG = [
       "Prior Authorization & Utilization Management",
       "Medication Safety & Adherence"
     ],
+    "date": "2026-06-17",
+    "specialties": [
+      "Surgery",
+      "Pharmacy",
+      "Health Administration"
+    ],
+    "roles": [
+      "Surgeons",
+      "Pharmacists",
+      "Hospital & health-system leaders",
+      "Payers & insurers"
+    ],
+    "systems": [],
     "idea": "Automating the benefit checks that gate GLP-1s and specialty drugs.",
     "take": "Automating the benefit checks that gate GLP-1s and specialty drugs.",
     "summary": "Develop Health uses voice and language AI to run pharmacy benefit verification and prior authorisation, determining coverage, restrictions, and cost for specialty medications where a single check can take a staffer half an hour on hold, a bottleneck the GLP-1 surge made acute.",
@@ -8152,6 +9997,15 @@ const CATALOG = [
     "tags": [
       "Claims, Payment Integrity & Fraud"
     ],
+    "date": "2026-05-01",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Payers & insurers",
+      "Patients & caregivers"
+    ],
+    "systems": [],
     "idea": "AI auditing of the itemised bills nobody has time to read.",
     "take": "AI auditing of the itemised bills nobody has time to read.",
     "summary": "Alaffia applies AI to complex claim and itemised-bill audit, the high-dollar facility bills where errors hide in hundreds of line items, automating the clinical and billing review that health plans and TPAs otherwise perform manually or skip entirely.",
@@ -8191,6 +10045,20 @@ const CATALOG = [
     "tags": [
       "Aging in Place & Home Health",
       "Aging in Place & Home Health"
+    ],
+    "date": "2026-03-15",
+    "specialties": [
+      "Critical Care",
+      "Pharmacy",
+      "Geriatrics & Senior Care",
+      "Health Administration"
+    ],
+    "roles": [
+      "Pharmacists",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Aging & mobility"
     ],
     "idea": "The operating system for home-care providers, with risk analytics built in.",
     "take": "The operating system for home-care providers, with risk analytics built in.",
@@ -8234,6 +10102,19 @@ const CATALOG = [
       "Aging in Place & Home Health",
       "Aging in Place & Home Health"
     ],
+    "date": "2026-06-26",
+    "specialties": [
+      "Nursing",
+      "Geriatrics & Senior Care",
+      "Health Administration"
+    ],
+    "roles": [
+      "Nurses",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Aging & mobility"
+    ],
     "idea": "Dutch computer vision that understands body language, not just motion.",
     "take": "Dutch computer vision that understands body language, not just motion.",
     "summary": "A University of Amsterdam spin-out, Kepler's Night Nurse interprets human body language from video to detect falls and patients needing help in care facilities, cutting the false alarms that make conventional motion-based alerting unusable at night.",
@@ -8276,6 +10157,18 @@ const CATALOG = [
       "Aging in Place & Home Health",
       "Aging in Place & Home Health"
     ],
+    "date": "2026-05-09",
+    "specialties": [
+      "Critical Care",
+      "Geriatrics & Senior Care"
+    ],
+    "roles": [
+      "Payers & insurers",
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Aging & mobility"
+    ],
     "idea": "Wiring home aides into the clinical team that never hears from them.",
     "take": "Wiring home aides into the clinical team that never hears from them.",
     "summary": "Vesta connects home-care aides, who see patients daily but sit outside clinical communication, to a virtual medical team, using their observations plus analytics to catch deterioration early in high-risk dual-eligible populations.",
@@ -8317,6 +10210,17 @@ const CATALOG = [
     "tags": [
       "Dental AI & Imaging"
     ],
+    "date": "2026-03-23",
+    "specialties": [
+      "Radiology",
+      "Dentistry"
+    ],
+    "roles": [
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Teeth & mouth"
+    ],
     "idea": "French dental AI that turns the X-ray into a patient conversation.",
     "take": "French dental AI that turns the X-ray into a patient conversation.",
     "summary": "Allisone analyses dental radiographs to detect and annotate findings, then automatically generates the patient-facing explanation and treatment presentation, targeting the communication gap that causes patients to decline recommended care they do not understand.",
@@ -8357,6 +10261,16 @@ const CATALOG = [
       "Patient Access & Engagement",
       "Telehealth & Digital Triage"
     ],
+    "date": "2026-07-11",
+    "specialties": [
+      "Emergency Medicine",
+      "Primary Care"
+    ],
+    "roles": [
+      "Primary care providers",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
     "idea": "Voice AI agents covering patient calls around the clock.",
     "take": "Voice AI agents covering patient calls around the clock.",
     "summary": "Parakeet builds conversational voice agents for healthcare organisations handling appointment management, intake, reminders, and routine questions in natural conversation, with configurable escalation to human staff when a call exceeds the agent's scope.",
@@ -8397,6 +10311,16 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
+    "date": "2026-05-25",
+    "specialties": [
+      "Oncology",
+      "Pharmacy",
+      "Drug Development"
+    ],
+    "roles": [],
+    "systems": [
+      "Cancer"
+    ],
     "idea": "Co-folding protein and drug together to design better binders.",
     "take": "Co-folding protein and drug together to design better binders.",
     "summary": "London-based Charm built DragonFold, a deep-learning approach that predicts the folded structure of a protein together with a candidate ligand rather than separately, a more physically faithful framing of binding that it applies to historically undruggable oncology targets.",
@@ -8436,6 +10360,16 @@ const CATALOG = [
     "tags": [
       "Pharmacovigilance & Regulatory Affairs"
     ],
+    "date": "2026-04-07",
+    "specialties": [
+      "Pharmacy",
+      "Drug Development"
+    ],
+    "roles": [
+      "Pharmacists",
+      "Researchers & pharma"
+    ],
+    "systems": [],
     "idea": "AI that assembles regulatory submissions from the underlying study data.",
     "take": "AI that assembles regulatory submissions from the underlying study data.",
     "summary": "Weave Bio automates construction of regulatory submission documents, IND, NDA, and CTA modules, by pulling from source study data and prior filings, aiming to compress the months of manual assembly that gate a programme's regulatory milestones.",
@@ -8474,6 +10408,20 @@ const CATALOG = [
     "status": "watch",
     "tags": [
       "Software as a Medical Device & RPM"
+    ],
+    "date": "2026-07-19",
+    "specialties": [
+      "Mental & Behavioral Health",
+      "Pharmacy"
+    ],
+    "roles": [
+      "Physicians",
+      "Pharmacists",
+      "Payers & insurers"
+    ],
+    "systems": [
+      "Bones & joints",
+      "Mental health"
     ],
     "idea": "Digital MSK that partners with clinics rather than bypassing them.",
     "take": "Digital MSK that partners with clinics rather than bypassing them.",
@@ -8514,6 +10462,18 @@ const CATALOG = [
     "tags": [
       "AI Therapy, Triage & Clinical Ops",
       "AI Therapy, Triage & Clinical Ops"
+    ],
+    "date": "2026-06-02",
+    "specialties": [
+      "Oncology",
+      "Mental & Behavioral Health"
+    ],
+    "roles": [
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Mental health",
+      "Cancer"
     ],
     "idea": "Detecting depression and anxiety from short samples of voice.",
     "take": "Detecting depression and anxiety from short samples of voice.",
@@ -8557,6 +10517,17 @@ const CATALOG = [
       "AI Therapy, Triage & Clinical Ops",
       "AI Therapy, Triage & Clinical Ops"
     ],
+    "date": "2026-04-16",
+    "specialties": [
+      "Mental & Behavioral Health",
+      "Critical Care"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Mental health"
+    ],
     "idea": "Video assessments analysed for what patients say and how they say it.",
     "take": "Video assessments analysed for what patients say and how they say it.",
     "summary": "Videra sends patients asynchronous video assessments and analyses the responses, language, facial expression, vocal characteristics, to track behavioural-health status between visits, flagging deterioration and relapse risk for clinical follow-up.",
@@ -8597,6 +10568,19 @@ const CATALOG = [
     "tags": [
       "Medication Safety & Adherence",
       "Medication Safety & Adherence"
+    ],
+    "date": "2026-07-28",
+    "specialties": [
+      "Pharmacy",
+      "Health Administration"
+    ],
+    "roles": [
+      "Pharmacists",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Bones & joints",
+      "Kidneys"
     ],
     "idea": "Personalised dosing for dialysis patients, protocol by protocol.",
     "take": "Personalised dosing for dialysis patients, protocol by protocol.",
@@ -8639,6 +10623,14 @@ const CATALOG = [
       "Dental AI & Imaging",
       "Patient Access & Engagement"
     ],
+    "date": "2026-06-17",
+    "specialties": [
+      "Dentistry"
+    ],
+    "roles": [],
+    "systems": [
+      "Teeth & mouth"
+    ],
     "idea": "An AI receptionist that never misses a dental practice's phone call.",
     "take": "An AI receptionist that never misses a dental practice's phone call.",
     "summary": "Arini builds voice AI for dental practices, answering calls, booking and rescheduling appointments, handling insurance questions, and following up on unbooked treatment, addressing the reality that most missed dental revenue is a phone call nobody answered.",
@@ -8680,6 +10672,17 @@ const CATALOG = [
       "Medication Safety & Adherence",
       "Patient Access & Engagement"
     ],
+    "date": "2026-05-01",
+    "specialties": [
+      "Pharmacy",
+      "Health Administration"
+    ],
+    "roles": [
+      "Pharmacists",
+      "Hospital & health-system leaders",
+      "Patients & caregivers"
+    ],
+    "systems": [],
     "idea": "Modern pharmacy commerce and automation for independents.",
     "take": "Modern pharmacy commerce and automation for independents.",
     "summary": "Nimble gives independent and small-chain pharmacies a modern digital front end plus back-office automation, refill management, delivery coordination, payments, and workflow, helping them compete against national chains and mail-order without their scale.",

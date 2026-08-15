@@ -3,84 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nithila Neminathan — Product thinking for AI in healthcare</title>
-  <meta name="description" content="Nithila Neminathan — aspiring product manager in AI and healthcare. Reviews, ventures, and work." />
+  <title>Vitai — What's new in AI across healthcare</title>
+  <meta name="description" content="Independent, up-to-date reviews of AI across every corner of healthcare. Browse by industry, specialty, or symptom, and follow the companies you care about." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div id="header-slot"></div>
 
-  <!-- Portfolio hero -->
-  <section class="p-hero">
+  <!-- Masthead band -->
+  <section class="masthead">
     <div class="wrap">
-      <div>
-        <p class="eyebrow" id="hero-role"></p>
-        <h1 id="hero-title"></h1>
-        <p class="intro" id="hero-intro"></p>
-        <div class="btns">
-          <a class="btn btn-solid" href="reviews.html">Explore the industries</a>
-          <a class="btn btn-ghost" href="#projects">See my work</a>
-        </div>
+      <p class="mast-kicker">Independent · updated continuously</p>
+      <h1 class="mast-title">What's new in <span class="accent">AI across healthcare</span></h1>
+      <p class="mast-sub">Every corner of healthcare, the AI reshaping it, and the companies to know. Browse by industry, your specialty, or a symptom.</p>
+      <form class="mast-search" onsubmit="location.href='reviews.html?q='+encodeURIComponent(document.getElementById('mq').value);return false;">
+        <span class="db-search-ico" aria-hidden="true"></span>
+        <input id="mq" type="search" placeholder="Search a condition, specialty, or company. Try gut health, neurology, sepsis" aria-label="Search" />
+        <button type="submit" class="mast-go">Search</button>
+      </form>
+      <div class="pulse-band" aria-hidden="true">
+        <svg viewBox="0 0 1280 46" preserveAspectRatio="none">
+          <path class="pulse-base" d="M0 23 H1280" />
+          <path class="pulse-line" d="M0 23 H150 l14 0 l8 -15 l10 30 l8 -23 l7 8 H430 l14 0 l8 -15 l10 30 l8 -23 l7 8 H710 l14 0 l8 -15 l10 30 l8 -23 l7 8 H990 l14 0 l8 -15 l10 30 l8 -23 l7 8 H1280" />
+        </svg>
       </div>
     </div>
   </section>
 
-  <!-- Selected reviews -->
-  <section class="section" id="work">
-    <div class="wrap reveal">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Selected analyses · Nithila Notes</p>
-          <h2>Featured reviews</h2>
-        </div>
-        <a class="link" href="reviews.html">Explore the industries →</a>
-      </div>
-      <div class="reviews" id="reviews"></div>
-      <a class="db-cta" href="reviews.html">See how AI is reshaping every healthcare industry →</a>
+  <!-- What's new -->
+  <section class="section-lite" id="whatsnew-sec">
+    <div class="wrap">
+      <div class="row-head"><h2>What's new</h2><a class="link" href="reviews.html?sort=new">All latest →</a></div>
+      <div class="feed-scroll" id="whatsnew"></div>
     </div>
   </section>
 
-  <!-- Areas -->
-  <section class="section alt" id="areas">
-    <div class="wrap reveal">
-      <div class="section-head"><div><p class="eyebrow">Sectors</p><h2>Areas I cover</h2></div></div>
+  <!-- Most notable -->
+  <section class="section-lite alt" id="notable-sec">
+    <div class="wrap">
+      <div class="row-head"><h2>Most notable</h2><a class="link" href="reviews.html?sort=top">Top rated →</a></div>
+      <div class="feed-grid" id="notable"></div>
+    </div>
+  </section>
+
+  <!-- Browse by industry -->
+  <section class="section-lite">
+    <div class="wrap">
+      <div class="row-head"><h2>Browse by industry</h2><a class="link" href="reviews.html">All industries →</a></div>
       <div class="areas" id="areas-grid"></div>
     </div>
   </section>
 
-  <!-- Projects (ONSET featured here) -->
-  <section class="section" id="projects">
-    <div class="wrap reveal">
-      <div class="section-head"><div><p class="eyebrow">Things I'm building</p><h2>Projects</h2></div></div>
-      <div id="onset-feature"></div>
-      <div id="projects-slot"></div>
+  <!-- By specialty -->
+  <section class="section-lite alt">
+    <div class="wrap">
+      <div class="row-head"><h2>Explore by specialty</h2><a class="link" href="reviews.html?view=specialty">All specialties →</a></div>
+      <div class="chip-row" id="specialty-chips"></div>
     </div>
   </section>
 
-  <!-- Involvement / experience -->
-  <section class="section" id="involvement">
-    <div class="wrap reveal">
-      <div class="section-head"><div><p class="eyebrow">Leadership · competitions · service</p><h2>Experience</h2></div></div>
-      <div class="inv-grid" id="involvement-slot"></div>
-    </div>
-  </section>
-
-  <!-- Research -->
-  <section class="section" id="research">
-    <div class="wrap reveal">
-      <div class="section-head"><div><p class="eyebrow">In the lab</p><h2>Research</h2></div></div>
-      <div id="research-slot"></div>
-    </div>
-  </section>
-
-  <!-- Fun fact -->
-  <section class="section alt" id="funfacts">
-    <div class="wrap reveal">
-      <div class="section-head"><div><p class="eyebrow">Off the clock</p><h2>Fun fact</h2></div></div>
-      <div id="funfacts-slot"></div>
+  <!-- For patients -->
+  <section class="section-lite">
+    <div class="wrap">
+      <div class="row-head"><h2>For patients &amp; families</h2><a class="link" href="reviews.html?view=patient">By symptom →</a></div>
+      <p class="row-note">Wondering what AI is doing for a condition you care about? Start with the body system.</p>
+      <div class="chip-row" id="system-chips"></div>
     </div>
   </section>
 
@@ -89,7 +79,7 @@
   <script src="icons.js"></script>
   <script src="data.js"></script>
   <script src="partials.js"></script>
-  <script src="ui.js"></script>
-  <script src="app.js"></script>
+  <script src="common.js"></script>
+  <script src="home.js"></script>
 </body>
 </html>

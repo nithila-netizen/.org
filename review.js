@@ -40,11 +40,18 @@ function render(p) {
   const deep = p.full
     ? `<a class="rv-deep" href="product.html?id=${encodeURIComponent(p.full)}">Read the full deep-dive review ${icon("arrow")}</a>` : "";
 
+  const dateStr = p.date ? fmtDate(p.date) : "";
   el.innerHTML = `
     <p class="crumb">${crumb}</p>
-    <p class="rv-eyebrow">${esc(p.field)}</p>
+    <p class="rv-eyebrow">${esc(p.field)}${dateStr ? ` · ${esc(dateStr)}` : ""}</p>
     <h1 class="rv-idea">${wrapTerms(esc(p.idea), new Set())}</h1>
-    <p class="rv-who">${esc(p.company)}${p.name && p.name !== p.company ? ` · ${esc(p.name)}` : ""}</p>
+    <div class="rv-who-row">
+      <p class="rv-who">${esc(p.company)}${p.name && p.name !== p.company ? ` · ${esc(p.name)}` : ""}</p>
+      <div class="rv-actions">
+        ${followBtn("companies", p.company, "Follow " + p.company)}
+        ${loc ? followBtn("topics", "sub:" + loc.sub.id, "Follow topic") : ""}
+      </div>
+    </div>
 
     <div class="rv-strip">
       <div><span class="rv-k">Rating</span>${stars(p.rating)}</div>
@@ -77,7 +84,7 @@ function render(p) {
 
     <p class="rv-disclaimer">Independent review for general information, not medical, legal, or purchasing advice. No affiliation with the company. Rating and verdict are opinions.</p>
   `;
-  document.title = `${p.company} · Nithila Notes`;
+  document.title = `${p.company} · Vitai`;
 }
 
 if (!item) {

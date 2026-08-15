@@ -19,7 +19,7 @@ const SITE = {
 /* --------------------------------------------------------------------------
    PROFILE, this is YOUR portfolio. Edit these to change the homepage.
    -------------------------------------------------------------------------- */
-/* Personal/portfolio data removed — Vitai is a non-personal publication. */
+/* Personal/portfolio data removed, Vitai is a non-personal publication. */
 
 const INDUSTRIES = [
   {
@@ -611,7 +611,7 @@ const CATALOG = [
       "Radiology & Medical Imaging",
       "Emergency Medicine"
     ],
-    "date": "2026-06-28",
+    "date": "2026-07-03",
     "specialties": [
       "Radiology",
       "Cardiology",
@@ -671,7 +671,7 @@ const CATALOG = [
       "Radiology & Medical Imaging",
       "Emergency Medicine"
     ],
-    "date": "2026-05-12",
+    "date": "2026-05-23",
     "specialties": [
       "Radiology",
       "Pathology",
@@ -730,7 +730,7 @@ const CATALOG = [
     "tags": [
       "Clinical Decision Support & Medical Knowledge"
     ],
-    "date": "2026-03-25",
+    "date": "2026-04-11",
     "specialties": [
       "Primary Care"
     ],
@@ -779,7 +779,7 @@ const CATALOG = [
       "Ambient Clinical Documentation",
       "Medical Coding & CDI"
     ],
-    "date": "2026-07-06",
+    "date": "2026-07-28",
     "specialties": [
       "Nursing",
       "Health Administration"
@@ -832,7 +832,7 @@ const CATALOG = [
       "Surgical AI & Robotics",
       "Surgery & Perioperative Care"
     ],
-    "date": "2026-05-20",
+    "date": "2026-06-17",
     "specialties": [
       "Emergency Medicine",
       "Dentistry",
@@ -885,7 +885,7 @@ const CATALOG = [
       "Radiology & Medical Imaging",
       "Digital Pathology"
     ],
-    "date": "2026-04-03",
+    "date": "2026-05-06",
     "specialties": [
       "Radiology",
       "Pathology",
@@ -941,7 +941,7 @@ const CATALOG = [
       "Radiology & Medical Imaging",
       "Ambient Clinical Documentation"
     ],
-    "date": "2026-07-22",
+    "date": "2026-04-01",
     "specialties": [
       "Radiology",
       "Health Administration"
@@ -992,7 +992,7 @@ const CATALOG = [
       "Point-of-Care Screening",
       "Primary Care & Virtual-First Medicine"
     ],
-    "date": "2026-06-04",
+    "date": "2026-07-19",
     "specialties": [
       "Radiology",
       "Endocrinology & Diabetes",
@@ -1049,7 +1049,7 @@ const CATALOG = [
       "Ambient Clinical Documentation",
       "Medical Coding & CDI"
     ],
-    "date": "2026-04-18",
+    "date": "2026-06-07",
     "specialties": [
       "Health Administration"
     ],
@@ -1097,7 +1097,7 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
-    "date": "2026-07-30",
+    "date": "2026-04-26",
     "specialties": [
       "Pharmacy",
       "Genetics & Genomics",
@@ -1147,7 +1147,7 @@ const CATALOG = [
     "tags": [
       "Dental AI & Imaging"
     ],
-    "date": "2026-06-13",
+    "date": "2026-03-16",
     "specialties": [
       "Dentistry",
       "Health Administration"
@@ -1200,7 +1200,7 @@ const CATALOG = [
       "Radiology & Medical Imaging",
       "Point-of-Care Screening"
     ],
-    "date": "2026-04-26",
+    "date": "2026-07-02",
     "specialties": [
       "Radiology",
       "Cardiology",
@@ -1261,7 +1261,7 @@ const CATALOG = [
     "tags": [
       "Digital Pathology"
     ],
-    "date": "2026-08-07",
+    "date": "2026-05-21",
     "specialties": [
       "Radiology",
       "Pathology",
@@ -1316,7 +1316,7 @@ const CATALOG = [
       "Genomics & Precision Medicine",
       "Real-World Data & Evidence"
     ],
-    "date": "2026-06-28",
+    "date": "2026-04-17",
     "specialties": [
       "Radiology",
       "Cardiology",
@@ -1375,7 +1375,7 @@ const CATALOG = [
       "Primary Care & Virtual-First Medicine",
       "Risk Adjustment & Quality Analytics"
     ],
-    "date": "2026-05-12",
+    "date": "2026-08-03",
     "specialties": [
       "Primary Care",
       "Health Administration"
@@ -1427,7 +1427,7 @@ const CATALOG = [
       "Ambient Clinical Documentation",
       "Clinical Decision Support & Medical Knowledge"
     ],
-    "date": "2026-03-26",
+    "date": "2026-06-22",
     "specialties": [
       "Endocrinology & Diabetes",
       "Health Administration"
@@ -1482,7 +1482,7 @@ const CATALOG = [
     "tags": [
       "Medical Coding & CDI"
     ],
-    "date": "2026-07-06",
+    "date": "2026-05-12",
     "specialties": [
       "Radiology",
       "Health Administration"
@@ -1531,7 +1531,7 @@ const CATALOG = [
     "tags": [
       "Prior Authorization & Utilization Management"
     ],
-    "date": "2026-05-20",
+    "date": "2026-03-31",
     "specialties": [
       "Health Administration"
     ],
@@ -1579,7 +1579,7 @@ const CATALOG = [
       "Revenue Cycle & Billing Automation",
       "Prior Authorization & Utilization Management"
     ],
-    "date": "2026-04-03",
+    "date": "2026-07-17",
     "specialties": [
       "Pharmacy",
       "Health Administration"
@@ -1633,7 +1633,7 @@ const CATALOG = [
       "AI Drug Discovery & Design",
       "Clinical Trials & Development"
     ],
-    "date": "2026-07-15",
+    "date": "2026-06-06",
     "specialties": [
       "Surgery",
       "Pharmacy",
@@ -1684,7 +1684,7 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Cardiac Diagnostics"
     ],
-    "date": "2026-06-05",
+    "date": "2026-05-02",
     "specialties": [
       "Cardiology"
     ],
@@ -1736,7 +1736,7 @@ const CATALOG = [
       "Point-of-Care Screening",
       "Primary Care & Virtual-First Medicine"
     ],
-    "date": "2026-04-18",
+    "date": "2026-03-21",
     "specialties": [
       "Radiology",
       "Oncology",
@@ -1792,7 +1792,7 @@ const CATALOG = [
     "tags": [
       "Radiology & Medical Imaging"
     ],
-    "date": "2026-07-30",
+    "date": "2026-07-08",
     "specialties": [
       "Radiology"
     ],
@@ -1840,7 +1840,7 @@ const CATALOG = [
     "tags": [
       "Digital Pathology"
     ],
-    "date": "2026-06-13",
+    "date": "2026-05-27",
     "specialties": [
       "Radiology",
       "Pathology",
@@ -1894,7 +1894,7 @@ const CATALOG = [
       "Cardiac Diagnostics",
       "Point-of-Care Screening"
     ],
-    "date": "2026-04-27",
+    "date": "2026-04-15",
     "specialties": [
       "Radiology",
       "Cardiology",
@@ -1949,7 +1949,7 @@ const CATALOG = [
     "tags": [
       "Cardiac Diagnostics"
     ],
-    "date": "2026-08-07",
+    "date": "2026-08-02",
     "specialties": [
       "Radiology",
       "Cardiology"
@@ -2049,7 +2049,7 @@ const CATALOG = [
     "tags": [
       "Ambient Clinical Documentation"
     ],
-    "date": "2026-05-12",
+    "date": "2026-05-17",
     "specialties": [
       "Health Administration"
     ],
@@ -2097,7 +2097,7 @@ const CATALOG = [
     "tags": [
       "Medical Coding & CDI"
     ],
-    "date": "2026-03-26",
+    "date": "2026-04-06",
     "specialties": [
       "Health Administration"
     ],
@@ -2144,7 +2144,7 @@ const CATALOG = [
     "tags": [
       "Real-World Data & Evidence"
     ],
-    "date": "2026-07-07",
+    "date": "2026-07-23",
     "specialties": [
       "Genetics & Genomics",
       "Public Health",
@@ -2193,7 +2193,7 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM"
     ],
-    "date": "2026-05-20",
+    "date": "2026-06-11",
     "specialties": [
       "Mental & Behavioral Health",
       "Surgery"
@@ -2245,7 +2245,7 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM"
     ],
-    "date": "2026-04-03",
+    "date": "2026-05-01",
     "specialties": [
       "Emergency Medicine",
       "Mental & Behavioral Health",
@@ -2301,7 +2301,7 @@ const CATALOG = [
     "tags": [
       "AI Therapy, Triage & Clinical Ops"
     ],
-    "date": "2026-07-15",
+    "date": "2026-03-20",
     "specialties": [
       "Mental & Behavioral Health"
     ],
@@ -2353,7 +2353,7 @@ const CATALOG = [
       "AI Therapy, Triage & Clinical Ops",
       "Ambient Clinical Documentation"
     ],
-    "date": "2026-05-29",
+    "date": "2026-07-06",
     "specialties": [
       "Mental & Behavioral Health",
       "Health Administration"
@@ -2402,7 +2402,7 @@ const CATALOG = [
     "tags": [
       "Aging in Place & Home Health"
     ],
-    "date": "2026-04-19",
+    "date": "2026-06-02",
     "specialties": [
       "Geriatrics & Senior Care"
     ],
@@ -2451,7 +2451,7 @@ const CATALOG = [
     "tags": [
       "Dental AI & Imaging"
     ],
-    "date": "2026-07-30",
+    "date": "2026-04-21",
     "specialties": [
       "Radiology",
       "Dentistry"
@@ -2501,7 +2501,7 @@ const CATALOG = [
     "tags": [
       "Disease Surveillance & Biosecurity"
     ],
-    "date": "2026-06-13",
+    "date": "2026-08-07",
     "specialties": [
       "Public Health"
     ],
@@ -2549,7 +2549,7 @@ const CATALOG = [
       "Radiology & Medical Imaging",
       "Emergency Medicine"
     ],
-    "date": "2026-04-27",
+    "date": "2026-06-27",
     "specialties": [
       "Radiology",
       "Cardiology",
@@ -2597,6 +2597,61 @@ const CATALOG = [
     ]
   },
   {
+    "slug": "rapidai",
+    "name": "RapidAI",
+    "company": "RapidAI",
+    "field": "Diagnostics & Imaging",
+    "rating": 4.3,
+    "status": "has-ai",
+    "tags": [
+      "Radiology & Medical Imaging",
+      "Emergency Medicine"
+    ],
+    "date": "2026-05-16",
+    "specialties": [
+      "Radiology",
+      "Cardiology",
+      "Neurology",
+      "Emergency Medicine"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians"
+    ],
+    "systems": [
+      "Heart & circulation",
+      "Brain & nervous system"
+    ],
+    "idea": "Time-critical stroke and vascular imaging AI.",
+    "take": "Time-critical stroke and vascular imaging AI.",
+    "summary": "RapidAI analyzes CT and MR imaging to flag stroke and vascular emergencies and coordinate the response team, deployed across stroke networks worldwide.",
+    "capabilities": [
+      "Stroke perfusion and large-vessel-occlusion analysis",
+      "Aneurysm and PE modules",
+      "Care-team coordination"
+    ],
+    "pros": [
+      "Deep stroke-imaging track record",
+      "Broad hospital network"
+    ],
+    "cons": [
+      "Competes head-to-head with other stroke platforms",
+      "Per-module economics add up"
+    ],
+    "verdict": "A category leader in stroke imaging. Shortlist alongside the other neurovascular platforms.",
+    "bestFor": "",
+    "regulatory": "FDA-cleared products",
+    "hq": "San Mateo, USA",
+    "founded": "",
+    "website": "https://www.rapidai.com",
+    "pricing": "",
+    "subIndustries": [
+      "radiology",
+      "emergency-medicine",
+      "cardiac-diagnostics"
+    ]
+  },
+  {
     "slug": "pathai",
     "name": "PathAI",
     "company": "PathAI",
@@ -2607,7 +2662,7 @@ const CATALOG = [
       "Digital Pathology",
       "Clinical Trials & Development"
     ],
-    "date": "2026-08-08",
+    "date": "2026-04-04",
     "specialties": [
       "Radiology",
       "Pathology",
@@ -2667,7 +2722,7 @@ const CATALOG = [
     "tags": [
       "Cardiac Diagnostics"
     ],
-    "date": "2026-06-22",
+    "date": "2026-07-22",
     "specialties": [
       "Radiology",
       "Cardiology"
@@ -2718,7 +2773,7 @@ const CATALOG = [
     "tags": [
       "Genomics & Precision Medicine"
     ],
-    "date": "2026-05-05",
+    "date": "2026-06-17",
     "specialties": [
       "Radiology",
       "Genetics & Genomics"
@@ -2766,7 +2821,7 @@ const CATALOG = [
     "tags": [
       "Point-of-Care Screening"
     ],
-    "date": "2026-03-26",
+    "date": "2026-05-06",
     "specialties": [
       "Radiology",
       "Endocrinology & Diabetes",
@@ -2818,7 +2873,7 @@ const CATALOG = [
     "tags": [
       "Patient Access & Engagement"
     ],
-    "date": "2026-07-07",
+    "date": "2026-03-26",
     "specialties": [
       "Primary Care",
       "Pharmacy",
@@ -2870,7 +2925,7 @@ const CATALOG = [
     "tags": [
       "Ambient Clinical Documentation"
     ],
-    "date": "2026-05-21",
+    "date": "2026-07-12",
     "specialties": [
       "Health Administration"
     ],
@@ -2917,7 +2972,7 @@ const CATALOG = [
     "tags": [
       "Ambient Clinical Documentation"
     ],
-    "date": "2026-04-03",
+    "date": "2026-05-31",
     "specialties": [
       "Primary Care",
       "Nursing",
@@ -2968,7 +3023,7 @@ const CATALOG = [
     "tags": [
       "Medical Coding & CDI"
     ],
-    "date": "2026-07-15",
+    "date": "2026-04-20",
     "specialties": [
       "Radiology",
       "Pathology",
@@ -3023,7 +3078,7 @@ const CATALOG = [
       "Revenue Cycle & Billing Automation",
       "Prior Authorization & Utilization Management"
     ],
-    "date": "2026-05-29",
+    "date": "2026-08-06",
     "specialties": [
       "Health Administration"
     ],
@@ -3071,7 +3126,7 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
-    "date": "2026-04-12",
+    "date": "2026-07-02",
     "specialties": [
       "Drug Development"
     ],
@@ -3116,7 +3171,7 @@ const CATALOG = [
     "tags": [
       "Clinical Trials & Development"
     ],
-    "date": "2026-07-31",
+    "date": "2026-05-22",
     "specialties": [
       "Neurology",
       "Drug Development"
@@ -3165,7 +3220,7 @@ const CATALOG = [
       "Real-World Data & Evidence",
       "Clinical Decision Support & Medical Knowledge"
     ],
-    "date": "2026-06-13",
+    "date": "2026-04-10",
     "specialties": [
       "Nursing",
       "Drug Development"
@@ -3216,7 +3271,7 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Software as a Medical Device & RPM"
     ],
-    "date": "2026-04-27",
+    "date": "2026-07-27",
     "specialties": [
       "Cardiology"
     ],
@@ -3270,7 +3325,7 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM"
     ],
-    "date": "2026-08-08",
+    "date": "2026-06-16",
     "specialties": [
       "Radiology",
       "Critical Care",
@@ -3325,7 +3380,7 @@ const CATALOG = [
       "AI Therapy, Triage & Clinical Ops",
       "AI Therapy, Triage & Clinical Ops"
     ],
-    "date": "2026-06-22",
+    "date": "2026-05-05",
     "specialties": [
       "Emergency Medicine",
       "Mental & Behavioral Health"
@@ -3378,7 +3433,7 @@ const CATALOG = [
     "tags": [
       "AI Therapy, Triage & Clinical Ops"
     ],
-    "date": "2026-05-06",
+    "date": "2026-03-24",
     "specialties": [
       "Mental & Behavioral Health",
       "Health Administration"
@@ -3429,7 +3484,7 @@ const CATALOG = [
     "tags": [
       "Aging in Place & Home Health"
     ],
-    "date": "2026-03-19",
+    "date": "2026-07-18",
     "specialties": [
       "Geriatrics & Senior Care"
     ],
@@ -3478,7 +3533,7 @@ const CATALOG = [
     "tags": [
       "Medication Safety & Adherence"
     ],
-    "date": "2026-07-07",
+    "date": "2026-06-06",
     "specialties": [
       "Pharmacy",
       "Public Health"
@@ -3527,7 +3582,7 @@ const CATALOG = [
     "tags": [
       "Population Health & Value-Based Care"
     ],
-    "date": "2026-05-21",
+    "date": "2026-04-25",
     "specialties": [
       "Public Health",
       "Health Administration"
@@ -3576,7 +3631,7 @@ const CATALOG = [
       "Radiology & Medical Imaging",
       "Emergency Medicine"
     ],
-    "date": "2026-04-04",
+    "date": "2026-03-15",
     "specialties": [
       "Radiology",
       "Emergency Medicine"
@@ -3629,7 +3684,7 @@ const CATALOG = [
       "Cardiac Diagnostics",
       "Point-of-Care Screening"
     ],
-    "date": "2026-07-15",
+    "date": "2026-07-01",
     "specialties": [
       "Radiology",
       "Cardiology",
@@ -3683,7 +3738,7 @@ const CATALOG = [
       "Emergency Medicine",
       "Telehealth & Digital Triage"
     ],
-    "date": "2026-05-29",
+    "date": "2026-05-20",
     "specialties": [
       "Emergency Medicine",
       "Nursing",
@@ -3736,7 +3791,7 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
-    "date": "2026-04-12",
+    "date": "2026-04-09",
     "specialties": [
       "Genetics & Genomics",
       "Drug Development"
@@ -3773,6 +3828,152 @@ const CATALOG = [
     ]
   },
   {
+    "slug": "hippocratic-ai",
+    "name": "Hippocratic AI",
+    "company": "Hippocratic AI",
+    "field": "Primary & Ambulatory Care",
+    "rating": 4.2,
+    "status": "watch",
+    "tags": [
+      "Patient Access & Engagement",
+      "Nursing & Virtual Care Teams"
+    ],
+    "date": "2026-08-02",
+    "specialties": [
+      "Primary Care",
+      "Nursing"
+    ],
+    "roles": [
+      "Nurses",
+      "Physicians",
+      "Primary care providers",
+      "Patients & caregivers"
+    ],
+    "systems": [
+      "Bones & joints"
+    ],
+    "idea": "A safety-first healthcare LLM powering AI agents for patient phone calls.",
+    "take": "A safety-first healthcare LLM powering AI agents for patient phone calls.",
+    "summary": "Hippocratic AI builds large language models tuned for non-diagnostic, patient-facing tasks, deploying conversational agents for outreach, follow-up, and chronic-care check-ins with a safety-focused evaluation program.",
+    "capabilities": [
+      "Voice agents for reminders, follow-up, and navigation",
+      "Safety-tuned models for non-diagnostic tasks",
+      "Integration into health-system outreach workflows"
+    ],
+    "pros": [
+      "Attacks the workforce-shortage problem directly",
+      "Serious investment in safety evaluation"
+    ],
+    "cons": [
+      "Non-diagnostic scope by design",
+      "Trust in voice agents still being earned"
+    ],
+    "verdict": "One of the most watched bets on patient-facing healthcare AI. The safety framing is the right posture for the category.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "Palo Alto, USA",
+    "founded": "",
+    "website": "https://www.hippocratic.ai",
+    "pricing": "",
+    "subIndustries": [
+      "patient-access",
+      "nursing"
+    ]
+  },
+  {
+    "slug": "qventus-ops",
+    "name": "Qventus",
+    "company": "Qventus",
+    "field": "Hospitals & Health Systems",
+    "rating": 4.2,
+    "status": "has-ai",
+    "tags": [
+      "Hospital Operations & Patient Flow",
+      "Inpatient & Acute Care"
+    ],
+    "date": "2026-06-21",
+    "specialties": [
+      "Surgery",
+      "Health Administration"
+    ],
+    "roles": [
+      "Surgeons",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
+    "idea": "AI that runs the daily operations of the hospital floor.",
+    "take": "AI that runs the daily operations of the hospital floor.",
+    "summary": "Qventus forecasts patient flow and automates operational work across inpatient units and the OR, from discharge planning to surgical scheduling.",
+    "capabilities": [
+      "Patient-flow prediction and capacity management",
+      "Automated discharge and OR scheduling workflows",
+      "Operational analytics for throughput"
+    ],
+    "pros": [
+      "Targets unglamorous, high-leverage operational waste",
+      "Measurable throughput impact at scale"
+    ],
+    "cons": [
+      "Value depends on operational buy-in",
+      "Change management is real work"
+    ],
+    "verdict": "A leading name in hospital operations AI. Best where leadership will act on what it surfaces.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "Mountain View, USA",
+    "founded": "",
+    "website": "https://qventus.com",
+    "pricing": "",
+    "subIndustries": [
+      "hospital-operations",
+      "inpatient-care"
+    ]
+  },
+  {
+    "slug": "generate-biomedicines",
+    "name": "Generate Biomedicines",
+    "company": "Generate Biomedicines",
+    "field": "Pharma & Life Sciences",
+    "rating": 4.2,
+    "status": "watch",
+    "tags": [
+      "AI Drug Discovery & Design"
+    ],
+    "date": "2026-05-11",
+    "specialties": [
+      "Genetics & Genomics",
+      "Drug Development"
+    ],
+    "roles": [],
+    "systems": [],
+    "idea": "Generative biology that designs new proteins as medicines.",
+    "take": "Generative biology that designs new proteins as medicines.",
+    "summary": "Generate Biomedicines uses generative models over protein structure and sequence to design novel therapeutic proteins across modalities.",
+    "capabilities": [
+      "Generative protein design",
+      "Multi-modality programs",
+      "Wet-lab-in-the-loop validation"
+    ],
+    "pros": [
+      "At the frontier of generative biology",
+      "Well-capitalized programs"
+    ],
+    "cons": [
+      "Clinical validation is years out",
+      "Capital-intensive"
+    ],
+    "verdict": "One of the most ambitious generative-biology platforms. A long-horizon bet worth tracking.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "Somerville, USA",
+    "founded": "",
+    "website": "https://generatebiomedicines.com",
+    "pricing": "",
+    "subIndustries": [
+      "drug-discovery"
+    ]
+  },
+  {
     "slug": "sophia-genetics",
     "name": "SOPHiA GENETICS",
     "company": "SOPHiA GENETICS",
@@ -3782,7 +3983,7 @@ const CATALOG = [
     "tags": [
       "Genomics & Precision Medicine"
     ],
-    "date": "2026-07-24",
+    "date": "2026-03-30",
     "specialties": [
       "Radiology",
       "Oncology",
@@ -3834,7 +4035,7 @@ const CATALOG = [
       "Primary Care & Virtual-First Medicine",
       "Telehealth & Digital Triage"
     ],
-    "date": "2026-06-14",
+    "date": "2026-07-16",
     "specialties": [
       "Emergency Medicine",
       "Primary Care",
@@ -3890,7 +4091,7 @@ const CATALOG = [
       "Telehealth & Digital Triage",
       "Primary Care & Virtual-First Medicine"
     ],
-    "date": "2026-04-27",
+    "date": "2026-06-05",
     "specialties": [
       "Emergency Medicine",
       "Primary Care"
@@ -3944,7 +4145,7 @@ const CATALOG = [
       "Telehealth & Digital Triage",
       "Patient Access & Engagement"
     ],
-    "date": "2026-08-08",
+    "date": "2026-04-24",
     "specialties": [
       "Emergency Medicine",
       "Primary Care"
@@ -3996,7 +4197,7 @@ const CATALOG = [
     "tags": [
       "Patient Access & Engagement"
     ],
-    "date": "2026-06-22",
+    "date": "2026-03-20",
     "specialties": [
       "Primary Care"
     ],
@@ -4044,7 +4245,7 @@ const CATALOG = [
     "tags": [
       "Medical Coding & CDI"
     ],
-    "date": "2026-05-06",
+    "date": "2026-07-07",
     "specialties": [
       "Radiology",
       "Health Administration"
@@ -4094,7 +4295,7 @@ const CATALOG = [
       "Medical Coding & CDI",
       "Inpatient & Acute Care"
     ],
-    "date": "2026-03-20",
+    "date": "2026-05-26",
     "specialties": [
       "Pathology",
       "Health Administration"
@@ -4145,7 +4346,7 @@ const CATALOG = [
     "tags": [
       "Revenue Cycle & Billing Automation"
     ],
-    "date": "2026-06-30",
+    "date": "2026-04-14",
     "specialties": [
       "Health Administration"
     ],
@@ -4192,7 +4393,7 @@ const CATALOG = [
     "tags": [
       "Risk Adjustment & Quality Analytics"
     ],
-    "date": "2026-05-21",
+    "date": "2026-08-01",
     "specialties": [
       "Health Administration"
     ],
@@ -4240,7 +4441,7 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
-    "date": "2026-04-04",
+    "date": "2026-06-20",
     "specialties": [
       "Radiology",
       "Drug Development"
@@ -4286,7 +4487,7 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
-    "date": "2026-07-16",
+    "date": "2026-05-09",
     "specialties": [
       "Genetics & Genomics",
       "Drug Development"
@@ -4334,7 +4535,7 @@ const CATALOG = [
     "tags": [
       "Clinical Trials & Development"
     ],
-    "date": "2026-05-30",
+    "date": "2026-04-05",
     "specialties": [
       "Drug Development"
     ],
@@ -4379,7 +4580,7 @@ const CATALOG = [
     "tags": [
       "Pharmacovigilance & Regulatory Affairs"
     ],
-    "date": "2026-04-12",
+    "date": "2026-07-22",
     "specialties": [
       "Emergency Medicine",
       "Pharmacy",
@@ -4432,7 +4633,7 @@ const CATALOG = [
     "tags": [
       "Surgical AI & Robotics"
     ],
-    "date": "2026-07-24",
+    "date": "2026-06-10",
     "specialties": [
       "Surgery",
       "Nursing",
@@ -4483,7 +4684,7 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM"
     ],
-    "date": "2026-06-07",
+    "date": "2026-04-30",
     "specialties": [
       "Endocrinology & Diabetes",
       "Pharmacy"
@@ -4533,7 +4734,7 @@ const CATALOG = [
       "Aging in Place & Home Health",
       "Aging in Place & Home Health"
     ],
-    "date": "2026-04-28",
+    "date": "2026-03-19",
     "specialties": [
       "Geriatrics & Senior Care",
       "Health Administration"
@@ -4586,7 +4787,7 @@ const CATALOG = [
     "tags": [
       "Medication Safety & Adherence"
     ],
-    "date": "2026-08-08",
+    "date": "2026-07-05",
     "specialties": [
       "Pharmacy"
     ],
@@ -4635,7 +4836,7 @@ const CATALOG = [
     "tags": [
       "Dental AI & Imaging"
     ],
-    "date": "2026-06-22",
+    "date": "2026-05-25",
     "specialties": [
       "Dentistry"
     ],
@@ -4686,7 +4887,7 @@ const CATALOG = [
     "tags": [
       "Population Health & Value-Based Care"
     ],
-    "date": "2026-05-06",
+    "date": "2026-04-20",
     "specialties": [
       "Public Health"
     ],
@@ -4734,7 +4935,7 @@ const CATALOG = [
     "tags": [
       "Radiology & Medical Imaging"
     ],
-    "date": "2026-03-20",
+    "date": "2026-08-06",
     "specialties": [
       "Radiology"
     ],
@@ -4783,7 +4984,7 @@ const CATALOG = [
       "Digital Pathology",
       "AI Drug Discovery & Design"
     ],
-    "date": "2026-07-01",
+    "date": "2026-06-26",
     "specialties": [
       "Radiology",
       "Pathology",
@@ -4840,7 +5041,7 @@ const CATALOG = [
       "Inpatient & Acute Care",
       "Real-World Data & Evidence"
     ],
-    "date": "2026-05-14",
+    "date": "2026-05-15",
     "specialties": [
       "Radiology",
       "Cardiology"
@@ -4893,7 +5094,7 @@ const CATALOG = [
     "tags": [
       "Clinical Trials & Development"
     ],
-    "date": "2026-04-04",
+    "date": "2026-04-03",
     "specialties": [
       "Drug Development"
     ],
@@ -4941,7 +5142,7 @@ const CATALOG = [
       "Real-World Data & Evidence",
       "Digital Pathology"
     ],
-    "date": "2026-07-16",
+    "date": "2026-07-21",
     "specialties": [
       "Pathology",
       "Oncology",
@@ -4997,7 +5198,7 @@ const CATALOG = [
       "Medical Coding & CDI",
       "Revenue Cycle & Billing Automation"
     ],
-    "date": "2026-05-30",
+    "date": "2026-06-09",
     "specialties": [
       "Health Administration"
     ],
@@ -5036,6 +5237,204 @@ const CATALOG = [
     ]
   },
   {
+    "slug": "leantaas",
+    "name": "LeanTaaS",
+    "company": "LeanTaaS",
+    "field": "Hospitals & Health Systems",
+    "rating": 4.1,
+    "status": "has-ai",
+    "tags": [
+      "Hospital Operations & Patient Flow"
+    ],
+    "date": "2026-05-05",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
+    "idea": "Capacity optimization for ORs, infusion centers, and inpatient beds.",
+    "take": "Capacity optimization for ORs, infusion centers, and inpatient beds.",
+    "summary": "LeanTaaS applies predictive analytics and its iQueue products to squeeze more usable capacity out of expensive hospital assets.",
+    "capabilities": [
+      "OR time optimization",
+      "Infusion-center scheduling",
+      "Inpatient bed and capacity planning"
+    ],
+    "pros": [
+      "Clear ROI on scarce, costly resources",
+      "Deep installed base"
+    ],
+    "cons": [
+      "Point-solution breadth varies by asset",
+      "Requires disciplined scheduling change"
+    ],
+    "verdict": "The capacity-optimization workhorse. Strong where OR and infusion utilization is the constraint.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "Santa Clara, USA",
+    "founded": "",
+    "website": "https://leantaas.com",
+    "pricing": "",
+    "subIndustries": [
+      "hospital-operations"
+    ]
+  },
+  {
+    "slug": "icometrix",
+    "name": "icometrix",
+    "company": "icometrix",
+    "field": "Diagnostics & Imaging",
+    "rating": 4.1,
+    "status": "has-ai",
+    "tags": [
+      "Radiology & Medical Imaging"
+    ],
+    "date": "2026-03-25",
+    "specialties": [
+      "Radiology",
+      "Neurology",
+      "Emergency Medicine",
+      "Dermatology"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians"
+    ],
+    "systems": [
+      "Brain & nervous system",
+      "Skin"
+    ],
+    "idea": "Neuroimaging AI quantifying MS, dementia, and brain injury.",
+    "take": "Neuroimaging AI quantifying MS, dementia, and brain injury.",
+    "summary": "icometrix turns brain MRI and CT into quantitative reports for multiple sclerosis, dementia, and traumatic brain injury.",
+    "capabilities": [
+      "Brain-volume and lesion quantification",
+      "Longitudinal neuro tracking",
+      "Structured reporting"
+    ],
+    "pros": [
+      "Turns qualitative reads into measurable trends",
+      "Strong neuro focus"
+    ],
+    "cons": [
+      "Specialist scope",
+      "Requires quality MRI protocols"
+    ],
+    "verdict": "A leading quantitative-neuroimaging tool for MS and dementia programs.",
+    "bestFor": "",
+    "regulatory": "FDA-cleared; CE marked",
+    "hq": "Leuven, Belgium",
+    "founded": "",
+    "website": "https://icometrix.com",
+    "pricing": "",
+    "subIndustries": [
+      "radiology"
+    ]
+  },
+  {
+    "slug": "cardiologs",
+    "name": "Cardiologs",
+    "company": "Philips (Cardiologs)",
+    "field": "Diagnostics & Imaging",
+    "rating": 4.1,
+    "status": "has-ai",
+    "tags": [
+      "Cardiac Diagnostics"
+    ],
+    "date": "2026-07-11",
+    "specialties": [
+      "Radiology",
+      "Cardiology",
+      "Primary Care"
+    ],
+    "roles": [
+      "Physicians",
+      "Primary care providers",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Heart & circulation"
+    ],
+    "idea": "ECG analysis AI for arrhythmia detection at scale.",
+    "take": "ECG analysis AI for arrhythmia detection at scale.",
+    "summary": "Cardiologs, now part of Philips, applies deep learning to ECGs to detect arrhythmias across ambulatory and remote monitoring.",
+    "capabilities": [
+      "Multi-condition ECG interpretation",
+      "Ambulatory and remote monitoring support",
+      "Reporting automation"
+    ],
+    "pros": [
+      "Scales scarce cardiology reading capacity",
+      "Backed by Philips distribution"
+    ],
+    "cons": [
+      "Platform-roadmap dependence",
+      "Commoditizing ECG-AI space"
+    ],
+    "verdict": "A proven ECG-AI engine with the reach of a large parent behind it.",
+    "bestFor": "",
+    "regulatory": "FDA-cleared; CE marked",
+    "hq": "",
+    "founded": "",
+    "website": "https://www.cardiologs.com",
+    "pricing": "",
+    "subIndustries": [
+      "cardiac-diagnostics"
+    ]
+  },
+  {
+    "slug": "caption-health",
+    "name": "Caption Health",
+    "company": "GE HealthCare (Caption Health)",
+    "field": "Diagnostics & Imaging",
+    "rating": 4.1,
+    "status": "has-ai",
+    "tags": [
+      "Cardiac Diagnostics",
+      "Software as a Medical Device & RPM"
+    ],
+    "date": "2026-05-30",
+    "specialties": [
+      "Radiology",
+      "Cardiology"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Heart & circulation"
+    ],
+    "idea": "AI that guides anyone to capture a diagnostic echocardiogram.",
+    "take": "AI that guides anyone to capture a diagnostic echocardiogram.",
+    "summary": "Caption Health, part of GE HealthCare, guides non-experts through cardiac ultrasound and auto-captures diagnostic-quality images, extending echo beyond the sonographer.",
+    "capabilities": [
+      "Real-time scan guidance for novices",
+      "Automated quality capture",
+      "Point-of-care echo expansion"
+    ],
+    "pros": [
+      "Democratizes echo acquisition",
+      "Clear access impact"
+    ],
+    "cons": [
+      "Downstream interpretation still needed",
+      "Hardware pairing dependency"
+    ],
+    "verdict": "A landmark in guided acquisition. Powerful where sonographer time is the bottleneck.",
+    "bestFor": "",
+    "regulatory": "FDA-cleared (guidance + quality)",
+    "hq": "",
+    "founded": "",
+    "website": "https://www.gehealthcare.com",
+    "pricing": "",
+    "subIndustries": [
+      "cardiac-diagnostics",
+      "smart-diagnostics-devices"
+    ]
+  },
+  {
     "slug": "proscia",
     "name": "Proscia Concentriq",
     "company": "Proscia",
@@ -5045,7 +5444,7 @@ const CATALOG = [
     "tags": [
       "Digital Pathology"
     ],
-    "date": "2026-04-13",
+    "date": "2026-04-19",
     "specialties": [
       "Radiology",
       "Pathology"
@@ -5096,7 +5495,7 @@ const CATALOG = [
       "Point-of-Care Screening",
       "Software as a Medical Device & RPM"
     ],
-    "date": "2026-07-24",
+    "date": "2026-08-05",
     "specialties": [
       "Radiology",
       "Oncology",
@@ -5152,7 +5551,7 @@ const CATALOG = [
     "tags": [
       "Clinical Decision Support & Medical Knowledge"
     ],
-    "date": "2026-06-07",
+    "date": "2026-06-24",
     "specialties": [
       "Primary Care",
       "Public Health"
@@ -5202,7 +5601,7 @@ const CATALOG = [
     "tags": [
       "Patient Access & Engagement"
     ],
-    "date": "2026-04-21",
+    "date": "2026-05-21",
     "specialties": [
       "Primary Care"
     ],
@@ -5249,7 +5648,7 @@ const CATALOG = [
     "tags": [
       "Prior Authorization & Utilization Management"
     ],
-    "date": "2026-08-09",
+    "date": "2026-04-09",
     "specialties": [
       "Health Administration"
     ],
@@ -5298,7 +5697,7 @@ const CATALOG = [
     "tags": [
       "Claims, Payment Integrity & Fraud"
     ],
-    "date": "2026-06-22",
+    "date": "2026-07-26",
     "specialties": [
       "Health Administration"
     ],
@@ -5345,7 +5744,7 @@ const CATALOG = [
     "tags": [
       "Claims, Payment Integrity & Fraud"
     ],
-    "date": "2026-05-06",
+    "date": "2026-06-15",
     "specialties": [
       "Health Administration"
     ],
@@ -5394,7 +5793,7 @@ const CATALOG = [
       "Risk Adjustment & Quality Analytics",
       "Population Health & Value-Based Care"
     ],
-    "date": "2026-03-20",
+    "date": "2026-05-04",
     "specialties": [
       "Health Administration"
     ],
@@ -5443,7 +5842,7 @@ const CATALOG = [
       "Clinical Trials & Development",
       "Pharmacovigilance & Regulatory Affairs"
     ],
-    "date": "2026-07-01",
+    "date": "2026-03-23",
     "specialties": [
       "Pharmacy",
       "Drug Development"
@@ -5494,7 +5893,7 @@ const CATALOG = [
     "tags": [
       "Pharmacovigilance & Regulatory Affairs"
     ],
-    "date": "2026-05-15",
+    "date": "2026-07-10",
     "specialties": [
       "Pharmacy",
       "Drug Development"
@@ -5544,7 +5943,7 @@ const CATALOG = [
       "Real-World Data & Evidence",
       "Clinical Trials & Development"
     ],
-    "date": "2026-03-28",
+    "date": "2026-06-05",
     "specialties": [
       "Oncology",
       "Genetics & Genomics",
@@ -5597,7 +5996,7 @@ const CATALOG = [
       "Surgical AI & Robotics",
       "Surgery & Perioperative Care"
     ],
-    "date": "2026-07-16",
+    "date": "2026-04-24",
     "specialties": [
       "Dentistry",
       "Surgery"
@@ -5650,7 +6049,7 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Inpatient & Acute Care"
     ],
-    "date": "2026-05-30",
+    "date": "2026-08-11",
     "specialties": [
       "Emergency Medicine",
       "Critical Care"
@@ -5702,7 +6101,7 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Aging in Place & Home Health"
     ],
-    "date": "2026-04-13",
+    "date": "2026-06-30",
     "specialties": [
       "Critical Care"
     ],
@@ -5752,7 +6151,7 @@ const CATALOG = [
     "tags": [
       "Aging in Place & Home Health"
     ],
-    "date": "2026-07-25",
+    "date": "2026-05-19",
     "specialties": [
       "Surgery",
       "Geriatrics & Senior Care"
@@ -5805,7 +6204,7 @@ const CATALOG = [
       "Medication Safety & Adherence",
       "Medication Safety & Adherence"
     ],
-    "date": "2026-06-07",
+    "date": "2026-04-08",
     "specialties": [
       "Pharmacy",
       "Health Administration"
@@ -5857,7 +6256,7 @@ const CATALOG = [
     "tags": [
       "Disease Surveillance & Biosecurity"
     ],
-    "date": "2026-04-21",
+    "date": "2026-07-25",
     "specialties": [
       "Public Health"
     ],
@@ -5902,7 +6301,7 @@ const CATALOG = [
     "tags": [
       "Disease Surveillance & Biosecurity"
     ],
-    "date": "2026-08-02",
+    "date": "2026-06-20",
     "specialties": [
       "Genetics & Genomics",
       "Public Health"
@@ -5951,7 +6350,7 @@ const CATALOG = [
       "Radiology & Medical Imaging",
       "Clinical Trials & Development"
     ],
-    "date": "2026-06-23",
+    "date": "2026-05-10",
     "specialties": [
       "Radiology",
       "Oncology",
@@ -6005,7 +6404,7 @@ const CATALOG = [
     "tags": [
       "Digital Pathology"
     ],
-    "date": "2026-05-07",
+    "date": "2026-03-29",
     "specialties": [
       "Radiology",
       "Pathology",
@@ -6060,7 +6459,7 @@ const CATALOG = [
     "tags": [
       "Cardiac Diagnostics"
     ],
-    "date": "2026-03-20",
+    "date": "2026-07-15",
     "specialties": [
       "Radiology",
       "Pathology",
@@ -6112,7 +6511,7 @@ const CATALOG = [
       "Genomics & Precision Medicine",
       "Real-World Data & Evidence"
     ],
-    "date": "2026-07-01",
+    "date": "2026-06-04",
     "specialties": [
       "Radiology",
       "Genetics & Genomics"
@@ -6162,7 +6561,7 @@ const CATALOG = [
     "tags": [
       "Genomics & Precision Medicine"
     ],
-    "date": "2026-05-15",
+    "date": "2026-04-23",
     "specialties": [
       "Radiology",
       "Genetics & Genomics"
@@ -6211,7 +6610,7 @@ const CATALOG = [
       "Inpatient & Acute Care",
       "Real-World Data & Evidence"
     ],
-    "date": "2026-03-29",
+    "date": "2026-03-12",
     "specialties": [],
     "roles": [
       "Researchers & pharma"
@@ -6259,7 +6658,7 @@ const CATALOG = [
       "Surgical AI & Robotics",
       "Surgery & Perioperative Care"
     ],
-    "date": "2026-07-09",
+    "date": "2026-07-06",
     "specialties": [
       "Dentistry",
       "Surgery",
@@ -6313,7 +6712,7 @@ const CATALOG = [
       "Hospital Operations & Patient Flow",
       "Nursing & Virtual Care Teams"
     ],
-    "date": "2026-05-30",
+    "date": "2026-05-25",
     "specialties": [
       "Nursing",
       "Health Administration"
@@ -6417,7 +6816,7 @@ const CATALOG = [
     "tags": [
       "Real-World Data & Evidence"
     ],
-    "date": "2026-07-25",
+    "date": "2026-07-31",
     "specialties": [
       "Drug Development"
     ],
@@ -6464,7 +6863,7 @@ const CATALOG = [
     "tags": [
       "Ambient Clinical Documentation"
     ],
-    "date": "2026-06-08",
+    "date": "2026-06-19",
     "specialties": [
       "Health Administration"
     ],
@@ -6514,7 +6913,7 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Cardiac Diagnostics"
     ],
-    "date": "2026-04-21",
+    "date": "2026-05-08",
     "specialties": [
       "Primary Care"
     ],
@@ -6564,7 +6963,7 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM"
     ],
-    "date": "2026-08-02",
+    "date": "2026-03-28",
     "specialties": [
       "Radiology",
       "Health Administration"
@@ -6613,7 +7012,7 @@ const CATALOG = [
       "Aging in Place & Home Health",
       "Aging in Place & Home Health"
     ],
-    "date": "2026-06-16",
+    "date": "2026-07-21",
     "specialties": [
       "Emergency Medicine",
       "Critical Care",
@@ -6659,6 +7058,193 @@ const CATALOG = [
     ]
   },
   {
+    "slug": "bayesian-health",
+    "name": "Bayesian Health",
+    "company": "Bayesian Health",
+    "field": "Hospitals & Health Systems",
+    "rating": 4,
+    "status": "watch",
+    "tags": [
+      "Inpatient & Acute Care",
+      "ICU & Critical Care"
+    ],
+    "date": "2026-06-09",
+    "specialties": [
+      "Critical Care",
+      "Nursing"
+    ],
+    "roles": [
+      "Nurses"
+    ],
+    "systems": [],
+    "idea": "Real-time deterioration and sepsis detection from the record.",
+    "take": "Real-time deterioration and sepsis detection from the record.",
+    "summary": "Bayesian Health surfaces early signs of clinical deterioration and sepsis from live EHR data, with a research pedigree from Johns Hopkins and a focus on beating alert fatigue.",
+    "capabilities": [
+      "Continuous deterioration and sepsis risk scoring",
+      "Evidence-linked alerts",
+      "Workflow routing to the right responder"
+    ],
+    "pros": [
+      "Rigorous published evaluation",
+      "Alert-quality focus"
+    ],
+    "cons": [
+      "Deployment demands clinical governance",
+      "Model performance varies by site"
+    ],
+    "verdict": "A credible, evidence-first take on the sepsis problem, aimed squarely at alert fatigue.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "Baltimore, USA",
+    "founded": "",
+    "website": "https://www.bayesianhealth.com",
+    "pricing": "",
+    "subIndustries": [
+      "inpatient-care",
+      "critical-care",
+      "nursing"
+    ]
+  },
+  {
+    "slug": "subtle-medical",
+    "name": "Subtle Medical",
+    "company": "Subtle Medical",
+    "field": "Diagnostics & Imaging",
+    "rating": 4,
+    "status": "has-ai",
+    "tags": [
+      "Radiology & Medical Imaging"
+    ],
+    "date": "2026-04-29",
+    "specialties": [
+      "Radiology"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
+    "idea": "AI that sharpens MRI and PET for faster, lower-dose scans.",
+    "take": "AI that sharpens MRI and PET for faster, lower-dose scans.",
+    "summary": "Subtle Medical enhances medical images so scans can be acquired faster or at lower dose while preserving diagnostic quality.",
+    "capabilities": [
+      "MRI acceleration",
+      "PET dose reduction",
+      "Vendor-agnostic image enhancement"
+    ],
+    "pros": [
+      "Directly improves scanner throughput and patient experience",
+      "Clear operational value"
+    ],
+    "cons": [
+      "Value tied to imaging-volume economics",
+      "Acquisition quality still matters"
+    ],
+    "verdict": "A focused, practical imaging-AI tool where scan time and dose are the pain.",
+    "bestFor": "",
+    "regulatory": "FDA-cleared products",
+    "hq": "Menlo Park, USA",
+    "founded": "",
+    "website": "https://subtlemedical.com",
+    "pricing": "",
+    "subIndustries": [
+      "radiology"
+    ]
+  },
+  {
+    "slug": "absci",
+    "name": "Absci",
+    "company": "Absci",
+    "field": "Pharma & Life Sciences",
+    "rating": 4,
+    "status": "watch",
+    "tags": [
+      "AI Drug Discovery & Design"
+    ],
+    "date": "2026-03-18",
+    "specialties": [
+      "Drug Development"
+    ],
+    "roles": [
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
+    "idea": "Generative AI for antibody design, grounded in wet-lab data.",
+    "take": "Generative AI for antibody design, grounded in wet-lab data.",
+    "summary": "Absci pairs generative models with high-throughput lab data to design and optimize antibodies, aiming to compress biologics discovery.",
+    "capabilities": [
+      "Generative antibody design",
+      "Integrated wet-lab data generation",
+      "Lead optimization"
+    ],
+    "pros": [
+      "Data-plus-model flywheel",
+      "Concrete biologics focus"
+    ],
+    "cons": [
+      "Early clinical proof",
+      "Competitive protein-design field"
+    ],
+    "verdict": "A credible generative-antibody platform where the lab-data loop is the differentiator.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "Vancouver, USA",
+    "founded": "",
+    "website": "https://www.absci.com",
+    "pricing": "",
+    "subIndustries": [
+      "drug-discovery"
+    ]
+  },
+  {
+    "slug": "genesis-therapeutics",
+    "name": "Genesis Therapeutics",
+    "company": "Genesis Therapeutics",
+    "field": "Pharma & Life Sciences",
+    "rating": 4,
+    "status": "watch",
+    "tags": [
+      "AI Drug Discovery & Design"
+    ],
+    "date": "2026-07-04",
+    "specialties": [
+      "Pharmacy",
+      "Drug Development"
+    ],
+    "roles": [
+      "Researchers & pharma"
+    ],
+    "systems": [],
+    "idea": "Molecular AI for small-molecule drug discovery.",
+    "take": "Molecular AI for small-molecule drug discovery.",
+    "summary": "Genesis Therapeutics develops deep-learning models of molecular interactions to design small-molecule drugs for hard targets.",
+    "capabilities": [
+      "Molecular property and binding prediction",
+      "Generative small-molecule design",
+      "Internal and partnered programs"
+    ],
+    "pros": [
+      "Strong technical foundation",
+      "Frontier small-molecule focus"
+    ],
+    "cons": [
+      "Unproven in the clinic",
+      "Crowded discovery-AI market"
+    ],
+    "verdict": "A promising small-molecule AI shop; the science leads, the clinic will judge.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "Burlingame, USA",
+    "founded": "",
+    "website": "https://www.genesistherapeutics.ai",
+    "pricing": "",
+    "subIndustries": [
+      "drug-discovery"
+    ]
+  },
+  {
     "slug": "clinicalkey-ai",
     "name": "ClinicalKey AI",
     "company": "Elsevier",
@@ -6668,7 +7254,7 @@ const CATALOG = [
     "tags": [
       "Clinical Decision Support & Medical Knowledge"
     ],
-    "date": "2026-05-07",
+    "date": "2026-05-24",
     "specialties": [
       "Primary Care",
       "Pharmacy"
@@ -6716,7 +7302,7 @@ const CATALOG = [
     "tags": [
       "Revenue Cycle & Billing Automation"
     ],
-    "date": "2026-03-21",
+    "date": "2026-04-12",
     "specialties": [
       "Health Administration"
     ],
@@ -6763,7 +7349,7 @@ const CATALOG = [
     "tags": [
       "Claims, Payment Integrity & Fraud"
     ],
-    "date": "2026-07-01",
+    "date": "2026-08-05",
     "specialties": [
       "Health Administration"
     ],
@@ -6810,7 +7396,7 @@ const CATALOG = [
     "tags": [
       "AI Therapy, Triage & Clinical Ops"
     ],
-    "date": "2026-05-15",
+    "date": "2026-06-25",
     "specialties": [
       "Mental & Behavioral Health"
     ],
@@ -6860,7 +7446,7 @@ const CATALOG = [
       "Aging in Place & Home Health",
       "Aging in Place & Home Health"
     ],
-    "date": "2026-03-29",
+    "date": "2026-05-14",
     "specialties": [
       "Mental & Behavioral Health",
       "Geriatrics & Senior Care"
@@ -6914,7 +7500,7 @@ const CATALOG = [
       "Aging in Place & Home Health",
       "Population Health & Value-Based Care"
     ],
-    "date": "2026-07-10",
+    "date": "2026-04-02",
     "specialties": [
       "Geriatrics & Senior Care",
       "Health Administration"
@@ -6966,7 +7552,7 @@ const CATALOG = [
       "Aging in Place & Home Health",
       "Revenue Cycle & Billing Automation"
     ],
-    "date": "2026-05-23",
+    "date": "2026-07-20",
     "specialties": [
       "Geriatrics & Senior Care",
       "Health Administration"
@@ -7017,7 +7603,7 @@ const CATALOG = [
     "tags": [
       "Medication Safety & Adherence"
     ],
-    "date": "2026-04-13",
+    "date": "2026-06-08",
     "specialties": [
       "Surgery",
       "Pharmacy",
@@ -7069,7 +7655,7 @@ const CATALOG = [
       "Population Health & Value-Based Care",
       "Hospital Operations & Patient Flow"
     ],
-    "date": "2026-07-25",
+    "date": "2026-04-27",
     "specialties": [
       "Genetics & Genomics",
       "Public Health",
@@ -7119,7 +7705,7 @@ const CATALOG = [
     "tags": [
       "Radiology & Medical Imaging"
     ],
-    "date": "2026-06-08",
+    "date": "2026-03-24",
     "specialties": [
       "Radiology"
     ],
@@ -7167,7 +7753,7 @@ const CATALOG = [
     "tags": [
       "Digital Pathology"
     ],
-    "date": "2026-04-22",
+    "date": "2026-07-10",
     "specialties": [
       "Radiology",
       "Pathology",
@@ -7219,7 +7805,7 @@ const CATALOG = [
       "Cardiac Diagnostics",
       "Clinical Trials & Development"
     ],
-    "date": "2026-08-02",
+    "date": "2026-05-29",
     "specialties": [
       "Radiology",
       "Cardiology",
@@ -7275,7 +7861,7 @@ const CATALOG = [
       "Cardiac Diagnostics",
       "Point-of-Care Screening"
     ],
-    "date": "2026-06-16",
+    "date": "2026-04-18",
     "specialties": [
       "Radiology",
       "Cardiology"
@@ -7326,7 +7912,7 @@ const CATALOG = [
     "tags": [
       "Genomics & Precision Medicine"
     ],
-    "date": "2026-04-30",
+    "date": "2026-08-04",
     "specialties": [
       "Radiology",
       "Oncology",
@@ -7378,7 +7964,7 @@ const CATALOG = [
       "Telehealth & Digital Triage",
       "Emergency Medicine"
     ],
-    "date": "2026-03-21",
+    "date": "2026-06-23",
     "specialties": [
       "Emergency Medicine",
       "Primary Care",
@@ -7432,7 +8018,7 @@ const CATALOG = [
       "Surgery & Perioperative Care",
       "Surgical AI & Robotics"
     ],
-    "date": "2026-07-02",
+    "date": "2026-05-13",
     "specialties": [
       "Radiology",
       "Dentistry",
@@ -7486,7 +8072,7 @@ const CATALOG = [
       "Nursing & Virtual Care Teams",
       "Aging in Place & Home Health"
     ],
-    "date": "2026-05-15",
+    "date": "2026-04-08",
     "specialties": [
       "Nursing",
       "Geriatrics & Senior Care",
@@ -7540,7 +8126,7 @@ const CATALOG = [
       "Hospital Operations & Patient Flow",
       "Surgery & Perioperative Care"
     ],
-    "date": "2026-03-29",
+    "date": "2026-07-25",
     "specialties": [
       "Dentistry",
       "Surgery",
@@ -7598,7 +8184,7 @@ const CATALOG = [
       "Primary Care & Virtual-First Medicine",
       "Population Health & Value-Based Care"
     ],
-    "date": "2026-07-10",
+    "date": "2026-06-14",
     "specialties": [
       "Primary Care",
       "Health Administration"
@@ -7650,7 +8236,7 @@ const CATALOG = [
     "tags": [
       "Patient Access & Engagement"
     ],
-    "date": "2026-05-24",
+    "date": "2026-05-03",
     "specialties": [
       "Cardiology",
       "Primary Care"
@@ -7701,7 +8287,7 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
-    "date": "2026-04-07",
+    "date": "2026-03-22",
     "specialties": [
       "Oncology",
       "Drug Development"
@@ -7749,7 +8335,7 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
-    "date": "2026-07-25",
+    "date": "2026-07-09",
     "specialties": [
       "Drug Development"
     ],
@@ -7795,7 +8381,7 @@ const CATALOG = [
       "Clinical Trials & Development",
       "Genomics & Precision Medicine"
     ],
-    "date": "2026-06-08",
+    "date": "2026-05-28",
     "specialties": [
       "Oncology",
       "Genetics & Genomics",
@@ -7845,7 +8431,7 @@ const CATALOG = [
     "tags": [
       "Real-World Data & Evidence"
     ],
-    "date": "2026-04-22",
+    "date": "2026-04-23",
     "specialties": [
       "Health Administration",
       "Drug Development"
@@ -7896,7 +8482,7 @@ const CATALOG = [
       "Real-World Data & Evidence",
       "Genomics & Precision Medicine"
     ],
-    "date": "2026-08-03",
+    "date": "2026-08-10",
     "specialties": [
       "Genetics & Genomics",
       "Drug Development"
@@ -7946,7 +8532,7 @@ const CATALOG = [
       "Ambient Clinical Documentation",
       "Clinical Decision Support & Medical Knowledge"
     ],
-    "date": "2026-06-16",
+    "date": "2026-06-29",
     "specialties": [
       "Health Administration"
     ],
@@ -7994,7 +8580,7 @@ const CATALOG = [
     "tags": [
       "Revenue Cycle & Billing Automation"
     ],
-    "date": "2026-04-30",
+    "date": "2026-05-18",
     "specialties": [
       "Health Administration"
     ],
@@ -8043,7 +8629,7 @@ const CATALOG = [
       "Prior Authorization & Utilization Management",
       "Revenue Cycle & Billing Automation"
     ],
-    "date": "2026-03-14",
+    "date": "2026-04-07",
     "specialties": [
       "Health Administration"
     ],
@@ -8093,7 +8679,7 @@ const CATALOG = [
       "Population Health & Value-Based Care",
       "Inpatient & Acute Care"
     ],
-    "date": "2026-07-02",
+    "date": "2026-07-24",
     "specialties": [
       "Critical Care",
       "Public Health"
@@ -8141,7 +8727,7 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Clinical Trials & Development"
     ],
-    "date": "2026-05-16",
+    "date": "2026-06-12",
     "specialties": [
       "Neurology",
       "Oncology"
@@ -8195,7 +8781,7 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Point-of-Care Screening"
     ],
-    "date": "2026-03-29",
+    "date": "2026-05-09",
     "specialties": [
       "Radiology"
     ],
@@ -8246,7 +8832,7 @@ const CATALOG = [
       "AI Therapy, Triage & Clinical Ops",
       "AI Therapy, Triage & Clinical Ops"
     ],
-    "date": "2026-07-10",
+    "date": "2026-03-28",
     "specialties": [
       "Mental & Behavioral Health"
     ],
@@ -8295,7 +8881,7 @@ const CATALOG = [
       "Disease Surveillance & Biosecurity",
       "Population Health & Value-Based Care"
     ],
-    "date": "2026-05-24",
+    "date": "2026-07-14",
     "specialties": [
       "Pharmacy",
       "Genetics & Genomics",
@@ -8340,6 +8926,298 @@ const CATALOG = [
     ]
   },
   {
+    "slug": "prenosis",
+    "name": "Prenosis",
+    "company": "Prenosis",
+    "field": "Hospitals & Health Systems",
+    "rating": 3.9,
+    "status": "watch",
+    "tags": [
+      "ICU & Critical Care",
+      "Inpatient & Acute Care"
+    ],
+    "date": "2026-06-03",
+    "specialties": [
+      "Oncology",
+      "Critical Care"
+    ],
+    "roles": [
+      "Physicians",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Cancer"
+    ],
+    "idea": "FDA-cleared sepsis risk from an immune-plus-EHR score.",
+    "take": "FDA-cleared sepsis risk from an immune-plus-EHR score.",
+    "summary": "Prenosis developed the Sepsis ImmunoScore, combining biomarkers and EHR data into an FDA-cleared risk assessment, shifting sepsis AI from screening nudge to regulated tool.",
+    "capabilities": [
+      "Biomarker-plus-EHR sepsis risk",
+      "Regulated diagnostic output",
+      "Dataset-driven model development"
+    ],
+    "pros": [
+      "Regulatory clarity rare in sepsis AI",
+      "Multimodal signal"
+    ],
+    "cons": [
+      "Requires the biomarker workflow",
+      "Early commercial footprint"
+    ],
+    "verdict": "A notable move to put sepsis AI on a regulated footing. Watch the real-world validation.",
+    "bestFor": "",
+    "regulatory": "FDA-cleared (Sepsis ImmunoScore)",
+    "hq": "",
+    "founded": "",
+    "website": "https://www.prenosis.com",
+    "pricing": "",
+    "subIndustries": [
+      "critical-care",
+      "inpatient-care"
+    ]
+  },
+  {
+    "slug": "augmedix",
+    "name": "Augmedix",
+    "company": "Augmedix",
+    "field": "Healthcare Administration & Revenue Cycle",
+    "rating": 3.9,
+    "status": "has-ai",
+    "tags": [
+      "Ambient Clinical Documentation"
+    ],
+    "date": "2026-04-22",
+    "specialties": [
+      "Health Administration"
+    ],
+    "roles": [
+      "Physicians",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
+    "idea": "Ambient medical documentation for hospitals and clinics.",
+    "take": "Ambient medical documentation for hospitals and clinics.",
+    "summary": "Augmedix converts clinician-patient conversations into structured notes, one of the longer-running players in the ambient documentation market.",
+    "capabilities": [
+      "Ambient note generation",
+      "EHR integration",
+      "Specialty and inpatient support"
+    ],
+    "pros": [
+      "Long operating history in the category",
+      "Enterprise deployments"
+    ],
+    "cons": [
+      "Crowded, fast-moving market",
+      "Feature parity race with newer rivals"
+    ],
+    "verdict": "An established ambient-documentation option worth including in a bake-off.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "San Francisco, USA",
+    "founded": "",
+    "website": "https://www.augmedix.com",
+    "pricing": "",
+    "subIndustries": [
+      "ambient-documentation"
+    ]
+  },
+  {
+    "slug": "deep6-ai",
+    "name": "Deep 6 AI",
+    "company": "Deep 6 AI",
+    "field": "Pharma & Life Sciences",
+    "rating": 3.9,
+    "status": "has-ai",
+    "tags": [
+      "Clinical Trials & Development"
+    ],
+    "date": "2026-08-08",
+    "specialties": [
+      "Drug Development"
+    ],
+    "roles": [
+      "Researchers & pharma"
+    ],
+    "systems": [],
+    "idea": "Clinical-trial patient matching straight from the record.",
+    "take": "Clinical-trial patient matching straight from the record.",
+    "summary": "Deep 6 AI mines structured and unstructured EHR data to match patients to clinical trials faster than manual chart review.",
+    "capabilities": [
+      "NLP over clinical notes for trial criteria",
+      "Cohort discovery and feasibility",
+      "Site and sponsor tooling"
+    ],
+    "pros": [
+      "Attacks the trial-enrollment bottleneck",
+      "Works on messy record data"
+    ],
+    "cons": [
+      "Match quality depends on data depth",
+      "Competitive trial-tech space"
+    ],
+    "verdict": "A focused fix for one of clinical research's slowest steps.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "Pasadena, USA",
+    "founded": "",
+    "website": "https://deep6.ai",
+    "pricing": "",
+    "subIndustries": [
+      "clinical-trials"
+    ]
+  },
+  {
+    "slug": "iterative-health",
+    "name": "Iterative Health",
+    "company": "Iterative Health",
+    "field": "Diagnostics & Imaging",
+    "rating": 3.9,
+    "status": "watch",
+    "tags": [
+      "Point-of-Care Screening",
+      "Clinical Trials & Development"
+    ],
+    "date": "2026-06-28",
+    "specialties": [
+      "Radiology",
+      "Gastroenterology"
+    ],
+    "roles": [
+      "Physicians"
+    ],
+    "systems": [
+      "Gut & digestion"
+    ],
+    "idea": "AI for GI endoscopy and precision care in IBD.",
+    "take": "AI for GI endoscopy and precision care in IBD.",
+    "summary": "Iterative Health applies computer vision to endoscopy and precision-medicine tools to improve gastrointestinal diagnosis and trial enrollment.",
+    "capabilities": [
+      "Endoscopy computer vision",
+      "Disease-severity scoring in IBD",
+      "Trial-enrollment support"
+    ],
+    "pros": [
+      "Specialty depth in GI",
+      "Bridges care and research"
+    ],
+    "cons": [
+      "Narrow specialty focus",
+      "Evidence still building"
+    ],
+    "verdict": "A focused GI-AI player worth watching as endoscopy AI matures.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "Cambridge, USA",
+    "founded": "",
+    "website": "https://www.iterative.health",
+    "pricing": "",
+    "subIndustries": [
+      "screening",
+      "clinical-trials"
+    ]
+  },
+  {
+    "slug": "artisight",
+    "name": "Artisight",
+    "company": "Artisight",
+    "field": "Hospitals & Health Systems",
+    "rating": 3.9,
+    "status": "has-ai",
+    "tags": [
+      "Hospital Operations & Patient Flow",
+      "Nursing & Virtual Care Teams"
+    ],
+    "date": "2026-05-24",
+    "specialties": [
+      "Nursing",
+      "Geriatrics & Senior Care",
+      "Health Administration"
+    ],
+    "roles": [
+      "Nurses",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Aging & mobility"
+    ],
+    "idea": "Smart-hospital computer vision for virtual nursing and safety.",
+    "take": "Smart-hospital computer vision for virtual nursing and safety.",
+    "summary": "Artisight uses in-room cameras and sensors to power virtual nursing, patient safety, and workflow automation across the hospital.",
+    "capabilities": [
+      "Virtual nursing and telesitting",
+      "Fall and safety monitoring",
+      "Workflow and throughput automation"
+    ],
+    "pros": [
+      "Multiplies scarce nursing capacity",
+      "Broad smart-room platform"
+    ],
+    "cons": [
+      "Camera consent and culture navigation",
+      "Deployment complexity"
+    ],
+    "verdict": "A capable smart-hospital platform where virtual nursing is the priority.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "Chicago, USA",
+    "founded": "",
+    "website": "https://www.artisight.com",
+    "pricing": "",
+    "subIndustries": [
+      "hospital-operations",
+      "nursing"
+    ]
+  },
+  {
+    "slug": "current-health",
+    "name": "Current Health",
+    "company": "Current Health (Best Buy)",
+    "field": "Medical Devices & MedTech",
+    "rating": 3.9,
+    "status": "has-ai",
+    "tags": [
+      "Software as a Medical Device & RPM",
+      "Aging in Place & Home Health"
+    ],
+    "date": "2026-04-12",
+    "specialties": [
+      "Nursing"
+    ],
+    "roles": [
+      "Nurses",
+      "Patients & caregivers"
+    ],
+    "systems": [],
+    "idea": "A remote-monitoring platform for hospital-at-home.",
+    "take": "A remote-monitoring platform for hospital-at-home.",
+    "summary": "Current Health, part of Best Buy Health, provides remote patient monitoring and care-at-home orchestration with wearable and device data.",
+    "capabilities": [
+      "Continuous remote monitoring",
+      "Care-at-home orchestration",
+      "Device and wearable integration"
+    ],
+    "pros": [
+      "End-to-end hospital-at-home enablement",
+      "Consumer-scale parent"
+    ],
+    "cons": [
+      "Home-care economics are hard",
+      "Crowded RPM space"
+    ],
+    "verdict": "A serious hospital-at-home platform backed by consumer-retail scale.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "Boston, USA",
+    "founded": "",
+    "website": "https://currenthealth.com",
+    "pricing": "",
+    "subIndustries": [
+      "wearables-rpm",
+      "home-health"
+    ]
+  },
+  {
     "slug": "floy",
     "name": "Floy",
     "company": "Floy",
@@ -8349,7 +9227,7 @@ const CATALOG = [
     "tags": [
       "Radiology & Medical Imaging"
     ],
-    "date": "2026-04-07",
+    "date": "2026-07-30",
     "specialties": [
       "Radiology",
       "Cardiology",
@@ -8403,7 +9281,7 @@ const CATALOG = [
       "Digital Pathology",
       "Real-World Data & Evidence"
     ],
-    "date": "2026-07-19",
+    "date": "2026-06-18",
     "specialties": [
       "Radiology",
       "Pathology"
@@ -8455,7 +9333,7 @@ const CATALOG = [
       "Point-of-Care Screening",
       "Clinical Trials & Development"
     ],
-    "date": "2026-06-08",
+    "date": "2026-05-07",
     "specialties": [
       "Radiology",
       "Oncology",
@@ -8511,7 +9389,7 @@ const CATALOG = [
       "Point-of-Care Screening",
       "Radiology & Medical Imaging"
     ],
-    "date": "2026-04-22",
+    "date": "2026-03-27",
     "specialties": [
       "Radiology",
       "Oncology",
@@ -8568,7 +9446,7 @@ const CATALOG = [
       "Surgery & Perioperative Care",
       "Surgical AI & Robotics"
     ],
-    "date": "2026-08-03",
+    "date": "2026-07-13",
     "specialties": [
       "Radiology",
       "Dentistry",
@@ -8622,7 +9500,7 @@ const CATALOG = [
     "tags": [
       "Surgical AI & Robotics"
     ],
-    "date": "2026-06-17",
+    "date": "2026-06-08",
     "specialties": [
       "Surgery"
     ],
@@ -8671,7 +9549,7 @@ const CATALOG = [
       "ICU & Critical Care",
       "Inpatient & Acute Care"
     ],
-    "date": "2026-04-30",
+    "date": "2026-04-28",
     "specialties": [
       "Cardiology",
       "Ophthalmology",
@@ -8725,7 +9603,7 @@ const CATALOG = [
       "Primary Care & Virtual-First Medicine",
       "Telehealth & Digital Triage"
     ],
-    "date": "2026-03-14",
+    "date": "2026-03-17",
     "specialties": [
       "Emergency Medicine",
       "Primary Care"
@@ -8776,7 +9654,7 @@ const CATALOG = [
       "Clinical Decision Support & Medical Knowledge",
       "Real-World Data & Evidence"
     ],
-    "date": "2026-06-25",
+    "date": "2026-07-03",
     "specialties": [
       "Primary Care"
     ],
@@ -8826,7 +9704,7 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
-    "date": "2026-05-16",
+    "date": "2026-05-23",
     "specialties": [
       "Drug Development"
     ],
@@ -8872,7 +9750,7 @@ const CATALOG = [
       "AI Drug Discovery & Design",
       "Digital Pathology"
     ],
-    "date": "2026-03-30",
+    "date": "2026-04-11",
     "specialties": [
       "Pathology",
       "Drug Development"
@@ -8921,7 +9799,7 @@ const CATALOG = [
     "tags": [
       "Clinical Trials & Development"
     ],
-    "date": "2026-07-10",
+    "date": "2026-07-28",
     "specialties": [
       "Drug Development"
     ],
@@ -8967,7 +9845,7 @@ const CATALOG = [
       "Pharmacovigilance & Regulatory Affairs",
       "Clinical Trials & Development"
     ],
-    "date": "2026-05-24",
+    "date": "2026-06-24",
     "specialties": [
       "Pharmacy",
       "Health Administration",
@@ -9018,7 +9896,7 @@ const CATALOG = [
     "tags": [
       "Ambient Clinical Documentation"
     ],
-    "date": "2026-04-07",
+    "date": "2026-05-13",
     "specialties": [
       "Primary Care",
       "Health Administration"
@@ -9066,7 +9944,7 @@ const CATALOG = [
     "tags": [
       "Revenue Cycle & Billing Automation"
     ],
-    "date": "2026-07-19",
+    "date": "2026-04-01",
     "specialties": [
       "Health Administration"
     ],
@@ -9114,7 +9992,7 @@ const CATALOG = [
       "Claims, Payment Integrity & Fraud",
       "Revenue Cycle & Billing Automation"
     ],
-    "date": "2026-06-02",
+    "date": "2026-07-19",
     "specialties": [
       "Health Administration"
     ],
@@ -9163,7 +10041,7 @@ const CATALOG = [
       "Risk Adjustment & Quality Analytics",
       "Population Health & Value-Based Care"
     ],
-    "date": "2026-04-22",
+    "date": "2026-06-07",
     "specialties": [
       "Health Administration"
     ],
@@ -9212,7 +10090,7 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Clinical Trials & Development"
     ],
-    "date": "2026-08-03",
+    "date": "2026-04-26",
     "specialties": [
       "Cardiology",
       "Pulmonology",
@@ -9270,7 +10148,7 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Aging in Place & Home Health"
     ],
-    "date": "2026-06-17",
+    "date": "2026-03-16",
     "specialties": [
       "Health Administration",
       "Drug Development"
@@ -9323,7 +10201,7 @@ const CATALOG = [
       "Software as a Medical Device & RPM",
       "Cardiac Diagnostics"
     ],
-    "date": "2026-05-01",
+    "date": "2026-07-09",
     "specialties": [
       "Cardiology"
     ],
@@ -9373,7 +10251,7 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM"
     ],
-    "date": "2026-03-15",
+    "date": "2026-05-28",
     "specialties": [
       "Mental & Behavioral Health",
       "Pharmacy",
@@ -9427,7 +10305,7 @@ const CATALOG = [
       "AI Therapy, Triage & Clinical Ops",
       "Ambient Clinical Documentation"
     ],
-    "date": "2026-06-25",
+    "date": "2026-04-17",
     "specialties": [
       "Mental & Behavioral Health",
       "Health Administration"
@@ -9481,7 +10359,7 @@ const CATALOG = [
       "Aging in Place & Home Health",
       "Aging in Place & Home Health"
     ],
-    "date": "2026-05-09",
+    "date": "2026-08-03",
     "specialties": [
       "Cardiology",
       "Geriatrics & Senior Care",
@@ -9539,7 +10417,7 @@ const CATALOG = [
       "Medication Safety & Adherence",
       "Medication Safety & Adherence"
     ],
-    "date": "2026-03-30",
+    "date": "2026-06-22",
     "specialties": [
       "Oncology",
       "Pharmacy",
@@ -9583,6 +10461,392 @@ const CATALOG = [
     ]
   },
   {
+    "slug": "commure",
+    "name": "Commure",
+    "company": "Commure",
+    "field": "Primary & Ambulatory Care",
+    "rating": 3.8,
+    "status": "has-ai",
+    "tags": [
+      "Patient Access & Engagement",
+      "Hospital Operations & Patient Flow"
+    ],
+    "date": "2026-05-12",
+    "specialties": [
+      "Primary Care",
+      "Health Administration"
+    ],
+    "roles": [
+      "Primary care providers",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [],
+    "idea": "A unified operating layer for health-system workflows and AI.",
+    "take": "A unified operating layer for health-system workflows and AI.",
+    "summary": "Commure consolidates provider workflow tools, including ambient documentation and operations, into a single platform after a series of mergers.",
+    "capabilities": [
+      "Ambient documentation",
+      "Operational and staff-facing tools",
+      "Platform consolidation of point solutions"
+    ],
+    "pros": [
+      "One-vendor consolidation appeal",
+      "Broad workflow surface"
+    ],
+    "cons": [
+      "Integration of acquired parts is ongoing",
+      "Breadth can dilute depth"
+    ],
+    "verdict": "An ambitious consolidation play. Judge it module by module rather than as one promise.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "Mountain View, USA",
+    "founded": "",
+    "website": "https://www.commure.com",
+    "pricing": "",
+    "subIndustries": [
+      "patient-access",
+      "hospital-operations",
+      "ambient-documentation"
+    ]
+  },
+  {
+    "slug": "benevolentai",
+    "name": "BenevolentAI",
+    "company": "BenevolentAI",
+    "field": "Pharma & Life Sciences",
+    "rating": 3.8,
+    "status": "has-ai",
+    "tags": [
+      "AI Drug Discovery & Design"
+    ],
+    "date": "2026-03-31",
+    "specialties": [
+      "Pharmacy",
+      "Drug Development"
+    ],
+    "roles": [],
+    "systems": [],
+    "idea": "Knowledge-graph AI for drug target discovery.",
+    "take": "Knowledge-graph AI for drug target discovery.",
+    "summary": "BenevolentAI mines biomedical data into a knowledge graph to surface novel targets and reposition drugs, one of the earlier AI-drug-discovery names.",
+    "capabilities": [
+      "Target identification from a biomedical knowledge graph",
+      "Drug repositioning",
+      "Discovery collaborations"
+    ],
+    "pros": [
+      "Pioneering data-integration approach",
+      "Pharma partnerships"
+    ],
+    "cons": [
+      "Pipeline proof still maturing",
+      "Business model has been reworked"
+    ],
+    "verdict": "A founding name in AI drug discovery whose thesis is being tested in the clinic.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "London, UK",
+    "founded": "",
+    "website": "https://www.benevolent.com",
+    "pricing": "",
+    "subIndustries": [
+      "drug-discovery"
+    ]
+  },
+  {
+    "slug": "ferrum-health",
+    "name": "Ferrum Health",
+    "company": "Ferrum Health",
+    "field": "Diagnostics & Imaging",
+    "rating": 3.8,
+    "status": "watch",
+    "tags": [
+      "Radiology & Medical Imaging",
+      "Patient Access & Engagement"
+    ],
+    "date": "2026-07-24",
+    "specialties": [
+      "Radiology"
+    ],
+    "roles": [
+      "Radiologists",
+      "Physicians"
+    ],
+    "systems": [],
+    "idea": "Run and monitor many clinical AI models, safely, in one place.",
+    "take": "Run and monitor many clinical AI models, safely, in one place.",
+    "summary": "Ferrum Health provides infrastructure for health systems to deploy, govern, and monitor multiple clinical AI applications behind their firewall.",
+    "capabilities": [
+      "On-premise AI deployment and governance",
+      "Model performance monitoring",
+      "Multi-vendor AI orchestration"
+    ],
+    "pros": [
+      "Addresses AI sprawl and safety governance",
+      "Vendor-neutral"
+    ],
+    "cons": [
+      "Value depends on the AI ecosystem maturing",
+      "Infrastructure sell"
+    ],
+    "verdict": "A pragmatic answer to the coming governance problem of running many clinical models.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "San Francisco, USA",
+    "founded": "",
+    "website": "https://www.ferrumhealth.com",
+    "pricing": "",
+    "subIndustries": [
+      "radiology",
+      "patient-access"
+    ]
+  },
+  {
+    "slug": "rhino-health",
+    "name": "Rhino Health",
+    "company": "Rhino Health",
+    "field": "Pharma & Life Sciences",
+    "rating": 3.8,
+    "status": "watch",
+    "tags": [
+      "Real-World Data & Evidence"
+    ],
+    "date": "2026-06-13",
+    "specialties": [
+      "Drug Development"
+    ],
+    "roles": [
+      "Researchers & pharma"
+    ],
+    "systems": [],
+    "idea": "Federated computing to build medical AI without moving data.",
+    "take": "Federated computing to build medical AI without moving data.",
+    "summary": "Rhino Health enables training and validating medical AI across institutions using federated methods, so data never leaves each site.",
+    "capabilities": [
+      "Federated model training and validation",
+      "Privacy-preserving collaboration",
+      "Multi-site dataset access"
+    ],
+    "pros": [
+      "Solves a real data-access and privacy barrier",
+      "Enables larger, fairer datasets"
+    ],
+    "cons": [
+      "Requires multi-site coordination",
+      "Emerging category"
+    ],
+    "verdict": "Useful infrastructure for the privacy-constrained reality of medical AI development.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "",
+    "founded": "",
+    "website": "https://www.rhinohealth.com",
+    "pricing": "",
+    "subIndustries": [
+      "real-world-evidence"
+    ]
+  },
+  {
+    "slug": "lyssn",
+    "name": "Lyssn",
+    "company": "Lyssn",
+    "field": "Mental & Behavioral Health",
+    "rating": 3.8,
+    "status": "has-ai",
+    "tags": [
+      "AI Therapy, Triage & Clinical Ops"
+    ],
+    "date": "2026-05-02",
+    "specialties": [
+      "Mental & Behavioral Health"
+    ],
+    "roles": [],
+    "systems": [
+      "Mental health"
+    ],
+    "idea": "AI quality measurement for behavioral-health conversations.",
+    "take": "AI quality measurement for behavioral-health conversations.",
+    "summary": "Lyssn analyzes therapy and counseling sessions to measure fidelity to evidence-based techniques and support supervision.",
+    "capabilities": [
+      "Session-fidelity analytics",
+      "Technique and quality scoring",
+      "Supervision and training support"
+    ],
+    "pros": [
+      "Brings measurement to a hard-to-observe field",
+      "Training value beyond compliance"
+    ],
+    "cons": [
+      "Requires thoughtful, non-punitive rollout",
+      "Behavioral-specific niche"
+    ],
+    "verdict": "A rare quality lens on what actually happens in behavioral-health sessions.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "Seattle, USA",
+    "founded": "",
+    "website": "https://www.lyssn.io",
+    "pricing": "",
+    "subIndustries": [
+      "behavioral-clinical-ops"
+    ]
+  },
+  {
+    "slug": "valar-labs",
+    "name": "Valar Labs",
+    "company": "Valar Labs",
+    "field": "Diagnostics & Imaging",
+    "rating": 3.8,
+    "status": "watch",
+    "tags": [
+      "Digital Pathology",
+      "Clinical Decision Support & Medical Knowledge"
+    ],
+    "date": "2026-03-21",
+    "specialties": [
+      "Radiology",
+      "Pathology",
+      "Oncology"
+    ],
+    "roles": [
+      "Pathologists",
+      "Physicians",
+      "Researchers & pharma"
+    ],
+    "systems": [
+      "Cancer"
+    ],
+    "idea": "AI biomarkers from pathology to guide cancer treatment.",
+    "take": "AI biomarkers from pathology to guide cancer treatment.",
+    "summary": "Valar Labs builds AI tests on pathology images that predict how individual cancer patients will respond to specific treatments.",
+    "capabilities": [
+      "Predictive pathology biomarkers",
+      "Treatment-response modeling",
+      "Oncology decision support"
+    ],
+    "pros": [
+      "Ties pathology AI to treatment decisions",
+      "Clinically actionable framing"
+    ],
+    "cons": [
+      "Requires validation per indication",
+      "Early stage"
+    ],
+    "verdict": "An interesting move from detection toward treatment-guiding pathology biomarkers.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "",
+    "founded": "",
+    "website": "https://www.valarlabs.com",
+    "pricing": "",
+    "subIndustries": [
+      "pathology",
+      "clinical-decision-support"
+    ]
+  },
+  {
+    "slug": "care-ai",
+    "name": "care.ai",
+    "company": "care.ai",
+    "field": "Hospitals & Health Systems",
+    "rating": 3.8,
+    "status": "has-ai",
+    "tags": [
+      "Hospital Operations & Patient Flow",
+      "Nursing & Virtual Care Teams"
+    ],
+    "date": "2026-07-08",
+    "specialties": [
+      "Nursing",
+      "Geriatrics & Senior Care",
+      "Health Administration"
+    ],
+    "roles": [
+      "Nurses",
+      "Hospital & health-system leaders"
+    ],
+    "systems": [
+      "Aging & mobility"
+    ],
+    "idea": "Ambient monitoring for smart hospital rooms and senior care.",
+    "take": "Ambient monitoring for smart hospital rooms and senior care.",
+    "summary": "care.ai deploys ambient sensors and computer vision to automate documentation, safety monitoring, and virtual care across facilities.",
+    "capabilities": [
+      "Ambient room intelligence",
+      "Virtual nursing and safety alerts",
+      "Care documentation automation"
+    ],
+    "pros": [
+      "Broad ambient-sensing footprint",
+      "Cross-setting reach"
+    ],
+    "cons": [
+      "Privacy governance required",
+      "Breadth over depth risk"
+    ],
+    "verdict": "A wide ambient-intelligence platform spanning hospital and senior-care settings.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "Orlando, USA",
+    "founded": "",
+    "website": "https://care.ai",
+    "pricing": "",
+    "subIndustries": [
+      "hospital-operations",
+      "nursing",
+      "aging-in-place"
+    ]
+  },
+  {
+    "slug": "memora-health",
+    "name": "Memora Health",
+    "company": "Memora Health",
+    "field": "Primary & Ambulatory Care",
+    "rating": 3.8,
+    "status": "has-ai",
+    "tags": [
+      "Patient Access & Engagement",
+      "Population Health & Value-Based Care"
+    ],
+    "date": "2026-05-27",
+    "specialties": [
+      "Emergency Medicine",
+      "Primary Care"
+    ],
+    "roles": [
+      "Primary care providers"
+    ],
+    "systems": [],
+    "idea": "AI-guided care navigation over everyday text messaging.",
+    "take": "AI-guided care navigation over everyday text messaging.",
+    "summary": "Memora Health digitizes care programs into intelligent text-message journeys that triage patient replies and route to staff when needed.",
+    "capabilities": [
+      "Automated care-program messaging",
+      "Reply triage and escalation",
+      "EHR-integrated workflows"
+    ],
+    "pros": [
+      "Meets patients on familiar channels",
+      "Offloads routine follow-up"
+    ],
+    "cons": [
+      "Depends on program design discipline",
+      "Messaging-only scope"
+    ],
+    "verdict": "A practical way to scale care navigation without another app to download.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "San Francisco, USA",
+    "founded": "",
+    "website": "https://www.memorahealth.com",
+    "pricing": "",
+    "subIndustries": [
+      "patient-access",
+      "population-health"
+    ]
+  },
+  {
     "slug": "jnj-ottava",
     "name": "Ottava",
     "company": "Johnson & Johnson MedTech",
@@ -9592,7 +10856,7 @@ const CATALOG = [
     "tags": [
       "Surgical AI & Robotics"
     ],
-    "date": "2026-07-11",
+    "date": "2026-04-15",
     "specialties": [
       "Surgery",
       "Drug Development"
@@ -9641,7 +10905,7 @@ const CATALOG = [
     "tags": [
       "Surgical AI & Robotics"
     ],
-    "date": "2026-05-24",
+    "date": "2026-08-09",
     "specialties": [
       "Surgery",
       "Gastroenterology"
@@ -9692,7 +10956,7 @@ const CATALOG = [
       "ICU & Critical Care",
       "Surgery & Perioperative Care"
     ],
-    "date": "2026-04-07",
+    "date": "2026-06-28",
     "specialties": [
       "Cardiology",
       "Mental & Behavioral Health",
@@ -9748,7 +11012,7 @@ const CATALOG = [
       "Nursing & Virtual Care Teams",
       "Inpatient & Acute Care"
     ],
-    "date": "2026-07-19",
+    "date": "2026-05-17",
     "specialties": [
       "Nursing",
       "Geriatrics & Senior Care"
@@ -9800,7 +11064,7 @@ const CATALOG = [
       "Clinical Decision Support & Medical Knowledge",
       "Inpatient & Acute Care"
     ],
-    "date": "2026-06-02",
+    "date": "2026-04-06",
     "specialties": [
       "Primary Care",
       "Health Administration"
@@ -9851,7 +11115,7 @@ const CATALOG = [
     "tags": [
       "Clinical Trials & Development"
     ],
-    "date": "2026-04-16",
+    "date": "2026-07-23",
     "specialties": [
       "Drug Development"
     ],
@@ -9897,7 +11161,7 @@ const CATALOG = [
       "Revenue Cycle & Billing Automation",
       "Prior Authorization & Utilization Management"
     ],
-    "date": "2026-08-03",
+    "date": "2026-06-11",
     "specialties": [
       "Health Administration"
     ],
@@ -9944,7 +11208,7 @@ const CATALOG = [
       "Prior Authorization & Utilization Management",
       "Medication Safety & Adherence"
     ],
-    "date": "2026-06-17",
+    "date": "2026-05-01",
     "specialties": [
       "Surgery",
       "Pharmacy",
@@ -9997,7 +11261,7 @@ const CATALOG = [
     "tags": [
       "Claims, Payment Integrity & Fraud"
     ],
-    "date": "2026-05-01",
+    "date": "2026-03-27",
     "specialties": [
       "Health Administration"
     ],
@@ -10046,7 +11310,7 @@ const CATALOG = [
       "Aging in Place & Home Health",
       "Aging in Place & Home Health"
     ],
-    "date": "2026-03-15",
+    "date": "2026-07-13",
     "specialties": [
       "Critical Care",
       "Pharmacy",
@@ -10102,7 +11366,7 @@ const CATALOG = [
       "Aging in Place & Home Health",
       "Aging in Place & Home Health"
     ],
-    "date": "2026-06-26",
+    "date": "2026-06-02",
     "specialties": [
       "Nursing",
       "Geriatrics & Senior Care",
@@ -10157,7 +11421,7 @@ const CATALOG = [
       "Aging in Place & Home Health",
       "Aging in Place & Home Health"
     ],
-    "date": "2026-05-09",
+    "date": "2026-04-21",
     "specialties": [
       "Critical Care",
       "Geriatrics & Senior Care"
@@ -10210,7 +11474,7 @@ const CATALOG = [
     "tags": [
       "Dental AI & Imaging"
     ],
-    "date": "2026-03-23",
+    "date": "2026-08-07",
     "specialties": [
       "Radiology",
       "Dentistry"
@@ -10251,6 +11515,51 @@ const CATALOG = [
     ]
   },
   {
+    "slug": "woebot-health",
+    "name": "Woebot Health",
+    "company": "Woebot Health",
+    "field": "Mental & Behavioral Health",
+    "rating": 3.7,
+    "status": "has-ai",
+    "tags": [
+      "AI Therapy, Triage & Clinical Ops"
+    ],
+    "date": "2026-06-27",
+    "specialties": [
+      "Mental & Behavioral Health"
+    ],
+    "roles": [],
+    "systems": [
+      "Mental health"
+    ],
+    "idea": "A CBT-based mental-health chatbot with a clinical evidence base.",
+    "take": "A CBT-based mental-health chatbot with a clinical evidence base.",
+    "summary": "Woebot Health built one of the most-studied mental-health chatbots, delivering structured cognitive-behavioral support with a research program behind it.",
+    "capabilities": [
+      "Structured CBT conversations",
+      "Clinical evidence program",
+      "Population mental-health support"
+    ],
+    "pros": [
+      "Deep research base",
+      "Safety-conscious design"
+    ],
+    "cons": [
+      "Consumer competition from general chatbots",
+      "Regulatory landscape shifting"
+    ],
+    "verdict": "A pioneer in evidence-based conversational mental health navigating a fast-changing category.",
+    "bestFor": "",
+    "regulatory": "",
+    "hq": "San Francisco, USA",
+    "founded": "",
+    "website": "https://woebothealth.com",
+    "pricing": "",
+    "subIndustries": [
+      "digital-therapy"
+    ]
+  },
+  {
     "slug": "parakeet-health",
     "name": "Parakeet Health",
     "company": "Parakeet Health",
@@ -10261,7 +11570,7 @@ const CATALOG = [
       "Patient Access & Engagement",
       "Telehealth & Digital Triage"
     ],
-    "date": "2026-07-11",
+    "date": "2026-05-16",
     "specialties": [
       "Emergency Medicine",
       "Primary Care"
@@ -10311,7 +11620,7 @@ const CATALOG = [
     "tags": [
       "AI Drug Discovery & Design"
     ],
-    "date": "2026-05-25",
+    "date": "2026-04-11",
     "specialties": [
       "Oncology",
       "Pharmacy",
@@ -10360,7 +11669,7 @@ const CATALOG = [
     "tags": [
       "Pharmacovigilance & Regulatory Affairs"
     ],
-    "date": "2026-04-07",
+    "date": "2026-07-29",
     "specialties": [
       "Pharmacy",
       "Drug Development"
@@ -10409,7 +11718,7 @@ const CATALOG = [
     "tags": [
       "Software as a Medical Device & RPM"
     ],
-    "date": "2026-07-19",
+    "date": "2026-06-17",
     "specialties": [
       "Mental & Behavioral Health",
       "Pharmacy"
@@ -10463,7 +11772,7 @@ const CATALOG = [
       "AI Therapy, Triage & Clinical Ops",
       "AI Therapy, Triage & Clinical Ops"
     ],
-    "date": "2026-06-02",
+    "date": "2026-05-06",
     "specialties": [
       "Oncology",
       "Mental & Behavioral Health"
@@ -10517,7 +11826,7 @@ const CATALOG = [
       "AI Therapy, Triage & Clinical Ops",
       "AI Therapy, Triage & Clinical Ops"
     ],
-    "date": "2026-04-16",
+    "date": "2026-03-26",
     "specialties": [
       "Mental & Behavioral Health",
       "Critical Care"
@@ -10569,7 +11878,7 @@ const CATALOG = [
       "Medication Safety & Adherence",
       "Medication Safety & Adherence"
     ],
-    "date": "2026-07-28",
+    "date": "2026-07-12",
     "specialties": [
       "Pharmacy",
       "Health Administration"
@@ -10623,7 +11932,7 @@ const CATALOG = [
       "Dental AI & Imaging",
       "Patient Access & Engagement"
     ],
-    "date": "2026-06-17",
+    "date": "2026-05-31",
     "specialties": [
       "Dentistry"
     ],
@@ -10672,7 +11981,7 @@ const CATALOG = [
       "Medication Safety & Adherence",
       "Patient Access & Engagement"
     ],
-    "date": "2026-05-01",
+    "date": "2026-04-27",
     "specialties": [
       "Pharmacy",
       "Health Administration"
@@ -10735,23 +12044,29 @@ const SECTORS = [
           "Fusion of bedside computer vision with EHR prediction for whole-room awareness"
         ],
         "items": [
+          "qventus-ops",
           "regard",
           "dandelion-health",
           "biointellisense-biobutton",
           "layer-health",
+          "bayesian-health",
           "teton-ai",
           "closedloop-ai",
+          "prenosis",
           "fifth-eye",
           "lookdeep-health",
           "abstractive-health"
         ],
         "companies": [
+          "Qventus",
           "Regard",
           "Dandelion Health",
           "BioIntelliSense",
           "Layer Health",
+          "Bayesian Health",
           "Teton.ai",
           "ClosedLoop",
+          "Prenosis",
           "Fifth Eye",
           "LookDeep Health",
           "Abstractive Health"
@@ -10905,6 +12220,7 @@ const SECTORS = [
           "aidoc",
           "viz-ai",
           "brainomix",
+          "rapidai",
           "gleamer",
           "corti",
           "mediktor"
@@ -10913,6 +12229,7 @@ const SECTORS = [
           "Aidoc",
           "Viz.ai",
           "Brainomix",
+          "RapidAI",
           "Gleamer",
           "Corti",
           "Mediktor"
@@ -11215,10 +12532,14 @@ const SECTORS = [
           "Multimodal models fusing waveforms, notes, and imaging for ICU trajectory prediction"
         ],
         "items": [
+          "bayesian-health",
+          "prenosis",
           "fifth-eye",
           "retia-medical"
         ],
         "companies": [
+          "Bayesian Health",
+          "Prenosis",
           "Fifth Eye",
           "Retia Medical"
         ],
@@ -11358,14 +12679,22 @@ const SECTORS = [
           "Ambient documentation expanding from physicians to nursing workflows"
         ],
         "items": [
+          "hippocratic-ai",
           "laudio",
+          "bayesian-health",
           "teton-ai",
+          "artisight",
+          "care-ai",
           "lookdeep-health",
           "kepler-vision"
         ],
         "companies": [
+          "Hippocratic AI",
           "Laudio",
+          "Bayesian Health",
           "Teton.ai",
+          "Artisight",
+          "care.ai",
           "LookDeep Health",
           "Kepler Vision"
         ],
@@ -11514,14 +12843,24 @@ const SECTORS = [
           "Operational AI bundled directly into EHR capacity modules"
         ],
         "items": [
+          "qventus-ops",
+          "leantaas",
           "laudio",
           "health-catalyst",
-          "lumeon"
+          "lumeon",
+          "artisight",
+          "commure",
+          "care-ai"
         ],
         "companies": [
+          "Qventus",
+          "LeanTaaS",
           "Laudio",
           "Health Catalyst",
-          "Lumeon"
+          "Lumeon",
+          "Artisight",
+          "Commure",
+          "care.ai"
         ],
         "keywords": [
           "hospital",
@@ -11682,13 +13021,17 @@ const SECTORS = [
           "qure-ai",
           "annalise-ai",
           "brainomix",
+          "rapidai",
           "gleamer",
           "deepc",
+          "icometrix",
           "quibim",
+          "subtle-medical",
           "sirona-medical",
           "sonio",
           "floy",
-          "thirona"
+          "thirona",
+          "ferrum-health"
         ],
         "companies": [
           "Aidoc",
@@ -11698,13 +13041,17 @@ const SECTORS = [
           "Qure.ai",
           "Annalise.ai (Harrison.ai)",
           "Brainomix",
+          "RapidAI",
           "Gleamer",
           "deepc",
+          "icometrix",
           "Quibim",
+          "Subtle Medical",
           "Sirona Medical",
           "Sonio",
           "Floy",
-          "Thirona"
+          "Thirona",
+          "Ferrum Health"
         ],
         "keywords": [
           "radiology",
@@ -11851,7 +13198,8 @@ const SECTORS = [
           "mindpeak",
           "pramana",
           "modella-ai",
-          "bioptimus"
+          "bioptimus",
+          "valar-labs"
         ],
         "companies": [
           "Lunit",
@@ -11864,7 +13212,8 @@ const SECTORS = [
           "Mindpeak",
           "Pramana",
           "Modella AI",
-          "Bioptimus"
+          "Bioptimus",
+          "Valar Labs"
         ],
         "keywords": [
           "digital",
@@ -12001,10 +13350,13 @@ const SECTORS = [
           "eko-health",
           "cleerly",
           "ultromics",
+          "rapidai",
           "us2-ai",
           "alivecor-kardia",
           "anumana",
           "dandelion-health",
+          "cardiologs",
+          "caption-health",
           "elucid",
           "hilo-aktiia",
           "idoven",
@@ -12018,10 +13370,13 @@ const SECTORS = [
           "Eko",
           "Cleerly",
           "Ultromics",
+          "RapidAI",
           "Us2.ai",
           "AliveCor",
           "Anumana",
           "Dandelion Health",
+          "Philips (Cardiologs)",
+          "GE HealthCare (Caption Health)",
           "Elucid",
           "Hilo",
           "Idoven",
@@ -12311,6 +13666,7 @@ const SECTORS = [
           "dermasensor",
           "caristo",
           "sonio",
+          "iterative-health",
           "legit-health",
           "thirona"
         ],
@@ -12324,6 +13680,7 @@ const SECTORS = [
           "DermaSensor",
           "Caristo",
           "Sonio",
+          "Iterative Health",
           "Legit.Health",
           "Thirona"
         ],
@@ -12779,6 +14136,7 @@ const SECTORS = [
           "clinicalkey-ai",
           "tortus",
           "consensus",
+          "valar-labs",
           "abstractive-health"
         ],
         "companies": [
@@ -12791,6 +14149,7 @@ const SECTORS = [
           "Elsevier",
           "Tortus",
           "Consensus",
+          "Valar Labs",
           "Abstractive Health"
         ],
         "keywords": [
@@ -12926,12 +14285,16 @@ const SECTORS = [
         "items": [
           "notable",
           "artera",
+          "hippocratic-ai",
           "fabric-health",
           "luma-health",
           "hyro",
           "mediktor",
           "lumeon",
           "assort-health",
+          "commure",
+          "ferrum-health",
+          "memora-health",
           "parakeet-health",
           "arini",
           "nimble-rx"
@@ -12939,12 +14302,16 @@ const SECTORS = [
         "companies": [
           "Notable",
           "Artera",
+          "Hippocratic AI",
           "Fabric",
           "Luma",
           "Hyro",
           "Mediktor",
           "Lumeon",
           "Assort Health",
+          "Commure",
+          "Ferrum Health",
+          "Memora Health",
           "Parakeet Health",
           "Arini",
           "Nimble"
@@ -13087,15 +14454,19 @@ const SECTORS = [
           "insilico-medicine",
           "chai-discovery",
           "evolutionaryscale",
+          "generate-biomedicines",
           "recursion",
           "cradle-bio",
           "aignostics",
           "owkin",
           "iambic-therapeutics",
+          "absci",
+          "genesis-therapeutics",
           "aqemia",
           "nabla-bio",
           "latent-labs",
           "bioptimus",
+          "benevolentai",
           "charm-therapeutics"
         ],
         "companies": [
@@ -13103,15 +14474,19 @@ const SECTORS = [
           "Insilico",
           "Chai Discovery",
           "EvolutionaryScale",
+          "Generate Biomedicines",
           "Recursion (merged with Exscientia)",
           "Cradle",
           "Aignostics",
           "Owkin",
           "Iambic",
+          "Absci",
+          "Genesis Therapeutics",
           "Aqemia",
           "Nabla Bio",
           "Latent Labs",
           "Bioptimus",
+          "BenevolentAI",
           "Charm Therapeutics"
         ],
         "keywords": [
@@ -13270,6 +14645,8 @@ const SECTORS = [
           "idoven",
           "triomics",
           "empatica",
+          "deep6-ai",
+          "iterative-health",
           "legit-health",
           "inato",
           "yseop",
@@ -13292,6 +14669,8 @@ const SECTORS = [
           "Idoven",
           "Triomics",
           "Empatica",
+          "Deep 6 AI",
+          "Iterative Health",
           "Legit.Health",
           "Inato",
           "Yseop",
@@ -13608,7 +14987,8 @@ const SECTORS = [
           "verantos",
           "lifebit",
           "modella-ai",
-          "consensus"
+          "consensus",
+          "rhino-health"
         ],
         "companies": [
           "Tempus AI",
@@ -13623,7 +15003,8 @@ const SECTORS = [
           "Verantos",
           "Lifebit",
           "Modella AI",
-          "Consensus"
+          "Consensus",
+          "Rhino Health"
         ],
         "keywords": [
           "real",
@@ -14259,8 +15640,10 @@ const SECTORS = [
           "corti",
           "freed",
           "tortus",
+          "augmedix",
           "deepscribe",
           "blueprint-health",
+          "commure",
           "abstractive-health"
         ],
         "companies": [
@@ -14275,8 +15658,10 @@ const SECTORS = [
           "Corti",
           "Freed",
           "Tortus",
+          "Augmedix",
           "DeepScribe",
           "Blueprint",
+          "Commure",
           "Abstractive Health"
         ],
         "keywords": [
@@ -14812,6 +16197,7 @@ const SECTORS = [
           "alivecor-kardia",
           "butterfly-iq3",
           "oura-ring",
+          "caption-health",
           "dermasensor",
           "biointellisense-biobutton",
           "biofourmis",
@@ -14819,6 +16205,7 @@ const SECTORS = [
           "exo",
           "empatica",
           "sonio",
+          "current-health",
           "corsano",
           "huma",
           "echonous",
@@ -14833,6 +16220,7 @@ const SECTORS = [
           "AliveCor",
           "Butterfly Network",
           "Oura Health",
+          "GE HealthCare (Caption Health)",
           "DermaSensor",
           "BioIntelliSense",
           "Biofourmis",
@@ -14840,6 +16228,7 @@ const SECTORS = [
           "Exo",
           "Empatica",
           "Sonio",
+          "Current Health (Best Buy)",
           "Corsano",
           "Huma",
           "EchoNous",
@@ -14909,6 +16298,8 @@ const SECTORS = [
           "slingshot-ash",
           "ieso",
           "blueprint-health",
+          "lyssn",
+          "woebot-health",
           "kintsugi",
           "videra-health"
         ],
@@ -14920,6 +16311,8 @@ const SECTORS = [
           "Slingshot AI",
           "ieso Digital Health",
           "Blueprint",
+          "Lyssn",
+          "Woebot Health",
           "Kintsugi",
           "Videra Health"
         ],
@@ -14984,9 +16377,11 @@ const SECTORS = [
           "wellsky",
           "element5",
           "teton-ai",
+          "current-health",
           "corsano",
           "huma",
           "cherish-health",
+          "care-ai",
           "birdie",
           "kepler-vision",
           "vesta-healthcare"
@@ -15003,9 +16398,11 @@ const SECTORS = [
           "WellSky",
           "Element5",
           "Teton.ai",
+          "Current Health (Best Buy)",
           "Corsano",
           "Huma",
           "Cherish Health",
+          "care.ai",
           "Birdie",
           "Kepler Vision",
           "Vesta Healthcare"
@@ -15265,6 +16662,7 @@ const SECTORS = [
           "closedloop-ai",
           "biobot-analytics",
           "astrata",
+          "memora-health",
           "vesta-healthcare",
           "kintsugi"
         ],
@@ -15280,6 +16678,7 @@ const SECTORS = [
           "ClosedLoop",
           "Biobot",
           "Astrata",
+          "Memora Health",
           "Vesta Healthcare",
           "Kintsugi"
         ],

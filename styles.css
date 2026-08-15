@@ -12,9 +12,15 @@
   --line:     #ECE2D3;   /* hairlines */
   --line-2:   #211B15;   /* strong rule */
 
-  --accent:     #E15A3D;   /* coral / clay */
+  --accent:     #E15A3D;   /* coral / clay — primary brand */
   --accent-ink: #C4472C;   /* darker coral for hover */
   --accent-soft:#FBEDE7;   /* tinted coral wash */
+  --accent-2:     #0E9A95; /* teal — secondary */
+  --accent-2-ink: #0B7C78;
+  --accent-2-soft:#DEF3F1;
+  --accent-3:     #2E5AAC; /* navy blue — tertiary */
+  --accent-3-ink: #22447F;
+  --accent-3-soft:#E4EAF7;
 
   --display: "Inter Tight", "Inter", system-ui, sans-serif;
   --sans:    "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -1053,3 +1059,60 @@ a.co-tile:hover { text-decoration: none; border-color: var(--accent); box-shadow
 .xgo svg { width: 18px; height: 18px; }
 @media (max-width: 860px){ .explore { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 460px){ .explore { grid-template-columns: 1fr; } }
+
+/* ==========================================================================
+   Hero graphic, carousel, tri-color palette touches
+   ========================================================================== */
+/* Two-column masthead with graphic */
+.mast-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; }
+.mast-art { display: flex; justify-content: center; }
+.mast-art svg { width: 100%; max-width: 440px; height: auto; }
+@media (max-width: 820px){ .mast-grid { grid-template-columns: 1fr; } .mast-art { display: none; } }
+
+/* tri-color title */
+.mast-title .accent { background: linear-gradient(92deg, var(--accent) 0%, var(--accent) 45%, var(--accent-2) 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--accent); }
+
+/* hero graphic motion */
+.mast-art .float { animation: floaty 6s ease-in-out infinite; transform-origin: center; }
+.mast-art .f2 { animation-duration: 7.5s; animation-delay: -1.5s; }
+.mast-art .f3 { animation-duration: 8s; animation-delay: -3s; }
+@keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+.mast-art .orb-pulse { stroke-dasharray: 60 200; animation: orbtrace 3s linear infinite; }
+@keyframes orbtrace { to { stroke-dashoffset: -260; } }
+.mast-art .ring { transform-origin: 230px 180px; animation: ringpulse 4s ease-in-out infinite; }
+.mast-art .r2 { animation-delay: -2s; }
+@keyframes ringpulse { 0%,100% { transform: scale(1); opacity: .4; } 50% { transform: scale(1.05); opacity: .18; } }
+.mast-art .node { animation: nodepulse 2.6s ease-in-out infinite; transform-origin: center; }
+.mast-art .n2 { animation-delay: -.8s; } .mast-art .n3 { animation-delay: -1.6s; }
+@keyframes nodepulse { 0%,100% { r: 6; opacity: 1; } 50% { r: 8; opacity: .6; } }
+@media (prefers-reduced-motion: reduce){ .mast-art * { animation: none !important; } }
+
+/* stat band: cycle the three colors */
+.stat:nth-child(1) .stat-n { color: var(--accent); }
+.stat:nth-child(2) .stat-n { color: var(--accent-2); }
+.stat:nth-child(3) .stat-n { color: var(--accent-3); }
+.stat:nth-child(4) .stat-n { color: var(--accent); }
+
+/* Carousel */
+.carousel { position: relative; }
+.carousel-win { overflow: hidden; border-radius: var(--radius); }
+.carousel-track { display: flex; transition: transform .5s cubic-bezier(.22,.61,.36,1); }
+.slide { min-width: 100%; }
+.slide .lead { border-radius: var(--radius); }
+.carousel-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid var(--line); background: var(--paper); color: var(--ink); font-size: 22px; line-height: 1; cursor: pointer; z-index: 3;
+  box-shadow: 0 4px 14px rgba(33,27,21,0.12); transition: background .12s ease, color .12s ease; }
+.carousel-arrow:hover { background: var(--ink); color: var(--paper); }
+.carousel-arrow.prev { left: -14px; } .carousel-arrow.next { right: -14px; }
+.carousel-dots { display: flex; gap: 8px; justify-content: center; margin-top: 16px; }
+.cdot { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; background: var(--line-2); opacity: .35; cursor: pointer; transition: all .2s ease; }
+.cdot.on { opacity: 1; background: var(--accent); width: 22px; border-radius: 4px; }
+@media (max-width: 560px){ .carousel-arrow { display: none; } }
+
+/* Featured slide: logo on a colored panel (headline visual = logo) */
+.lead-logo-cover { display: flex; align-items: center; justify-content: center; height: 100%; min-height: 240px;
+  background: linear-gradient(135deg, var(--ic, var(--accent)), var(--ink)); }
+.lead-logo-cover .logo { width: 108px !important; height: 108px !important; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.18); }
+.lead-logo-cover .logo-fb { font-size: 46px; border-radius: 20px; background: rgba(255,255,255,0.16); }
+@media (max-width: 720px){ .lead-logo-cover { min-height: 150px; } .lead-logo-cover .logo { width: 76px !important; height: 76px !important; } }

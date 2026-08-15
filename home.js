@@ -7,23 +7,44 @@ mountChrome();
 
 const byDate = (a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : b.rating - a.rating);
 
-/* Featured lead story: strongest article, shown large */
-const lead = [...CATALOG].sort((a, b) => b.rating - a.rating || byDate(a, b))[0];
-if (lead) document.getElementById("lead").innerHTML =
-  `<a class="lead" href="${articleHref(lead)}">
-    ${coverArt(lead, true)}
+/* Featured carousel: several strong stories, auto-advancing */
+const featured = [...CATALOG].sort((a, b) => b.rating - a.rating || byDate(a, b)).slice(0, 6);
+function leadSlide(c) {
+  return `<a class="lead" href="${articleHref(c)}">
+    <div class="lead-logo-cover" style="--ic:${indStyle(c.field)[0]}">${logoBadge(c, 96)}</div>
     <div class="lead-body">
-      <span class="lead-kicker">Featured · ${esc(lead.field)}</span>
-      <h2 class="lead-idea">${wrapTerms(esc(lead.idea), new Set())}</h2>
-      <p class="lead-sum">${esc((lead.summary || "").slice(0, 230))}…</p>
+      <span class="lead-kicker">Featured · ${esc(c.field)}</span>
+      <h2 class="lead-idea">${wrapTerms(esc(c.idea), new Set())}</h2>
+      <p class="lead-sum">${esc((c.summary || "").slice(0, 220))}…</p>
       <div class="lead-foot">
-        <span class="signal ${esc(lead.status)}">${esc(statusLabel(lead.status))}</span>
-        <span class="fcard-co">${esc(lead.company)}${lead.full ? ' <span class="idea-deep">Deep dive</span>' : ""}</span>
-        <span class="idea-score">${Number(lead.rating).toFixed(1)}</span>
-        <span class="fcard-date">${fmtDate(lead.date)}</span>
+        <span class="signal ${esc(c.status)}">${esc(statusLabel(c.status))}</span>
+        <span class="fcard-co">${esc(c.company)}${c.full ? ' <span class="idea-deep">Deep dive</span>' : ""}</span>
+        <span class="idea-score">${Number(c.rating).toFixed(1)}</span>
+        <span class="fcard-date">${fmtDate(c.date)}</span>
       </div>
     </div>
   </a>`;
+}
+(function carousel() {
+  const track = document.getElementById("ctrack"), dotsEl = document.getElementById("cdots");
+  if (!track) return;
+  track.innerHTML = featured.map(c => `<div class="slide">${leadSlide(c)}</div>`).join("");
+  dotsEl.innerHTML = featured.map((_, i) => `<button class="cdot${i === 0 ? " on" : ""}" data-i="${i}" aria-label="Slide ${i + 1}"></button>`).join("");
+  let idx = 0; const n = featured.length;
+  function go(i) {
+    idx = (i + n) % n;
+    track.style.transform = `translateX(-${idx * 100}%)`;
+    dotsEl.querySelectorAll(".cdot").forEach((d, j) => d.classList.toggle("on", j === idx));
+  }
+  document.getElementById("cnext").addEventListener("click", () => { go(idx + 1); reset(); });
+  document.getElementById("cprev").addEventListener("click", () => { go(idx - 1); reset(); });
+  dotsEl.addEventListener("click", e => { const d = e.target.closest(".cdot"); if (d) { go(+d.dataset.i); reset(); } });
+  let timer = setInterval(() => go(idx + 1), 5500);
+  function reset() { clearInterval(timer); timer = setInterval(() => go(idx + 1), 5500); }
+  const car = document.getElementById("carousel");
+  car.addEventListener("mouseenter", () => clearInterval(timer));
+  car.addEventListener("mouseleave", reset);
+})();
 
 /* What's new — most recent articles, horizontal scroll */
 document.getElementById("whatsnew").innerHTML =

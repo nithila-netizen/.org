@@ -15,19 +15,42 @@
 
   <!-- Masthead band -->
   <section class="masthead">
-    <div class="wrap">
-      <p class="mast-kicker">Independent · updated continuously</p>
-      <h1 class="mast-title">What's new in <span class="accent">AI across healthcare</span></h1>
-      <p class="mast-sub">Every corner of healthcare, the AI reshaping it, and the companies to know. Browse by industry, your specialty, or a symptom.</p>
-      <form class="mast-search" onsubmit="location.href='reviews.html?q='+encodeURIComponent(document.getElementById('mq').value);return false;">
-        <span class="db-search-ico" aria-hidden="true"></span>
-        <input id="mq" type="search" placeholder="Search a condition, specialty, or company. Try gut health, neurology, sepsis" aria-label="Search" />
-        <button type="submit" class="mast-go">Search</button>
-      </form>
-      <div class="pulse-band" aria-hidden="true">
-        <svg viewBox="0 0 1280 46" preserveAspectRatio="none">
-          <path class="pulse-base" d="M0 23 H1280" />
-          <path class="pulse-line" d="M0 23 H150 l14 0 l8 -15 l10 30 l8 -23 l7 8 H430 l14 0 l8 -15 l10 30 l8 -23 l7 8 H710 l14 0 l8 -15 l10 30 l8 -23 l7 8 H990 l14 0 l8 -15 l10 30 l8 -23 l7 8 H1280" />
+    <div class="wrap mast-grid">
+      <div class="mast-text">
+        <p class="mast-kicker">Independent · updated continuously</p>
+        <h1 class="mast-title">What's new in <span class="accent">AI across healthcare</span></h1>
+        <p class="mast-sub">Every corner of healthcare, the AI reshaping it, and the companies to know. Browse by industry, your specialty, or a symptom.</p>
+        <form class="mast-search" onsubmit="location.href='reviews.html?q='+encodeURIComponent(document.getElementById('mq').value);return false;">
+          <span class="db-search-ico" aria-hidden="true"></span>
+          <input id="mq" type="search" placeholder="Search a condition, specialty, or company. Try gut health, neurology, sepsis" aria-label="Search" />
+          <button type="submit" class="mast-go">Search</button>
+        </form>
+      </div>
+      <div class="mast-art" aria-hidden="true">
+        <svg viewBox="0 0 420 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="ha1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E15A3D"/><stop offset="1" stop-color="#C4472C"/></linearGradient>
+            <linearGradient id="ha2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E9A95"/><stop offset="1" stop-color="#0B7C78"/></linearGradient>
+            <linearGradient id="ha3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E5AAC"/><stop offset="1" stop-color="#22447F"/></linearGradient>
+          </defs>
+          <!-- soft backdrop -->
+          <circle cx="230" cy="180" r="150" fill="#FBEDE7"/>
+          <circle class="ring r1" cx="230" cy="180" r="118" stroke="#0E9A95" stroke-width="2" opacity="0.35"/>
+          <circle class="ring r2" cx="230" cy="180" r="92" stroke="#E15A3D" stroke-width="2" opacity="0.4"/>
+          <!-- central pulse orb -->
+          <circle cx="230" cy="180" r="66" fill="url(#ha2)"/>
+          <path class="orb-pulse" d="M188 180 h20 l8 -22 l12 44 l9 -30 l7 8 h20" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <!-- floating article cards -->
+          <g class="float f1"><rect x="18" y="60" width="120" height="76" rx="12" fill="#fff" stroke="#ECE2D3"/><rect x="30" y="72" width="60" height="8" rx="4" fill="url(#ha1)"/><rect x="30" y="88" width="96" height="6" rx="3" fill="#ECE2D3"/><rect x="30" y="100" width="80" height="6" rx="3" fill="#ECE2D3"/><rect x="30" y="116" width="40" height="10" rx="5" fill="#DEF3F1"/></g>
+          <g class="float f2"><rect x="286" y="30" width="112" height="70" rx="12" fill="#fff" stroke="#ECE2D3"/><rect x="298" y="42" width="52" height="8" rx="4" fill="url(#ha3)"/><rect x="298" y="58" width="88" height="6" rx="3" fill="#ECE2D3"/><rect x="298" y="70" width="70" height="6" rx="3" fill="#ECE2D3"/><rect x="298" y="84" width="36" height="9" rx="4" fill="#E4EAF7"/></g>
+          <g class="float f3"><rect x="292" y="266" width="118" height="74" rx="12" fill="#fff" stroke="#ECE2D3"/><rect x="304" y="278" width="56" height="8" rx="4" fill="url(#ha2)"/><rect x="304" y="294" width="92" height="6" rx="3" fill="#ECE2D3"/><rect x="304" y="306" width="74" height="6" rx="3" fill="#ECE2D3"/><rect x="304" y="320" width="40" height="9" rx="4" fill="#FBEDE7"/></g>
+          <!-- connector nodes -->
+          <circle class="node n1" cx="138" cy="98" r="6" fill="url(#ha1)"/>
+          <circle class="node n2" cx="342" cy="100" r="6" fill="url(#ha3)"/>
+          <circle class="node n3" cx="346" cy="266" r="6" fill="url(#ha2)"/>
+          <line x1="138" y1="98" x2="176" y2="150" stroke="#E15A3D" stroke-width="1.5" opacity="0.4"/>
+          <line x1="342" y1="100" x2="286" y2="150" stroke="#2E5AAC" stroke-width="1.5" opacity="0.4"/>
+          <line x1="346" y1="266" x2="288" y2="212" stroke="#0E9A95" stroke-width="1.5" opacity="0.4"/>
         </svg>
       </div>
     </div>
@@ -39,9 +62,16 @@
     <div class="ticker-view"><div class="ticker-track" id="ticker-track"></div></div>
   </div>
 
-  <!-- Featured lead -->
+  <!-- Featured carousel -->
   <section class="section-lite" id="lead-sec">
-    <div class="wrap"><div id="lead"></div></div>
+    <div class="wrap">
+      <div class="carousel" id="carousel">
+        <div class="carousel-win"><div class="carousel-track" id="ctrack"></div></div>
+        <button class="carousel-arrow prev" id="cprev" aria-label="Previous">‹</button>
+        <button class="carousel-arrow next" id="cnext" aria-label="Next">›</button>
+        <div class="carousel-dots" id="cdots"></div>
+      </div>
+    </div>
   </section>
 
   <!-- Explore chooser: the one clear way to navigate -->

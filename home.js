@@ -29,18 +29,51 @@ if (lead) document.getElementById("lead").innerHTML =
 document.getElementById("whatsnew").innerHTML =
   [...CATALOG].sort(byDate).slice(0, 12).map(feedCard).join("");
 
-/* Most notable — top rated */
-document.getElementById("notable").innerHTML =
-  [...CATALOG].sort((a, b) => b.rating - a.rating).slice(0, 6).map(feedCard).join("");
+/* Ticker — scrolling recent headlines (rendered twice for a seamless loop) */
+const tickItems = [...CATALOG].sort(byDate).slice(0, 16).map(c =>
+  `<a class="tick" href="${articleHref(c)}"><span class="tick-co">${esc(c.company)}</span> ${esc(c.idea)}</a>`).join("");
+document.getElementById("ticker-track").innerHTML = tickItems + tickItems;
 
-/* Browse by industry */
+/* Animated stats band */
+const newThisMonth = CATALOG.filter(c => c.date >= "2026-07-15").length;
+const stats = [
+  [CATALOG.length, "companies reviewed"],
+  [SECTORS.length, "industries mapped"],
+  [SECTORS.reduce((n, s) => n + s.subsectors.length, 0), "sub-sectors"],
+  [newThisMonth, "new this month"],
+];
+document.getElementById("stats").innerHTML = stats.map(([n, label]) =>
+  `<div class="stat"><span class="stat-n" data-target="${n}">0</span><span class="stat-l">${esc(label)}</span></div>`).join("");
+(function countUp() {
+  const io = new IntersectionObserver(ents => ents.forEach(e => {
+    if (!e.isIntersecting) return; io.unobserve(e.target);
+    const el = e.target, target = +el.dataset.target; let cur = 0;
+    const step = Math.max(1, Math.round(target / 40));
+    const tick = () => { cur = Math.min(target, cur + step); el.textContent = cur; if (cur < target) requestAnimationFrame(tick); };
+    tick();
+  }), { threshold: 0.6 });
+  document.querySelectorAll(".stat-n").forEach(el => io.observe(el));
+})();
+
+/* Top rated — ranked list (distinct from the card grids) */
+document.getElementById("topranked").innerHTML =
+  [...CATALOG].sort((a, b) => b.rating - a.rating).slice(0, 6).map((c, i) =>
+    `<a class="rank-row" href="${articleHref(c)}">
+      <span class="rank-no">${String(i + 1).padStart(2, "0")}</span>
+      <span class="rank-body"><span class="rank-idea">${esc(c.idea)}</span>
+        <span class="rank-meta">${esc(c.company)} · ${esc(c.field)}</span></span>
+      <span class="rank-score">${Number(c.rating).toFixed(1)}</span>
+    </a>`).join("");
+
+/* Browse by industry — colorized tiles with the industry's own color + icon */
 document.getElementById("areas-grid").innerHTML = SECTORS.map((s, i) => {
-  const subs = s.subsectors.map(x => x.name).join(" · ");
   const n = s.subsectors.reduce((a, x) => a + ((x.items || []).length), 0);
-  return `<a class="area" href="reviews.html?ind=${encodeURIComponent(s.id)}">
-      <span class="no">${String(i + 1).padStart(2, "0")}</span>
+  const st = indStyle(s.name);
+  return `<a class="area" href="reviews.html?ind=${encodeURIComponent(s.id)}" style="--ic:${st[0]}">
+      <span class="area-ico">${icon(st[2])}</span>
       <span class="body"><h3>${esc(s.name)}</h3><p>${esc(s.blurb)}</p>
-        <span class="subs">${esc(subs)} · ${n} idea${n === 1 ? "" : "s"}</span></span>
+        <span class="subs">${s.subsectors.length} sub-sectors · ${n} idea${n === 1 ? "" : "s"}</span></span>
+      <span class="area-go">${icon("arrow")}</span>
     </a>`;
 }).join("");
 

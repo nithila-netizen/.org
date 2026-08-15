@@ -65,31 +65,20 @@ document.getElementById("topranked").innerHTML =
       <span class="rank-score">${Number(c.rating).toFixed(1)}</span>
     </a>`).join("");
 
-/* Browse by industry — colorized tiles with the industry's own color + icon */
-document.getElementById("areas-grid").innerHTML = SECTORS.map((s, i) => {
-  const n = s.subsectors.reduce((a, x) => a + ((x.items || []).length), 0);
-  const st = indStyle(s.name);
-  return `<a class="area" href="reviews.html?ind=${encodeURIComponent(s.id)}" style="--ic:${st[0]}">
-      <span class="area-ico">${icon(st[2])}</span>
-      <span class="body"><h3>${esc(s.name)}</h3><p>${esc(s.blurb)}</p>
-        <span class="subs">${s.subsectors.length} sub-sectors · ${n} idea${n === 1 ? "" : "s"}</span></span>
-      <span class="area-go">${icon("arrow")}</span>
-    </a>`;
-}).join("");
-
-/* Facet tallies */
-function tally(key) {
-  const m = {};
-  CATALOG.forEach(c => (c[key] || []).forEach(v => m[v] = (m[v] || 0) + 1));
-  return Object.entries(m).sort((a, b) => b[1] - a[1]);
-}
-
-/* Specialty tiles (top few; full list behind "All specialties →") */
-document.getElementById("specialty-chips").outerHTML =
-  `<div class="facet-grid" id="specialty-chips">` + tally("specialties").slice(0, 8).map(([name, n]) =>
-    `<a class="facet-tile" href="reviews.html?view=specialty&f=${encodeURIComponent(name)}">${esc(name)} <span class="n">${n}</span></a>`).join("") + `</div>`;
-
-/* Patient body-system tiles (top few; full list behind "By symptom →") */
-document.getElementById("system-chips").outerHTML =
-  `<div class="facet-grid" id="system-chips">` + tally("systems").slice(0, 8).map(([name, n]) =>
-    `<a class="facet-tile" href="reviews.html?view=patient&f=${encodeURIComponent(name)}">${esc(name)} <span class="n">${n}</span></a>`).join("") + `</div>`;
+/* Explore chooser — the one clear, obvious way to navigate */
+const nSub = SECTORS.reduce((n, s) => n + s.subsectors.length, 0);
+const nSpec = new Set(CATALOG.flatMap(c => c.specialties || [])).size;
+const nSys = new Set(CATALOG.flatMap(c => c.systems || [])).size;
+const choices = [
+  ["#E15A3D", "layers",   "Browse by industry", `${SECTORS.length} industries · ${nSub} sub-sectors`, "reviews.html"],
+  ["#2FA69A", "pulse",    "By your specialty",  `${nSpec} specialties, radiology to nursing`,          "reviews.html?view=specialty"],
+  ["#D65A86", "heart",    "For patients",       `${nSys} body systems, browse by symptom`,             "reviews.html?view=patient"],
+  ["#7C6BD6", "calendar", "Latest reviews",     `${CATALOG.length} articles, newest first`,            "reviews.html?sort=new"],
+];
+document.getElementById("explore").innerHTML = choices.map(([c, ic, title, desc, href]) =>
+  `<a class="xcard" href="${href}" style="--ic:${c}">
+    <span class="xico">${icon(ic)}</span>
+    <span class="xtitle">${esc(title)}</span>
+    <span class="xdesc">${esc(desc)}</span>
+    <span class="xgo">${icon("arrow")}</span>
+  </a>`).join("");

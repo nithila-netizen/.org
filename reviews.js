@@ -74,9 +74,9 @@ function tabBar(active) {
   const tabs = [
     ["Industries", "reviews.html"],
     ["By specialty", "reviews.html?view=specialty"],
-    ["Who it's for", "reviews.html?view=role"],
     ["For patients", "reviews.html?view=patient"],
     ["Latest", "reviews.html?sort=new"],
+    ["Top rated", "reviews.html?sort=top"],
   ];
   return `<div class="tabbar">${tabs.map(([t, h]) =>
     `<a class="tab${active === t ? " on" : ""}" href="${h}">${t}</a>`).join("")}</div>`;
@@ -96,10 +96,10 @@ function ideaRow(slug) {
     ${followBtn("companies", c.company)}
   </div>`;
 }
-function companyChip(name) {
+function companyTile(name) {
   const c = CBY_COMPANY[name];
-  if (c) return `<a class="comp-chip has-review" href="${articleHref(c)}">${esc(name)}</a>`;
-  return `<span class="comp-chip">${esc(name)}</span>`;
+  if (c) return `<a class="co-tile" href="${articleHref(c)}">${logoBadge(c, 34)}<span class="co-name">${esc(name)}</span></a>`;
+  return `<span class="co-tile">${logoBadge({ company: name }, 34)}<span class="co-name">${esc(name)}</span></span>`;
 }
 function adoptionMeter(a) {
   const levels = ["Early", "Emerging", "Scaling", "Mainstream"];
@@ -114,9 +114,9 @@ function subsectorBlock(sub) {
   const items = sub.items || [];
   const ideas = items.length ? `<div class="idea-list">${items.map(ideaRow).join("")}</div>` : `<p class="ss-coming">Coverage coming soon.</p>`;
   const comps = (sub.companies || []).length
-    ? `<details class="ss-companies"><summary>Companies (${sub.companies.length})</summary><div class="comp-chips">${sub.companies.map(companyChip).join("")}</div></details>` : "";
+    ? `<p class="ss-eyebrow ss-ideas-h">Companies (${sub.companies.length})</p><div class="co-grid">${sub.companies.map(companyTile).join("")}</div>` : "";
   return `<section class="subsector" id="${esc(sub.id)}">
-    <div class="ss-h"><h3>${esc(sub.name)}</h3>${followBtn("topics", "sub:" + sub.id)}</div>
+    <div class="ss-h"><h3>${esc(sub.name)}</h3>${followBtn("topics", "sub:" + sub.id, "Follow topic")}</div>
     <div class="ss-grid">
       <div class="ss-main">
         <p class="ss-eyebrow">How AI is reshaping this</p>
@@ -134,22 +134,39 @@ function subsectorBlock(sub) {
 /* ---------- views ---------- */
 function industryGrid() {
   const cards = SECTORS.map(s => {
-    const subs = s.subsectors.map(x => x.name).join(" · ");
     const n = s.subsectors.reduce((a, x) => a + ((x.items || []).length), 0);
-    return `<a class="ind-card" href="reviews.html?ind=${encodeURIComponent(s.id)}">
-      <h3>${esc(s.name)}</h3><p>${esc(s.blurb)}</p>
-      <span class="ind-subs">${esc(subs)}</span>
-      <span class="ind-go">${s.subsectors.length} sub-sector${s.subsectors.length === 1 ? "" : "s"} · ${n} idea${n === 1 ? "" : "s"} →</span>
+    const st = indStyle(s.name);
+    return `<a class="ind-card" href="reviews.html?ind=${encodeURIComponent(s.id)}" style="--ic:${st[0]}">
+      <span class="ind-ico">${icon(st[2])}</span>
+      <h3>${esc(s.name)}</h3>
+      <p>${esc(s.blurb)}</p>
+      <span class="ind-go">${s.subsectors.length} sub-sectors · ${n} ideas <em>→</em></span>
     </a>`;
   }).join("");
   return tabBar("Industries") + `<div class="ind-grid">${cards}</div>`;
 }
 
+// One industry: clean cards for each sub-sector (ideas are one click deeper).
+function subCard(sec, sub) {
+  const n = (sub.items || []).length;
+  return `<a class="sub-card" href="reviews.html?ind=${encodeURIComponent(sec.id)}&sub=${encodeURIComponent(sub.id)}">
+    <div class="sub-card-top"><h3>${esc(sub.name)}</h3><span class="sub-adopt">${esc(sub.adoption.level)}</span></div>
+    <p>${esc(sub.reshaping.slice(0, 105))}…</p>
+    <span class="sub-go">${n} idea${n === 1 ? "" : "s"} <em>→</em></span>
+  </a>`;
+}
 function industryDetail(sec) {
+  const st = indStyle(sec.name);
   return `<p class="crumb"><a href="reviews.html">← All industries</a></p>
-    <h2 class="ind-title">${esc(sec.name)}</h2>
-    <p class="ind-blurb">${esc(sec.blurb)}</p>
-    ${sec.subsectors.map(subsectorBlock).join("")}`;
+    <div class="detail-head" style="--ic:${st[0]}"><span class="ind-ico">${icon(st[2])}</span>
+      <div><h2 class="ind-title">${esc(sec.name)}</h2><p class="ind-blurb">${esc(sec.blurb)}</p></div></div>
+    <div class="sub-grid">${sec.subsectors.map(sub => subCard(sec, sub)).join("")}</div>`;
+}
+
+// One sub-sector: the full write-up + the ideas reviewed there.
+function subDetail(sec, sub) {
+  return `<p class="crumb"><a href="reviews.html">Industries</a> <span class="crumb-sep">›</span> <a href="reviews.html?ind=${encodeURIComponent(sec.id)}">${esc(sec.name)}</a></p>
+    ${subsectorBlock(sub)}`;
 }
 
 function facetView(kind) {
@@ -213,11 +230,11 @@ function render() {
   if (sort) { view.innerHTML = sortedList(sort); return; }
   if (ind) {
     const sec = SECTORS.find(s => s.id === ind);
-    view.innerHTML = sec ? industryDetail(sec) : industryGrid();
-    if (sec && location.hash) {
-      const t = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-      if (t) setTimeout(() => t.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
-    }
+    if (!sec) { view.innerHTML = industryGrid(); return; }
+    const subId = params.get("sub") || (location.hash ? decodeURIComponent(location.hash.slice(1)) : "");
+    const sub = subId ? sec.subsectors.find(x => x.id === subId) : null;
+    view.innerHTML = sub ? subDetail(sec, sub) : industryDetail(sec);
+    window.scrollTo(0, 0);
     return;
   }
   view.innerHTML = industryGrid();

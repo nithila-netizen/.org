@@ -42,6 +42,27 @@ function articleHref(c) {
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function fmtDate(d) { if (!d) return ""; const [y, m, day] = d.split("-"); return `${MONTHS[+m - 1]} ${+day}, ${y}`; }
 
+/* ---- Company logos: pulled live from a logo service by website domain,
+        with a lettered fallback when a logo is missing ---- */
+function companyDomain(c) {
+  if (!c || !c.website) return "";
+  try { return new URL(c.website).hostname.replace(/^www\./, ""); } catch (e) { return ""; }
+}
+function logoBadge(c, size) {
+  size = size || 36;
+  const initial = esc((((c && c.company) || "?").trim().charAt(0) || "?").toUpperCase());
+  const fs = Math.round(size * 0.44);
+  const fb = `<span class="logo-fb" style="width:${size}px;height:${size}px;font-size:${fs}px">${initial}</span>`;
+  const d = companyDomain(c);
+  if (!d) return `<span class="logo" style="width:${size}px;height:${size}px">${fb}</span>`;
+  // Try Clearbit; on failure fall back to the site favicon; then to a letter.
+  const onerr = "if(this.dataset.s==='1'){this.style.display='none';this.nextElementSibling.style.display='flex';}" +
+    "else{this.dataset.s='1';this.src='https://www.google.com/s2/favicons?domain=" + d + "&sz=128';}";
+  return `<span class="logo" style="width:${size}px;height:${size}px">` +
+    `<img src="https://logo.clearbit.com/${d}?size=${size * 2}" alt="${esc((c && c.company) || "")} logo" width="${size}" height="${size}" loading="lazy" onerror="${onerr}">` +
+    `<span class="logo-fb" style="display:none;width:${size}px;height:${size}px;font-size:${fs}px">${initial}</span></span>`;
+}
+
 /* ---- Generated cover art: unique, colorful, branded per industry ---- */
 const IND_STYLE = {
   "Hospitals & Health Systems":                 ["#E15A3D", "#B83B22", "pulse"],

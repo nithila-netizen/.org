@@ -104,7 +104,6 @@ function render() {
       <h1>${esc(p.name)}</h1>
       <p class="tagline">${esc(p.tagline)}</p>
       <div class="analyst">
-        ${rating ? `<div class="a-item"><span class="a-k">Rating</span><span class="a-v db-rating">${stars(rating)}</span></div>` : ""}
         <div class="a-item"><span class="a-k">Category</span><span class="a-v">${esc(catField)}</span></div>
         <div class="a-item"><span class="a-k">Status</span><span class="a-v">${esc(signal)}</span></div>
       </div>

@@ -63,7 +63,7 @@ function articleCard(c) {
         <h3 class="fcard-idea">${wrapTerms(esc(c.idea), new Set())}</h3>
         <p class="acard-sum">${esc((c.summary || "").slice(0, 120))}${(c.summary || "").length > 120 ? "…" : ""}</p>
         <div class="fcard-foot"><span class="fcard-co">${esc(c.company)}${c.full ? ' <span class="idea-deep">Deep dive</span>' : ""}</span>
-          <span class="fcard-meta"><span class="idea-score">${Number(c.rating).toFixed(1)}</span><span class="fcard-date">${fmtDate(c.date)}</span></span></div>
+          <span class="fcard-meta"><span class="fcard-date">${fmtDate(c.date)}</span></span></div>
       </div>
     </a>
     ${followBtn("companies", c.company)}
@@ -76,7 +76,7 @@ function tabBar(active) {
     ["By specialty", "reviews.html?view=specialty"],
     ["For patients", "reviews.html?view=patient"],
     ["Latest", "reviews.html?sort=new"],
-    ["Top rated", "reviews.html?sort=top"],
+    ["Notable", "reviews.html?sort=top"],
   ];
   return `<div class="tabbar">${tabs.map(([t, h]) =>
     `<a class="tab${active === t ? " on" : ""}" href="${h}">${t}</a>`).join("")}</div>`;
@@ -91,7 +91,7 @@ function ideaRow(slug) {
         <span class="idea-text">${wrapTerms(esc(c.idea), new Set())}</span>
         <span class="idea-by">${esc(c.company)}${c.full ? ' <span class="idea-deep">Deep dive</span>' : ""}</span>
       </span>
-      <span class="idea-meta"><span class="signal ${esc(c.status)}">${esc(statusLabel(c.status))}</span><span class="idea-score">${Number(c.rating).toFixed(1)}</span></span>
+      <span class="idea-meta"><span class="signal ${esc(c.status)}">${esc(statusLabel(c.status))}</span></span>
     </a>
     ${followBtn("companies", c.company)}
   </div>`;
@@ -190,8 +190,8 @@ function sortedList(sort) {
   const items = [...CATALOG].sort(sort === "top"
     ? (a, b) => b.rating - a.rating
     : (a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : b.rating - a.rating));
-  return tabBar(sort === "top" ? "" : "Latest") +
-    `<h2 class="ind-title">${sort === "top" ? "Top rated" : "Latest articles"}</h2>
+  return tabBar(sort === "top" ? "Notable" : "Latest") +
+    `<h2 class="ind-title">${sort === "top" ? "Notable reviews" : "Latest articles"}</h2>
      <p class="ind-blurb">${items.length} articles.</p>
      ${paginatedGrid(items)}`;
 }

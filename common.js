@@ -108,7 +108,7 @@ function feedCard(c) {
       <h3 class="fcard-idea">${wrapTerms(esc(c.idea), new Set())}</h3>
       <div class="fcard-foot">
         <span class="fcard-co">${esc(c.company)}${c.full ? ' <span class="idea-deep">Deep dive</span>' : ""}</span>
-        <span class="fcard-meta"><span class="idea-score">${Number(c.rating).toFixed(1)}</span><span class="fcard-date">${fmtDate(c.date)}</span></span>
+        <span class="fcard-meta"><span class="fcard-date">${fmtDate(c.date)}</span></span>
       </div>
     </div>
   </a>`;

@@ -19,7 +19,6 @@ function leadSlide(c) {
       <div class="lead-foot">
         <span class="signal ${esc(c.status)}">${esc(statusLabel(c.status))}</span>
         <span class="fcard-co">${esc(c.company)}${c.full ? ' <span class="idea-deep">Deep dive</span>' : ""}</span>
-        <span class="idea-score">${Number(c.rating).toFixed(1)}</span>
         <span class="fcard-date">${fmtDate(c.date)}</span>
       </div>
     </div>
@@ -83,7 +82,7 @@ document.getElementById("topranked").innerHTML =
       <span class="rank-no">${String(i + 1).padStart(2, "0")}</span>
       <span class="rank-body"><span class="rank-idea">${esc(c.idea)}</span>
         <span class="rank-meta">${esc(c.company)} · ${esc(c.field)}</span></span>
-      <span class="rank-score">${Number(c.rating).toFixed(1)}</span>
+      <span class="rank-arrow">→</span>
     </a>`).join("");
 
 /* Explore chooser — the one clear, obvious way to navigate */

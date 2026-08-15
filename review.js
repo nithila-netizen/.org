@@ -54,7 +54,6 @@ function render(p) {
     </div>
 
     <div class="rv-strip">
-      <div><span class="rv-k">Rating</span>${stars(p.rating)}</div>
       <div><span class="rv-k">Category</span><span class="rv-v">${esc(p.field)}</span></div>
       <div><span class="rv-k">Status</span><span class="signal ${esc(p.status)}">${esc(statusLabel(p.status))}</span></div>
     </div>

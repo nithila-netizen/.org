@@ -1116,3 +1116,7 @@ a.co-tile:hover { text-decoration: none; border-color: var(--accent); box-shadow
 .lead-logo-cover .logo { width: 108px !important; height: 108px !important; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.18); }
 .lead-logo-cover .logo-fb { font-size: 46px; border-radius: 20px; background: rgba(255,255,255,0.16); }
 @media (max-width: 720px){ .lead-logo-cover { min-height: 150px; } .lead-logo-cover .logo { width: 76px !important; height: 76px !important; } }
+
+/* rating removed: ranked rows end with an arrow, not a score */
+.rank-arrow { font-family: var(--sans); font-size: 22px; color: var(--muted); }
+.rank-row:hover .rank-arrow { color: var(--accent); }

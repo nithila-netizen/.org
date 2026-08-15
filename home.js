@@ -7,6 +7,24 @@ mountChrome();
 
 const byDate = (a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : b.rating - a.rating);
 
+/* Featured lead story: strongest article, shown large */
+const lead = [...CATALOG].sort((a, b) => b.rating - a.rating || byDate(a, b))[0];
+if (lead) document.getElementById("lead").innerHTML =
+  `<a class="lead" href="${articleHref(lead)}">
+    ${coverArt(lead, true)}
+    <div class="lead-body">
+      <span class="lead-kicker">Featured · ${esc(lead.field)}</span>
+      <h2 class="lead-idea">${wrapTerms(esc(lead.idea), new Set())}</h2>
+      <p class="lead-sum">${esc((lead.summary || "").slice(0, 230))}…</p>
+      <div class="lead-foot">
+        <span class="signal ${esc(lead.status)}">${esc(statusLabel(lead.status))}</span>
+        <span class="fcard-co">${esc(lead.company)}${lead.full ? ' <span class="idea-deep">Deep dive</span>' : ""}</span>
+        <span class="idea-score">${Number(lead.rating).toFixed(1)}</span>
+        <span class="fcard-date">${fmtDate(lead.date)}</span>
+      </div>
+    </div>
+  </a>`;
+
 /* What's new — most recent articles, horizontal scroll */
 document.getElementById("whatsnew").innerHTML =
   [...CATALOG].sort(byDate).slice(0, 16).map(feedCard).join("");

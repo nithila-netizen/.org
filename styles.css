@@ -902,3 +902,38 @@ a.db-row:hover { padding-left: 14px; background: var(--paper-2); text-decoration
 .foll-manage > summary { cursor: pointer; font-family: var(--sans); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; color: var(--muted); list-style: none; padding: 12px 0; }
 .foll-manage > summary::-webkit-details-marker { display: none; }
 .foll-manage .foll-h { font-size: 15px; margin: 20px 0 12px; }
+
+/* ==========================================================================
+   Cover art + visual cards + featured lead (magazine feel)
+   ========================================================================== */
+.cover { position: relative; width: 100%; height: 132px; overflow: hidden; background: var(--accent); }
+.cover svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.cover-ico { position: absolute; right: 13px; bottom: 10px; color: #fff; opacity: .92; line-height: 0; }
+.cover-ico svg { width: 26px; height: 26px; }
+
+.fcard { padding: 0; overflow: hidden; }
+.fcard-body { padding: 15px 17px; display: flex; flex-direction: column; gap: 9px; flex: 1; }
+.feed-scroll .fcard .cover { height: 118px; }
+
+.acard-body { padding: 0 0 52px; }
+.acard-inner { padding: 15px 17px 0; display: flex; flex-direction: column; gap: 8px; }
+.acard .cover { height: 118px; }
+.acard .follow-btn { left: 17px; bottom: 14px; }
+
+/* Featured lead */
+.lead { display: grid; grid-template-columns: 1.05fr 1fr; min-height: 300px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--paper); transition: box-shadow .18s ease, transform .18s ease; }
+.lead:hover { text-decoration: none; box-shadow: 0 16px 44px rgba(33,27,21,0.12); transform: translateY(-2px); }
+.lead .cover { height: 100%; }
+.lead-body { padding: 34px 36px; display: flex; flex-direction: column; justify-content: center; gap: 13px; }
+.lead-kicker { font-family: var(--sans); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-ink); font-weight: 700; }
+.lead-idea { font-family: var(--display); font-weight: 700; font-size: clamp(24px,3vw,36px); line-height: 1.08; letter-spacing: -0.025em; margin: 0; color: var(--ink); }
+.lead:hover .lead-idea { color: var(--accent-ink); }
+.lead-sum { color: var(--ink-2); font-size: 16px; line-height: 1.55; margin: 0; }
+.lead-foot { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 6px; }
+@media (max-width: 720px){ .lead { grid-template-columns: 1fr; } .lead .cover { height: 170px; } .lead-body { padding: 24px; } }
+
+/* Following filter bar → seamless underline tabs */
+.fbar { gap: 2px; border-bottom: 1px solid var(--line); padding-bottom: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.fbar-chip { border: 0; background: transparent; border-radius: 0; border-bottom: 2px solid transparent; padding: 9px 13px; color: var(--ink-2); margin-bottom: -1px; white-space: nowrap; }
+.fbar-chip:hover { border-color: transparent; color: var(--ink); background: transparent; }
+.fbar-chip.on { background: transparent; color: var(--accent-ink); border-bottom-color: var(--accent); }

@@ -36,11 +36,14 @@ function tally(key) {
 function articleCard(c) {
   return `<div class="acard">
     <a class="acard-body" href="${articleHref(c)}">
-      <div class="fcard-top"><span class="fcard-cat">${esc(c.field)}</span><span class="signal ${esc(c.status)}">${esc(statusLabel(c.status))}</span></div>
-      <h3 class="fcard-idea">${wrapTerms(esc(c.idea), new Set())}</h3>
-      <p class="acard-sum">${esc((c.summary || "").slice(0, 120))}${(c.summary || "").length > 120 ? "…" : ""}</p>
-      <div class="fcard-foot"><span class="fcard-co">${esc(c.company)}${c.full ? ' <span class="idea-deep">Deep dive</span>' : ""}</span>
-        <span class="fcard-meta"><span class="idea-score">${Number(c.rating).toFixed(1)}</span><span class="fcard-date">${fmtDate(c.date)}</span></span></div>
+      ${coverArt(c)}
+      <div class="acard-inner">
+        <div class="fcard-top"><span class="fcard-cat">${esc(c.field)}</span><span class="signal ${esc(c.status)}">${esc(statusLabel(c.status))}</span></div>
+        <h3 class="fcard-idea">${wrapTerms(esc(c.idea), new Set())}</h3>
+        <p class="acard-sum">${esc((c.summary || "").slice(0, 120))}${(c.summary || "").length > 120 ? "…" : ""}</p>
+        <div class="fcard-foot"><span class="fcard-co">${esc(c.company)}${c.full ? ' <span class="idea-deep">Deep dive</span>' : ""}</span>
+          <span class="fcard-meta"><span class="idea-score">${Number(c.rating).toFixed(1)}</span><span class="fcard-date">${fmtDate(c.date)}</span></span></div>
+      </div>
     </a>
     ${followBtn("companies", c.company)}
   </div>`;

@@ -42,14 +42,53 @@ function articleHref(c) {
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function fmtDate(d) { if (!d) return ""; const [y, m, day] = d.split("-"); return `${MONTHS[+m - 1]} ${+day}, ${y}`; }
 
+/* ---- Generated cover art: unique, colorful, branded per industry ---- */
+const IND_STYLE = {
+  "Hospitals & Health Systems":                 ["#E15A3D", "#B83B22", "pulse"],
+  "Diagnostics & Imaging":                      ["#2FA69A", "#1C7167", "scan"],
+  "Primary & Ambulatory Care":                  ["#3FA45C", "#2A7541", "heart"],
+  "Pharma & Life Sciences":                     ["#7C6BD6", "#54459E", "flask"],
+  "Payers & Health Insurance":                  ["#E8A13C", "#BE7C1C", "shield"],
+  "Healthcare Administration & Revenue Cycle":  ["#5B7CB0", "#3C577F", "layers"],
+  "Medical Devices & MedTech":                  ["#4E63C8", "#33429A", "pulse"],
+  "Mental & Behavioral Health":                 ["#D65A86", "#A83A63", "heart"],
+  "Senior Care & Post-Acute":                   ["#E07B3C", "#B85B1E", "compass"],
+  "Pharmacy & Medication Management":           ["#2FA57C", "#1C7757", "flask"],
+  "Dental":                                     ["#3AA0C8", "#24728F", "scan"],
+  "Public & Population Health":                 ["#4C8AD6", "#3163A0", "compass"],
+};
+function indStyle(field) { return IND_STYLE[field] || ["#E15A3D", "#B83B22", "pulse"]; }
+function hashStr(s) { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = (h * 16777619) >>> 0; } return h; }
+function coverArt(c, tall) {
+  const [c1, c2, ic] = indStyle(c.field); const h = hashStr(c.slug || c.company || c.field || "x");
+  const id = "g" + (h % 1000000);
+  const cx1 = 40 + (h % 90), cy1 = 20 + ((h >>> 3) % 90), r1 = 55 + ((h >>> 5) % 55);
+  const cx2 = 360 - ((h >>> 7) % 120), cy2 = 150 - ((h >>> 9) % 90), r2 = 30 + ((h >>> 11) % 55);
+  const yb = 120 + ((h >>> 13) % 40);
+  return `<div class="cover${tall ? " cover-tall" : ""}">
+    <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs>
+      <rect width="400" height="200" fill="url(#${id})"/>
+      <circle cx="${cx1}" cy="${cy1}" r="${r1}" fill="#fff" opacity="0.10"/>
+      <circle cx="${cx2}" cy="${cy2}" r="${r2}" fill="#fff" opacity="0.07"/>
+      <circle cx="${cx2}" cy="${cy2}" r="${r2 * 0.5}" fill="#000" opacity="0.05"/>
+      <path d="M-10 ${yb} H110 l9 0 l6 -30 l9 52 l7 -22 l6 0 H420" fill="none" stroke="#fff" stroke-width="2.6" opacity="0.55" stroke-linecap="round"/>
+    </svg>
+    <span class="cover-ico">${icon(ic)}</span>
+  </div>`;
+}
+
 /* ---- The article card (used on the home feed and in listings) ---- */
 function feedCard(c) {
   return `<a class="fcard" href="${articleHref(c)}">
-    <div class="fcard-top"><span class="fcard-cat">${esc(c.field)}</span><span class="signal ${esc(c.status)}">${esc(statusLabel(c.status))}</span></div>
-    <h3 class="fcard-idea">${wrapTerms(esc(c.idea), new Set())}</h3>
-    <div class="fcard-foot">
-      <span class="fcard-co">${esc(c.company)}${c.full ? ' <span class="idea-deep">Deep dive</span>' : ""}</span>
-      <span class="fcard-meta"><span class="idea-score">${Number(c.rating).toFixed(1)}</span><span class="fcard-date">${fmtDate(c.date)}</span></span>
+    ${coverArt(c)}
+    <div class="fcard-body">
+      <div class="fcard-top"><span class="fcard-cat">${esc(c.field)}</span><span class="signal ${esc(c.status)}">${esc(statusLabel(c.status))}</span></div>
+      <h3 class="fcard-idea">${wrapTerms(esc(c.idea), new Set())}</h3>
+      <div class="fcard-foot">
+        <span class="fcard-co">${esc(c.company)}${c.full ? ' <span class="idea-deep">Deep dive</span>' : ""}</span>
+        <span class="fcard-meta"><span class="idea-score">${Number(c.rating).toFixed(1)}</span><span class="fcard-date">${fmtDate(c.date)}</span></span>
+      </div>
     </div>
   </a>`;
 }
